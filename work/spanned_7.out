@@ -1,0 +1,15 @@
+PG(3,7): 400 points/planes
+k=1 {'orbits': 1, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (5s)
+k=2 {'orbits': 1, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (14s)
+k=3 {'orbits': 2, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (20s)
+k=4 {'orbits': 5, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (37s)
+k=5 {'orbits': 10, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (75s)
+k=6 {'orbits': 40, 'chi': 12, 'locfree': 12, 'nondf': 0, 'free': 0, 'mixed': 0}  (113s)
+FREE NON-DF {"q": 7, "k": 7, "P": [0, 1, 8, 16, 25, 35, 57], "n_planes": 16, "exps": [1, 1, 7, 7], "status": "free", "realizations": 0, "nonfree_realizations": 0}
+k=7 {'orbits': 247, 'chi': 41, 'locfree': 41, 'nondf': 1, 'free': 1, 'mixed': 0}  (227s)
+FREE NON-DF {"q": 7, "k": 8, "P": [0, 1, 2, 8, 9, 18, 20, 57], "n_planes": 16, "exps": [1, 1, 7, 7], "status": "free", "realizations": 0, "nonfree_realizations": 0}
+FREE NON-DF {"q": 7, "k": 8, "P": [0, 1, 2, 8, 18, 57, 129, 224], "n_planes": 26, "exps": [1, 7, 9, 9], "status": "free", "realizations": 2, "nonfree_realizations": 0}
+k=8 {'orbits': 4450, 'chi': 102, 'locfree': 100, 'nondf': 2, 'free': 2, 'mixed': 0}  (924s)
+FREE NON-DF {"q": 7, "k": 9, "P": [0, 1, 2, 3, 8, 9, 22, 23, 57], "n_planes": 16, "exps": [1, 1, 7, 7], "status": "free", "realizations": 0, "nonfree_realizations": 0}
+FREE NON-DF {"q": 7, "k": 9, "P": [0, 1, 2, 4, 8, 9, 57, 109, 206], "n_planes": 26, "exps": [1, 7, 9, 9], "status": "free", "realizations": 2, "nonfree_realizations": 0}
+FREE NON-DF {"q": 7, "k": 9, "P": [0, 1, 2, 8, 9, 22, 57, 123, 248], "n_planes": 26, "exps": [1, 7, 9, 9], "status": "free", "realizations": 2, "nonfree_realizations": 0}

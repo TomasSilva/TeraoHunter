@@ -1,0 +1,25 @@
+HIT {"chunk": 21, "S": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 16, 17, 19, 20, 22, 23, 25, 27, 29, 30, 31, 35, 39], "k": 25, "chi": [1, -25, 195, -495, 324], "exps": [1, 3, 9, 12], "gens": [1, 3, 9, 12], "normals": [[0, 0, 0, 1], [0, 0, 1, 0], [0, 0, 1, 1], [0, 0, 1, 2], [0, 1, 0, 0], [0, 1, 0, 1], [0, 1, 0, 2], [0, 1, 1, 0], [0, 1, 1, 1], [0, 1, 1, 2], [1, 0, 0, 0], [1, 0, 0, 1], [1, 0, 1, 0], [1, 0, 1, 1], [1, 0, 2, 0], [1, 0, 2, 1], [1, 1, 0, 0], [1, 1, 0, 1], [1, 1, 1, 0], [1, 1, 1, 2], [1, 1, 2, 1], [1, 1, 2, 2], [1, 2, 0, 0], [1, 2, 1, 1], [1, 2, 2, 2]]}
+chunk 21 {'essential': 1748, 'chi_split': 103, 'df': 59, 'nondf_split': 44, 'loc_free': 1, 'free': 1} df 20s loc 21s free 12s total 53s
+chunk 23 {'essential': 1747, 'chi_split': 107, 'df': 58, 'nondf_split': 49, 'loc_free': 0, 'free': 0} df 19s loc 21s free 0s total 39s
+HIT {"chunk": 25, "S": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 16, 17, 19, 21, 22, 23, 25, 27, 34, 35], "k": 23, "chi": [1, -23, 169, -417, 270], "exps": [1, 3, 9, 10], "gens": [1, 3, 9, 10], "normals": [[0, 0, 0, 1], [0, 0, 1, 0], [0, 0, 1, 1], [0, 0, 1, 2], [0, 1, 0, 0], [0, 1, 0, 1], [0, 1, 0, 2], [0, 1, 1, 0], [0, 1, 1, 1], [0, 1, 1, 2], [0, 1, 2, 0], [1, 0, 0, 0], [1, 0, 0, 1], [1, 0, 1, 0], [1, 0, 1, 1], [1, 0, 2, 0], [1, 0, 2, 2], [1, 1, 0, 0], [1, 1, 0, 1], [1, 1, 1, 0], [1, 1, 1, 2], [1, 2, 1, 0], [1, 2, 1, 1]]}
+chunk 25 {'essential': 1746, 'chi_split': 100, 'df': 53, 'nondf_split': 47, 'loc_free': 1, 'free': 1} df 18s loc 21s free 3s total 42s
+chunk 27 {'essential': 1746, 'chi_split': 102, 'df': 61, 'nondf_split': 41, 'loc_free': 0, 'free': 0} df 18s loc 18s free 0s total 36s
+chunk 29 {'essential': 1747, 'chi_split': 95, 'df': 55, 'nondf_split': 40, 'loc_free': 0, 'free': 0} df 18s loc 18s free 0s total 35s
+chunk 31 {'essential': 1746, 'chi_split': 106, 'df': 57, 'nondf_split': 49, 'loc_free': 0, 'free': 0} df 18s loc 21s free 0s total 39s
+chunk 33 {'essential': 1746, 'chi_split': 109, 'df': 63, 'nondf_split': 46, 'loc_free': 0, 'free': 0} df 18s loc 20s free 0s total 38s
+chunk 35 {'essential': 1747, 'chi_split': 99, 'df': 54, 'nondf_split': 45, 'loc_free': 0, 'free': 0} df 17s loc 21s free 0s total 38s
+chunk 37 {'essential': 1747, 'chi_split': 91, 'df': 49, 'nondf_split': 42, 'loc_free': 0, 'free': 0} df 17s loc 18s free 0s total 35s
+chunk 39 {'essential': 1747, 'chi_split': 107, 'df': 55, 'nondf_split': 52, 'loc_free': 0, 'free': 0} df 18s loc 23s free 0s total 42s
+chunk 41 {'essential': 1747, 'chi_split': 98, 'df': 49, 'nondf_split': 49, 'loc_free': 0, 'free': 0} df 18s loc 21s free 0s total 39s
+chunk 43 {'essential': 1747, 'chi_split': 99, 'df': 54, 'nondf_split': 45, 'loc_free': 0, 'free': 0} df 18s loc 19s free 0s total 37s
+chunk 45 {'essential': 1747, 'chi_split': 104, 'df': 61, 'nondf_split': 43, 'loc_free': 0, 'free': 0} df 18s loc 19s free 0s total 37s
+chunk 47 {'essential': 1747, 'chi_split': 97, 'df': 48, 'nondf_split': 49, 'loc_free': 0, 'free': 0} df 18s loc 21s free 0s total 39s
+chunk 49 {'essential': 1746, 'chi_split': 93, 'df': 46, 'nondf_split': 47, 'loc_free': 0, 'free': 0} df 17s loc 20s free 0s total 37s
+chunk 51 {'essential': 1746, 'chi_split': 89, 'df': 47, 'nondf_split': 42, 'loc_free': 0, 'free': 0} df 17s loc 18s free 0s total 36s
+chunk 53 {'essential': 1747, 'chi_split': 91, 'df': 46, 'nondf_split': 45, 'loc_free': 0, 'free': 0} df 18s loc 21s free 0s total 38s
+chunk 55 {'essential': 1747, 'chi_split': 90, 'df': 47, 'nondf_split': 43, 'loc_free': 0, 'free': 0} df 18s loc 21s free 0s total 38s
+chunk 57 {'essential': 1747, 'chi_split': 97, 'df': 49, 'nondf_split': 48, 'loc_free': 0, 'free': 0} df 18s loc 20s free 0s total 38s
+chunk 59 {'essential': 1747, 'chi_split': 94, 'df': 48, 'nondf_split': 46, 'loc_free': 0, 'free': 0} df 18s loc 20s free 0s total 37s
+chunk 61 {'essential': 1747, 'chi_split': 93, 'df': 51, 'nondf_split': 42, 'loc_free': 0, 'free': 0} df 18s loc 19s free 0s total 36s
+chunk 63 {'essential': 1746, 'chi_split': 81, 'df': 44, 'nondf_split': 37, 'loc_free': 0, 'free': 0} df 17s loc 17s free 0s total 34s
+DONE

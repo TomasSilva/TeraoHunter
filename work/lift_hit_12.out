@@ -1,0 +1,3 @@
+hit 12 n 8 m [1, 2, 2, 1, 1, 3, 1, 1] t 500 multi free [4, 4, 4] | R [2, 3, 2, 5, 1] | lifts 30 [('free', 0, 4), ('nonfree_chi', 1, 5)]
+hit 12 n 8 m [1, 2, 2, 1, 1, 3, 1, 1] t 77 multi free [4, 4, 4] | R [2, 3, 2, 5, 1] | lifts 34 [('free', 0, 4)]
+hit 12 n 8 m [1, 2, 2, 1, 1, 3, 1, 1] t 505 multi nonfree [3, 5, 5, 5] | R [2, 3, 2, 5, 1] | lifts 35 [('nonfree_chi', 1, 4)]

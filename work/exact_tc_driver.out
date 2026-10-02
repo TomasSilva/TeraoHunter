@@ -1,0 +1,12 @@
+56 distinct lattices
+13 lines (1, 6, 6) {3: 3, 4: 3, 5: 3} (q=11, k=6):
+   k=6 points, 13 lines, 3 concurrency flats off P, 1 collinear point sets
+   components: 1, nondegenerate: 1, dims {1}
+   COMPONENT dim 1: generic rank 42 / 42 (generic member FREE); non-free locus inside degeneracy locus: true exact_tc_n13_1_6_6_47212.m2:53:6:(3):[5]: warning: local declaration of r shields variable with same name (20s)
+15 lines (1, 7, 7) {3: 6, 5: 6} (q=11, k=6):
+   k=6 points, 15 lines, 6 concurrency flats off P, 0 collinear point sets
+   components: 1, nondegenerate: 1, dims {1}
+   COMPONENT dim 1: generic rank 56 / 56 (generic member FREE); non-free locus inside degeneracy locus: true exact_tc_n15_1_7_7_46583.m2:55:6:(3):[5]: warning: local declaration of r shields variable with same name (101s)
+19 lines (1, 9, 9) {3: 14, 5: 8, 6: 1} (q=11, k=9):
+   k=9 points, 19 lines, 14 concurrency flats off P, 7 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)

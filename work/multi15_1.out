@@ -1,0 +1,5 @@
+same-lattice d count 1002
+GENERIC-FREE [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1] exps [3, 7, 7] nonfree d: []
+GENERIC-FREE [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1] exps [2, 7, 7] nonfree d: []
+GENERIC-FREE [1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1] exps [3, 7, 7] nonfree d: []
+GENERIC-FREE [1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2] exps [4, 7, 7] nonfree d: []

@@ -1,0 +1,1318 @@
+arXiv:1502.07520v4  [math.AC]  17 Jan 2017
+Divisionally free arrangements of hyperplanes
+Takuro Abe ∗
+April 5, 2018
+Abstract
+Let ( A, A′, AH) be the triple of hyperplane arrangements. We
+show that the freeness of AH and the division of χ (A; t) by χ (AH; t)
+imply the freeness of A. This “division theorem” improves the famous
+addition-deletion theorem, and it has several application s, which in-
+clude a deﬁnition of “divisionally free arrangements”. It i s a strictly
+larger class of free arrangements than the classical import ant class of
+inductively free arrangements. Also, whether an arrangeme nt is divi-
+sionally free or not is determined by the combinatorics. Mor eover, we
+show that a lot of recursively free arrangements, to which al most all
+known free arrangements are belonging, are divisionally fr ee.
+1 Main results
+Let V be an ℓ-dimensional vector space over an arbitrary ﬁeld K with ℓ ≥ 1,
+S = Sym( V ∗) = K[x1, . . . , xℓ] its coordinate ring and Der S := ⊕ℓ
+i=1S∂xi
+the module of K-linear S-derivations. A hyperplane arrangement A is a
+ﬁnite set of hyperplanes in V . We say that A is central if every hyperplane is
+linear. In this article every arrangement is central unless otherwis e speciﬁed.
+In the central cases, we ﬁx a linear form αH ∈ V ∗ such that ker( αH) = H
+for each H ∈ A. An ℓ-arrangement is an arrangement in an ℓ-dimensional
+vector space. Let L(A) := {∩H∈BH | B ⊂ A} be an intersection lattice .
+L(A) has a partial order by reverse inclusion, which equips L(A) with a poset
+structure. For X ∈ L(A), deﬁne the localization AX of A at X by AX :=
+{H ∈ A | H ⊃ X}, which is a subarrangement of A. Also, the restriction
+AX of A onto X is deﬁned by AX := {H ∩ X | H ∈ A \ A X}, which is an
+∗ Institute of Mathematics for Industry, Kyushu University, Fuku oka 819-0395, Japan.
+Email:abe@imi.kyushu-u.ac.jp 2010 Mathematics Subject Classiﬁcation . 32S22, 52S35.
+1
+arrangement in X ≃ Kdim X. Let Li(A) := {X ∈ L(A) | codimV X = i}.
+Also, we use some notations in §2.
+In the study of hyperplane arrangements, its algebraic structur e D(A) is
+well-studied. The logarithmic derivation module D(A) is deﬁned by
+D(A) := {θ ∈ Der S | θ(αH ) ∈ S · αH (∀H ∈ A)}.
+We say that A is free with exponents exp(A) = ( d1, . . . , dℓ) if D(A) is gen-
+erated as an S-module by S-independent homogeneous generators θ1, . . . , θℓ
+with deg θi = di (i = 1, . . . , ℓ). The study of free arrangements was initiated
+by Terao in [19], and has been playing the central role in this area. Re cently,
+there have been several studies to determine when A is free, e.g., [2], [9], [21],
+[22] and so on. However, it is still very diﬃcult to determine the freen ess.
+Freeness of arrangements implies several interesting geometric a nd combina-
+torial properties of A. For example, see [1], [2] and [20]. In particular, the
+most important result among them is Terao’s factorization theorem(Theorem
+2.5) in [20], which asserts that if A is free with exp( A) = ( d1, . . . , dℓ), then its
+characteristic polynomial χ(A; t) (essentially this is the same as the topo-
+logical Poincar` e polynomial π(A; t) of the complement M(A) := V \ ∪H∈AH
+of A in V when K = C) factorizes into χ(A; t) = ∏ ℓ
+i=1(t − di). When A ⁄= ∅,
+it is known that ( t − 1) divides χ(A; t). Let χ0(A; t) := χ(A; t)/(t − 1) when
+A ⁄= ∅.
+The most useful method to construct free arrangements is the a ddition-
+deletion theorems (Theorem 2.3) by Terao in [19]. Let us recall it. For a
+central arrangement A and H ∈ A , deﬁne A′ := A \ { H}. Combining this
+with the restriction AH of A onto H ∈ A, we call ( A, A′, AH) the triple. The
+addition-deletion theorem enables us to determine the freeness of all these
+three when we know the freeness of any two of them with some infor mation
+on exponents. For example, the addition theorem asserts that if b oth A′
+and AH are free with exp( A′) ⊃ exp(AH), then A is also free with certain
+exponents. By the factorization theorem above, in this case, it fo llows that
+χ(AH; t) divides χ(A′; t) (the division of polynomials is often denoted by
+χ(AH; t) | χ(A′; t)). Since there is a famous deletion-restriction formula (see
+Theorem 2.2)
+χ(A; t) = χ(A′; t) − χ(AH; t),
+it holds that χ(AH; t) also divides χ(A; t) in this case. So the addition-
+deletion theorem contains a statement about divisions of polynomials , but
+these divisions have not been studied so much.
+The aim of this article is to give a consideration on this aspect, i.e., the
+division of characteristic polynomials of these triples. The main result in this
+article is as follows.
+2
+Theorem 1.1 (Division theorem)
+Let A be a central ℓ-arrangement. Assume that there is a hyperplane H ∈ A
+such that χ(AH; t) divides χ(A; t) and that AH is free. Then A is free.
+Theorem 1.1 has several advantages compared to previous result s in both
+theoretical and practical senses. First, let us show a practical a dvantage of
+Theorem 1.1 in the following example.
+Example 1.2
+Let us consider the arrangement B in R4 deﬁned by
+B = (
+4∏
+i=1
+xi)
+∏
+a2,a3,a4∈{±1}
+(x1 + a2x2 + a3x3 + a4x4) = 0 .
+B is a restriction of the famous counterexample to Orlik’s famous conj ecture
+by Edelman and Reiner in [12] onto a coordinate hyperplane. B is known to
+be free. Here we can check it soon by Theorem 1.1 combinatorially. Le t
+C := Bx4=0 = (
+3∏
+i=1
+xi)
+∏
+a2,a3∈{±1}
+(x1 + a2x2 + a3x3) = 0 .
+Then it is easy to check that
+χ(B; t) = ( t − 1)(t − 3)2(t − 5),(1.1)
+χ(C; t) = ( t − 1)(t − 3)2,
+χ(Cx3=0; t) = ( t − 1)(t − 3).
+Since every 2-central arrangment is free (e.g., see Lemma 3.1), applying The-
+orem 1.1 twice shows that B is free. Note that the freeness of B is checked
+by using only combinatorial information L(B).
+There are several ways to understand Theorem 1.1. If we emphas ize the
+aspect of a generalization of the addition-deletion theorem 2.3, The orem 1.1
+can be formulated as Theorems 3.10 and 3.11. Also, it can be regarde d as
+a modiﬁed converse of Orlik’s conjecture, see Remark 3.8. Here we f ocus on
+the relation between the freeness and combinatorics.
+As in Example 1.2, Theorem 1.1 allows us to check the freeness of A by
+constructing a divisional “tower” of characteristic polynomials as in (1.1). In
+other words, we obtain the following completely combinatorial algorit hm to
+show freeness:
+3
+Theorem 1.3
+An ℓ-arrangement A is free if there is a ﬂag
+V = X0 ⊃ X1 ⊃ · · · ⊃ Xℓ−2
+such that Xi ∈ Li(A) for i = 0 , . . . , ℓ − 2 and χ(AXi+1; t) | χ(AXi; t) for
+i = 0, . . . , ℓ− 3. Let us call this ﬂag a divisional ﬂag .
+Apparently, whether A has a divisional ﬂag or not is purely combinato-
+rial. Hence Theorem 1.3 gives us purely combinatorial method to chec k the
+freeness. One of these theoretical applications is to investigate t he relation
+between freeness and combinatorics of the famous Shi arrangem ents (see §6
+for the notation):
+Theorem 1.4
+The extended Shi arrangement has a divisional ﬂag. Hence the fre eness of
+Shi arrangement depends only on its intersection lattice.
+To determine the relation between freeness and combinatorics has been an
+imporant but very hard problem. However, in this article, we can sho w the
+similar results as in Theorem 1.4 due to Theorem 1.1 (e.g., Example 4.6 and
+Theorem 5.6), which is very useful for that purpose. To make this f ramework
+systematically, we may introduce a new class of free arrangements , called the
+class of divisionally free arrangements .
+Deﬁnition 1.5 (Divisionally free arrangements)
+We say that an ℓ-arrangement A is divisionally free if A has a divisional
+ﬂag in Theorem 1.3, which is combinatorially determined by L(A). The set
+DF ℓ consists of all the divisionally free ℓ-arrangements, and DF := ∪ℓ≥1DF ℓ.
+For details on divisionally free arrangements, see Theorem 4.4. The m ost
+famous and important class of free arrangements with the same pr operties
+is the class of inductively free arrangements introduced by Terao in [19] (see
+Deﬁnition 4.2). Let IF denote the class of inductively free arrangements. In
+fact, the class of divisionally free arrangements is strictly larger th an that of
+inductively free arrangements.
+Theorem 1.6
+IF ⊊ DF .
+To prove Theorem 1.6, recent developments on the freeness of un itary
+reﬂection arrangements (e.g., [10], [13]) play the key roles. Hence Th eorem
+1.1 develops the theory of free arrangements from the viewpoint o f Terao’s
+4
+conjecture (Conjecture 4.1) by strictly enlarging the inductively f ree arrange-
+ments. Also, we can show that a lot of recursively free arrangemen ts are
+divisionally free in Theorem 5.5. Moreover, as in Theorem 1.4, applicatio ns
+to those related to root systems are also given. Hence Theorem 1.1 and the
+divisionally free arrangements give rise to an essential progress to the theory
+of free arrangements and its combinatorics.
+To prove Theorem 1.1, the key ingredient is the following fact that, t he
+division of characteristic polynomial commutes with localizations along the
+hyperplane in codimension-three :
+Theorem 1.7 (Localization and Remainder Theorem)
+Let A be a central ℓ-arrangement and H ∈ A. Let us consider the polynomial
+division
+χ0(A; t) = ( t − (|A| − |AH|))χ0(AH; t) + r(t)
+with the remainder r(t) = ∑ ℓ−3
+i=0(−1)iritℓ−3−i. Then r0 ≥ 0. Moreover, if
+r0 = 0, then χ(AH
+X; t) divides χ(AX; t) for all X ∈ L2(AH), and A is locally
+free along H in codimension three. In particular, if χ(AH; t) divides χ(A; t)
+for a hyperplane H ∈ A, then the same statement holds.
+The statement in Theorem 1.7 is non-trivial. For example, even when A
+is free, that statement does not hold in general, e.g, see Example 3.7 . Also,
+a certain converse of Theorem 1.7 holds, see Theorem 3.13.
+If χ(AH; t) divides χ(A; t), then clearly r0 = 0. Hence the ﬁrst part of
+Theorem 1.7 implies the second one. The meaning of r0 ≥ 0 in Theorem 1.7
+can be seen in Remark 2.8.
+Remark 1.8
+As in Theorem 1.7, the condition χ(AH; t) | χ(A; t) in Theorem 1.1 can be
+replaced by r0 = 0 in terms of Theorem 1.7.
+Following Remark 1.8, we can show the following equivalent condition to
+divisionally free arrangements.
+Theorem 1.9
+The following three conditions are equivalent:
+(1) A is divisionally free.
+(2) There is a ﬂag V = X0 ⊃ X1 ⊃ · · · ⊃ Xℓ−2 such that Xi ∈ Li(A) ( i =
+0, . . . , ℓ− 2) and that χ0(A; t) = ( t − (|AXℓ− 2| − 1)) ∏ ℓ−3
+i=0(t − (|AXi| −
+|AXi+1|)).
+5
+(3) There is a ﬂag V = X0 ⊃ X1 ⊃ · · · ⊃ Xℓ−2 such that Xi ∈ Li(A) ( i =
+0, . . . , ℓ− 2) and that
+b2(dA) =
+ℓ−3∑
+i=0
+(|AXi| − |AXi+1|)(|AXi+1| − 1),
+where b2(dA) is the coeﬃcient of tℓ−3 in χ0(A; t).
+Hence to determine whether A ∈ DF , it suﬃces to compute b2(dA), the
+second Betti number of the complement of A when K = C, and the number
+of restricted hyperplanes |AXi|, which are numerical and combinatorial. We
+hope that Theorem 1.9 (3) enables us to make an eﬃcient computer p rogram
+to check the divisional freeness.
+Though Theorem 1.1 is a generalization of the addition-deletion theor ems,
+the proofs of Theorems 1.1 and 1.7 deeply depend on the new develop ment of
+the theory of multiarrangements, i.e., we use the deﬁntion of multiar range-
+ments by Ziegler in [23], Yoshinaga’s criterion in [21] and its reﬁnement in
+[9], development of basic tools to treat them in [7] and [8], and the sam e
+statement as Theorem 1.1 when ℓ = 3 in [2]. It is interesting to see that in
+the statement of Theorem 1.1 there are no multiarrangements.
+The organization of this article is as follows. In §2 we introduce several
+results used for the proof of results in §1. In §3 we prove our main theorems
+in §1. In §4 we investigate the most important application; the deﬁnition
+of divisionally free arrangements in Deﬁnitions 1.5 and 4.3. We show tha t
+divisionally free arrangements contain all the inductively free arran gements,
+and whether an arrangement is divisionally free or not is determined b y only
+combinatorics. Moreover, there is a divisionally free arrangement w hich is
+not inductively free. In §5 we consider the relation between divisionally and
+recursively free arrangements to which almost all known free arra ngments be-
+long. In §6 we give applications to the arrangements related to root systems .
+In particular, we prove that Shi arrangements are divisionally free .
+2 Preliminaries
+Let us review several deﬁnitions and results used in the rest of this article.
+We use the notation and deﬁnitions appeared in §1. We use [15] as a general
+reference in this section. Deﬁne the M¨ obius functionµ : L(A) → Z by
+µ(X) = 1 if X = V and µ(X) = − ∑
+X⊊ Y ∈L(A) µ(Y ) if X ⁄= V . Then the
+characteristic polynomial χ(A; t) and the Poincar` e polynomial π(A; t)
+6
+are deﬁned by
+χ(A; t) : =
+∑
+X∈L(A)
+µ(X)tdim X ,
+π(A; t) : =
+∑
+X∈L(A)
+µ(X)(−t)codim X .
+As mentioned in §1, π(A; t) equals to the topological Poincar` e polynomial of
+M(A) when K = C. Also, it is easy to see that χ(A) is divisible by ( t − 1)
+if A ⁄= ∅. Write and deﬁne
+χ(A; t) =
+ℓ∑
+i=0
+bi(A)(−1)itℓ−i,
+χ0(A; t) : = χ(A; t)/(t − 1) =
+ℓ−1∑
+i=0
+bi(dA)(−1)itℓ−1−i.
+Remark 2.1
+The reason why we use the terminology bi(dA) is as follows. Fix a hyperplane
+H0 ∈ A . Then we may consider the operation named deconing dA of A
+with respect to H0. Namely, dA is a set of aﬃne hyperplanes obtained as
+intersections of αH0 = 1 with all hyperplanes L ∈ A \ { H0}. Then it is
+known that χ(dA; t) = χ0(A; t). See [15] for example. This is the reason of
+the notation above.
+Let θE := ∑ ℓ
+i=1 xi∂xi be the Euler derivation. Let us recall several results
+on these polynomials and freeness:
+Theorem 2.2 (Deletion-restriction formula, e.g., [15], Co rollary 2.57)
+Let (A, A′, AH) be a triple. Then it holds that
+χ(A; t) = χ(A′; t) − χ(AH; t),
+χ0(A; t) = χ0(A′; t) − χ0(AH; t).
+Theorem 2.3 (Addition-deletion theorem, [19])
+Let (A, A′, AH) be a triple. Then any two of the following three imply the
+third:
+(1) A is free with exp(A) = ( d1, . . . , dℓ−1, dℓ).
+(2) A′ is free with exp(A′) = ( d1, . . . , dℓ−1, dℓ − 1).
+7
+(3) AH is free with exp(AH) = ( d1, . . . , dℓ−1).
+Theorem 2.4 (Restriction Theorem, [19])
+In the notation of Theorem 2.3, assume that both A and A′ are free. Then
+all the statements (1), (2), and (3) in Theorem 2.3 hold. Moreover , we may
+choose a basis θ1, . . . , θℓ for D(A) such that αH divides θℓ and π(θ1), . . . , π(θℓ−1)
+form a basis for D(AH), where π is a residue map D(A) → D(AH).
+Theorem 2.5 (Factorization theorem, [20], Main Theorem)
+If A is free with exp(A) = ( d1, . . . , dℓ), then χ(A; t) = ∏ ℓ
+i=1(t − di).
+When ℓ = 3, the addition-deletion theorem 2.3 has the following simple
+form.
+Theorem 2.6 ([2], Theorem 1.1 (3))
+Let A be a central arrangement in V = K3. Then two of the following three
+imply all the statements (1), (2) and (3) in Theorem 2.3:
+(a) χ(A; t) = ( t − 1)(t − d1)(t − d2).
+(b) χ(A′; t) = ( t − 1)(t − d1)(t − (d2 − 1)).
+(c) |AH| = d1 + 1.
+Among the equivalent conditions in Theorem 2.6, we can ﬁnd several
+divisions of characteristic polynomials, and they imply the freeness o f each
+member in the triple ( A, A′, AH). From this point of view, Theorem 1.1 is
+a generalization of Theorem 2.6. Also, if we regard these freeness a s a local
+freeness in codimension three in K3, then Theorem 1.7 is also a generalization
+of Theorem 2.6. The following is also in [2] with a diﬀerent formulation.
+Theorem 2.7 ([2], Theorem 1.1)
+Assume that ℓ = 3 and let us consider the division
+χ0(A; t) = ( t − (|AH| − 1))(t − (|A| − |AH|)) + a.
+Then a = χ0(A; |AH| − 1) ≥ 0. Moreover, a = 0 implies that A is free.
+Remark 2.8
+Theorem 2.7 says that the integer a can be regarded as the remainder of
+the polynomial division of χ0(A; t) by t − (|AH| − 1) = χ0(AH; t). The non-
+negativity of a in the above was generalized in [2], Theorem 7.1 for an arbi-
+trary ℓ ≥ 3 just as an inequality. However, from the viewpoint of polynomial
+8
+divisions, we may understand the non-negativity as that of the lead ing term
+of the remainder of a characteristic polynomial division naturally. He nce the
+non-negativity r0 ≥ 0 in Theorem 1.7 can be regarded as a generalization of
+Theorem 2.7.
+Now let us explain the freeness criterion by using multiarrangements .
+A multiarrangement (A, m) is a pair consisting of an ℓ-arrangement A
+and a function m : A → Z>0. Let |m| := ∑
+H∈A m(H). For L ∈ A , let
+δL : A → { 0, 1} be a characteristic multiplicity of L deﬁned by δL(H) = 1
+only when H = L (hence δL(H) = 0 for all A ∋ H ⁄= L). For ( A, m), we can
+deﬁne the logarithmic derivation module D(A, m) by
+D(A, m) := {θ ∈ Der S | θ(αH) ∈ Sα m(H)
+H (∀H ∈ A)}.
+Also, its freeness and exponents can be deﬁned in the same manner as for
+A and D(A). When ( A, m) is free with exp( A, m) = ( d1, . . . , dℓ), it holds
+that ∑ ℓ
+i=1 di = |m|. For two multiplicities mi : A → Z>0 (i = 1, 2), m1 ≤ m2
+denotes m1(H) ≤ m2(H) for all H ∈ A. Then the following is the most basic
+method to determine the freeness.
+Theorem 2.9 (Saito’s criterion, [16])
+Let θ1, . . . , θℓ ∈ D(A, m). Then (A, m) is free if and only if θ1, . . . , θℓ are
+S-independent and ∑ ℓ
+i=1 deg θi = |m|.
+Not only the freeness, but also a characteristic polynomial χ(A, m; t)
+for a multiarrangement ( A, m) can be deﬁned too. Let us write
+χ(A, m; t) =
+ℓ∑
+i=0
+bi(A, m)(−1)itℓ−i.
+Also, there is the factorization theorem for free multiarrangemen ts as for the
+arrangement cases, i.e., if ( A, m) is free with exp( A, m) = ( d1, . . . , dℓ), then
+χ(A, m; t) =
+ℓ∏
+i=1
+(t − di).
+For details, see Deﬁnition 2.1 and Theorem 4.1 in [7]. Contrary to χ(A; t),
+to compute χ(A, m; t) when m is not identically 1 is very diﬃcult. In fact, it
+is not combinatorial (see [7]). However, it is easy to check that b1(A, m) =
+|m|. Moreover, b2(A, m) can be computed by using the following local-global
+formula.
+9
+Theorem 2.10 (Local-global formula, [7], Theorem 3.3)
+Let (A, m) be a multiarrangement. For X ∈ L2(A), denote exp(AX, m|AX ) =
+(dX
+1 , dX
+2 , 0, . . . ,0). Then
+b2(A, m) =
+∑
+X∈L2(A)
+dX
+1 dX
+2 =
+∑
+X∈L2(A)
+b2(AX, m|AX ).
+From a central arrangement A and a hyperplane H ∈ A , we may deﬁne
+an induced multiarrangement ( AH, mH) (called the Ziegler restriction of
+A onto H) by
+mH (K) := |{L ∈ A ′ | L ∩ H = K}|.
+The multiplicity mH is called the Ziegler multiplicity . By deﬁnition,
+|mH | = |A′| = |A| − 1. Then Ziegler showed the following fundamental
+fact.
+Theorem 2.11 ([23])
+Assume that A is free with exp(A) = (1 , d2, . . . , dℓ). Then the Ziegler re-
+striction (AH, mH) onto an arbitrary H ∈ A is free with exp(AH, mH) =
+(d2, . . . , dℓ).
+We say that A is locally free in codimension i along H ∈ A if AX
+is free for all X ∈ Li(A) with X ⊂ H (equivalently, for all X ∈ Li−1(AH)).
+By using this notion, as a converse of Theorem 2.11, the following fre eness
+criterion is known.
+Theorem 2.12 ([9], Theorem 5.1)
+Let A ⁄= ∅ and H ∈ A . Then b2(dA) ≥ b2(AH, mH), and the equality holds
+if and only if A is locally free in codimension three along H. Moreover, if
+the Ziegler restriction (AH, mH) is free, then the following conditions are
+equivalent:
+(1) A is free.
+(2) b2(dA) = b2(AH, mH).
+(3) AX is free for any X ∈ L2(AH), i.e., A is locally free in codimension
+three along H.
+Also, let us recall the addition-deletion theorem for multiarrangeme nts
+(A, m) from [8]. For H ∈ A , we may deﬁne a restriction ( AH, m∗) of the
+multiarrangement ( A, m) onto H, which is called the Euler restriction of
+10
+(A, m) onto H. Also, the new multiplicity m∗ is called the Euler multiplic-
+ity. Let us explain the deﬁnition of m∗ since it will be used for the proofs of
+main results.
+For X ∈ L2(A) with X ⊂ H, let mX denote the restriction of m
+onto AX. Then the multiarrangement ( AX, mX) is a direct product of a
+2-multiarrangement and the ( ℓ − 2)-empty arrangement. It is well-known
+that every 2-arrangement is free. Hence we may deﬁne exp( AX, mX) =
+(dX
+1 , dX
+2 , 0, . . . ,0). Therefore, there is a homogeneous free basis θ1, θ2, ϕ1, . . . , ϕℓ−2
+for D(AX, mX) such that deg θi = di (i = 1 , 2) and deg ϕj = 0 ( j =
+1, . . . , ℓ − 2). By the same reason, there are free basis θ′
+1, θ′
+2, ϕ′
+1, . . . , ϕ′
+ℓ−2
+for D(AX, mX − δH) such that deg θ′
+i = d′
+i (i = 1 , 2) and deg ϕ′
+j = 0 ( j =
+1, . . . , ℓ− 2), here exp( AX, mX − δH) = ( d′
+1, d′
+2, 0, . . . ,0). It was shown in [8]
+that we may assume d1 = d′
+1 + 1 and d2 = d′
+2. Moreover, we may choose
+bases in such a way that
+θ1 = αHθ′
+1, θ 2 = θ′
+2, ϕ j = ϕ′
+j (j = 1, . . . , ℓ− 2).
+Recall that X ∈ L2(A) with X ⊂ H ⇐ ⇒ X ∈ A H. Now deﬁne
+m∗(X) := deg θ2. For more details of these deﬁnitions, see [8]. By using
+these deﬁnitions, we have the addition-deletion theorem for multiar-
+rangements as follows.
+Theorem 2.13 ([8], Theorem 0.8)
+Let (A, m) be a multiarrangement, H ∈ A and (AH, m∗) the Euler restriction
+of (A, m) onto H. Then any two of the following three imply the third:
+(1) (A, m) is free with exp(A, m) = ( d1, . . . , dℓ−1, dℓ).
+(2) (A, m − δH) is free with exp(A, m − δH) = ( d1, . . . , dℓ−1, dℓ − 1).
+(3) (AH, m∗) is free with exp(AH, m∗) = ( d1, . . . , dℓ−1).
+Moreover, if both (A, m) and (A, m − δH ) are free, then all the three hold
+true.
+3 Proofs of results
+Let us start the proof of main results in §1. Let us add one notation. For
+an ℓ-multiarrangement (A, m) and X ∈ Li(A), assume that ( AX, mX ) is free
+with exp( AX, mX ) = ( d1, . . . , di, 0, . . . ,0). Then the set exp ∗(AX, mX) :=
+{d1, . . . , di}.
+First, we introduce a lemma which is used without referring in the rest
+of this article.
+11
+Lemma 3.1
+A 2-multiarrangement (A, m) is free. Let exp(A, m) = ( d1, d2). Then for
+H ∈ A, it holds that exp(A, m − δH ) = ( d1 − 1, d2) or (d1, d2 − 1).
+Proof. For example, see Lemma 2.7 in [2]. □
+Second we need the following lemmas.
+Lemma 3.2
+Let A be a 2-arrangement. Then exp(A, m) = ( |m| − |A| + 1 , |A| − 1)
+when |m| ≤ 2|A| − 1. If |m| ≥ 2|A|, then di ≥ |A| − 1 ( i = 1 , 2) for
+exp(A, m) = ( d1, d2) with d1 ≤ d2.
+Proof. This result is well-known. Here we give a short proof. For a complete
+proof, see Lemma 2.10 in [2] for example.
+First consider the case |m| ≤ 2|A| − 1. Then clearly
+θ1 := (
+∏
+H∈A
+αm(H)−1
+H )θE ∈ D(A, m).
+Note that deg θ1 = |m| − |A| + 1. Also the deﬁnition of D(A, m) shows
+that there are no θ ∈ D(A, m) such that θ | θ1. Since d1 + d2 = |m| by
+Theorem 2.9, it has to hold that |m| − |A| + 1 = d1, or |m| − |A| + 1 = d2,
+or d2 < |m| − |A| + 1. The third case contradicts Saito’s criterion 2.9.
+Second assume that |m| ≥ 2|A| and take multiplicities m′ ≤ m such
+that |m′| = 2 |A| − 1. Then the ﬁrst assertion shows that exp( A, m′) =
+(|A| − 1, |A|). Since D(A, m′) ⊃ D(A, m), it holds that |A| − 1 ≤ d1 ≤ d2.□
+Lemma 3.3
+Let (A, m) be a multiarrangement and ﬁx H ∈ A with m(H) ≥ 2. Then
+(1) if A is a 2-arrangement, then b2(A, m)−b2(A, m−δH) = exp ∗(A, m)∩
+exp∗(A, m − δH ), and
+(2) b2(A, m) − b2(A, m − δH) ≥ |A| − 1.
+Proof.
+(1) Immediate by the deﬁnition of b2(A, m) and Lemmas 3.1 and 3.2.
+(2) Let us compute b2(A, m) − b2(A, m − δH) by using the local-global
+formula 2.10. Since ( AX, mX) = ( AX, (m − δH )X) for L2(A) ∋ X ⁄⊂H, it
+holds that
+(3.1) b2(A, m) − b2(A, m − δH ) =
+∑
+X∈AH
+(b2(AX, mX) − b2(AX, (m − δH)X)).
+Now apply (1) and Lemma 3.2 to show that
+(3.1) ≥
+∑
+X∈AH
+(|AX| − 1) = |A| − 1,
+12
+which completes the proof. □
+Lemma 3.4
+Let (A, m) be a multiarrangement and ﬁx H ∈ A with m(H) ≥ 2. Let m∗
+be the Euler multiplicity of (A, m) onto H. Then
+(1) m∗(X) ≥ |A X| − 1 for all X ∈ A H, m∗(X) = exp ∗(AX, mX ) ∩
+exp∗(AX, mX − δH) and
+(2) if m∗(X) ⁄= |AX| − 1 for some X ∈ A H, then b2(A, m) − b2(A, m −
+δH ) > |A| − 1.
+Proof. (1) When |mX| ≤ 2|AX| − 1, the explicit construction of θ1 in the
+proof of Lemma 3.2 shows that m∗(X) = |AX| − 1. If |mX| ≥ 2|AX|, then
+Lemma 3.2 shows that d ≥ |A X| − 1 for all d ∈ exp∗(AX, mX). Hence the
+deﬁnition of m∗ shows that m∗(X) ≥ |A X|− 1. The second statement follows
+immediately by the same proof as Lemma 3.3 (1).
+(2) By the assumption, (1) and Lemma 3.3 (1), m∗(Y ) = b2(AY , mY ) −
+b2(AY , (m−δH )Y ) > |AY |− 1 for some Y ∈ A H. Then apply this and Lemma
+3.3 (2) to the local-global formula 2.10 to obtain
+b2(A, m) − b2(A, m − δH ) =
+∑
+X∈AH
+(b2(AX, mX) − b2(AX, (m − δH )X))
+>
+∑
+X∈AH
+(|AX| − 1) = |A| − 1.
+□
+Lemma 3.5
+Let (A, m) be an ℓ-multiarrangement, H ∈ A with m(H) > 1, X ∈ L2(AH)
+and (AH, m∗) the Euler restriction of A onto H. Then
+(3.2) b2(AH
+X, mX ) − b2(AH
+X, (m − δH)X ) = m∗(X).
+Proof. Immediate from Lemmas 3.3 (1) and 3.4 (1). □
+Proposition 3.6
+In the setup of Theorem 1.7, it holds that
+b2(AH) + (|AH| − 1)(|A| − |AH| − 1) + r0(3.3)
+= b2(dA) ≥ b2(AH, mH)
+≥ b2(AH) + (|AH| − 1)(|A| − |AH| − 1).
+13
+In particular, when r0 = 0 , for a multiplicity m on AH such that 1 ≤ m ≤
+mH , it holds that
+b2(AH, m) − b2(AH, m − δL) = |AH| − 1,(3.4)
+b2(AH
+X, mX ) − b2(AH
+X, (m − δL)X ) = |AH
+X| − 1(3.5)
+for L ∈ A H, X ∈ L2(AH) with X ⊂ L and m(L) > 1.
+Proof. Recall the division of characteristic polynomials:
+χ0(A; t) = χ0(AH; t)(t − (|A| − |AH|)) +
+ℓ−3∑
+i=0
+ritℓ−3−i.
+Now let us introduce three (in)equalities:
+First inequality . b2(dA) ≥ b2(AH, mH). This is a part of Theorem
+2.12.
+Second inequality. b2(AH, mH) ≥ b2(AH) + (|AH| −1)(|A| − |AH| −1).
+First note that |mH| − |A H| = |A| − |A H| − 1. By deﬁnition, there are a
+sequence of hyperplanes L1, . . . , L|A|−|AH |−1 ∈ A H such that mH = 1 + δL1 +
+· · · + δL|A|−|AH |− 1
+. Hence Lemma 3.3 (2) implies that
+b2(AH, mH ) =
+|A|−|AH |−1∑
+i=1
+(b2(AH, 1 + δL1 + · · · + δLi)(3.6)
+−b2(AH, 1 + δL1 + · · · + δLi− 1)) + b2(AH)
+≥
+|A|−|AH |−1∑
+i=1
+(|AH| − 1) + b2(AH)
+= b2(AH) + (|A| − |AH| − 1)(|AH| − 1).
+Third equality . b2(dA) = b2(AH) + ( |AH| − 1)(|A| − |A H| − 1) + r0.
+First, note that χ0(A; t) = ( t − (|A| − |AH|))χ0(AH; t) + ∑ ℓ−3
+i=0 ritℓ−3. Hence
+comparing the coeﬃcients of tℓ−3 implies
+b2(dA) = ( |A| − |AH|)(|AH| − 1) + b2(dAH) + r0.
+Since χ(AH; t) = ( t−1)χ0(AH; t), it holds that b2(AH) = b2(dAH)+ |AH|− 1.
+Hence
+b2(dA) = ( |A| − |AH| − 1)(|AH| − 1) + b2(AH) + r0.
+Now we have three (in)equalities. Combine these three to obtain
+b2(AH) + (|AH| − 1)(|A| − |AH| − 1) + r0
+= b2(dA) ≥ b2(AH, mH)
+≥ b2(AH) + (|AH| − 1)(|A| − |AH| − 1),
+14
+which is the ﬁrst statement in this proposition.
+Now assume that r0 = 0. Then the inequalities above are all equalities.
+Hence
+b2(dA) = b2(AH, mH)(3.7)
+= b2(AH) + (|A| − |AH| − 1)(|AH| − 1).(3.8)
+Let us show b2(AH, m) − b2(AH, m − δL) = |AH| − 1 for a multiplicity
+1 ≤ m ≤ mH and L ∈ A H with m(L) > 1. We know that b2(AH, m) −
+b2(AH, m − δL) ≥ |A H| − 1 by Lemma 3.3 (2). If this inequality is strict,
+then again Lemma 3.3 (2) and (3.6) show that the equality (3.8) canno t hold,
+which is a contradiction.
+Next let us show that b2(AH
+X, mX )−b2(AH
+X, (m−δL)X) = |AH
+X|− 1 for X ∈
+L2(AH) with X ⊂ L. By the above, we know that b2(AH, m) − b2(AH, m −
+δL) = |AH| − 1. So the local-global formula 2.10 shows that
+b2(AH, m) − b2(AH, m − δL) =
+∑
+X∈(AH )L
+(b2(AH
+X, mX) − b2(AH
+X, (m − δL)X))
+= |AH| − 1 =
+∑
+X∈(AH )L
+(|AH
+X| − 1).
+Since b2(AH
+X, mX) − b2(AH
+X, (mX − δL)X) ≥ |A H
+X| − 1 by Lemma 3.3 (2), this
+inequality has to be an equality, which completes the proof. □
+Now let us prove Theorem 1.7.
+Proof of Theorem 1.7 . The nonnegativity r0 ≥ 0 holds immediately
+from the inequality in Proposition 3.6. Assume that r0 = 0. Then we
+have the equation (3.7). Thus Theorem 2.12 shows that A is locally free
+in codimension three along H. Hence to complete the proof by applying
+Theorem 2.12, it suﬃces to show that χ(AH
+X; t) divides χ(AX; t) for all X ∈
+L3(A) with X ⊂ H.
+We show that exp( AH
+X, (mH )X) = ( |AH
+X| − 1, |(mH)X | − |A H
+X| + 1) by
+applying Theorem 2.13. First, note that (( AH)X, (mH )X) coincides with the
+Ziegler restriction of AX onto H ⊃ X by deﬁnition. Hence let us express
+this multiarrangement by ( AH
+X, mH
+X). Now we need to compute the Euler
+multiplicity m∗, which can be obtained as the Euler restriction of AX onto
+H. Recall that we have the equation (3.5). Hence Lemma 3.5 shows tha t
+(3.9) m∗(X) = b2(AH
+X, mX) − b2(AH
+X, (m − δL)X) = |AH
+X| − 1
+for L ∈ A H and X ∈ (AH)L as in the notation of Proposition 3.6.
+15
+Since exp ∗(AH
+X) = (1 , |AH
+X| − 1) by Lemma 3.2, Theorem 2.13 shows that
+exp(AH
+X, (mH)X ) = ( |(mH)X|−(|AH
+X|−1), |AH
+X|−1) = ( |AX|−|A H
+X|, |AH
+X|−1).
+Because A is locally free in codimension three along H by (3.7), Theorems
+2.5 and 2.11 show that
+χ(AX; t) = ( t − 1)(t − (|AH
+X| − 1))(t − (|AX| − |AH
+X|)),
+χ(AH
+X; t) = ( t − 1)(t − (|AH
+X| − 1)),
+which completes the proof. □
+Example 3.7
+Let A be a plane arrangement consisting of the cone of all edges and diago nal
+lines of a regular pentagon. Hence |A| = 11 . It is well-known that (for
+example, see [15], Example 4.54) A is free with exp(A) = (1 , 5, 5) and |AH| =
+5 for any H ∈ A . Let B be the coning of A, hence free with exp(A) =
+(1, 1, 5, 5). Let H0 ∈ B be the inﬁnite line in A and let X ∈ L2(AH0) be a
+ﬂat which is contained in all the cone of planes belonging to A. Then it is
+easy to see that BX = A × ∅1 and BH0
+X consists of ﬁve linear lines in a plane.
+Hence
+χ(BX; t) = ( t − 1)(t − 5)2, χ (BH0
+X ; t) = ( t − 1)(t − 4).
+So clearly χ(BH0
+X ; t) ∤ χ(BX; t).
+Proof of Theorem 1.1 . By Theorems 1.7 and 2.12, it suﬃces to show that
+the Ziegler restriction ( AH, mH) of A onto H is free. By the assumption
+and Terao’s factorization theorem 2.5, it holds that χ(AH; t) = ∏ ℓ−1
+i=1(t − di),
+where d1 = 1 and exp( AH) = ( d1, . . . , dℓ−1). Since χ(AH; t) | χ(A; t), we
+may write χ(A; t) = ( t − dℓ)χ(AH; t) = ∏ ℓ
+i=1(t − di) for dℓ := |A| − |A H| ∈
+Z≥0. In fact, we show that, for every multiplicity m with 1 ≤ m ≤ mH,
+the multiarrangement ( AH, m) is free with exp( AH, m) = ( |m| − |A H| +
+1, d2, . . . , dℓ−1).
+We show by induction on |m|. If m is a constant multiplicity 1, then the
+statement holds true by the assumption. Assume that the statem ent holds
+true for all m with |m| − |AH| < n (n ∈ Z≥1). Take an arbitrary m satisfying
+the condition above and |m| − |A H| = n. We may choose a hyperplane L ∈
+AH such that m(L) ≥ 2. By the induction hypothesis, the multiarrangement
+(AH, m − δL) is free with exp( AH, m − δL) = ( n, d2, . . . , dℓ−1). Let us apply
+the addition theorem for multiarrangements (Theorem 2.13) to con ﬁrm that
+(AH, m) is free with exp( AH, m) = ( n + 1, d2, . . . , dℓ−1).
+For that purpose, we need to compute the Euler restriction (( AH)L, m∗)
+of ( AH, m) onto L. By the assumption, Proposition 3.6, the equation (3.5)
+and Lemma 3.5, the equation (3.9) also follows here, i.e.,
+b2(AH
+X, mX ) − b2(AH
+X, (m − δL)X ) = m∗(X) = |AH
+X| − 1
+16
+for all X ∈ (AH)L. On the other hand, by deﬁnition, mL(X) = |AH
+X| − 1
+for X ∈ (AH)L, where (( AH)L, mL) is the Ziegler restriction of AH onto L.
+Hence in this case, these two restrictions coincide; (( AH)L, mL) = (( AH)L, m∗).
+Since AH is free with exp( AH) = (1 , d2, . . . , dℓ−1), Theorem 2.11 shows that
+((AH)L, mL) = (( AH)L, m∗) is free with exponents ( d2, . . . , dℓ−1). Hence the
+assumption on the freeness and exponents on ( AH, m − δL), and Theorem
+2.13 show that ( AH, m) is also free with exp( AH, m) = ( n + 1, d2, . . . , dℓ−1).
+Now apply this argument to ( AH, mH). Then we obtain that ( AH, mH)
+is free with
+exp(AH, mH) = ( |mH| − |AH| + 1, d2, . . . , dℓ−1)
+= ( |A| − |AH|, d2, . . . , dℓ−1)
+= ( d2, . . . , dℓ−1, dℓ),
+which completes the proof. When the condition χ(AH, t) | χ(A; t) is replaced
+by r0 = 0 as mentioned in Remark 1.8, the proof is totally the same, so we
+left it to the reader. □
+Proof of Theorem 1.3 . Apply Theorem 1.1 repeatedly with Lemma 3.1.
+□
+Remark 3.8
+Theorem 1.1 can be regarded as a modiﬁed converse of the famous O rlik’s
+conjecture, which asserted that AH is free if A is free. To this conjecture, a
+counter example was found by Edelman and Reiner in [12]. This conject ure
+was asserting that global freeness implies restricted freeness. T hough this
+is not true, Theorem 1.1 asserts that the modiﬁed converse is true , i.e.,
+restricted freeness with a combinatorial condition implies global fre eness.
+As a corollary of the proof above, the following is immediate.
+Corollary 3.9
+(1) Assume that χ(AH; t) | χ(A; t). Then (AH, mH) is free if AH is free.
+(2) Assume that there is H ∈ A such that the Ziegler restriction (AH, mH)
+is free and χ(AH; t) | χ(A; t). Then A is free.
+(3) Assume that AH is free. If r0 = 0 in the division
+χ0(A; t) = ( t − (|A| − |AH|))χ0(AH; t) +
+ℓ−3∑
+i=0
+ritℓ−3−i,
+then r1 = · · · = rℓ−3 = 0. Equivalently, χ(AH; t) divides χ(A; t).
+If we emphasize the aspect as the addition-deletion theorems, we m ay
+have the following formulations too.
+17
+Theorem 3.10
+Let A be an ℓ-central arrangement. Assume that there is a hyperplane L ⁄∈ A
+such that χ((A ∪ {L})L; t) divides χ(A; t) and that (A ∪ {L})L is free. Then
+A is free.
+Proof. Apply the same proof as that of Theorem 1.1 to A ∪ {L} to obtain
+that A ∪ {L} is free since χ((A ∪ {L})L; t) | χ(A ∪ {L}; t) by Theorem 2.2.
+Now apply Theorem 2.3 to complete the proof. □
+Theorem 3.11
+Let (A, A′, AH) be the triple with respect to H ∈ A . Assume that AH is
+free. Then the following conditions are equivalent:
+(1) A is free and exp(A) ⊃ exp(AH).
+(2) A′ is free and exp(A′) ⊃ exp(AH).
+(3) All the three of A, A′ and AH are free.
+(4) χ(AH; t) divides χ(A; t).
+(5) χ(AH; t) divides χ(A′; t).
+(6) χ(A; t) and χ(A′; t) have a GCD of degree ℓ − 1.
+(7) In the division χ0(A; t) = χ0(AH; t)(t − (|A| − |AH|)) + ∑ ℓ−3
+i=0 ritℓ−3−i,
+it holds that r0 = 0.
+(8) In the division χ0(A′; t) = χ0(AH; t)(t − (|A′| − |AH|)) + ∑ ℓ−3
+i=0 r′
+itℓ−3−i,
+it holds that r′
+0 = 0.
+Proof. The equivalences among (1), (2) and (3) follow immediately from
+the addition-deletion theorem 2.3. Those among (4), (5) and (6) fo llow from
+the deletion-restriction theorem 2.2. Since χ0(A; t) = χ0(A′; t) − χ0(AH; t),
+that between (7) and (8) is easy. Both (1) ⇐ ⇒ (4) and (1) ⇐ ⇒ (7) follow
+by Theorem 1.1 and Remark 1.8, which completes the proof. □
+The conditions (1), (2) and (3) are the addition-deletion theorems that
+contain freeness conditions. However, the others are just comb inatorial ones.
+Also, the freeness is assumed for an ( ℓ − 1)-arrangement AH to check the
+freeness of ℓ-arrangement A, which enables us an inductive argument.
+The following result is a corollary of the proofs of Theorems 1.7 and 1.1 .
+18
+Corollary 3.12
+Let A be a free ℓ-arrangement with exp(A) = (1 , d2, . . . , dℓ) and let m : A →
+Z>0. Let us consider the division
+χ(A, m; t) = ( t − (|m| − |A| + 1))χ0(A; t) +
+ℓ−2∑
+i=0
+sitℓ−2−i.
+If s0 = 0, then (A, m) is free with exp(A, m) = ( |m| − |A| + 1, d2, . . . , dℓ).
+The following is a certain converse of Theorem 1.7.
+Corollary 3.13
+Let A be an ℓ-arrangement.
+(1) Assume that there is H ∈ A such that χ(AH
+X; t) divides χ(AX; t) for
+all X ∈ L2(AH), and AH is free. Then A is free.
+(2) If there is a ﬂag V = X0 ⊃ X1 ⊃ · · · ⊃ Xℓ−2 with Xi ∈ Li(A) ( i =
+0, . . . , ℓ− 2) such that, for Ai := AXi (i = 0 , . . . , ℓ− 2), χ((Ai+1)Y ; t)
+dividies χ((Ai)Y ; t) for all Y ∈ L2(Ai+1) and for i = 0, . . . , ℓ− 3. Then
+A is free.
+Proof. (1) By the same argument as in the proof of Theorem 1.1, it holds
+that
+b2(A, m) − b2(A, m − δL) = |AH| − 1
+and
+b2(AH
+X, mX ) − b2(AH
+X, (m − δL)X ) = m∗(X) = |AH
+X| − 1
+for all m : AH → Z with 1 ≤ m ≤ mH, all L ∈ A H with m(L) > 1 and
+X ∈ (AH)L. Hence Theorems 2.11 and 2.13 complete the proof. (2) is an
+immediate consequence of (1). □
+Without the freeness of AH, Corollary 3.13 (1) does not hold. See the
+following example.
+Example 3.14
+Let A := {xyzw (x + y + z + w) = 0 } and H := {w = 0} ∈ A . Then it is easy
+to check that χ(AX; t) = ( t − 1)3 and χ(AH
+X; t) = ( t − 1)2 for all X ∈ L2(AH).
+Also, it is easy to compute
+χ(A; t) = ( t − 1)(t3 − 4t2 + 6t − 4), χ (AH; t) = ( t − 1)(t2 − 3t + 3).
+Hence AH is not free and χ(AH; t) ∤ χ(A; t), and Theorem 3.13 (1) does not
+hold.
+19
+4 Divisionally free arrangements
+In this section we give the main application of main results in this article.
+Before that, let us recall Terao’s conjecture.
+Conjecture 4.1 (Terao)
+Let A, B be two ℓ-arrangements such that L(A) ≃ L(B) as posets and that
+A is free. Then B is also free.
+Conjecture 4.1 is still open even when ℓ = 3. To approach Conjecture 4.1,
+it is one way to construct a class of free arrangements such that w hether an
+arrangement belongs to that class or not can be determined by com binatorics.
+If we can ﬁnd such a class and show that all free arrangements are in it, then
+Conjecture 4.1 is settled positively. Also, how many free arrangeme nts could
+belong to such a class is an interesting problem itself. For that purpo se,
+Terao introduced a class of inductively free arrangements by using Theorem
+2.3 which satisﬁes the properties written above. First recall the de ﬁnition of
+the inductively free arrangements.
+Deﬁnition 4.2 ([19])
+The set IF ℓ of ℓ-arrangements consists of the following:
+(1) If ℓ = 1, 2, then all arrangements are in IF ℓ.
+(2) Assume that ℓ ≥ 3. Then A ∈ IF ℓ if A = ∅ℓ, or there is H ∈ A such
+that A′ := A \ {H} ∈ IF ℓ, AH ∈ IF ℓ−1 and χ(AH; t) | χ(A′; t).
+By Theorem 2.3, A ∈ IF ℓ is free. An arrangement A is called inductively
+free (IF) if A ∈ IF := ∪ℓ≥1IF ℓ.
+Hence to approach Conjecture 4.1, to enlarge the class IF is an inter-
+esting strategy. For that purpose, we introduce the class of divis ionally free
+arrangements. Though it has been already deﬁned in Deﬁnition 1.5, le t us
+give an another equivalent deﬁnition of it similar to Deﬁnition 4.2.
+Theorem-Deﬁnition 4.3
+The set DF ℓ of ℓ-arrangements can be also deﬁned as follows:
+(1) When ℓ = 1 and 2, all arrangements are in DF ℓ.
+(2) Assume that ℓ ≥ 3. Then A ∈ DF ℓ if A = ∅ℓ, or there is H ∈ A such
+that χ(AH; t) | χ(A; t) and AH ∈ DF ℓ−1.
+An arrangement A is called divisionally free (DF) if A ∈ DF := ∪ℓ≥1DF ℓ.
+20
+Comparing Deﬁnition 4.2 with Deﬁnition 4.3, it can be seen that the di-
+visionally free arrangement is an analogy of the inductively free arra ngement
+by replacing the addition-deletion theorem 2.3 by Theorem 1.1.
+By the Deﬁnitions 1.5, 4.3, Theorems 2.3, 1.1 and 1.3, the following is
+clear.
+Theorem 4.4
+(1) If A ∈ DF , then A is free.
+(2) IF ⊂ DF .
+(3) Whether A ∈ DF or not depends only on L(A).
+Hence to check the divisional freeness of an arrangement gives on e method
+to check the “dependency of that freeness on combinatorics”.
+Recall that every inductively free arrangement has to be constru cted from
+the empty arrangement by the addition theorem. On the other han d, a
+divisionally free arrangement need not. In fact, the class DF is strictly
+larger than IF . Let us show it as Theorem 1.6.
+Proof of Theorem 1.6 . It suﬃces to ﬁnd an arrangement A ∈ DF \ IF .
+We can ﬁnd such an example among the reﬂecting hyperplanes of a un itary
+reﬂection group.
+Let G31 be a ﬁnite unitary reﬂection group acting on C4, where we use
+the labeling of such groups due to Shephard and Todd in [17]. Let A be the
+unitary reﬂection arrangement in V = C4 corresponding to G31. Then it is
+shown that A is free with exp( A) = (1 , 13, 17, 29) (see [15], Table C. 12 for
+example), but A is not inductively free ([13], Theorem 1.1).
+However, Lemma 3.5 in [13] showed that there is H ∈ A such that AH is
+free with exp( AH) = (1 , 13, 17). Also, Lemma 4.1 in [10] shows that there is
+L ∈ A H such that |(AH)L| = 14. Hence Theorem 2.5 shows that χ(AH; t) |
+χ(A; t) and χ((AH)L; t) | χ(AH; t), which implies that A is divisionally free
+by Theorem 1.3. Therefore, IF ⊊ DF .
+Also, the intermediate arrangements Ak
+ℓ (r) ∈ DF \ IF if k ⁄= 0 , ℓ ≥ 3.
+See Theorem 5.6 for details. □
+One example to which the divisional freeness is applied is as follows:
+Example 4.5
+It is known that all the freeness of Weyl arrangements depends o nly on its
+combinatorics. Here we show the same statement, for certain cas es, by using
+divisionally free arrangements.
+Let Bℓ be the Weyl arrangement of the type Bℓ deﬁned by
+ℓ∏
+i=1
+xi
+∏
+1≤i<j≤ℓ
+(x2
+i − x2
+j ) = 0 .
+21
+Then immediately Bxℓ=0
+ℓ = Bℓ−1. Also, we may compute
+χ(Bℓ; t) = ( t − 1)(t − 3) · · ·(t − (2ℓ − 1)).
+Hence it follows that
+χ(Bi−1; t) | χ(Bi; t) ( i = 3, . . . , ℓ).
+Therefore, Bℓ ∈ DF . The same proof works for the root systems of the types
+A and C.
+Example 4.6
+By the proof of Theorem 1.6, A(G31) ∈ DF .
+For the ﬁnite unitary reﬂection arrangements, inductive freenes s and di-
+visional freeness almost coincide:
+Corollary 4.7
+Let W be a ﬁnite irreducible complex reﬂection group and A = A(W ) its
+corresponding reﬂection arrangement. Then A ∈ IF or W = G31 if and only
+if A ∈ DF .
+Proof. Let W ⁄= G31. Then Corollary 1.3 in [13] shows that A = A(W ) ∈
+IF if and only if exp( AH) ⊂ exp(A) for any H ∈ A . Since A is free, this
+is also equivalent to say that A ∈ DF . Hence the proof of Theorem 1.6
+completes the proof. □
+It seems interesting to study the (non-)divisional freeness of se veral non-
+inductively free arrangements around complex reﬂection arrange ments which
+appeared in the recent development. See [10], [13] for example.
+Recalling the fact that there have been several developments on h ow to
+check the inductively freeness of several arrangements due to [ 10], [13] and
+so on, practically, the following formulation of Theorem 1.3 is also usef ul.
+Theorem 4.8
+A ∈ DF if and only if A has a ﬂag V = X0 ⊃ X1 ⊃ · · · ⊃ Xℓ−2 with
+Xi ∈ Li(A) such that χ(AXi+1; t) divides χ(AXi \{Xi+1}; t) for i = 0, . . . , ℓ−3
+and that A \ {X1} is free.
+Proof. Follows immediately from Theorems 1.1, 1.3, 2.3 and Deﬁnitions 1.5
+and 4.2. □
+Corollary 4.9
+A ∈ DF if and only if A has a ﬂag V = X0 ⊃ X1 ⊃ · · · ⊃ Xℓ−2 with Xi ∈
+Li(A) such that AXi is all free for i = 1 , . . . , ℓ− 2, exp(AXi+1) ⊂ exp(AXi)
+for i = 1, . . . , ℓ− 3 and that A \ {X1} is free with exp(A \ {X1}) ⊃ exp(AX1).
+22
+Proof. Apply the same proof as that of Theorem 4.8. □
+The points in Theorem 4.8 and Corollary 4.9 are, though we have to che ck
+the freeness of some arrangements, we do not have to check any thing else on
+them contrary to inductively free arrangements. Corollary 4.9 is us eful when
+we have a list of free arrangements.
+In the end of this section let us prove Theorem 1.9.
+Proof of Theorem 1.9 . Let A be an arrangement and H ∈ A . Recall
+that, if both A and AH are free with exp( AH) ⊂ exp(A), then χ0(A; t) =
+(t − (|A| − |A H|))χ0(AH; t) by the deletion theorem (Theorem 2.3) and the
+factorization theorem (Theorem 2.5). Hence the implication (1) to ( 2) is
+immediate by the deﬁnition of divisional free. Assume (2). Let us agr ee that
+Xℓ−1 is an arrangemnet of one point on a line, we have
+b2(dA) =
+∑
+0≤i<j≤ℓ−2
+(|AXi| − |AXi+1|)(|AXj| − |AXj+1|)
+=
+ℓ−3∑
+i=0
+(|AXi| − |AXi+1|)
+ℓ−2∑
+j=i+1
+(|AXj | − |AXj+1|)
+=
+ℓ−3∑
+i=0
+(|AXi| − |AXi+1|)(|AXi+1| − 1),
+which implies (3).
+Finally, assume (3). Applying Theorem 1.8 to AXi and AXi+1, it holds
+that
+(4.1) b2(dAXi) ≥ b2(dAXi+1) + (|AXi| − |AXi+1|)(|AXi+1| − 1).
+Taking the sum from i = 0 to i = ℓ − 3 of the equation (4.1), we have
+b2(dA) ≥
+ℓ−3∑
+i=0
+(|AXi| − |AXi+1|)(|AXi+1| − 1).
+Here we used the fact that b2(dAXℓ− 2) = 0 since χ0(AXℓ− 2; t) = t−|AXℓ− 2|+1.
+Since (3) assumes the above inequality is the equality, all the inequalit ies in
+(4.1) have to be the equalities. Now apply Theorem 1.3 to each AXi to show
+that they are all divisionally free, which completes the proof. □
+The following is an immediate corollary of the proof of Theorem 1.9.
+23
+Corollary 4.10
+In the notation of Theorem 1.9, let V = X0 ⊃ X1 ⊃ · · · ⊃ Xℓ−2 be an
+arbitrary ﬂag with Xi ∈ Li(A). Then
+b2(dA) ≥
+ℓ−3∑
+i=0
+(|AXi| − |AXi+1|)(|AXi+1| − 1).
+5 Recursively and divisionally free arrange-
+ments
+First let us recall the deﬁnition of the recursively free arrangemen ts.
+Deﬁnition 5.1 (Recursively free arrangements)
+A set of ℓ-arrangements RF ℓ is deﬁned by,
+(a) all arrangements are in RF ℓ when ℓ = 1, 2, and
+(b) for ℓ ≥ 3, A ∈ RF ℓ if A = ∅ℓ, or there is a hyperplane H ∈ A such
+that AH ∈ RF ℓ−1, A \ {H} ∈ RF ℓ and χ(AH; t) | χ(A; t), or there is
+a hyperplane L ⁄∈ Asuch that (A ∪ {L}) ∈ RF ℓ, (A ∪ {L})L ∈ RF ℓ−1
+and χ((A ∪ {L})L; t) | χ(A; t).
+By Theorem 2.3, A is free if A ∈ RF . We say that an arrangement A is
+recursively free if A ∈ RF := ∪ℓ≥1RF ℓ.
+Remark 5.2
+The deﬁnition of recursively free arrangements may seem to be art iﬁcial.
+However, this contains almost all of known free arrangements. Th ere are
+only three arrangements known which are free but non-recursive ly free. The
+ﬁrst one is found by Cuntz and Hoge in [11], and the other two are in [4 ].
+Though some free arrangements (like A(G31) in the previous section) are not
+known whether it is recursively free or not (see [10], Corollary 4.3), by these
+known results on RF , it is worth considering Conjecture 4.1 for recursively
+free arrangements.
+Contrary to the inductively free arrangements, it is not yet known whether
+the freeness of recursively free arrangements depends only on t he combina-
+torics.
+Problem 5.3
+Does the freeness of recursively free arrangements depend only on its combi-
+natorics?
+24
+We will show that a lot of recursively free arrangements are in fact d ivi-
+sionally free. For that purpose, let us introduce a deﬁnition.
+Deﬁnition 5.4
+Let RF = ∪ℓ≥1RF ℓ denote the class of recursively free arrangements. Deﬁne
+RF ∗
+1 := RF 1, RF ∗
+2 := RF 2, and
+RF ∗
+ℓ : = {A ∈ RF ℓ | ∃H ∈ A such that χ(AH; t) | χ(A; t)
+and AH ∈ RF ∗
+ℓ−1} (ℓ ≥ 3),
+and put RF ∗ := ∪ℓ≥1RF ∗
+ℓ . We call RF ∗ the class of recursively free
+arrangements at the hill . If A ∈ RF \ RF ∗, then we say that A is a
+recursively free arrangement at the valley .
+As far as we know, there have been no answer to Problem 5.3. Here w e
+give the ﬁrst partial answer to Problem 5.3 asserting that recursiv ely free
+arrangements not at the valley are divisionally free.
+Theorem 5.5
+RF ∗ ⊂ DF .
+Proof. We show by induction on ℓ. When ℓ = 1, 2, then there is nothing to
+show. Assume that ℓ ≥ 3 and A ∈ RF ∗
+ℓ . Then there is H ∈ A such that
+χ(AH; t) | χ(A; t) and AH ∈ RF ∗
+ℓ−1 ⊂ DF ℓ−1 by the induction hypothesis.
+Hence Deﬁnition 4.3 shows that A ∈ DF ℓ. □
+An example of non-inductively free A ∈ RF ∗ is intermediate arrange-
+ments. Let Ak
+ℓ (r) ( ℓ ≥ 2, 0 ≤ k ≤ ℓ) be an ℓ-arrangement deﬁned by
+k∏
+i=1
+xi
+∏
+1≤i<j≤ℓ, 0≤n<r
+(xi − ζ nxj) = 0 ,
+where ζ is a primitive r-th root of unity. They are called intermediate
+arrangements, and ﬁrst studied by Orlik and Solomon in [14]. They in-
+terpolate between the reﬂection arrangements corresponding t o monomial
+groups, and they are all free arrangements (Propositions 2.11 an d 2.13, [14]).
+The inductive freeness of intermediate arrangements is studied in [1 0], and
+showed that Ak
+ℓ (r) is not inductively free if and only if r ≥ 3 and 0 ≤ k ≤ ℓ−3
+(Theorem 3.6, [10]). On their divisional freeness, we have the followin g.
+Theorem 5.6
+Let ℓ ≥ 3. Then Ak
+ℓ (r) ∈ DF if and only if k ⁄= 0.
+25
+Proof. Let H ∈ A k
+ℓ (r) be an arbitrary coordinate hyperplane. When k = 0,
+by Corollary 1.3 in [13], there are no H ∈ A such that AH is free and
+χ(AH; t) | χ(A; t). Hence A0
+ℓ (r) is not divisionally free. Assume that k ⁄=
+0. Then for a coordinate hyperplane H ∈ A , by the result in [14] (see
+Proposition 3.1 in [10] too), it holds that ( Ak
+ℓ (r))H ≃ A ℓ−1
+ℓ−1(r), and
+exp(Ak
+ℓ (r)) ⊃ exp(Ak
+ℓ (r)H), exp(Aj
+j(r)) ⊃ exp(Aj−1
+j−1(r)) ( j = 3, . . . , ℓ).
+Hence Theorem 1.3 shows that Ak
+ℓ (r) ∈ DF . □
+As shown in Theorem 3.6 in [10], Ak
+ℓ (r) (0 < k < ℓ − 2, ℓ ≥ 3) are
+not inductively free but recursively free. By Theorem 5.6, the cond itions in
+Theorem 5.5 are satisﬁed. Hence Ak
+ℓ (r) ∈ RF ∗. So only the arrangement
+A0
+ℓ (r) which is at the the valley of free paths of arrangements Ak
+ℓ (r) ( k ≥ 0)
+is not divisionally free.
+Also, following the deﬁnition based on the addition-deletion theorems , we
+can deﬁne the following class of free arrangements.
+Deﬁnition 5.7
+(1) A set of ℓ-arrangements MF ℓ is deﬁned by,
+(a) all arrangements are in MF ℓ when ℓ = 1, 2, and
+(b) for ℓ ≥ 3, A ∈ MF ℓ if there is a hyperplane H ∈ A such that AH ∈
+MF ℓ−1 and χ(AH; t) | χ(A; t), or there is a hyperplane L ⁄∈ Asuch
+that (A ∪ {L})L ∈ MF ℓ−1 and χ((A ∪ {L})L; t) | χ(A; t).
+We say that an arrangement A is multiplicatively free if A ∈ MF :=
+∪ℓ≥1MF ℓ.
+(2) An ℓ-arrangement is hereditarily divisionally free if AX is divi-
+sionally free for all X ∈ L(A).
+Recall that the deﬁnition of hereditarily inductively free, where the def-
+inition of hereditarily divisionally free generalizes it. An arrangement A is
+hereditarily inductively free if AX is inductively free for all X ∈ L(A).
+Clearly, hereditarily inductively free arrangements are hereditarily division-
+ally free.
+Proposition 5.8
+There is an arrangement A which is not hereditarily inductively free but
+hereditarily divisionally free.
+Proof. Let us again use a divisionally free, but not inductively free unitary
+reﬂection arrangement A = A(G31) in the proof of Theorem 1.6. By Theorem
+1.2 in [10], every AX is inductively free for X ∈ L3(A). Since A is a 4-
+arrangement and IF ⊊ DF by Theorem 4.4, the proof is completed. □
+26
+Remark 5.9
+Apparently multiplicatively free arrangements are generalizations o f recur-
+sively free arrangements. The former contains the latter. By the result in
+[11], there is a free arrangement which is not multiplicatively free. Hen ce
+there is a free arrangement which is not either divisionally nor multiplica -
+tively free.
+By Theorem 5.5, if there exists a counterexample to Conjecture 4.1 in
+RF , then that has to be at the valley. So we may pose a problem.
+Problem 5.10
+Does the freeness of a recursively free arrangement at the valley depend only
+on its combinatorics?
+Even if Problem 5.10 is settled positively, Conjecture 4.1 seems to be s till
+diﬃcult. However, Problem 5.10 is a natural one based on the results in this
+article. Based on several examples, we pose the following conjectu re:
+Conjecture 5.11
+(1) RF ∗ ⊊ DF .
+(2) RF ⊊ MF.
+To settle Conjecture 5.11 (1) positively, for example, recalling the p roof
+of Theorem 1.6, it suﬃces to show that A(G31) is not recursively free, which
+is not yet known (see [10], Corollary 4.3). It seems natural to believe that
+Conjecture 5.11 (1) is true. On Conjecture 5.11 (2), it seems still d iﬃcult
+to check since there are few known examples of a free arrangemen t which is
+non-recursively free (see [11], [4]).
+6 Application to Weyl arrangements
+In this section assume that K = R and consider a real irreducible crystallo-
+graphic reﬂection arrangements and its deformations.
+First let us recall a notation on root systems and related Weyl arra nge-
+ments. Let Φ be a real irreducible crystallographic root system of r ank
+ℓ with the Coxeter number h. Fix a positive system Φ + of Φ and let
+∆ = {α1, . . . , αℓ} ⊂ Φ + the associated simple system. Let W be the corre-
+sponding Weyl group and Hα the reﬂecting hyperplane with respect to the
+root α ∈ Φ + in V = Rℓ. Then the Weyl arrangement AW of Φ + is deﬁned
+by
+AW := {Hα | α ∈ Φ +}.
+27
+Also, the k-extended Shi arrangement Shik is deﬁned by the equation
+Shik := {z = 0}
+⋃
+{H j
+α}α∈Φ +, −k+1≤j≤k,
+where z is a new coordinate added to the vector space spanned by α1, . . . , αℓ,
+and H j
+α := {α = jz} for α ∈ Φ + and j ∈ Z. The Shi arrangement was
+introduced by J.-Y Shi in [18], and has been well-studied by several ma th-
+ematicians. See [6] and [21] for example. It is proved by Yoshinaga in [ 21]
+that Shi k is free with exponents (1 , kh, . . . , kh). We can show that Shi k is
+divisionally free, which implies Theorem 1.4 by Theorem 4.4.
+Theorem 6.1
+Shik ∈ DF .
+To prove Theorem 6.1, we need a theorem.
+Theorem 6.2
+Let K be an arbitrary ﬁeld, V = Kℓ and A be an ℓ-arrangement in V .
+Assume that A is free with exp(A) = (1 , d1 . . . , dℓ−1), and that there are
+distinct hyperplanes H1, . . . , Hℓ−1 ∈ A such that,
+(1) A′
+i := A\{Hi} is free with exp(A′
+i) = (1 , d1, d2, . . . , di−1, di−1, di+1, . . . , dℓ−1)
+for i = 1, . . . , ℓ− 1.
+(2) A′ := A\{H1, . . . , Hℓ−1} is free with exp(A′) = (1 , d1−1, d2−1, . . . , dℓ−1−
+1).
+Then A ∈ DF .
+Proof. Let Xi := ∩ℓ−1
+j=ℓ−iHj (i = 1 , . . . , ℓ − 1). We show that V = X0 ⊃
+X1 ⊃ · · · ⊃ Xℓ−1 is a divisional ﬂag. Let αj := αHj for j = 1, . . . , ℓ− 1.
+For that purpose, at ﬁrst, we show that A is free with exp(A) = (1 , d1, d2, . . . , dℓ−1)
+with a special basis. By the assumption, there is a derivation θi ∈ D(A′
+i) (i =
+1, . . . , ℓ − 1) of degree di − 1 such that θi ⁄∈D(A), αiθi ∈ D(A) and that
+θE, θj are a part of a basis for D(A′
+j) for j = 1 , . . . , ℓ − 1. We show that
+θE, θ1, . . . , θℓ−1 form a basis for D(A′). We may assume that 1 ≤ deg θ1 ≤
+· · · ≤ deg θℓ−1. Note that 1 + ∑ ℓ−1
+i=1 deg θi = |A′| and deg θj = dj − 1 for
+j = 1 , . . . , ℓ − 1. Hence by Proposition 4.42 in [15], it suﬃces to show
+that ⟨θE, θ1, . . . , θi−1⟩S ⁄∋θi for i = 1 , . . . , ℓ − 1. If θ1 ∈ SθE, then it con-
+tradicts the fact that θE, θ1 form a part of basis for D(A′
+1). Now assume
+that θi = f θE + ∑ i−1
+j=1 fjθj (f, fj ∈ S). By the choice of θi, θk(αj) ∈ Sαj
+if and only if k ⁄= j. Since θE(α) = α for any α ∈ V ∗, it holds that
+(f θE + ∑ i−1
+j=1 fjθj)(αi) ∈ Sαi, but θi(αi) ⁄∈Sαi, which is a contradiction.
+28
+Hence D(A′) has a basis θE, θ1, . . . , θℓ−1 with the properties above. More-
+over, the construction implies that θE, α1θ1, . . . , αℓ−1θℓ−1 form a basis for
+D(A). By using these bases, we show that V = X0 ⊃ X1 ⊃ · · · ⊃ Xℓ−1 is a
+divisional ﬂag.
+First, we show that AX1 is free with exp( AX1) = (1 , d1, d2, . . . , dℓ−1). Let
+π : D(A) → D(AX1) be the restriction map deﬁned by π(θ)(f ) := θ(f )
+modulo αℓ−1. By Terao’s restriction theorem 2.4, the derivations
+π(θE), π(α1θ1), . . . , π(αℓ−2θℓ−2)
+form a free basis for D(AX1), hence exp( AX1) = (1 , d1, d2, . . . , dℓ−2).
+Second, the arrangement AX1 in Hℓ−1 = Kℓ−1, hyperplanes H1∩Hℓ−1, . . . , Hℓ−2∩
+Hℓ−1 ∈ A X1 and derivations π(θE), π(α1θ1), . . . , π(αℓ−2θℓ−2) satisfy the same
+assumptions as for A, H1, H2, . . . , Hℓ−1, θE, α1θ1, . . . , αℓ−1θℓ−1. For f ∈ S, let
+f denote the image of f by the canonical surjection S → S/(αℓ−1). Since
+αi | θi, clearly αi | π(θi) for i = 1 , . . . , ℓ− 2. Also, we can show that αi =
+0 (i = 1, . . . , ℓ− 2) deﬁne distinct hyperplanes in AX1. Assume not. Then we
+may assume that α2 = α3. Then for B1 := AX1 \ {H2 ∩ Hℓ−1 = H3 ∩ Hℓ−1},
+the derivations
+π(θE), π(α1θ1), π(θ2), π(θ3), π(α4θ4), . . . , π(αℓ−2θℓ−2)
+form a basis for D(B1). Since the sum of degrees of the derivations above
+is |AX1| − 2 = |B1| − 1, this contradicts Saito’s criterion 2.9. Hence H1 ∩
+Hℓ−1, · · · , Hℓ−2 ∩ Hℓ−1 are distinct. Hence these satisfy the same assumption
+in the previous paragraph.
+Now apply the same arguments inductively to AX1, AX2, · · · , AXℓ− 2 with
+Theorem 2.5 to show that χ(AXi+1; t) | χ(AXi; t) for i = 0, . . . , ℓ− 3. Hence
+Theorem 1.3 shows that A ∈ DF . □
+Proof of Theorem 6.1 . First recall the result on simple-root basis in [5].
+It asserts that, there are derivations φ1, . . . , φℓ ∈ D(Shik) of degree kh such
+that θE, φ1, . . . , φℓ form a homogeneous basis for D(Shik) and ( αi − kz) |
+φi (i = 1 , . . . , ℓ). We call this basis a simple-root basis minus (see [5] for
+details).
+By the property of simple root basis, the Shi arrangement and hyp er-
+planes αi − kz = 0 ( i = 1, . . . , ℓ) clearly satisfy the assumptions in Theorem
+6.2, which implies that Shi k ∈ DF . □
+If we use some speciﬁc basis for the derivation module, then we can s how
+the following corollary similar to Theorem 6.2.
+29
+Corollary 6.3
+Let K be an arbitrary ﬁeld, V = Kℓ and A be a free ℓ-arrangement in V
+with exp(A) = (1 , d, d2, . . . , dℓ−1). Assume that there are distinct hyper-
+planes H2, . . . , Hℓ−1 ∈ A and derivations θE, ϕ, θ2, . . . , θℓ−1 for D(A) such
+that deg ϕ = d, deg θi = di (i = 2 , . . . , ℓ− 1) and αi := αHi divides θi for
+i = 2, . . . , ℓ− 1. Then A ∈ DF .
+Proof. The proof is the same as that of Theorem 6.2. □
+Let ∆ j be the set of all positive roots of height j. By applying the same
+proofs as in Theorem 6.2 with Corollary 6.3, the following statements a re
+easy to show by using results in [3] and [6].
+Corollary 6.4
+The following arrangements are divisionally free.
+(1) A = {H 0
+α}α∈∆ 1 ∪ {H 0
+β}β∈Σ for any subset Σ ⊂ ∆ 2.
+(2) A = {H 0
+α}α∈∆ 1∪∆ 2∪∆ 3.
+Proof. (1) By [3], A is free with basis θ1, . . . , θℓ−σ, ϕ1, . . . , ϕσ for D(A) with
+σ := |Σ | such that deg θi = 1 ( i = 1 , . . . , ℓ− σ), deg ϕj = 2 ( j = 1 , . . . , σ)
+and that βj | ϕj for j = 1, . . . , σ and Σ 2 = {β1, . . . , βσ}. By the argument in
+the proof of Theorem 6.2, we can construct a divisional ﬂag V = X0 ⊃ X1 ⊃
+· · · ⊃ Xσ = X, where Xi = ∩i
+j=1Hβj . Since AX is a Boolean arrangement, it
+is divisionally free. So A is divisionally free.
+(2) By [3], A has a free basis for D(A) satisfying the condition in Corol-
+lary 6.3. Hence A is divisionally free. □
+Corollary 6.5
+The following arrangements are divisionally free.
+(1) Shik \{H k
+α} for α ∈ ∆ 1.
+(2) Shik \{H k
+α}α∈∆ 1.
+(3) Shik ∪{H −k
+α }α∈∆ 1.
+(4) Shik ∪{H −k
+α }α∈∆ 1 \ {H −k
+β } for β ∈ ∆ 1.
+(5) Shik ∪{H −k
+α }α∈∆ 1∪∆ 2.
+Proof. It was shown in [6] that all the above cases have the free bases
+satisfying the condition in Corollary 6.3. Hence they are all divisionally f ree.
+□
+30
+Based on the arguments in this section, [3], [6] and [21], we pose a con-
+jecture. For that purpose, let us recall terminologies. For α, β ∈ Φ + For the
+terminology, we say α ≥ β if α − β is a linear combination of simple roots
+with non-negative coeﬃcients. An ideal I ⊂ Φ + is deﬁned by, if α, β ∈ Φ +
+with α ≥ β and α ∈ I implies β ∈ I. Then an ideal-subarrangement
+AI ⊂ A W is deﬁned by AI := {H 0
+α | α ∈ I}. Also, ideal-Shi arrangement
+Shik
+±I is deﬁned by
+Shik
++I : = Shi k ∪{H −k
+α }α∈I ,
+Shik
+−I : = Shi k \{H k
+α}α∈I.
+For details, see [3] and [6].
+Conjecture 6.6
+All ideal-subarrangments AI and ideal-Shi arrangements Shik
+±I are division-
+ally free.
+Acknowledgements. The author is partially supported by by JSPS Grants-
+in-Aid for Young Scientists (B) No. 24740012. Also, the author is gr ateful
+to Torsten Hoge for his pointing out an error in Theorem 6.2.
+References
+[1] T. Abe, Chambers of 2-aﬃne arrangements and freeness of 3-
+arrangements. J. Alg. Combin ., 38 (2013), no. 1, 65–78.
+[2] T. Abe, Roots of characteristic polynomials and and intersection
+points of line arrangements. J. Singularities , 8 (2014), 100–117.
+[3] T. Abe, M. Barakat, M. Cuntz, T. Hoge, H. Terao, The freenes s
+of ideal subarrangements of Weyl arrangements. arXiv:1304.803 3.
+J. Eur. Math. Soc ., to appear.
+[4] T. Abe, M. Cuntz, H. Kawanoue and T. Nozawa, Non-recursive
+freeness and non-rigidity of plane arrangements. arXiv:1411.3351 .
+[5] T. Abe and H. Terao, Simple-root basis for Shi arrangements. J.
+Alegbra, 422 (2015), 89-104
+[6] T. Abe and H. Terao, The freeness of ideal-Shi arrangements a nd
+free paths in aﬃne Weyl arrangements. arXiv:1405.6379.
+[7] T. Abe, H. Terao and M. Wakeﬁeld, The characteristic polynomial
+of a multiarrangement. Adv. in Math. , 215 (2007), 825–838.
+31
+[8] T. Abe, H. Terao and M. Wakeﬁeld, The Euler multiplicity
+and addition-deletion theorems for multiarrangements. J. London
+Math. Soc ., 77 (2008), no. 2, 335–348.
+[9] T. Abe and M. Yoshinaga, Free arrangements and coeﬃcients of
+characteristic polynomials. Math. Z., 275 (2013), Issue 3, 911-919.
+[10] N. Amend, T. Hoge and G. R¨ ohrle, On inductively free restrictions
+of reﬂection arrangements. J. Algebra, 418 (2014), 197–212.
+[11] M. Cuntz and T. Hoge, Free but not recursively free arrangem ents.
+Proc. Amer. Math. Soc. , 143 (2015), 35–40.
+[12] P. H. Edelman and V. Reiner, A counterexample to Orlik’s con-
+jecture. Proc. Amer. Math. Soc ., 118 (1993), 927–929.
+[13] T. Hoge and G. R¨ ohrle, On inductively free reﬂection arrange-
+ments. J. Reine Angew. Math. , to appear. arXiv:1208.3131.
+[14] P. Orlik and L. Solomon, Arrangements deﬁned by unitary reﬂec -
+tion groups. Math. Ann ., 261 (1982), 339–357.
+[15] P. Orlik and H. Terao, Arrangements of hyperplanes. Grundlehren
+der Mathematischen Wissenschaften, 300. Springer-Verlag,
+Berlin, 1992.
+[16] K. Saito, Theory of logarithmic diﬀerential forms and logarithmic
+vector ﬁelds. J. Fac. Sci. Univ. Tokyo 27 (1980), 265–291.
+[17] G.C. Shehpard and J.A. Todd, Finite unitary reﬂection groups,
+Canadian J. Math ., 6 (1954), 274–304.
+[18] J.-Y. Shi, The Kazhdan-Lusztig cells in certain aﬃne Weyl groups .
+Lecture Notes in Math., 1179, Springer-Verlag, 1986.
+[19] H. Terao, Arrangements of hyperplanes and their freeness I , II. J.
+Fac. Sci. Univ. Tokyo 27 (1980), 293–320.
+[20] H. Terao, Generalized exponents of a free arrangement of hy per-
+planes and Shephard-Todd-Brieskorn formula. Invent. Math . 63
+(1981), 159–179.
+[21] M. Yoshinaga, Characterization of a free arrangement and co n-
+jecture of Edelman and Reiner. Invent. Math. 157 (2004), no. 2,
+449–454.
+32
+[22] M. Yoshinaga, On the freeness of 3-arrangements. Bull. London
+Math. Soc. 37 (2005), no. 1, 126–134.
+[23] G. M. Ziegler, Multiarrangements of hyperplanes and their free -
+ness. Singularities (Iowa City, IA, 1986), 345–359, Contemp.
+Math., 90, Amer. Math. Soc., Providence, RI, 1989.
+33

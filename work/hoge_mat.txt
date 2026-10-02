@@ -1,0 +1,231 @@
+MAT-FREENESS IS NOT COMBINATORIAL
+TORSTEN HOGE AND GERHARD R ¨OHRLE
+Abstract.We show that the notion of MAT-freeness for hyperplane arrangements depends
+on the underlying field. In particular, MAT-freeness is not combinatorial.
+1.Introduction
+In the theory of hyperplane arrangements the study of classes which are determined purely
+by combinatorial data, i.e., which only depend on their underlying intersection lattices (see
+Definition 2.1), has a long tradition.
+Undoubtedly, the most tantalizing example is the question whether freeness for hyperplane
+arrangements is combinatorial or not. The assertion that this is the case is known asTerao’s
+conjecture[T80, p. 293]. In 1990 Ziegler showed that the question of freeness does depend
+on the choice of the underlying field, [Z90, Ex. 4.1]. Thus freeness is not combinatorial.
+Subsequently, in the literature Terao’s conjecture specifies a fixed underlying field, [OT92,
+Conj. 4.138]. While overwhelming evidence in support of this conjecture stems from Terao’s
+seminal Factorization Theorem for the Poincar´ e polynomial of a free arrangement [OT92,
+Thm. 4.137], a conclusive resolution eludes until this day.
+There are stronger notions of freeness, such asinductive freeness(Definition 2.3) oradditive
+freeness(Definition 2.5). In contrast to freeness itself, both of them are combinatorial, see
+[CH15, Lem. 2.5], respectively [Abe19, Thm. 1.4].
+In [CH15] Cuntz and Hoge showed that the weaker notion ofrecursive freeness([OT92,
+Def. 4.60]) is again not combinatorial. In this short note we observe that the related concept
+ofMAT-freeness(Definition 2.9), due to Cuntz and M¨ ucksch [CM20], also fails to be com-
+binatorial: Example 3.1 shows that MAT-freeness depends on the choice of the underlying
+field. Following [CM20], we denote the class of MAT-free arrangements byMF.
+Theorem 1.1.(i)The classMFis not combinatorial.
+(ii)The subclass ofMFconsisting of arrangements over infinite fields is combinatorial.
+The origin of MAT-freeness stems from the so calledMultiple Addition Theorem2.7 from
+[ABC+16]. Inloc. cit.and [CM20] the investigations concerned hyperplane arrangements
+over fields of characteristic 0. MAT-freeness is indeed combinatorial for the subclass consist-
+ing of hyperplane arrangements defined over such fields, as shown in [CM20, Lem. 3.4]; see
+also Remark 3.4.
+For general information on hyperplane arrangements we refer to [OT92].
+2010Mathematics Subject Classification.52C35 (14N20, 32S22, 51D20).
+Key words and phrases.Free arrangement, MAT-freeness, combinatorial freeness.
+1
+arXiv:2512.04613v1  [math.CO]  4 Dec 2025
+2.Preliminaries
+2.1.Hyperplane arrangements.Let𝕜be a field and letV=𝕜 ℓ be anℓ-dimensional
+𝕜-vector space. Ahyperplane arrangementis a pair (A,V), whereAis a finite collection
+of hyperplanes inV. Usually, we simply writeAin place of (A,V). We write|A|for the
+number of hyperplanes inA. The empty arrangement inVis denoted by Φ ℓ.
+ThelatticeL(A) ofAis the set of subspaces ofVof the formH 1∩···∩H i where{H 1,...,H i}
+is a subset ofA. ForX∈L(A), we have two associated arrangements, firstlyA X :={H∈
+A|X⊆H}⊆A, thelocalization ofAatX, and secondly, therestriction ofAtoX,
+(AX,X), whereA X :={X∩H|H∈A\A X}. The latticeL(A) is a partially ordered
+set by reverse inclusion:X≤YprovidedY⊆XforX,Y∈L(A). The rank function on
+L(A) is given by rank(X) = codimXforX∈L(A). The rank ofA, rank(A), is the rank
+of a maximal element ofL(A).
+Definition 2.1.LetCbe a class of arrangements and letA∈C. If for all arrangements
+BwithL(B) andL(A) isomorphic as lattices, we haveB∈C, then the classCis called
+combinatorial. HereAandBdo not have to be defined over the same underlying field.
+2.2.Free arrangements.LetS=S(V ∗) be the symmetric algebra of the dual spaceV ∗
+ofV. Ifx 1,...,x ℓ is a basis ofV ∗, then we identifySwith the polynomial ring𝕜[x 1,...,x ℓ].
+LettingS p denote the𝕜-subspace ofSconsisting of the homogeneous polynomials of degree
+p(along with 0),Sis naturallyℤ-graded:S=⊕ p∈ℤSp, whereS p = 0 in casep<0.
+Let Der(S) be theS-module of algebraic𝕜-derivations ofS. Using theℤ-grading onS,
+Der(S) becomes a gradedS-module. Fori= 1,...,ℓ, letD i :=∂/∂x i be the usual derivation
+ofS. ThenD 1,...,D ℓ is anS-basis of Der(S). We say thatθ∈Der(S) ishomogeneous of
+polynomial degree pprovidedθ= Pℓ
+i=1fiDi, wheref i is either 0 or homogeneous of degree
+pfor each 1≤i≤ℓ. In this case we write degθ=p.
+LetAbe an arrangement inV. Then forH∈Awe fixα H∈V ∗ withH= ker(α H). The
+defining polynomialQ(A) ofAis given byQ(A) := Q
+H∈A αH∈S.
+Themodule ofA-derivationsofAis defined by
+D(A) :={θ∈Der(S)|θ(α H)∈α HSfor eachH∈A}.
+We say thatAisfreeif the module ofA-derivationsD(A) is a freeS-module.
+With theℤ-grading of Der(S), alsoD(A) becomes a gradedS-module, [OT92, Prop. 4.10].
+IfAis a free arrangement, then theS-moduleD(A) admits a basis ofℓhomogeneous
+derivations, sayθ 1,...,θ ℓ, [OT92, Prop. 4.18]. While theθ i’s are not unique, their polynomial
+degrees degθ i are unique (up to ordering). This multiset is the set ofexponentsof the free
+arrangementAand is denoted by expA. We use the shorthand notation (e 1,...,e ℓ)≤ for
+(e1≤e 2≤...≤e ℓ) when we address the set of exponents of a free arrangement.
+The fundamentalAddition Deletion Theoremdue to Terao [T80] plays a crucial role in the
+study of free arrangements, [OT92, Thm. 4.51]. SupposeA̸= Φ ℓ. Fix a memberH 0 inA.
+SetA ′ =A\{H 0}andA ′′ =A H0. Then (A,A ′,A ′′) is frequently referred to as atriple
+of arrangements(with respect toH 0).
+2
+Theorem 2.2.SupposeA̸= Φ ℓ and let(A,A ′,A ′′)be a triple of arrangements. Then
+any two of the following statements imply the third:
+(i)Ais free withexpA= (b 1,...,b ℓ−1,bℓ);
+(ii)A ′ is free withexpA ′ = (b1,...,b ℓ−1,bℓ−1);
+(iii)A ′′ is free withexpA ′′ = (b1,...,b ℓ−1).
+Theorem 2.2 motivates the following notion.
+Definition 2.3([OT92, Def. 4.53]).The classIFofinductively freearrangements is the
+smallest class of arrangements subject to
+(i) Φℓ∈IFfor eachℓ≥0;
+(ii) if there exists a hyperplaneH 0∈Asuch that bothA ′ andA ′′ belong toIF, and
+expA ′′⊆expA ′, thenAalso belongs toIF.
+Remark 2.4.The classIFis known to be combinatorial [CH15, Lem. 2.5].
+2.3.Additively free arrangements.In view of Theorem 2.2, it is also natural to consider
+the following property, [Abe19, Def. 1.6] which is weaker than inductive freeness.
+Definition 2.5.An arrangementAis calledadditively freeif there is afree filtration
+Φℓ =A 0⊂A 1⊂···⊂A n =A,
+ofA, i.e., where eachA i is free with|A i|=ifor eachi. Denote this class byAF.
+Remarks 2.6.(i). In view of [OT92, Thm. 4.46], we haveIF⊆AF. However, there are
+examples of arrangements which are additively free but not inductively free, see [HR21].
+(ii). The classAFis known to be combinatorial [Abe19, Thm. 1.4].
+2.4.MAT-free arrangements.Next we consider a freeness concept due to Cuntz and
+M¨ ucksch, [CM20] which is closely related to inductive freeness. We begin by recalling the
+core result from [ABC +16], the so calledMultiple Addition Theorem. This can be viewed as
+a generalization of the addition part of Theorem 2.2.
+Theorem 2.7([ABC +16, Thm. 3.1]).LetA ′ = (A′,V)be a free arrangement withexp(A ′) =
+(e1,...,e ℓ)≤ and let1≤p≤ℓbe the multiplicity of the highest exponent, i.e.
+eℓ−p <e ℓ−p+1 =···=e ℓ =:e.
+LetH 1,...,H q be hyperplanes inVwithH i̸∈A ′ fori= 1,...,q. Define
+A′′
+j := (A′∪{Hj})Hj ={H∩H j|H∈A ′},forj= 1,...,q.
+Assume that the following conditions are satisfied:
+(1)X:=H 1∩···∩H q isq-codimensional.
+(2)X̸⊆ S
+H∈A ′H.
+(3)|A ′|−|A ′′
+j|=efor1≤j≤q.
+3
+Thenq≤pandA:=A ′∪{H 1,...,H q}is free with
+exp(A) = (e 1,...,e ℓ−q,e+ 1,...,e+ 1) ≤.
+We consider the simultaneous addition of several hyperplanes using Theorem 2.7. This
+motivates the next terminology.
+Definition 2.8.LetA ′,{H 1,...,H q}be as in Theorem 2.7 such that conditions (1)–(3) are
+satisfied. Then the addition of{H 1,...,H q}resulting inA=A ′∪{H 1,...,H q}is called
+anMAT-step.
+An iterative application of Theorem 2.7 motivates the following natural concept.
+Definition 2.9([CM20, Def. 3.2, Lem. 3.8]).An arrangementAis calledMAT-freeif there
+exists an ordered partition
+π= (π 1|···|π n)
+ofAsuch that for every 0≤k≤n−1 the following hold. Set
+Ak :=
+k[
+i=1
+πi.
+Then
+(a) rk(πk+1) =|π k+1|,
+(b)∩ H∈π k+1H⊈ S
+H ′∈Ak
+H′,
+(c)|A k|−|(A k∪{H}) H|=kfor eachH∈π k+1,
+i.e.A k+1 =A k∪πk+1 is an MAT-step. An ordered partitionπwith these properties is called
+anMAT-partitionforA.
+Following [CM20], the class of MAT-free arrangements is denoted byMF.
+Note that in [CM20] MAT-freeness was defined differently. However, for our purpose its
+characterization in [CM20, Lem. 3.8] is sufficient. Hence we take the latter here for our
+definition.
+Remark 2.10.Suppose thatAis MAT-free with MAT-partitionπ= (π 1|···|π n). Then
+(a) for each 1≤k≤n,A k is MAT-free with MAT-partition (π1|···|π k),
+(b)Ais free and the exponents exp(A) = (e 1,...,e ℓ)≤ ofAare given by the block sizes
+of the dual partition ofπ:
+ei :=|{k||π k|≥ℓ−i+ 1}|,
+(c)|π 1|>|π 2|≥···≥|π n|.
+Statement (a) is clear by definition. Statements (b) and (c) follow readily from Theorem 2.7
+and a simple induction.
+4
+3.Proof of Theorem 1.1
+The following example proves Theorem 1.1(i).
+Example 3.1.Consider the arrangementAover𝔽 2 given by the defining polynomial
+Q(A) =xyz(x+y)(x+z)(y+z).
+Furthermore consider the arrangementBover𝔽 4 given by the same defining polynomial
+Q(B) =xyz(x+y)(x+z)(y+z).
+Then
+(1) both arrangements are free with exp(A) = exp(B) = (1,2,3);
+(2) the latticesL(A) andL(B) are isomorphic;
+(3) the arrangementBis MAT-free butAis not MAT-free.
+Since the coefficients of the linear forms in the defining polynomialQ(A) =Q(B) are
+elements of𝔽 2, both lattices are isomorphic. Both arrangements are additively free and in
+dimension 3 they are automatically inductively free. The order of the hyperplanes, as given
+in the definition of the defining polynomials above yield an inductive sequence of hyperplanes
+yielding successive inductively free subarrangements for both,AandB.
+Letπ= ({kerx,kery,kerz},{ker(x+y),ker(x+z)},{ker(y+z)}). One checks that this is
+an MAT-partition forBand henceBis MAT-free over𝔽 4.
+In contrast,Ais not MAT-free. We argue by contradiction. Suppose thatAis MAT-free.
+Then there is a partitionπ= (π 1,π 2,π 3) ofAsuch thatπ 3 is a singleton. After possibly
+renaming the coordinates, we may assume thatπ 3 consists of either ker(z) or ker(y+z). But
+note that, since𝕜=𝔽 2, we have
+ker(z) ={(0,0,0),(1,0,0),(0,1,0),(1,1,0)}⊂ker(x)∪ker(y)∪ker(x+y)
+and
+ker(y+z) ={(0,0,0),(1,0,0),(0,1,1),(1,1,1)}⊂ker(x)∪ker(y)∪ker(x+y).
+This contradicts Definition 2.9(b). Soπ 3 cannot be a part of an MAT-partition ofA.
+Therefore,Ais not MAT-free after all, as claimed.
+We see from Example 3.1 that condition (b) in Definition 2.9 can fail for small fields. It is
+clear that this is not a lattice condition. If we replace it by a suitable lattice condition, we
+obtain a strictly larger class of arrangements capturing this notion of freeness independent
+of the underlying field. Note that the two remaining conditions in Definition 2.9 (and in
+Theorem 2.7) are combinatorial.
+Specifically, if we replace condition (2) in Theorem 2.7 by
+(2*)X̸⊆Hfor eachH∈A ′,
+and condition (b) in Definition 2.9 by
+(b*)∩ H∈π k+1H⊈H ′ for eachH ′∈A k,
+5
+then we obtain a larger class of arrangements, as obviously (2) implies (2*) and (b) implies
+(b*). Denote this class byMF ∗. Both arrangementsAandBfrom Example 3.1 belong to
+MF∗. In particular, the example shows thatMF⊊MF ∗.
+Definition 3.2.The classMF ∗ is the class ofMAT ∗-freearrangements.
+Not only is condition (2*) easier to check than (2), more importantly, it only depends on the
+combinatorial data of the lattice of the arrangement (X∧H̸=Hfor allH∈A ′). We thus
+readily derive the following.
+Theorem 3.3.The classMF ∗ is combinatorial.
+Remark 3.4(i) gives Theorem 1.1(ii).
+Remarks 3.4.(i). IfAis defined over the infinite field𝕜, thenAis MAT-free if and only
+if it is MAT∗-free. This follows from the prime avoidance theorem [E95, Lem. 3.3].
+(ii). Furthermore, ifAis MAT ∗-free over a field extension of𝕜thenAis also additively free
+over the smaller field𝕜, since additive freeness and MAT ∗-freeness are both combinatorial.
+(iii). Since we are predominantly interested in freeness as such, MAT ∗-freeness appears to
+be a natural extension of of MAT-freeness.
+(iv). There is a generalization of MAT-freeness, so calledMAT2-freeness, see [CM20,
+Def. 3.4]. The discussion above about the (non-)combinatorial nature applies equally well
+to MAT2-freeness.
+Acknowledgments: This work was supported by DFG-Grant RO 1072/24-1 (DFG Project
+number 539858198) to G. R¨ ohrle.
+References
+[Abe19] T. Abe,Addition-deletion theorem for free hyperplane arrangements and combinatorics, Math.
+Ann.373(2019), no. 1-2, 581–595.
+[ABC+16] T. Abe, M. Barakat, M. Cuntz, T. Hoge, and H. Terao,The freeness of ideal subarrangements of
+Weyl arrangements, J. Eur. Math. Soc. (JEMS)18(2016), no. 6, 1339–1348.
+[CH15] M. Cuntz and T. Hoge,Free but not Recursively Free Arrangements, Proc. Amer. Math. Soc.
+143, (2015), 35–40.
+[E95] D. Eisenbud,Commutative algebra with a view toward algebraic geometry, Grad. Texts in Math.,
+150Springer-Verlag, New York, 1995. xvi+785 pp.
+[HR21] T. Hoge and G. R¨ ohrle,Some remarks on free arrangements, Tˆ ohoku Math. J.73(2021), no. 2,
+277–288.
+[CM20] M. Cuntz, P. M¨ ucksch,MAT-free reflection arrangements, Electronic J. Comb.27(1)(2020),
+#P1.28.
+[OT92] P. Orlik and H. Terao,Arrangements of hyperplanes, Springer-Verlag, 1992.
+[T80] H. Terao,Arrangements of hyperplanes and their freeness I, II, J. Fac. Sci. Univ. Tokyo27(1980),
+293–320.
+[Z90] G.M. Ziegler,Matroid representations and free arrangements, Trans. Amer. Math. Soc.320
+(1990), no. 2, 525–541.
+6
+F akult¨at f ¨ur Mathematik, Ruhr-Universit ¨at Bochum, D-44780 Bochum, Germany
+Email address:torsten.hoge@rub.de
+Email address:gerhard.roehrle@rub.de
+7

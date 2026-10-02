@@ -1,0 +1,26 @@
+chunk 20 {'essential': 1748, 'chi_split': 105, 'df': 56, 'nondf_split': 49, 'loc_free': 0, 'free': 0} df 20s loc 24s free 0s total 45s
+chunk 22 {'essential': 1748, 'chi_split': 104, 'df': 59, 'nondf_split': 45, 'loc_free': 0, 'free': 0} df 18s loc 19s free 0s total 37s
+chunk 24 {'essential': 1747, 'chi_split': 114, 'df': 63, 'nondf_split': 51, 'loc_free': 0, 'free': 0} df 18s loc 22s free 0s total 40s
+chunk 26 {'essential': 1746, 'chi_split': 98, 'df': 58, 'nondf_split': 40, 'loc_free': 0, 'free': 0} df 18s loc 18s free 0s total 36s
+chunk 28 {'essential': 1747, 'chi_split': 98, 'df': 57, 'nondf_split': 41, 'loc_free': 0, 'free': 0} df 18s loc 19s free 0s total 36s
+chunk 30 {'essential': 1747, 'chi_split': 96, 'df': 55, 'nondf_split': 41, 'loc_free': 0, 'free': 0} df 17s loc 17s free 0s total 34s
+HIT {"chunk": 32, "S": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 16, 17, 19, 20, 22, 23, 25, 27, 29, 31, 35, 36, 39], "k": 25, "chi": [1, -25, 195, -495, 324], "exps": [1, 3, 9, 12], "gens": [1, 3, 9, 12], "normals": [[0, 0, 0, 1], [0, 0, 1, 0], [0, 0, 1, 1], [0, 0, 1, 2], [0, 1, 0, 0], [0, 1, 0, 1], [0, 1, 0, 2], [0, 1, 1, 0], [0, 1, 1, 1], [0, 1, 1, 2], [1, 0, 0, 0], [1, 0, 0, 1], [1, 0, 1, 0], [1, 0, 1, 1], [1, 0, 2, 0], [1, 0, 2, 1], [1, 1, 0, 0], [1, 1, 0, 1], [1, 1, 1, 0], [1, 1, 1, 2], [1, 1, 2, 1], [1, 2, 0, 0], [1, 2, 1, 1], [1, 2, 1, 2], [1, 2, 2, 2]]}
+chunk 32 {'essential': 1745, 'chi_split': 109, 'df': 58, 'nondf_split': 51, 'loc_free': 1, 'free': 1} df 18s loc 23s free 11s total 52s
+chunk 34 {'essential': 1747, 'chi_split': 100, 'df': 57, 'nondf_split': 43, 'loc_free': 0, 'free': 0} df 18s loc 18s free 0s total 37s
+chunk 36 {'essential': 1747, 'chi_split': 98, 'df': 51, 'nondf_split': 47, 'loc_free': 0, 'free': 0} df 19s loc 20s free 0s total 39s
+chunk 38 {'essential': 1747, 'chi_split': 98, 'df': 52, 'nondf_split': 46, 'loc_free': 0, 'free': 0} df 17s loc 20s free 0s total 38s
+chunk 40 {'essential': 1747, 'chi_split': 106, 'df': 54, 'nondf_split': 52, 'loc_free': 0, 'free': 0} df 18s loc 22s free 0s total 40s
+chunk 42 {'essential': 1747, 'chi_split': 100, 'df': 50, 'nondf_split': 50, 'loc_free': 0, 'free': 0} df 18s loc 22s free 0s total 39s
+chunk 44 {'essential': 1747, 'chi_split': 104, 'df': 54, 'nondf_split': 50, 'loc_free': 0, 'free': 0} df 18s loc 23s free 0s total 40s
+chunk 46 {'essential': 1747, 'chi_split': 99, 'df': 54, 'nondf_split': 45, 'loc_free': 0, 'free': 0} df 18s loc 19s free 0s total 37s
+chunk 48 {'essential': 1747, 'chi_split': 97, 'df': 45, 'nondf_split': 52, 'loc_free': 0, 'free': 0} df 18s loc 23s free 0s total 41s
+chunk 50 {'essential': 1747, 'chi_split': 97, 'df': 51, 'nondf_split': 46, 'loc_free': 0, 'free': 0} df 18s loc 20s free 0s total 38s
+chunk 52 {'essential': 1747, 'chi_split': 98, 'df': 50, 'nondf_split': 48, 'loc_free': 0, 'free': 0} df 17s loc 23s free 0s total 40s
+chunk 54 {'essential': 1747, 'chi_split': 88, 'df': 42, 'nondf_split': 46, 'loc_free': 0, 'free': 0} df 18s loc 22s free 0s total 40s
+chunk 56 {'essential': 1747, 'chi_split': 94, 'df': 47, 'nondf_split': 47, 'loc_free': 0, 'free': 0} df 17s loc 21s free 0s total 39s
+HIT {"chunk": 58, "S": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26, 34, 35], "k": 23, "chi": [1, -23, 169, -417, 270], "exps": [1, 3, 9, 10], "gens": [1, 3, 9, 10], "normals": [[0, 0, 0, 1], [0, 0, 1, 0], [0, 0, 1, 1], [0, 0, 1, 2], [0, 1, 0, 0], [0, 1, 0, 1], [0, 1, 0, 2], [0, 1, 1, 0], [0, 1, 1, 1], [0, 1, 1, 2], [0, 1, 2, 0], [1, 0, 0, 0], [1, 0, 0, 1], [1, 0, 1, 0], [1, 0, 1, 1], [1, 0, 2, 0], [1, 0, 2, 1], [1, 1, 0, 0], [1, 1, 0, 1], [1, 1, 1, 0], [1, 1, 1, 1], [1, 2, 1, 0], [1, 2, 1, 1]]}
+chunk 58 {'essential': 1747, 'chi_split': 99, 'df': 53, 'nondf_split': 46, 'loc_free': 1, 'free': 1} df 18s loc 20s free 3s total 41s
+chunk 60 {'essential': 1746, 'chi_split': 87, 'df': 47, 'nondf_split': 40, 'loc_free': 0, 'free': 0} df 18s loc 17s free 0s total 35s
+HIT {"chunk": 62, "S": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 19, 20, 22, 23, 25, 26], "k": 22, "chi": [1, -22, 156, -378, 243], "exps": [1, 3, 9, 9], "gens": [1, 3, 9, 9], "normals": [[0, 0, 0, 1], [0, 0, 1, 0], [0, 0, 1, 1], [0, 0, 1, 2], [0, 1, 0, 0], [0, 1, 0, 1], [0, 1, 0, 2], [0, 1, 1, 0], [0, 1, 1, 1], [0, 1, 1, 2], [0, 1, 2, 0], [1, 0, 0, 0], [1, 0, 0, 1], [1, 0, 0, 2], [1, 0, 1, 0], [1, 0, 1, 1], [1, 0, 2, 0], [1, 0, 2, 1], [1, 1, 0, 0], [1, 1, 0, 1], [1, 1, 1, 0], [1, 1, 1, 1]]}
+chunk 62 {'essential': 1745, 'chi_split': 89, 'df': 48, 'nondf_split': 41, 'loc_free': 1, 'free': 1} df 18s loc 18s free 1s total 37s
+DONE

@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+# downloaded third-party papers (references only)
+work/*.pdf

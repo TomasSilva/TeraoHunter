@@ -1,0 +1,825 @@
+arXiv:1906.02188v2  [math.AC]  18 Mar 2021
+Locally Heavy Hyperplanes in
+Multiarrangements
+Takuro Abe ∗and Lukas K¨ uhne†
+19th March 2021
+Hyperplane Arrangements of rank 3 admitting an unbalanced Z iegler re-
+striction are known to fulﬁll Terao’s conjecture. This long -standing con-
+jecture asks whether the freeness of an arrangement is deter mined by its
+combinatorics. In this note we prove that arrangements whic h admit a loc-
+ally heavy ﬂag satisfy Terao’s conjecture which is a general ization of the
+statement above to arbitrary dimension. To this end we exten d results char-
+acterizing the freeness of multiarrangements with a heavy h yperplane to those
+satisfying the weaker notion of a locally heavy hyperplane. As a corollary
+we give a new proof that irreducible arrangements with a gene ric hyperplane
+are totally nonfree. In another application we show that an i rreducible mul-
+tiarrangement of rank 3 with at least two locally heavy hyper planes is not
+free.
+Keywords: Hyperplane Arrangements, Free Arrangement, Logarithmic d erivations,
+Multiarrangement.
+2010 MSC: 32S22, 52C35, 13N15.
+1 Introduction
+Inspired by singularity theory, K. Saito initiated the stud y of logarithmic vector ﬁelds
+on a hypersurface [ Sai80]. In the special case of hyperplane arrangements H. Terao
+subsequently showed that on can pass from analytic to algebr aic consideration by in-
+troducing free arrangements [ Ter80]. The long-standing open problem in this area is
+Terao’s conjecture asserting that the freeness of an hyperp lane arrangement only de-
+pends on its underlying combinatorics. A recent approach to this problem, which gives
+∗ Institute of Mathematics for Industry, Kyushu University, Japan. Email: abe@imi.kyushu-u.ac.jp
+† Einstein Institute of Mathematics, The Hebrew University o f Jerusalem, Israel and Max Planck Insti-
+tute for Mathematics in the Sciences in Leipzig, Germany. Em ail: lf.kuehne@gmail.com
+1
+a partial answer, is based on multiarrangements and Yoshina ga’s criterion, cf. [ Yos04;
+Yos05; AY13; Abe16].
+In [ AK18], the authors deﬁned heavy and locally heavy hyperplanes in multiarrange-
+ments and developed the theory of the former. As a main result , heavy ﬂags are intro-
+duced as a class of arrangements for which Terao’s conjectur e holds. The goal of this
+note is to generalize this theory to locally heavy hyperplan es. We start by giving our
+main deﬁnition of (locally) heavy hyperplanes.
+Deﬁnition 1.1. Let (A,m ) be a multiarrangement in V = Kℓ.
+(1) A hyperplane H0 ∈ A is called heavy if
+m(H0) ≥
+∑
+L∈A, L ⁄=H0
+m(L).
+(2) A hyperplane H0 ∈ A is called locally heavy if
+m(H0) ≥
+∑
+L∈AX , L ⁄=H0
+m(L) (1.1)
+for all localizations (AX,m X) with X ∈ A H0 and |AX| ≥ 3.
+An advantage of working with locally heavy hyperplanes in mu ltiarrangements is that
+the Euler restriction ( AH,m ∗) onto a locally heavy hyperplane H0 is of a particular nice
+shape, namely m∗(X) = |mX | −m(H0) for all X ∈ A H0. Since this last equation always
+holds for X ∈ A H0 with |AX | = 2 we only demand Equation ( 1.1) to hold for the ﬂats
+X ∈ A H0 with |AX | ≥ 3.
+In particular, the Euler multiplicity onto a locally heavy h yperplane is combinatori-
+ally determined which is usually not the case, since its deﬁn ition is of algebraic nature
+(cf. [ ATW08]). This multiplicity on the restriction AH also coincides with the natural
+generalization of Ziegler’s multirestriction to the setti ng of multiarrangements. We call
+the restriction to a locally heavy hyperplane therefore an Euler–Ziegler restriction .
+An important tool to investigate the freeness of an arrangem ents is its second Betti
+numberb2. This approach has been pioneered by Yoshinaga in [ Yos05] and by the ﬁrst
+author in joint work with Yoshinaga in [ AY13]. In the case of a simple complex arrange-
+ment, this number agrees with the second topological Betti n umber of the complement
+with rational coeﬃcients. In general, the second Betti numb er can be deﬁned as follows:
+Deﬁnition 1.2. (1) For a simple arrangement A its second Betti number b2(A) is
+b2(A) :=
+∑
+X∈L2(A)
+|AX| − 1.
+(2) For a multiarrangement (A,m ) its second Betti number b2(A,m ) is deﬁned as
+b2(A,m ) :=
+∑
+X∈L2(A)
+d(1)
+X d(2)
+X ,
+2
+whered(1)
+X ,d (2)
+X are the nonzero exponents of the multiarrangement (AX,m X) which
+is a multiarrangement of rank 2 and thus free.
+For a multiarrangement ( A,m ) of rank ℓ, the Betti number b2(A,m ) is the coeﬃcient
+of tℓ−2 of the characteristic polynomial deﬁned in [ ATW07]. Note that in the case of
+a multiarrangement, these coeﬃcients were not called Betti numbers in [ ATW07]; we
+introduced this term for multiarrangements in [ AK18].
+A main result of this article is a strengthening of Theorem 1. 2 in [ AK18] which es-
+tablishes a connection between the freeness of a locally hea vy multiarrangement and its
+Euler–Ziegler restriction:
+Theorem 1.3. Let (A,m ) be a multiarrangement with a locally heavy hyperplane H0 ∈ A
+with m0 :=m(H0). Then
+b2(A,m ) −m0(|m| −m0) ≥b2(AH0,m H0), (1.2)
+Moreover, (A,m ) is free if and only if the Euler–Ziegler restriction (AH0,m H0) of (A,m )
+onto H0 is free, and Inequality (1.2) holds with equality.
+The left hand side of Inequality ( 1.2) is the second Betti number of the multiarrange-
+ment ( A,m ) away from the locally heavy hyperplane H0. This statement will be made
+precise in Lemma 3.3.
+The following example is an application of Theorem 1.3 to a multiarrangement whose
+underlying simple arrangement is the braid arrangement A3.
+Example 1.4. Consider the multiarrangement (A,m ) given by the deﬁning equation
+Q(A,m ) = xa(x −y)a(x −z)aya(y −z)azm0,
+for some positive integers a andm0 withm0 ≥ 2a. Figure 1 shows a projectivized picture
+of (A,m ) where H0 := {z = 0 } is the hyperplane at inﬁnity. Note that by assumption
+H0 is locally heavy.
+In the circled intersections at rank a rank two ﬂat X in Figure 1 we display the Betti
+number b2(AX,m X ). If the intersection is a rank two ﬂat of size two this is just th e
+product of the multiplicities of the two deﬁning hyperplane s. If the intersection is deﬁned
+by three hyperplanes we use Wakamiko’s result in [ Wak07] that yields b2(AX,m X ) =⌊ mX
+2
+⌋⌈ mX
+2
+⌉
+in this case (assuming that this localization does not have a heavy hyperplane
+which is true in all applications of this theorem in this exam ple).
+Now, we can compute the left hand side of Inequality (1.2) using the above discussion
+and Deﬁnition 1.2 as
+2a2 + 2
+⌊ 3a
+2
+⌋⌈ 3a
+2
+⌉
+. (1.3)
+On the other hand, the deﬁning equation Q(AH0,m H0) of the Euler–Ziegler restriction
+toH0 isx2ay2a(x −y)a. This restricted multiarrangement is of rank 2 and therefore free.
+Wakamiko’s theorem [Wak07] again yields exp(AH0,m H0) =
+(⌊5a
+2
+⌋
+,
+⌈ 5a
+2
+⌉)
+and therefore
+b2(AH0,m H0) =
+⌊ 5a
+2
+⌋⌈ 5a
+2
+⌉
+. (1.4)
+3
+a2
+ka2
+ka
+a
+a
+a a
+m0
+Figure 1: The projectivized picture of ( A,m ). The numbers in the intersections denote
+the value of b2 in the localization along these ﬂats where k :=
+⌊ 3a
+2
+⌋⌈ 3a
+2
+⌉
+.
+Hence, Theorem 1.3 shows that (A,m ) is free if and only if the Expressions (1.3)
+and (1.4) agree. A short computations yields that this is the case if an d only if a = 1 in
+which case (A,m ) is free with exp(A,m ) = (m0, 2, 3).
+One of the most important open conjectures in the ﬁeld of hype rplane arrangements is
+Terao’s conjecture. It asks whether the freeness of an arran gement A is determined by its
+intersection lattice L(A). In this note we will consider Terao’s conjecture for the sp ecial
+class of arrangements which iteratively admit locally heav y Euler–Ziegler restrictions.
+We call such a chain of restrictions a locally heavy ﬂag:
+Deﬁnition 1.5. Let A be an arrangement in V = Kℓ. A ﬂag {Xi}ℓ
+i=1 of A with
+Xi ∈ Li(A), i.e. codimXi = i, is called a locally heavy ﬂag if Xi+1 ∈ A Xi is locally
+heavy in (AXi,m Xi) fori = 1,...,ℓ −1. Let LHF ℓ be the set of hyperplane arrangements
+in V = Kℓ such that every A ∈ LHF ℓ admits a locally heavy ﬂag.
+Theorem 1.3 yields a positive answer to Terao’s conjecture for the class of arrangements
+in LHF ℓ which generalizes Corollary 1.8 in [ AK18]:
+Theorem 1.6. Let A be an arrangement in V = Kℓ which admits a locally heavy ﬂag
+{Xi}ℓ
+i=1. Then A is free with exp(A) = (1,m X1 (X2),...,m Xℓ− 1(Xℓ)) if and only if
+b2(A) =
+∑
+0≤i<j≤ℓ−1
+mXi(Xi+1)mXj (Xj+1), (1.5)
+where we set mX0(X1) := 1. In this case, this ﬂag is both a supersolvable ﬁltration and a
+divisional ﬂag as in [ Abe16]. In particular, the freeness of any A ∈ LHF ℓ depends only
+on its combinatorics, namely its intersection lattice L(A).
+4
+We remark that not every supersolvable arrangement admits a locally heavy ﬂag; for
+instance the simple braid arrangement A3 underlying Example 1.4 is supersolvable but
+does not have a locally heavy Euler–Ziegler restriction.
+As an illustration of Theorem 1.6, we give an example of an arrangement with a locally
+heavy ﬂag in LHF 4 and determine its freeness combinatorially:
+Example 1.7. Let A in V = K4 be deﬁned by
+x(x −z +w)(x −z −w)(y −w)(y +w)(y −z)z(z +w)(z −w)w = 0,
+Then, A has a locally heavy ﬂag X1 := {w = 0} ∈ A , X2 := {w =z = 0} ∈ (AX1,m X1)
+and X3 := {w =z =y = 0} ∈ (AX2,m X2), and X4 := 0. Then it holds that mX1(X2) =
+3, mX2(X3) = 3 and mX3(X4) = 3 . So the RHS of (1.5) evaluates to 1(3 + 3 + 3) +
+3(3 + 3) + 3 · 3 = 36 .
+We compute b2(A) via Deﬁnition 1.2. There are 21 rank two ﬂats with |AX| = 2, six
+with |AX| = 3, one with |AX| = 4. Thus, we obtain b2(A) = 21+6 ·2+3 = 36 . Therefore,
+Theorem 1.6 implies that A is free and any arrangement with the same intersection latti ce
+as A is free as well.
+This article is organized as follows. In Section 2, we recall deﬁnitions and results
+relevant for the proofs of the main results. These proofs wil l be given in Section 3. Sub-
+sequently, we will consider two applications of the locally heaviness techniques. Firstly,
+we will show in Section 4 that arrangements with a generic hyperplane are totally non -
+free arrangements. Secondly, we will consider multiarrang ements with multiple locally
+heavy hyperplanes in Section 5.
+Acknowledgments We thank the anonymous referee for carefully reading an earl ier
+version of this article and for giving many useful suggestio ns how to improve the ex-
+position. The ﬁrst author is partially supported by JSPS KAK ENHI Grant-in-Aid for
+Scientiﬁc Research (B) 16H03924. The second author is suppo rted by ERC StG 716424
+- CASe and a Minerva Fellowship of the Max Planck Society.
+2 Preliminaries
+In this section we ﬁx some notations and introduce known resu lts, which will be used in
+the following proofs.
+LetV be a vector space of dimension ℓ over a ﬁeld K andS :=S(V ∗) be the symmet-
+ric algebra. We can choose coordinates x1,...,x ℓ for V ∗ such that S = K[x1,...,x ℓ].
+A hyperplane H in V is a linear subspace of codimension 1. A (central) arrange-
+ment of hyperplanes A is a ﬁnite collection of hyperplanes. This article is mainly
+concerned with multiarrangements, which are deﬁned to be an arrangement of hy-
+perplanes A with a multiplicity function m : A → Z>0. Multiarrangements were ﬁrst
+deﬁned by Ziegler in [ Zie89] and are denoted by ( A,m ). Deﬁne |m| :=∑
+H∈Am(H). A
+multiarrangement ( A,m ) with m(H) = 1 for all H ∈ A is called a simple hyperplane
+arrangement. For each hyperplane H we can choose a linear deﬁning equation αH ∈S.
+5
+Then Q(A,m ) := ∏
+H∈Aαm(H)
+H is the deﬁning polynomial of a multiarrangement
+(A,m ). For L ∈ A we deﬁne the characteristic multiplicity δL : A → Z>0 of L by
+setting δL(H) = 1 if H =L and 0 otherwise.
+For an arrangement A the set of all non-empty intersections of elements of A is deﬁned
+to be the intersection lattice L(A), i.e.,
+L(A) := {∩H∈BH | B ⊂ A}.
+It is ordered by reverse inclusion and ranked by the codimens ion. Denote by Lr(A) :=
+{X ∈L(A) | codim(X) = r} the set of X ∈L(A) with codimension r. For any X ⊂V
+let ( AX,m X ) be the localization of ( A,m ) at X by deﬁning AX := {H ∈ A | X ⊆H}
+and mX :=m|AX .
+A central notion of this article is the freeness of a (multi-) arrangement. The S-module
+D(A,m ) is the module of logarithmic derivations of ( A,m ) deﬁned as
+D(A,m ) := {θ ∈ Der(S) |θ(αH) ∈αm(H)
+H S for all H ∈ A},
+where Der(S) is the module of all derivations on S. If D(A,m ) is a free S-module,
+we call ( A,m ) a free multiarrangement . In the case of a free multiarrangement
+(A,m ) one can choose a homogeneous basis θ1,...,θ ℓ ofD(A,m ). In this case we deﬁne
+exp(A,m ) = (pdeg θ1,..., pdegθℓ) to be the exponents of ( A,m ) where a derivation
+θ ∈ Der(S) is homogeneous with pdeg θ = d if θ(α) is a homogeneous polynomial of
+degree d for any α ∈V ∗.
+A useful result to decide the freeness of a multiarrangement is Saito’s criterion ﬁrst
+proved by K. Saito for simple arrangements [ Sai80, Theorem 1.8] and by Ziegler for
+multiarrangements [Zie89, Theorem 8]. For θ1,...,θ ℓ ∈D(A,m ) deﬁne an ( ℓ ×ℓ)-matrix
+M (θ1,...,θ ℓ) by setting the ( i,j )-th entry to be θj(xi).
+Theorem 2.1. Let θ1,...,θ ℓ be derivations in D(A,m ). Then there exists some f ∈ S
+such that
+detM (θ1,...,θ ℓ) = f Q(A,m ).
+Furthermore, the family (θ1,...,θ ℓ) with θi ∈ D(A,m ) forms a basis of D(A,m ) if and
+only if f ∈ K∗. In particular, if θ1,...,θ ℓ are all homogeneous, then (θ1,...,θ ℓ) forms a
+basis of D(A,m ) if and only if the following two conditions are satisﬁed:
+(i) θ1,...,θ ℓ are independent over S.
+(ii) ∑ ℓ
+i=1 pdegθi = |m|.
+Next, we review the addition-deletion theorem for multiarr angements. Let ( A,m ) be
+a multiarrangement and H0 ∈ A a ﬁxed hyperplane. The deletion ( A′,m ′) of ( A,m )
+with respect to H0 is deﬁned as:
+(1) If m(H0) = 1 then A′ := A \ {H0} and m′(H) = m(H) for all H ∈ A ′.
+6
+(2) If m(H0) ≥ 2 then A′ := A and for H ∈ A ′ = A, we set
+m′(H) :=
+{ m(H) if H ⁄=H0,
+m(H0) − 1 if H =H0.
+The restricted arrangement is deﬁned by AH0 := {H0 ∩H | H ∈ A \ {H0}}. Now for
+X ∈ A H0, the arrangement ( AX,m X ) is of rank 2 and therefore always free (cf. [ Zie89,
+Corollary 7]). Hence, we can choose a basis {ζ1,...,ζ ℓ−2,θ X,ψ X } of D(AX,m X ) such
+that pdeg ζi = 0, θX ⁄∈αH0 DerK(S) and ψX ∈ αH0 DerK(S) (cf. [ ATW08, Proposition
+2.1]). Then the Euler multiplicity m∗ on AH0 is deﬁned as m∗(X) := pdeg θX and
+(AH0,m ∗) is called the Euler restriction of ( A,m ). For the Euler restriction, one has
+the following result.
+Theorem 2.2. [ATW08, Theorem 0.8] (Addition-Deletion Theorem for multiar-
+rangements) Let (A,m ) be a multiarrangement and H0 ∈ A . Then any two of the
+following three statements imply the third:
+(1) (A,m ) is free with exp(A,m ) = (d1,...,d ℓ−1,d ℓ).
+(2) (A′,m ′) is free with exp(A′,m ′) = (d1,...,d ℓ−1,d ℓ − 1).
+(3) (AH0,m ∗) is free with exp(AH0,m ∗) = (d1,...,d ℓ−1).
+Another way of deﬁning a multiplicity on the restriction of a multiarrangement (A,m )
+to a hyperplane H0 is the Euler–Ziegler restriction (AH0,m H0) deﬁned by setting
+mH0(X) = |mX| −m(H0)
+for any X ∈ A H0 (cf. also [ AK18]). For a simple arrangement A this deﬁnition agrees
+with the classical Ziegler restriction (cf. [ Zie89, Example 2]) which we therefore take
+as its deﬁnition for this article.
+IfH0 is a locally heavy hyperplane in ( A,m ), we have m∗(X) = mH0(X) by [ ATW08,
+Proposition 4.1]. Hence in the locally heavy case, the Euler restriction ( AH0,m ∗) coin-
+cides with the Euler–Ziegler restriction ( AH0,m H0).
+Much of our work on locally heavy multiarrangements is motiv ated by and modeled
+after results on simple arrangements. The corresponding re sult to Theorem 1.3 is the
+following.
+Theorem 2.3. [AY13, Theorem 5.1] Let A be an arrangement with a ﬁxed hyperplane
+H0 ∈ A and assume that ℓ ≥ 3. Let (AH0,m H0) be the Ziegler restriction onto H0. Then
+it holds that
+b2(A) − (|A| − 1) ≥b2
+(
+AH0,m H0
+)
+.
+Moreover, A is free if and only if the above inequality is an equality, and (AH0,m H0) is
+free.
+We restate two main results of [ AK18] which will be used in the following proofs:
+7
+Theorem 2.4. [AK18, Theorem 1.2] Let (A,m ) be a multiarrangement and H0 ∈ A a
+heavy hyperplane with m0 :=m(H0). Then
+b2(A,m ) −m0(|m| −m0) ≥b2(AH0,m H0). (2.1)
+where b2(A,m ) is the second Betti number of (A,m ) (cf. [ ATW07, Deﬁnition 3.1]).
+Moreover, (A,m ) is free if and only if the Euler–Ziegler restriction (AH0,m H0) of (A,m )
+onto H0 is free, and Inequality (2.1) is satisﬁed with equality. In this case, exp(A,m ) =
+(m0,d 2,...,d ℓ), where exp(AH0,m H0) = (d2,...,d ℓ).
+Theorem 2.5. [AK18, Theorem 1.6] Let (A,m ) be a multiarrangement and H ∈ A .
+Then
+b2(A,m ) −m(H)(|m| −m(H)) ≥b2(AH,m ∗),
+where (AH,m ∗) is the Euler restriction of (A,m ) onto H.
+Lastly, we quote a lemma relating the logarithmic derivatio ns of a multiarrangement
+with the ones of its restriction.
+Lemma 2.6. [AK18, Lemma 3.2] Let (A,m ) be a multiarrangement and ﬁx a hyperplane
+H0 ∈ A with H0 = kerαH0. If δ ∈D(A,m ) and δ(αH0 ) = 0 then δ |H0∈D(AH0,m H0).
+3 Proofs of the Main Results
+The starting point of this article is the observation that lo cally heavy hyperplanes guar-
+antee the existence of a distinguished derivation in its mod ule of logarithmic derivations
+playing a similar role as the Euler derivation for simple hyp erplane arrangements. Such a
+derivation is called a good summand in [AK18]. This statement is made precise in the
+following proposition which generalizes Theorem 3.4 in [ AK18] from heavy hyperplanes
+to locally heavy hyperplanes.
+Proposition 3.1. Let (A,m ) be a multiarrangement with a locally heavy hyperplane
+H0 ∈ A , say H0 = {α0 = 0 } and set m0 :=m(H0). Further assume that (A,m ) is free
+with exp(A,m ) = (d1,...,d ℓ). Choose a basis θ1...,θ ℓ ofD(A,m ) withdi = pdegθi for
+all 1 ≤i ≤ℓ. Then the following three statements hold:
+(1) For some 1 ≤j ≤ℓ it holds that dj =m0 and θj(α0) = αm0
+0 .
+(2) There exists a basis θ′
+1,...,θ ′
+ℓ of D(A,m ) such that θ′
+j(α0) = αm0
+0 and the projec-
+tions to S/α0S of the remaining basis elements θ′
+1,..., θ′
+j−1,θ′
+j+1,..., θ′
+ℓ areS/α0S-
+independent.
+(3) The Euler restriction (AH0,m ∗) is free.
+Proof. A change of coordinates allows us to assume α0 =x1. By deﬁnition of D(A,m )
+we have θi(x1) = 0 for all i with di <m 0. Theorem 2.1 (Saito’s criterion) ensures that
+there exists 1 ≤j ≤ℓ such that θj(x1) ⁄= 0.
+8
+Assume for a contradiction di > m0 for all indices i with θi(x1) ⁄= 0 and hence
+θi(x1) = 0 for all indices i with di ≤m0.
+Again by deﬁnition of D(A,m ) we can choose polynomials fi ∈S such that θi(x1) =
+xm0
+1 fi for 1 ≤ i ≤ ℓ. Hence, the Laplace expansion of M (θ1,...,θ ℓ) along its ﬁrst row
+yields
+detM (θ1,...,θ ℓ) = xm0
+1
+( ℓ∑
+i=1
+(−1)i+1figi
+)
+,
+where gi ∈S is the minor of M (θ1,...,θ ℓ) with the ﬁrst row and i-th column removed.
+Therefore, Theorem 2.1 shows that Q(A,m ) = xm0
+1
+(∑ ℓ
+i=1(−1)i+1figi
+)
+.
+Since xm0+1
+1 ∤Q(A,m ) there exists an index, say ℓ, such that
+fℓgℓ ⁄= 0 (3.1)
+in S/x1S. In particular, we have
+0 ⁄=gℓ = det(θi(xk))i=1,...,ℓ−1,k=2,...,ℓ.
+Hence, the derivations θ1,..., θℓ−1 are S/x1S-independent.
+Furthermore, (3.1) implies fℓ ⁄= 0 and hence dℓ >m 0 by assumption. Therefore,
+deggℓ = |m| −dℓ< |m| −m0 = |m∗|, (3.2)
+where the last equality holds since H0 is locally heavy in ( A,m ).
+By Proposition 2.2 in [ ATW08] the projected derivations θ1,..., θℓ−1 are elements of
+D(AH0,m ∗). Hence, Theorem 2.1 implies that there exists some f ∈S such that
+gℓ =fQ (AH0,m ∗).
+Thus, deg gℓ ≥ |m∗| which contradicts ( 3.2). Therefore our assumption is false and
+we may without loss of generality assume θℓ(x1) = xm0
+1 which proves the claim (1) of
+Proposition 3.1.
+For (2) we may assume θℓ(x1) = xm0
+1 by the ﬁrst part. We perform a change of basis
+ofD(A,m ) by setting θ′
+i :=θi − θi(x1)
+θℓ(x1)θℓ for 1 ≤i ≤ℓ − 1 and θ′
+ℓ :=θℓ. Hence, the family
+θ′
+1,...,θ ′
+ℓ also forms a basis of D(A,m ) and it holds that θ′
+i(x1) = 0 for 1 ≤i ≤ℓ − 1.
+Thus, the Laplace expansion of the ﬁrst row of the Saito matri x M (θ′
+1,...,θ ′
+ℓ) yields
+that the projected derivations θ′
+1,..., θ′
+ℓ−1 are S/x1S-independent in D(AH0,m ∗).
+Lastly, for (3) note that
+d1 + · · · +dℓ−1 = |m| −dℓ = |m| −m0 = |m∗|.
+Thus, Saito’s criterion (Theorem 2.1) shows that the family θ′
+1,..., θ′
+ℓ−1 forms a basis of
+D(AH0,m ∗) which completes the proof.
+As a corollary to this proposition we obtain a strengthening of Proposition 3.6 in [ AK18]:
+9
+Corollary 3.2. Let (A,m ) be a multiarrangement with H0 ∈ A such that H0 is locally
+heavy. Then the following are equivalent:
+(1) (A,m ) is free.
+(2) (A,m +kδH0) is free for some k ∈ Z such that H0 is also locally heavy in (A,m +
+kδH0 ).
+(3) (A,m +kδH0) is free for all k ∈ Z such that H0 is locally heavy in (A,m +kδH0).
+Note that k is allowed to be negative in (2) and (3).
+Proof. Assume that ( A,m ) is free. Proposition 3.1 then implies that exp( A,m ) =
+(m0,d 2,...d ℓ) holds and ( AH0,m H0) is also free with exp( AH0,m H0) = (d2,...d ℓ). This
+Euler–Ziegler restriction ( AH0,m H0) coincides with the Euler restriction ( AH0,m ∗) on
+AH0 since H0 is a locally heavy hyperplane. So repeated applications of t he addition in
+Theorem 2.2 yields the freeness of ( A,m +kδH ) since this arrangement and all inter-
+mediate arrangements are locally heavy by assumption with t he identical Euler–Ziegler
+restriction. Conversely, if one assumes that ( A,m +kδH ) is free, the same argument
+with the deletion part of Theorem 2.2 shows the freeness of ( A,m ).
+Before proving Theorem 1.3 we give another Lemma:
+Lemma 3.3. Let (A,m ) be a multiarrangement and H0 ∈ A a locally heavy hyperplane
+with m0 :=m(H0). Then
+b2(A,m ) −m0(|m| −m0) =
+∑
+X∈L2(A),
+X⁄⊂H0
+b2(AX,m X ).
+Proof. The local-global formula (Theorem 3.3 in [ ATW07]) enables us to express the
+second Betti number of ( A,m ) as
+b2(A,m ) =
+∑
+X∈L2(A)
+b2(AX,m X )
+=
+∑
+X∈L2(A),
+X⊂H0
+b2(AX,m X) +
+∑
+X∈L2(A),
+X⁄⊂H0
+b2(AX,m X). (3.3)
+Hence, it suﬃces to prove that the ﬁrst summand in ( 3.3) equals m0(|m| −m0).
+In each localization ( AX,m X ) with X ∈ L2(A) and X ⊂ H0 the hyperplane H0
+is heavy by the deﬁnition of locally heavy. Thus, these local izations are free with
+exp(AX,m X ) = ( m0, |mX | − m0), cf. e.g. [ Yos14, Proposition 1.23 (i)], and therefore
+10
+we obtain b2(AX,m X) = m0(|mX | −m0). Hence, we can compute
+∑
+X∈L2(A),
+X⊂H0
+b2(AX,m X ) =
+∑
+X∈L2(A),
+X⊂H0
+m0(|mX | −m0)
+=m0
+
+
+∑
+X∈L2(A),
+X⊂H0
+∑
+K∈AX ,
+K⁄=H0
+m(K)
+
+ (3.4)
+=m0(|m| −m0).
+The double sum in Equation ( 3.4) counts the multiplicity of each hyperplane in A diﬀer-
+ent from H0 exactly once since each such hyperplane intersects H0 exactly once. Thus,
+this double sum equals |m| −m0 which completes the proof.
+Combining the results derived so far, we are now able to prove Theorem 1.3:
+Proof of Theorem 1.3. By the assumption that H0 is locally heavy in ( A,m ), the Euler
+restriction (AH0,m ∗) coincides with the Euler–Ziegler restriction ( AH0,m H0). Therefore,
+the inequality ( 1.2) follows immediately from Theorem 2.5.
+For the characterization of the freeness of ( A,m ) in the second part of Theorem 1.3, we
+ﬁx some k ∈ N such that H0 is a heavy hyperplane in ( A,m +kδH0). By Corollary 3.2
+(A,m ) is free if and only if ( A,m +kδH0 ) is free. Lemma 3.3 implies that the left
+hand side of Inequality ( 1.2), namely b2(A,m ) −m0(|m| −m0), agrees for ( A,m ) and
+(A,m + kδH0 ). Lastly by its deﬁnition, the Euler–Ziegler restriction ( AH0,m H0) is
+independent of the multiplicity of H0 and hence it agrees for ( A,m ) and ( A,m +kδH0)
+too. So in total, the characterization of freeness for ( A,m ) follows immediately from the
+analogous characterization for ( A,m +kδH0) in Theorem 2.4.
+The proof of Theorem 1.6 is very similar to the corresponding Theorem 1.7 in [ AK18].
+We give it in its modiﬁed form for the sake of completeness.
+Proof of Theorem 1.6. For convenience in our notations, we set A =
+(
+AX0,m X0
+)
+, where
+mX0(H) = 1 for all H ∈ A. Theorem 2.3 applied to A yields
+A is free ⇔
+(
+AX1,m X1
+)
+is free and b2(A) −
+(⏐⏐mX0
+⏐⏐− 1
+)
+=b2
+(
+AX1,m X1
+)
+. (3.5)
+Note that
+((
+AXi
+) Xi+1
+,
+(
+mXi
+) Xi+1
+)
+=
+(
+AXi+1,m Xi+1
+)
+and the hyperplane Xi+2 is loc-
+ally heavy in the multiarrangement
+(
+AXi+1,m Xi+1
+)
+for i = 1,...,ℓ − 3. In accordance
+with [ AK18], we will write bH
+2 (A,m ) = b2(A,m ) −m(H)(|m| −m(H)) to simplify our
+notation in the following. Hence we can apply Theorem 1.3 to obtain, for i = 1,...,ℓ −3,
+(
+AXi,m Xi
+)
+is free ⇔ (3.6)
+(
+AXi+1,m Xi+1
+)
+is free and bXi+1
+2
+(
+AXi,m Xi
+)
+=b2
+(
+AXi+1,m Xi+1
+)
+.
+11
+Since
+(
+AXℓ− 2,m Xℓ− 2
+)
+is a multiarrangement of rank 2, it is always free (cf. [ Zie89]). So
+we can iteratively link the statements ( 3.5) and ( 3.6) to obtain
+A is free ⇔bXi+1
+2
+(
+AXi,m Xi
+)
+=b2
+(
+AXi+1,m Xi+1
+)
+for all i = 0,...,ℓ − 3. (3.7)
+Since Theorems 2.3 and 1.3 imply that bXi+1
+2
+(
+AXi,m Xi
+)
+≥ b2
+(
+AXi+1,m Xi+1
+)
+for all
+i = 0,...,ℓ − 3, the right-hand side of ( 3.7) is equivalent to
+ℓ−3∑
+i=0
+bXi+1
+2
+(
+AXi,m Xi
+)
+=
+ℓ−3∑
+i=0
+b2
+(
+AXi+1,m Xi+1
+)
+. (3.8)
+Noting that
+bXi+1
+2 (AXi,m Xi) = b2(AXi,m Xi) −mXi(Xi+1)(|mXi| −mXi(Xi+1))
+we ﬁnd that ( 3.8) is in fact equivalent to
+b2(A) −
+ℓ−3∑
+i=0
+mXi(Xi+1)
+(⏐⏐mXi
+⏐⏐−mXi(Xi+1)
+)
+=b2
+(
+AXℓ− 2,m Xℓ− 2
+)
+. (3.9)
+Since exp
+(
+AXℓ− 2,m Xℓ− 2
+)
+=
+(
+mXℓ− 2(Xℓ−1),
+⏐⏐mXℓ− 2
+⏐⏐−mXℓ− 2(Xℓ−1)
+)
+, we have
+b2
+(
+AXℓ− 2,m Xℓ− 2
+)
+=mXℓ− 2(Xℓ−1)
+(⏐⏐mXℓ− 2
+⏐⏐−mXℓ− 2(Xℓ−1)
+)
+.
+This shows that ( 3.9) is equivalent to
+b2(A) =
+ℓ−2∑
+i=0
+mXi(Xi+1)
+(⏐⏐mXi
+⏐⏐−mXi(Xi+1)
+)
+.
+Since
+⏐⏐mXi
+⏐⏐ =∑ ℓ−1
+j=imXj (Xj+1), the above equality is equivalent to
+b2(A) =
+ℓ−2∑
+i=0
+mXi(Xi+1)
+
+
+ℓ−1∑
+j=i+1
+mXj (Xj+1))
+
+
+=
+∑
+0≤i<j≤ℓ−1
+mXi(Xi+1)mXj (Xj+1)
+This completes the ﬁrst part of the proof, since by ( 3.7) this is equivalent to A being
+free.
+The characteristic polynomialχ(A;t), and in particular also b2(A), of a simple arrange-
+ment A is combinatorially determined. The same holds true for the m ultiplicities of the
+Euler-Ziegler restrictions. Therefore the freeness of any arrangement in LHF ℓ depends
+only on its combinatorics. For the supersolvablity, use Pro position 4.2 in [ Abe17].
+12
+4 Totally Non-Freeness and Generic Hyperplanes
+Before stating the main result of this section we make the fol lowing deﬁnitions:
+Deﬁnition 4.1. An arrangement A in a vector space V is called reducible if after a
+change of coordinates A = A1 × A2 where Ai is an arrangements of hyperplanes in the
+vector spaceVi fori = 1, 2 such that V1 ⊕V2 =V . Otherwise, A is called irreducible. A
+hyperplaneH in an arrangement A is deﬁned to be a generic hyperplane if |AX | = 2
+for all X ∈L2(A) with X ⊂H. If all hyperplanes in A are generic the arrangement A
+is deﬁned to be a generic arrangement .
+Deﬁnition 4.2. [ATW08, Deﬁnition 5.4] An arrangement A is called totally nonfree
+if for any multiplicity m : A → Z>0 the multiarrangement (A,m ) is not free.
+Yoshinaga showed that an irreducible generic arrangement o f rank greater than 2 is
+totally nonfree [ Yos10]. A simple irreducible arrangement of rank greater than 2 wh ich
+contains a generic hyperplane is known to be not free, cf. [ OT92]. Recently, DiPasquale
+generalized this fact to multiarrangements by showing that such an arrangement is totally
+nonfree [ DiP18, Corollary 4.13]. Since a generic hyperplane is always loca lly heavy, we
+obtain another proof of this result as a corollary of our loca lly heaviness technique.
+Corollary 4.3. Let A be an irreducible arrangement of rank greater than 2 with a generic
+hyperplaneH0 ∈ A. Then A is totally nonfree.
+Before proving this corollary, we recall a known auxiliary l emma:
+Lemma 4.4. Let (A,m ) be an irreducible multiarrangement with m ⁄≡1. Then for any
+non-zeroθ ∈D(A,m ) it holds that pdegθ ≥ 2.
+Proof. For a graded S-module M we denote by Mk the k-th graded piece of M . We
+will ﬁrstly show that D(A)0 = 0 and D(A) = ⟨θE⟩S whereθE =∑ ℓ
+i=1xi∂xi is the Euler
+derivation.
+Assume there is a θ ∈D(A)0. Hence, θ =∑ ℓ
+i=0ci∂xi for some ci ∈ K for i = 1,...,ℓ
+and we set c := (c1,...,c ℓ). Therefore, for any H ∈ A we have 0 = θ(αH) = c ·αH,
+which contradicts A being irreducible.
+Secondly, consider a θ ∈ D(A)1 with θ /∈ ⟨θE⟩S and write again θ =∑ ℓ
+i=0fi∂xi for
+some fi ∈S1 fori = 1,...,ℓ . Since A is irreducible by assumption we may assume that
+A contains the hyperplanes Hi := {xi = 0 } for all 1 ≤ i ≤ ℓ. Since θ(xi) = fi we ﬁnd
+that fi = cixi for suitable ci ∈ K for all 1 ≤ i ≤ ℓ. By subtracting the scaled Euler
+derivation c1θE from θ we can assume c1 = 0, i.e. θ(x1) = 0 and θ ⁄= 0 since θ is not
+a multiple of θE. This however implies that the deﬁning linear equations of A except
+for H1 only involve the variables x2,...,x ℓ since any hyperplane in both x1 and any
+other variable would contradict θ ∈D(A). This is a contradiction to the fact that A is
+irreducible which ﬁnishes the proof of our claim.
+Now ﬁnally, we have D(A)k ⊇ D(A,m )k by deﬁnition of the derivation module. By
+assumption, there is H ∈ A with m(H) > 1. Hence, θE(αH ) = αH /∈ αm(H)
+H S which
+implies θE /∈ D(A,m ). In light of the ﬁrst part of the proof, we obtain D(A,m )0 = 0
+and D(A,m )1 = 0.
+13
+Proof of Corollary 4.3. Assume (A,m ) is free for some multiplicity m with exp(A,m ) =
+(d1,...,d ℓ). Firstly, we consider the case m0 := m(H0) = 1. In the case of a simple
+arrangement, i.e. m(H) = 1 for all H ∈ A , ( A,m ) is known to be not free. So we may
+assumem ⁄≡1. By assumption, the hyperplane H0 is generic in A which implies for the
+Euler restriction ( AH0,m ∗) of ( A,m ) onto H0
+|m∗| = |m| −m0 = |m| − 1.
+The fact that the arrangement A is irreducible and m ⁄≡1 yields di ≥ 2 for all 1 ≤i ≤ℓ
+by Lemma 4.4. Furthermore, by Proposition 3.1 at least one of the ( ℓ − 1) subsets of a
+basis of D(A,m ) forms a basis of D(AH0,m ∗). So by combining the above statements
+with Saito’s criterion we obtain
+|m| − 1 = |m∗| ≤ |m| − 2,
+which is a contradiction and hence ( A,m ) is not free.
+As a second case, we assume m0> 1. Since H0 is a generic hyperplane it is by deﬁnition
+also locally heavy in the multiarrangement ( A,m ). Hence, Corollary 3.2 implies that
+(A,m ) is free if and only if ( A, ˜m) is free where the multiplicity ˜m is deﬁned as
+˜m(H) :=
+{
+1 if H =H0,
+m(H) otherwise.
+However, the multiarrangement ( A, ˜m) is not free by the ﬁrst case which completes the
+proof.
+5 Multiple Locally Heavy Hyperplanes
+In contrast to heavy hyperplanes a multiarrangement can hav e multiple locally heavy
+hyperplanes. The following results show that in this case th e multiarrangement is not
+free unless its combinatorics is of a special nature.
+Theorem 5.1. Let (A,m ) be a multiarrangement with two locally heavy hyperplanes
+H,L ∈ A. Then we have:
+(1) If (A,m ) has rank 3, it is free if and only if it is reducible.
+(2) Assume (A,m ) has rank ℓ > 3, and there exists an X ∈ L3(A) with X ⊂ H ∩L
+such that AX is reducible as AX = ∅ℓ−3 ×~AX where ∅d is the empty arrangement
+in a Kd and ~AX is irreducible. Then (A,m ) is not free.
+Proof. For (1) note that a reducible rank 3 multiarrangement is always free since any rank
+2 multiarrangement is free. So let ( A,m ) be irreducible of rank 3 and assume it is free.
+Then by Proposition 3.1 we have exp(A,m ) = (m(H),m (L),d 3). Theorem 1.3 now yields
+14
+that (AH,m H) is free with exp( AH,m H) = (m(L),d 3) and henceb2(AH,m H ) = m(L)d3.
+On the other hand, Theorem 1.3 also shows
+b2(A,m ) −m(H)(|m| −m(H)) = b2(AH,m H) = m(L)d3. (5.1)
+By Lemma 3.3, the left hand side of this equation can computed as
+b2(A,m ) −m(H)(|m| −m(H)) =
+∑
+X∈L2(A),
+X⁄⊂H
+b2(AX,m X)
+=
+∑
+X∈L2(A),
+X⁄⊂H
+X⊂L
+b2(AX,m X) +
+∑
+X∈L2(A),
+X⁄⊂H
+X⁄⊂L
+b2(AX,m X )
+=m(L)d3 +
+∑
+X∈L2(A),
+X⁄⊂H
+X⁄⊂L
+b2(AX,m X),
+where the last equation holds since L is locally heavy and it intersects all remaining
+hyperplanes whose multiplicities sum to d3. Since ( A,m ) is irreducible there is at least
+one X ∈ L2(A) with X ⁄⊂H and X ⁄⊂L. Hence, the second summand in the above
+equation is strictly positive which is a contradiction to Eq uation (5.1). Therefore, ( A,m )
+is not free in this case.
+For (2) assume again that ( A,m ) is free. Now consider the localization ( AX,m X)
+which is also free since any localization of a free is multiar rangement is free. The rank
+3 multiarrangement ( AX,m X) contains the hyperplanes H,L which are clearly also
+locally heavy in ( AX,m X). Furthermore, ( AX,m X) contains the irreducible component
+(~AX,m X ) by assumption. Hence, by part (1) the multiarrangement ( AX,m X ) is not
+free which is a contradiction. Thus, ( A,m ) is not free.
+Example 5.2. Consider again a multiarrangement (A,m ) whose underlying simple ar-
+rangement is the braid arrangement A3 and which is given by the deﬁning equation
+Q(A,m ) = x(x −y)2(x −z)y(y −z)z2.
+Both the hyperplanes {x −y = 0 } and {z = 0 } are locally heavy in (A,m ). Since the
+underlying braid arrangement is irreducible, Theorem 5.1 immediately shows that (A,m )
+is nonfree.
+References
+[Abe16] T. Abe. “Divisionally free arrangements of hyperpl anes”. In: Invent. Math.
+204.1 (2016), pp. 317–346.
+[Abe17] T. Abe. “Restrictions of free arrangements and the d ivision theorem”. In:
+Perspectives in Lie theory . Vol. 19. Springer INdAM Ser. Springer, Cham,
+2017, pp. 389–401.
+15
+[AK18] T. Abe and L. K¨ uhne. “Heavy hyperplanes in multiarra ngements and their
+freeness”. In: J. Algebraic Combin. 48.4 (2018), pp. 581–606.
+[ATW07] T. Abe, H. Terao and M. Wakeﬁeld. “The characteristi c polynomial of a
+multiarrangement”. In: Adv. Math. 215.2 (2007), pp. 825–838.
+[ATW08] T. Abe, H. Terao and M. Wakeﬁeld. “The Euler multipli city and addition-
+deletion theorems for multiarrangements”. In: J. Lond. Math. Soc. (2) 77.2
+(2008), pp. 335–348.
+[AY13] T. Abe and M. Yoshinaga. “Free arrangements and coeﬃc ients of character-
+istic polynomials”. In: Math. Z. 275.3-4 (2013), pp. 911–919.
+[DiP18] M. DiPasquale. “A homological characterization fo r freeness of multi-arrange-
+ments”. In: ArXiv e-prints (June 2018). arXiv: 1806.05295 [math.AG] .
+[OT92] P. Orlik and H. Terao. Arrangements of hyperplanes . Vol. 300. Grundlehren
+der Mathematischen Wissenschaften [Fundamental Principl es of Mathemat-
+ical Sciences]. Springer-Verlag, Berlin, 1992, pp. xviii+ 325.
+[Sai80] K. Saito. “Theory of logarithmic diﬀerential forms a nd logarithmic vector
+ﬁelds”. In: J. Fac. Sci. Univ. Tokyo Sect. IA Math. 27.2 (1980), pp. 265–291.
+[Ter80] H. Terao. “Arrangements of hyperplanes and their fr eeness. I, II”. In: J. Fac.
+Sci. Univ. Tokyo Sect. IA Math. 27.2 (1980), pp. 293–320.
+[Wak07] A. Wakamiko. “On the exponents of 2-multiarrangeme nts”. In: Tokyo J.
+Math. 30.1 (2007), pp. 99–116.
+[Yos04] M. Yoshinaga. “Characterization of a free arrangem ent and conjecture of
+Edelman and Reiner”. In: Invent. Math. 157.2 (2004), pp. 449–454.
+[Yos05] M. Yoshinaga. “On the freeness of 3-arrangements”. In: Bull. London Math.
+Soc. 37.1 (2005), pp. 126–134.
+[Yos10] M. Yoshinaga. “On the extendability of free multiar rangements”. In: Ar-
+rangements, local systems and singularities. Vol. 283. Progr. Math. Birkh¨ auser
+Verlag, Basel, 2010, pp. 273–281.
+[Yos14] M. Yoshinaga. “Freeness of hyperplane arrangement s and related topics”. In:
+Ann. Fac. Sci. Toulouse Math. (6) 23.2 (2014), pp. 483–512.
+[Zie89] G. M. Ziegler. “Multiarrangements of hyperplanes a nd their freeness”. In:
+Singularities (Iowa City, IA, 1986) . Vol. 90. Contemp. Math. Amer. Math.
+Soc., Providence, RI, 1989, pp. 345–359.
+16

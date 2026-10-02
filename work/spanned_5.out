@@ -1,0 +1,11 @@
+PG(3,5): 156 points/planes
+k=1 {'orbits': 1, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (0s)
+k=2 {'orbits': 1, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (1s)
+k=3 {'orbits': 2, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (1s)
+k=4 {'orbits': 4, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (2s)
+k=5 {'orbits': 8, 'chi': 0, 'locfree': 0, 'nondf': 0, 'free': 0, 'mixed': 0}  (3s)
+k=6 {'orbits': 24, 'chi': 8, 'locfree': 8, 'nondf': 0, 'free': 0, 'mixed': 0}  (5s)
+k=7 {'orbits': 80, 'chi': 24, 'locfree': 24, 'nondf': 0, 'free': 0, 'mixed': 0}  (10s)
+k=8 {'orbits': 502, 'chi': 54, 'locfree': 54, 'nondf': 0, 'free': 0, 'mixed': 0}  (36s)
+k=9 {'orbits': 5093, 'chi': 93, 'locfree': 93, 'nondf': 0, 'free': 0, 'mixed': 0}  (355s)
+k=10 {'orbits': 64682, 'chi': 249, 'locfree': 247, 'nondf': 0, 'free': 0, 'mixed': 0}  (5512s)

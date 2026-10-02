@@ -1,0 +1,1 @@
+hit 10 n 8 m [1, 1, 2, 1, 1, 2, 2, 2] special [1007] patterns 61 stats (dim_generic, dim_special, sameLattice): {(4, 4, False): 61}

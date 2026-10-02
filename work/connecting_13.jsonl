@@ -1,0 +1,13 @@
+{"q": 13, "k": 6, "P": [0, 1, 2, 14, 30, 55], "n_lines": 13, "exps": [1, 6, 6], "t": [3, 3, 3, 4, 4, 4, 5, 5, 5], "moduli_tangent": 1, "realizations": 6, "nonfree_realizations": 0}
+{"q": 13, "k": 6, "P": [0, 1, 14, 28, 43, 113], "n_lines": 15, "exps": [1, 7, 7], "t": [3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5], "moduli_tangent": 1, "realizations": 10, "nonfree_realizations": 0}
+{"q": 13, "k": 6, "P": [0, 1, 14, 28, 46, 95], "n_lines": 15, "exps": [1, 7, 7], "t": [3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5], "moduli_tangent": 1, "realizations": 10, "nonfree_realizations": 0}
+{"q": 13, "k": 6, "P": [0, 1, 14, 28, 57, 72], "n_lines": 15, "exps": [1, 7, 7], "t": [3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5], "moduli_tangent": 1, "realizations": 10, "nonfree_realizations": 0}
+{"q": 13, "k": 7, "P": [0, 1, 2, 14, 15, 30, 35], "n_lines": 15, "exps": [1, 7, 7], "t": [3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5], "moduli_tangent": 1, "realizations": 10, "nonfree_realizations": 0}
+{"q": 13, "k": 7, "P": [0, 1, 2, 14, 15, 31, 37], "n_lines": 15, "exps": [1, 7, 7], "t": [3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5], "moduli_tangent": 1, "realizations": 10, "nonfree_realizations": 0}
+{"q": 13, "k": 7, "P": [0, 1, 2, 14, 15, 33, 36], "n_lines": 15, "exps": [1, 7, 7], "t": [3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5], "moduli_tangent": 1, "realizations": 10, "nonfree_realizations": 0}
+{"q": 13, "k": 7, "P": [0, 1, 2, 14, 15, 40, 45], "n_lines": 13, "exps": [1, 6, 6], "t": [3, 3, 3, 4, 4, 4, 5, 5, 5], "moduli_tangent": 1, "realizations": 6, "nonfree_realizations": 0}
+{"q": 13, "k": 8, "P": [0, 1, 2, 3, 14, 15, 84, 85], "n_lines": 15, "exps": [1, 7, 7], "t": [3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5], "moduli_tangent": 1, "realizations": 10, "nonfree_realizations": 0}
+{"q": 13, "k": 8, "P": [0, 1, 2, 4, 14, 15, 53, 54], "n_lines": 15, "exps": [1, 7, 7], "t": [3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5], "moduli_tangent": 1, "realizations": 10, "nonfree_realizations": 0}
+{"q": 13, "k": 8, "P": [0, 1, 2, 5, 14, 15, 42, 43], "n_lines": 15, "exps": [1, 7, 7], "t": [3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5], "moduli_tangent": 1, "realizations": 10, "nonfree_realizations": 0}
+{"q": 13, "k": 8, "P": [0, 1, 2, 14, 15, 27, 62, 134], "n_lines": 22, "exps": [1, 10, 11], "t": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 6, 6, 6, 7, 7], "moduli_tangent": 0, "realizations": 2, "nonfree_realizations": 0}
+{"q": 13, "k": 8, "P": [0, 1, 14, 28, 43, 55, 86, 110], "n_lines": 28, "exps": [1, 13, 14], "t": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 7, 7, 7, 7, 7, 7, 7, 7], "moduli_tangent": 0, "realizations": 3, "nonfree_realizations": 0}
