@@ -329,3 +329,10 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
 - Scale of larger classes (stage 1 only): n=16 (7,8): 8,884,481 big-block configurations (complete,
   4.7 h); n=17 (7,9): > 7.6M states; n=18 (7,10): > 5.7M states (killed: beyond reach of this
   pipeline without further pruning).
+- Scaling analysis (TC_ATTEMPT.md section 11): profile inequalities (Hirzebruch, Bojanowski-Pokora)
+  pass 99.6% of skeletons; skeleton realisability prunes only the densest (<= 8 big blocks ~100%
+  realisable, dims 4-16); in-search realisability pruning: -28% nodes at 20x cost; 83% of the 6M
+  (7,7) lattices have m = 5 and s_min = 5 (where the free ones are).  New lattice condition from
+  Abe 2014 Cor 1.2(2): unjoined multiple points P, Q need (m_P-1)+(m_Q-1) <= d1 or = d2 (prunes
+  1.3%; certifies lattices 3143, 4608 non-free).  n = 16 feasible (~400 CPU-h) with streaming +
+  compiled filter; beyond needs theory (eps >= 2 free arrangements; mdr-mixed deletion lattices).

@@ -487,6 +487,73 @@ would multiply these by a large factor (for n = 15 the ratio was 61), so 16 line
 method as it stands. What would be needed: a stronger necessary condition on the lattice of a free
 arrangement than the per-line counts, or an enumeration that builds in realisability.
 
+## 11. Scaling beyond 15 lines: where the cost is, and what would remove it
+
+**Diagnosis from the 15-line run** (`work/tc15/`). The candidate class for exponents (7, 7) had
+6,091,145 lattices; 10 are realisable; the other 99.9998% are abstract linear spaces with no
+geometry. The cost is therefore intrinsic to "enumerate lattices, then test realisability": the
+number of dense linear spaces grows super-exponentially (99,993 big-block skeletons at n = 15,
+8,884,481 at n = 16 for the single class (7, 8)), and the ratio lattices/skeletons was 61.
+
+Measurements that rule out the obvious shortcuts:
+- *Profile inequalities.* Hirzebruch's and the Bojanowski–Pokora inequality are satisfied by 99.6%
+  of the skeletons (n = 15 and 16): the candidates have many double points.
+- *Realisability of the skeleton alone.* Skeletons with ≤ 8 big blocks are essentially all
+  realisable, with realisation spaces of dimension 4–16; non-realisability appears only for the
+  densest skeletons (n = 16 sample: 11 big blocks 23/58 realisable, 12 big blocks 0/14). The
+  over-determination comes from the triples, i.e. at the leaves of the search.
+- *Realisability pruning inside the triple search* (`fill_pruned_experiment.py`): with the exact
+  one-sided test applied at every node where it is cheap, the tree shrank by 28% and the leaves by
+  39%, at 20× the cost. The combinatorial search followed by the leaf filter is the right design;
+  it just produces too many leaves.
+- *Theoretical cuts along the obvious axes do not help.* Of the 6,091,145 candidates, 5,068,388
+  have maximal multiplicity 5 (ε = d₁ − m = 2) and 5,209,745 have smallest line size 5 — exactly
+  where the five free (1, 7, 7) lattices live (all have ε = 2). No free candidate has ε = 3.
+
+**A new combinatorial necessary condition** (small, but exact). Apply Abe 2014, Cor. 1.2(2), to
+the free realisation A₁: every line L of the plane not in A₁ meets A₁ in k_L ∈ {d₁ + 1} ∪
+ℤ_{≥ d₂+1} points, i.e. σ_L = Σ_{P ∈ L} (m_P − 1) ∈ {0, …, d₁} ∪ {d₂}. Two multiple points P, Q
+not on a common line of A are joined by an external line, so
+
+  **(m_P − 1) + (m_Q − 1) ≤ d₁, or = d₂ with no third multiple point on PQ.**
+
+This is a condition on the lattice. It excludes 1.3% of the (7, 7) skeletons and certifies
+combinatorially that two of the ten realisable (7, 7) lattices (indices 3143 and 4608: two 6-fold
+points not on a common line) have no free realisation — in agreement with the exact computation.
+
+**What does scale.**
+1. *Streaming and a compiled leaf filter.* The leaf filter costs 3 ms per lattice in python-flint;
+   the (7, 8) class at n = 16 (~5·10⁸ lattices) is then ~400 CPU-hours, i.e. about two days on
+   8 cores if the lattices are filtered as they are generated instead of written out. This makes
+   16 lines a large but finite computation; 17 lines is ×50 beyond it.
+2. *Components only.* Terao can fail for L only if the non-degenerate realisation space has a
+   positive-dimensional component or at least two irreducible components over ℚ (§5, Prop. A).
+   So no freeness computation is ever needed for the rigid single-orbit lattices, which were 9 of
+   the 10 realisable ones here; freeness is computed only on the rare multi-component or
+   positive-dimensional lattices.
+3. *Geometry-first enumeration.* Enumerate the dual point configurations directly, adding one
+   point at a time as the intersection of two existing lines, on one existing line (one parameter)
+   or free (two parameters), with the matroid as the isomorphism key and the realisation space
+   tracked exactly; prune when it becomes empty or degenerate, and when the density conditions
+   (≤ d₁ lines through a point, the fixed total W) cannot be met. The number of nodes is then the
+   number of realisable dense partial configurations, not of abstract linear spaces. The
+   measurements above are a warning: partial configurations are mostly realisable until they are
+   nearly complete, so the gain comes from the last few levels, and the algebra at every node must
+   stay in the ≤ 2-parameter range to be affordable.
+4. *An induction with a bigger class.* Deleting any line from a counterexample (A₁ free, A₂
+   non-free, same lattice) gives A₁ ∖ H plus-one generated with mdr = d₁ and A₂ ∖ H with mdr ≤
+   d₁ − 1 (derivations restrict; mdr drops by at most one under deletion). So every deletion of a
+   counterexample lattice is a lattice with n − 1 lines whose realisations have different minimal
+   degrees of Jacobian relations, with χ = (t − 1)[(t − d₁)(t − d₂) − (t − s_H + 1)]. Terao for n
+   lines would follow from the absence of such "mdr-mixed" lattices with n − 1 lines. This is
+   Dimca's Conjecture 1.2 territory (mdr < (n − 2)/2 combinatorial), now known to fail in its
+   stronger form for 9 lines (Dimca–Pokora 2026), so it is a research question, not a computation.
+
+**Bottom line.** The 15-line verification is near the end of what lattice enumeration can do;
+16 is a two-day computation with the improvements in (1)–(2); beyond that, only a structural
+theorem about free arrangements with d₁ ≥ m + 2 (the ε ≥ 2 regime of Dimca–Kühne–Pokora, where
+all our free candidates sit) or about mdr-mixed lattices would remove the wall.
+
 ## Sources
 
 - Abe, [Exponents of 2-multiarrangements and freeness of 3-arrangements](https://arxiv.org/abs/1005.5276) (2010/2012).
