@@ -1,0 +1,2 @@
+phi B3 base 9 intersection points 13 candidate lines 16
+phi B3 {'tried': 2764289, 'chi': 274765, 'free': 274765, 'nondf_free': 0} distinct free non-DF lattices: 0

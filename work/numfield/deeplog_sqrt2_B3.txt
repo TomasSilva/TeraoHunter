@@ -1,0 +1,2 @@
+sqrt2 B3 base 9 intersection points 13 candidate lines 16
+sqrt2 B3 {'tried': 2745735, 'chi': 272913, 'free': 272913, 'nondf_free': 0} distinct free non-DF lattices: 0

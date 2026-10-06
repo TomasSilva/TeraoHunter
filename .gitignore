@@ -3,3 +3,10 @@ __pycache__/
 .DS_Store
 # downloaded third-party papers (references only)
 work/*.pdf
+# multi-GB intermediates of the 15-line verification (regenerable with work/tc15/*.py)
+work/tc15/lattices_n15_7_7*.jsonl
+work/tc15/bigblocks_n1[678]_*.jsonl
+work/tc15/bigblocks_n15_7_7.jsonl
+work/tc15/defer_n15_7_7*
+work/tc15/defer2_n15_7_7.jsonl
+work/tc15/*.m2

@@ -1,0 +1,2 @@
+i G413 base 15 intersection points 31 candidate lines 112
+i G413 {'tried': 320123, 'chi': 92139, 'free': 76225, 'nondf_free': 1} distinct free non-DF lattices: 1

@@ -1,0 +1,1 @@
+sqrt3 7 tried 18178 {'chi': 27, 'free': 3, 'nondf': 1} distinct free non-DF lattices 1

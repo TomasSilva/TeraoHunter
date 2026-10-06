@@ -1,0 +1,8 @@
+k=1 {'orbits': 1, 'chi': 0, 'free': 0, 'nondf_free': 0, 'with_moduli': 0, 'mixed': 0}  (0s)
+k=2 {'orbits': 1, 'chi': 0, 'free': 0, 'nondf_free': 0, 'with_moduli': 0, 'mixed': 0}  (0s)
+k=3 {'orbits': 2, 'chi': 0, 'free': 0, 'nondf_free': 0, 'with_moduli': 0, 'mixed': 0}  (1s)
+k=4 {'orbits': 5, 'chi': 2, 'free': 2, 'nondf_free': 0, 'with_moduli': 0, 'mixed': 0}  (1s)
+k=5 {'orbits': 13, 'chi': 7, 'free': 7, 'nondf_free': 0, 'with_moduli': 0, 'mixed': 0}  (2s)
+k=6 {'orbits': 106, 'chi': 33, 'free': 33, 'nondf_free': 4, 'with_moduli': 4, 'mixed': 0}  (3s)
+k=7 {'orbits': 1663, 'chi': 50, 'free': 50, 'nondf_free': 4, 'with_moduli': 4, 'mixed': 0}  (8s)
+k=8 {'orbits': 33685, 'chi': 74, 'free': 74, 'nondf_free': 5, 'with_moduli': 3, 'mixed': 0}  (88s)

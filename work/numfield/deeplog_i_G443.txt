@@ -1,0 +1,2 @@
+i G443 base 12 intersection points 19 candidate lines 51
+i G443 {'tried': 1908908, 'chi': 109486, 'free': 109189, 'nondf_free': 2} distinct free non-DF lattices: 2

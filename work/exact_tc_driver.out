@@ -10,3 +10,159 @@
 19 lines (1, 9, 9) {3: 14, 5: 8, 6: 1} (q=11, k=9):
    k=9 points, 19 lines, 14 concurrency flats off P, 7 collinear point sets
    components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+19 lines (1, 9, 9) {3: 14, 5: 3, 6: 4} (q=17, k=7):
+   TIMEOUT
+21 lines (1, 9, 11) {3: 21, 6: 7} (q=11, k=7):
+   TIMEOUT
+21 lines (1, 10, 10) {3: 13, 4: 3, 5: 3, 6: 5} (q=11, k=9):
+   k=9 points, 21 lines, 15 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+22 lines (1, 10, 11) {3: 30, 5: 5, 6: 4} (q=11, k=9):
+   k=9 points, 22 lines, 30 concurrency flats off P, 2 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+22 lines (1, 10, 11) {3: 22, 5: 3, 6: 3, 7: 2} (q=13, k=8):
+   TIMEOUT
+23 lines (1, 11, 11) {3: 27, 5: 3, 6: 5, 7: 1} (q=11, k=9):
+   k=9 points, 23 lines, 27 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 26, 4: 2, 5: 3, 7: 4} (q=11, k=9):
+   k=9 points, 23 lines, 26 concurrency flats off P, 3 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 26, 5: 4, 7: 4} (q=11, k=8):
+   k=8 points, 23 lines, 26 concurrency flats off P, 1 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 25, 4: 1, 5: 2, 6: 4, 7: 2} (q=11, k=9):
+   k=9 points, 23 lines, 25 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 24, 4: 1, 5: 3, 6: 5, 7: 1} (q=11, k=9):
+   k=9 points, 23 lines, 25 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 24, 4: 1, 5: 3, 6: 2, 7: 3} (q=11, k=9):
+   k=9 points, 23 lines, 24 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 23, 4: 2, 5: 1, 6: 6, 7: 1} (q=11, k=9):
+   k=9 points, 23 lines, 24 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 23, 4: 1, 5: 4, 6: 3, 7: 2} (q=11, k=9):
+   k=9 points, 23 lines, 24 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 23, 4: 1, 5: 3, 6: 3, 7: 1, 8: 1} (q=11, k=9):
+   k=9 points, 23 lines, 23 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 22, 4: 2, 5: 2, 6: 4, 7: 2} (q=11, k=9):
+   k=9 points, 23 lines, 23 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 21, 4: 2, 5: 3, 6: 5, 7: 1} (q=11, k=9):
+   k=9 points, 23 lines, 23 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 20, 4: 4, 5: 3, 7: 4} (q=11, k=9):
+   k=9 points, 23 lines, 22 concurrency flats off P, 3 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 20, 4: 3, 5: 1, 6: 6, 7: 1} (q=11, k=9):
+   k=9 points, 23 lines, 22 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 20, 4: 2, 5: 4, 6: 3, 7: 2} (q=11, k=9):
+   k=9 points, 23 lines, 22 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 20, 4: 2, 5: 3, 6: 3, 7: 1, 8: 1} (q=11, k=9):
+   k=9 points, 23 lines, 21 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 19, 4: 4, 5: 3, 6: 1, 7: 2, 8: 1} (q=11, k=9):
+   k=9 points, 23 lines, 21 concurrency flats off P, 3 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 19, 4: 3, 5: 2, 6: 4, 7: 2} (q=11, k=9):
+   k=9 points, 23 lines, 21 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 19, 4: 2, 5: 4, 6: 4, 8: 1} (q=11, k=9):
+   k=9 points, 23 lines, 21 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 18, 4: 4, 6: 5, 7: 2} (q=11, k=9):
+   k=9 points, 23 lines, 20 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 18, 4: 3, 5: 3, 6: 5, 7: 1} (q=11, k=9):
+   k=9 points, 23 lines, 21 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 18, 4: 3, 5: 3, 6: 2, 7: 3} (q=11, k=9):
+   k=9 points, 23 lines, 20 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 17, 4: 3, 5: 4, 6: 3, 7: 2} (q=11, k=9):
+   k=9 points, 23 lines, 20 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 16, 4: 4, 5: 2, 6: 4, 7: 2} (q=11, k=9):
+   k=9 points, 23 lines, 19 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+23 lines (1, 11, 11) {3: 15, 4: 3, 5: 5, 6: 2, 7: 1, 8: 1} (q=11, k=9):
+   k=9 points, 23 lines, 18 concurrency flats off P, 5 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 30, 5: 1, 6: 7, 7: 1} (q=11, k=9):
+   k=9 points, 24 lines, 30 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 29, 5: 2, 6: 5, 7: 2} (q=11, k=9):
+   k=9 points, 24 lines, 29 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 28, 4: 1, 6: 6, 7: 2} (q=11, k=8):
+   k=8 points, 24 lines, 29 concurrency flats off P, 2 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 28, 5: 3, 6: 3, 7: 3} (q=11, k=9):
+   k=9 points, 24 lines, 28 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 27, 4: 2, 5: 2, 6: 4, 7: 1, 8: 1} (q=11, k=9):
+   k=9 points, 24 lines, 28 concurrency flats off P, 3 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 27, 4: 1, 5: 1, 6: 7, 7: 1} (q=11, k=9):
+   k=9 points, 24 lines, 28 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 27, 5: 4, 6: 1, 7: 4} (q=11, k=9):
+   k=9 points, 24 lines, 27 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 26, 4: 1, 5: 2, 6: 5, 7: 2} (q=11, k=9):
+   k=9 points, 24 lines, 27 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 25, 4: 1, 5: 3, 6: 3, 7: 3} (q=11, k=9):
+   k=9 points, 24 lines, 26 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 24, 4: 2, 5: 1, 6: 7, 7: 1} (q=11, k=9):
+   k=9 points, 24 lines, 26 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 23, 4: 2, 5: 2, 6: 5, 7: 2} (q=11, k=9):
+   k=9 points, 24 lines, 25 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 22, 4: 3, 6: 9} (q=11, k=9):
+   k=9 points, 24 lines, 25 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 22, 4: 2, 5: 3, 6: 3, 7: 3} (q=11, k=9):
+   k=9 points, 24 lines, 24 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 21, 4: 3, 5: 1, 6: 7, 7: 1} (q=11, k=9):
+   k=9 points, 24 lines, 24 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 20, 4: 3, 5: 2, 6: 5, 7: 2} (q=11, k=9):
+   k=9 points, 24 lines, 23 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+24 lines (1, 11, 12) {3: 19, 4: 3, 5: 2, 6: 6, 8: 1} (q=11, k=9):
+   k=9 points, 24 lines, 22 concurrency flats off P, 6 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+25 lines (1, 11, 13) {3: 32, 4: 1, 5: 3, 6: 2, 7: 4} (q=11, k=9):
+   k=9 points, 25 lines, 33 concurrency flats off P, 4 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+25 lines (1, 11, 13) {3: 29, 4: 2, 5: 3, 6: 2, 7: 4} (q=11, k=9):
+   k=9 points, 25 lines, 31 concurrency flats off P, 4 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+25 lines (1, 11, 13) {3: 27, 4: 3, 5: 2, 6: 4, 7: 3} (q=11, k=9):
+   k=9 points, 25 lines, 30 concurrency flats off P, 4 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+25 lines (1, 11, 13) {3: 26, 4: 3, 5: 3, 6: 2, 7: 4} (q=11, k=9):
+   k=9 points, 25 lines, 29 concurrency flats off P, 4 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+25 lines (1, 11, 13) {3: 24, 4: 3, 5: 4, 6: 1, 7: 3, 8: 1} (q=11, k=9):
+   k=9 points, 25 lines, 27 concurrency flats off P, 4 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+25 lines (1, 11, 13) {3: 23, 4: 4, 5: 3, 6: 2, 7: 4} (q=11, k=9):
+   k=9 points, 25 lines, 27 concurrency flats off P, 4 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+25 lines (1, 11, 13) {3: 22, 4: 5, 5: 4, 7: 2, 8: 2} (q=11, k=9):
+   k=9 points, 25 lines, 26 concurrency flats off P, 2 collinear point sets
+   components: 0, nondegenerate: 0  (NOT REALIZABLE in characteristic 0)  (1s)
+28 lines (1, 13, 14) {3: 49, 7: 8} (q=13, k=8):
+   TIMEOUT
+ALLDONE

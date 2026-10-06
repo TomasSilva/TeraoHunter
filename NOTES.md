@@ -306,3 +306,26 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   (0,25,0,3) is projectively unique = Ceva(5) (3-net + Kneser), so TC.  Others open.
 - Finite fields: TC for all line arrangements over F_q, q <= 7 (Barakat-Kuhne + Yoshinaga/Abe
   Cor 6.2); covering lemma rank-3 case = Yoshinaga 2006 (attribution fixed in FREE_NOT_DF.md).
+
+## Finding 22: Terao's conjecture beyond 14 lines -- exhaustive verification by exponent class
+(work/tc15/, write-up TC_ATTEMPT.md section 10)
+- Method: a counterexample lattice with n lines and exponents (d1,d2) has chi = (t-1)(t-d1)(t-d2),
+  all s_H in [d2-d1+4, d1], multiplicities <= d1-1.  Enumerate such linear spaces (big blocks first,
+  then triples with exact-cover branching, isomorph rejection by nauty), then decide exactly:
+  realisation ideal over Q (frame-fixed dual points), components, Yoshinaga's criterion on the
+  Ziegler restriction to z = 0 (rank of the (ax+by)^mu | af+bg conditions in degree d1-1).
+- n = 15 (6,8): 12,721 big-block configurations, 3 candidate lattices (two 3-nets of order 5, one
+  9-quadruple lattice); non-group net and 9-quad lattice NOT realisable over C; Z5-net = Ceva, one
+  degree-4 component, all free.  TC HOLDS for 15 lines with exponents (6,8).  [Theorem 10.1]
+- n = 15 (7,7): 99,993 big-block configurations, 6,091,145 candidate lattices (2 GB); the known
+  (1,7,7) 15-line lattice is among them (index 1,140,657).  Exact realisability: fast filter
+  (python-flint) 4,831,300 NONREAL / 1,259,845 deferred; pass 2 (number fields, curves) 1,245,893
+  NONREAL / 13,952 deferred; Macaulay2: 13,942 NONREAL, 10 realisable, 0 mixed.  The 10: 5 rigid
+  non-free, 4 rigid free (three degree-2 orbits and one rational 3^6 4^6 5^3 arrangement), and the
+  known 3^6 5^6 one-parameter family (generically free, non-free locus inside the degeneracy locus).
+  Finite-field cross-check (10 primes) agrees with every exact verdict.
+  TC HOLDS for 15 lines with exponents (7,7) [Theorem 10.2]  =>  TC HOLDS FOR ALL 15-LINE
+  ARRANGEMENTS IN CP^2 [Corollary 10.3], one beyond Barakat-Kuhne.
+- Scale of larger classes (stage 1 only): n=16 (7,8): 8,884,481 big-block configurations (complete,
+  4.7 h); n=17 (7,9): > 7.6M states; n=18 (7,10): > 5.7M states (killed: beyond reach of this
+  pipeline without further pruning).

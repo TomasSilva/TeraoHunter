@@ -10,8 +10,9 @@ nothing here closes it. What I can do:
    - a free, non-divisionally-free 15-line lattice with moduli, beyond the 14-line range where
      TC is verified (§2);
    - a free, non-DF 26-plane arrangement in P³ (§5).
-3. Narrow the smallest open size, 15 lines, to two exponent types, and prove TC for one of the
-   four profiles that remain in the first type (§3).
+3. Prove TC for all arrangements of 15 lines in P²_ℂ, one beyond the published range, by an
+   exhaustive enumeration of the candidate lattices and exact realisation-space computations
+   (§10). The 15-line analysis of §3 is superseded by this.
 4. Prove TC over finite fields in two cases (§4):
    - all line arrangements over F_q with q ≤ 7 (a direct combination of known theorems);
    - "covering" lattices in every rank (rank ≥ 4 is new).
@@ -255,6 +256,236 @@ Known free non-DF rank-4 examples:
 show it holds whenever I could test it, through "protection": the lift's lattice records the
 special parameter that the restriction's lattice cannot see. But I have no proof of that
 mechanism.
+
+## 7. Over ℚ (and over ℝ)
+
+TC over ℚ is weaker than TC over ℂ:
+- Freeness is unchanged by extending the field, so a ℚ-counterexample is also a ℂ-counterexample.
+- The converse fails: a ℂ-counterexample need not be definable over ℚ. Freeness is
+  Galois-invariant, so the non-free locus of a ℚ-defined realisation space is defined over ℚ, but
+  it need not contain rational points.
+
+I could not prove TC over ℚ either. But ℚ ⊂ ℝ gives a constraint that is unavailable over ℂ.
+
+**Proposition 9.** If (A₁, A₂) is a counterexample over ℝ (in particular over ℚ), then
+  d₂ ≤ 2d₁ − 7 + 18/(d₁ + 3),
+which is strictly stronger than Abe's d₂ ≤ 2d₁ − 4 for d₁ ≥ 4.
+
+*Proof.*
+1. A real line arrangement that is not a pencil satisfies Melchior's inequality
+   t₂ ≥ 3 + Σ_{k≥4} (k − 3) t_k, equivalently 2N − b₂ ≥ 3, where N is the number of points.
+2. Summing Theorem 1(3), s_H ≤ d₁, over the n lines gives b₂ + N = Σ_H s_H ≤ n d₁.
+3. So (b₂ + 3)/2 ≤ N ≤ n d₁ − b₂. Substitute b₂ = d₁d₂ + d₁ + d₂ and n = d₁ + d₂ + 1. ∎
+
+**Consequences.** Over ℚ there is no counterexample:
+- with 15 lines and exponents (6, 8) (all four complex-admissible profiles violate Melchior);
+- with exponents (7, 9), (7, 10) or (8, 11) — exactly the cases excluded by the new bound.
+
+The smallest open real/rational cases are 15 lines with exponents (7, 7) and 16 lines with
+(7, 8). Counting weak combinatorics that satisfy all the numerical constraints of Theorem 1 plus
+Melchior (with m ≤ d₁ − 1):
+
+| n | (d₁, d₂) | admissible profiles over ℂ | over ℝ |
+|---|---|---:|---:|
+| 15 | (6, 8) | 4 | **0** |
+| 15 | (7, 7) | 108 | 85 |
+| 16 | (7, 8) | 101 | 62 |
+| 17 | (7, 9) | 70 | **0** |
+| 17 | (8, 8) | 377 | 300 |
+| 18 | (7, 10) | 16 | **0** |
+| 18 | (8, 9) | 438 | 323 |
+| 19 | (8, 10) | 397 | 172 |
+| 19 | (9, 9) | 1257 | 1070 |
+| 20 | (8, 11) | 314 | **0** |
+| 20 | (9, 10) | 1613 | 1300 |
+
+**Where it stops over ℚ.** The surviving profiles need actual lattices (linear spaces) and their
+realisation spaces over ℚ. Each is a finite computation of the §2 type, but the enumeration is
+large, and I have not done it. No arithmetic argument I tried — rational points on the non-free
+locus, or reduction mod p — forces the non-free locus to lie in the degeneration locus.
+
+## 8. Search over quadratic number fields
+
+**Scripts.** `work/numfield_search.py`, `work/numfield_deep.py`, `work/numfield_screen.py`;
+results in `work/numfield/`.
+
+**Method.**
+- **Arithmetic.** All arithmetic is exact in ℤ[α], for α ∈ {i, √2, ω, φ, √−2, √3, √−7, √5}.
+  A lattice is accepted only if it is identical modulo two large primes that split in K.
+- **Generators.**
+  (a) Connecting-line arrangements of random point sets, with coordinates in
+      {0, ±1, ±α, ±1±α, 2}; about 147,000 tried.
+  (b) Greedy incidence-rich line sets.
+  (c) Deletions of up to 4 lines from, and additions of up to 3 lines through the multiple points
+      of, the special arrangements of each field: B₃ (every field), G(4,4,3) and G(4,1,3) over
+      ℚ(i), G(3,3,3), G(3,1,3) and G(6,1,3) over ℚ(ω), and the icosahedral H₃ over ℚ(√5).
+      About 13.8 million arrangements; 1.67 million had split χ and 1.50 million were free.
+- **Screen.** Every distinct free, non-DF lattice found was screened by enumerating all its
+  realisations over two medium primes that split in K, then testing each one's freeness exactly.
+  A counterexample over K would show up as mixed freeness for almost every split prime.
+
+**Result.** No counterexample. Free, non-DF lattices are very rare among these arrangements. Only
+six distinct ones appeared:
+
+| lines | exponents | points (kᵗᵐ) | moduli | split-prime realisations, free/total |
+|---|---|---|---|---|
+| 12 | (1, 5, 6) | 3¹⁶ 4³ | 0 | 2/2, 2/2 |
+| 13 | (1, 6, 6) | 3⁶ 4⁶ 5¹ | 0 | 2/2, 2/2 |
+| 13 | (1, 6, 6) | 3³ 4³ 5³ | 1 | 54/54 … 66/66 (in 7 fields) |
+| 15 | (1, 7, 7) | 3⁶ 5⁶ | 1 | 54/54, 64/64 (Theorem 2) |
+| 18 | (1, 7, 10) | 3³⁶ 6³ | 0 | 2/2, 2/2 (Ceva(6) = G(6, 6, 3)) |
+
+The table lists five rows; the two 12-line hits, from G(4,1,3) and G(4,4,3), are the same
+weak combinatorics, which makes six. All lattices with at most 14 lines are already covered
+by Barakat–Kühne. The 15-line one is proved exactly in §2. The 18-line Ceva(6) is rigid, and both
+of its split-prime realisations are free.
+
+**Assessment.** The special geometry of these fields — reflection arrangements and their
+deletions and additions — overwhelmingly produces divisionally free arrangements, which satisfy
+TC automatically. The few non-DF ones are rigid, or they are the two known lattices with moduli.
+A counterexample would need a non-DF free lattice with moduli and more than 14 lines, and these
+generators essentially never produce one.
+
+## 9. Conjecture F (positive-dimensional components)
+
+**Conjecture F.** Let C be a positive-dimensional component of the realisation space of a free,
+non-DF lattice, and Z(C) the set of non-free points on C. Then Z(C) is empty: the incidence theorem
+that gives C its excess dimension also forces freeness along all of C.
+
+**Proved in general.**
+- **(F1)** Z(C) is a proper closed subset of C (Yuzvinsky's openness of freeness).
+- **(F2)** Z(C) is exactly the rank-drop locus of the degree-(d₁ − 1) derivation matrix. It is
+  defined over the field of definition of C and is invariant under Aut(L).
+- **(F3) Local-to-global certificate.** For every line H, Z(C) ⊆ J_H(C), the set where the Ziegler
+  restriction to H changes exponents (Yoshinaga's criterion). J_H(C) is the pull-back of a finite
+  jump set of a rank-2 multiarrangement under the map C → M₀,ₛ_H. So if J_H(C) ∩ J_H′(C) = ∅ for
+  two lines, then F holds on C. Special cases:
+  - some line's points are constant along C (rigidity principle);
+  - some line has s_H = 4 and n is even (parity).
+
+  For the 15-line family none of the trivial cases applies: all 15 lines move.
+
+**Proved for every case that occurs in a large class.** By Corollary C, free non-DF lattices with
+moduli need excess dimension, i.e. an incidence theorem. In every source I have, they come from
+point configurations (lines through pairs of points). The exhaustive enumerations of connecting-line
+arrangements found, as the only free non-DF lattices with positive-dimensional realisation space:
+- over F₁₁, all configurations of ≤ 9 points;
+- over F₁₃ and F₁₇, all configurations of ≤ 8 points (new runs; 33,685 and 258,735 orbits at
+  8 points);
+
+only the 13-line (1, 6, 6) lattice and the 15-line (1, 7, 7) lattice. For both, Conjecture F is
+proved exactly over ℚ̄ (§2: the non-free locus lies inside the degeneration locus).
+
+Hence F, and TC, hold for every characteristic-0 family of connecting-line arrangements of ≤ 8
+points whose generic member keeps its lattice modulo 11, 13 or 17.
+
+**Not proved.** That F3 or a direct computation always applies. A general argument would have to
+explain why, in the 15-line family, the rank drop of the derivation matrix lands exactly on the
+extra concurrencies. I have no such argument.
+
+## 10. Beyond 14 lines: exhaustive verification by exponent class
+
+The literature stops at 14 lines (Barakat–Kühne). The anatomy of §1 makes larger n tractable: a
+counterexample lattice with n lines and exponents (d₁, d₂) must have χ = (t − 1)(t − d₁)(t − d₂),
+every line with s_H ∈ [d₂ − d₁ + 4, d₁] points, and all multiplicities ≤ d₁ − 1. For n = 15 the only
+exponent classes are (6, 8) and (7, 7).
+
+**Method** (`work/tc15/`).
+1. *Enumeration.* Lines are elements, multiple points are blocks. Write w(x) = Σ_{B∋x}(|B| − 2) =
+   n − 1 − s_x and W = Σ_B C(|B| − 1, 2) = C(n, 2) − b₂. The constraints become w(x) ∈ [wmin, wmax]
+   and W = Wtot. Stage 1 (`bigblocks.py`) enumerates the configurations of blocks of size ≥ 4 up to
+   isomorphism (one block at a time, one representative per orbit of the automorphism group, nauty
+   certificates). Stage 2 (`fill_triples.py`) adds the triples by an exact search that decides each
+   pair once, then removes isomorphic duplicates.
+2. *Realisation space* (`exact_tc_lattice.py`). In the dual plane the lines are points; four in
+   general position are the frame, the others are determined or parametrised greedily, and the
+   blocks give the collinearity equations. The components of the realisation space are the minimal
+   primes of this ideal that contain no forbidden collinearity.
+3. *Freeness on each component* by Yoshinaga's criterion on the Ziegler restriction to the line
+   z = 0: free iff the matrix of the conditions (ax + by)^μ | af + bg, in degree d₁ − 1, has full
+   rank 2d₁. On a 0-dimensional component the rank is computed over the residue field, which
+   covers all Galois conjugates at once. On a positive-dimensional component, generic rank plus the
+   annihilator of the cokernel give the non-free locus, which is compared with the degeneration
+   locus.
+
+**Theorem 10.1.** Terao's conjecture holds for arrangements of 15 lines in P²_ℂ with exponents
+(1, 6, 8): if a free arrangement with these exponents has lattice L, every realisation of L is free.
+
+*Proof.* A counterexample lattice has s_H = 6 on every line, multiplicities ≤ 5, and χ =
+(t − 1)(t − 6)(t − 8), so w(x) = 8 for every point. Writing f(x), q(x) for the numbers of
+quintuple and quadruple points on the line x, the number of double points on x is
+d(x) = 2f(x) + q(x) − 2. This rules out the profile (n₂, n₃, n₄, n₅) = (1, 22, 3, 2): its five lines
+through no quintuple point would need ≥ 10 incidences with three quadruple points that pairwise
+share at most one line, which inclusion–exclusion forbids on 5 lines. The remaining profiles have at
+most 9 blocks of size ≥ 4. The enumeration gives 12,721 big-block configurations and exactly three
+candidate lattices:
+- the two 3-nets of order 5 (profile (0, 25, 0, 3); the Latin squares of Z₅ and of the non-group
+  quasigroup of order 5 — the search found exactly 161,280 = |Latin squares of order 5| raw
+  solutions);
+- one lattice with 9 quadruple and 16 triple points (profile (3, 16, 9, 0)).
+
+Exact computation: the non-group net and the 9-quadruple lattice have realisation ideal (1), so no
+complex realisation. The Z₅ net has a single 0-dimensional component of degree 4 (the Ceva
+arrangement over ℚ(ζ₅)), on which the Yoshinaga matrix has full rank 12/12: all realisations are
+free. ∎
+
+**Theorem 10.2.** Terao's conjecture holds for arrangements of 15 lines in P²_ℂ with exponents
+(1, 7, 7).
+
+*Proof.* A counterexample lattice has χ = (t − 1)(t − 7)², every line with 4 to 7 points, and
+multiplicities ≤ 6; in the enumeration parameters, w(x) ∈ [7, 10] and W = 42.
+1. *Enumeration.* Stage 1 gives 99,993 big-block configurations; stage 2 gives 6,091,145 candidate
+   lattices (2 GB). The known (1, 7, 7) lattice with moduli (Theorem 2) is among them, as it must be.
+2. *Realisability, exactly, in three passes* (`fast_real.py`, `fast_real2.py`, `exact_tc_lattice.py`;
+   all over ℚ, with python-flint and Macaulay2):
+   - a forbidden collinearity holds identically in the frame-fixed parametrisation, or the
+     equations reduce to a nonzero rational number, or (one parameter) the gcd of the equations is
+     constant, or every root of it is degenerate, or (two parameters) the gcd of the v-resultants is
+     constant: 4,831,300 lattices non-realisable, 1,259,845 deferred;
+   - two parameters, with gcds over the number fields ℚ[u]/(φ) for the factors φ of the resultant
+     gcd, and curve components checked for forced degeneracy: 1,245,893 more non-realisable,
+     13,952 deferred;
+   - Macaulay2 (minimal primes of the realisation ideal, degenerate components removed): 13,942
+     non-realisable (1,383 with ideal (1), 12,559 with only degenerate components), **10 realisable**.
+   The first two passes were validated against Macaulay2 on a 2,000-lattice sample (no
+   disagreement), and are one-sided: they only ever assert non-realisability.
+3. *Freeness on the 10 realisable lattices*, by Yoshinaga's criterion on each component:
+   - 5 lattices with 0-dimensional realisation spaces (one Galois orbit each, of degree 2, 4, 2, 4,
+     4) on which every realisation is non-free (rank 13 of 14);
+   - 4 lattices with 0-dimensional realisation spaces on which every realisation is free: three
+     of degree 2 (conjugate pairs over quadratic fields) and one of degree 1, i.e. a unique
+     realisation, defined over ℚ, with 3 quintuple, 6 quadruple and 6 triple points
+     (`work/tc15/realisable_n15_7_7.json`, index 13926);
+   - 1 lattice with a 1-dimensional realisation space, generically free, whose non-free locus lies
+     inside the degeneration locus: the known lattice with 6 quintuple and 6 triple points
+     (Theorem 2 again, now found by the enumeration).
+   No lattice has both free and non-free realisations. ∎
+
+*Cross-check* (`hunter/realize.py`, `hunter/ffree.py`): realising each of the 10 lattices over
+F_q for the ten primes 11 ≤ q ≤ 43 and testing freeness with the independent finite-field engine
+agrees with the exact verdicts in every case (the rigid lattices realise exactly at the primes where
+their field of definition splits; every realisation of the family is free).
+
+**Corollary 10.3.** Terao's conjecture holds for all arrangements of 15 lines in P²_ℂ.
+
+*Proof.* By §1, a counterexample with 15 lines has exponents (6, 8) or (7, 7) [Abe 2014,
+Cor. 5.4 and 5.5], its lattice is not divisionally free [Abe 2016], every line carries between
+d₂ − d₁ + 4 and d₁ points [Abe 2014 Cor. 1.2; Abe 2012 Prop. 4.2 and Cor. 0.4], and the largest
+multiplicity is at most d₁ − 1 [Dimca–Kühne–Pokora]. Theorems 10.1 and 10.2 cover exactly these
+lattices. ∎
+
+This extends the Barakat–Kühne verification (≤ 14 lines) by one. As a by-product, the free
+15-line arrangements with exponents (1, 7, 7) that are not divisionally free, have at most 7
+points on every line and multiplicities ≤ 6, form exactly 5 lattices: 4 rigid (three conjugate pairs
+of realisations and one rational arrangement) and the known one-parameter family, all of whose
+members are free.
+
+**Larger n.** The same pipeline was started for n = 16 (exponents (7, 8)), 17 ((7, 9)) and 18
+((7, 10)). Stage 1 alone gives 8,884,481 big-block configurations for n = 16 (complete, 4.7 h), and
+more than 7.6 million states for n = 17 and 5.7 million for n = 18 before I stopped them. Stage 2
+would multiply these by a large factor (for n = 15 the ratio was 61), so 16 lines is beyond this
+method as it stands. What would be needed: a stronger necessary condition on the lattice of a free
+arrangement than the per-line counts, or an enumeration that builds in realisability.
 
 ## Sources
 

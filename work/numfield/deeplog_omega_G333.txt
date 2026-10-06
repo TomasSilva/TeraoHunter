@@ -1,0 +1,2 @@
+omega G333 base 9 intersection points 12 candidate lines 12
+omega G333 {'tried': 1656640, 'chi': 255480, 'free': 255480, 'nondf_free': 0} distinct free non-DF lattices: 0

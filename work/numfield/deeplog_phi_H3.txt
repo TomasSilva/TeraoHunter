@@ -1,0 +1,2 @@
+phi H3 base 15 intersection points 31 candidate lines 106
+phi H3 {'tried': 287080, 'chi': 86736, 'free': 71473, 'nondf_free': 0} distinct free non-DF lattices: 0
