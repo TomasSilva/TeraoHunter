@@ -10,8 +10,8 @@ nothing here closes it. What I can do:
    - a free, non-divisionally-free 15-line lattice with moduli, beyond the 14-line range where
      TC is verified (§2);
    - a free, non-DF 26-plane arrangement in P³ (§5).
-3. Prove TC for all arrangements of 15 lines in P²_ℂ, one beyond the published range, by an
-   exhaustive enumeration of the candidate lattices and exact realisation-space computations
+3. Prove TC for all arrangements of 15 and of 16 lines in P²_ℂ, two beyond the published range,
+   by an exhaustive enumeration of the candidate lattices and exact realisation-space computations
    (§10). The 15-line analysis of §3 is superseded by this.
 4. Prove TC over finite fields in two cases (§4):
    - all line arrangements over F_q with q ≤ 7 (a direct combination of known theorems);
@@ -480,12 +480,30 @@ points on every line and multiplicities ≤ 6, form exactly 5 lattices: 4 rigid 
 of realisations and one rational arrangement) and the known one-parameter family, all of whose
 members are free.
 
-**Larger n.** The same pipeline was started for n = 16 (exponents (7, 8)), 17 ((7, 9)) and 18
-((7, 10)). Stage 1 alone gives 8,884,481 big-block configurations for n = 16 (complete, 4.7 h), and
-more than 7.6 million states for n = 17 and 5.7 million for n = 18 before I stopped them. Stage 2
-would multiply these by a large factor (for n = 15 the ratio was 61), so 16 lines is beyond this
-method as it stands. What would be needed: a stronger necessary condition on the lattice of a free
-arrangement than the per-line counts, or an enumeration that builds in realisability.
+**Theorem 10.4.** Terao's conjecture holds for all arrangements of 16 lines in P²_ℂ.
+
+*Proof.* With 16 lines, d₁ + d₂ = 15 and the reductions of §1 leave only the exponents (7, 8):
+(6, 9) has δ = 3 ≥ d₁ − 3 [Abe 2014, Cor. 5.4] and smaller d₁ is covered by Cor. 5.5. A
+counterexample lattice for (7, 8) has χ = (t − 1)(t − 7)(t − 8), between 5 and 7 points on every
+line and multiplicities ≤ 6 (w(x) ∈ [8, 10], W = 49, blocks ≤ 6). The enumeration gives 8,884,481
+big-block configurations and 16,371,552 candidate lattices. The exact filters decide 16,343,863 of
+them (13,748,942 in the first pass, 2,594,921 in the number-field pass) and Macaulay2 the remaining
+27,689: 3,039 have realisation ideal (1) and 24,650 have only degenerate components. **No candidate
+lattice has a complex realisation**, so none has a free one, and there is no counterexample.
+(Soundness check: on a random sample of 3,001 of the candidate lattices, the full Macaulay2 pipeline
+agrees with the exact filters, as it did on the 15-line sample, which contained realisable
+lattices.) ∎
+
+So the verified range is now 16 lines. Note the contrast with n = 15: the (7, 8) class is more
+over-determined (e(L) ≤ d₁(1 − δ) − 6 = −6 by Theorem B, against ≤ 1 for (7, 7)), and indeed it
+contains no realisable lattice at all, free or not. The volume was also far below my estimate of
+§11: the ratio lattices/skeletons was 1.8 for this class (61 for (7, 7)), because the window of
+points per line is narrower, so the whole computation took about 4 hours on 8 cores.
+
+**Larger n.** For n = 17 the classes are (7, 9) (every line with 6 or 7 points) and (8, 8) (4 to
+8 points per line, multiplicities ≤ 7); for n = 18, (7, 10) (exactly 7 points on every line) and
+(8, 9). The narrow classes (7, 9) and (7, 10) look feasible; the balanced classes (8, 8) and (8, 9)
+are the (7, 7) problem one size up and will be one to two orders of magnitude larger. See §11.
 
 ## 11. Scaling beyond 15 lines: where the cost is, and what would remove it
 
@@ -549,8 +567,9 @@ points not on a common line) have no free realisation — in agreement with the 
    Dimca's Conjecture 1.2 territory (mdr < (n − 2)/2 combinatorial), now known to fail in its
    stronger form for 9 lines (Dimca–Pokora 2026), so it is a research question, not a computation.
 
-**Bottom line.** The 15-line verification is near the end of what lattice enumeration can do;
-16 is a two-day computation with the improvements in (1)–(2); beyond that, only a structural
+**Bottom line.** 16 lines turned out to be a four-hour computation (Theorem 10.4), because the
+(7, 8) class is narrow. The balanced classes (8, 8) at 17 and (9, 9) at 19 are where lattice
+enumeration ends; beyond that, only a structural
 theorem about free arrangements with d₁ ≥ m + 2 (the ε ≥ 2 regime of Dimca–Kühne–Pokora, where
 all our free candidates sit) or about mdr-mixed lattices would remove the wall.
 

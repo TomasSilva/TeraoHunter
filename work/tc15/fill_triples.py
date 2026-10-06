@@ -243,8 +243,11 @@ def fill_bfs(big, w0, n3):
 
 def run():
     t0 = time.time()
-    configs = [json.loads(l) for l in open(IN)]
-    mine = configs[part::nparts]
+    mine = []                                   # stream: keep only this part's configurations
+    with open(IN) as fh:
+        for i, l in enumerate(fh):
+            if i % nparts == part:
+                mine.append(json.loads(l))
     seen = set()
     out = open(OUT, 'w')
     total_raw = 0

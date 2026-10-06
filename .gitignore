@@ -10,3 +10,9 @@ work/tc15/bigblocks_n15_7_7.jsonl
 work/tc15/defer_n15_7_7*
 work/tc15/defer2_n15_7_7.jsonl
 work/tc15/*.m2
+work/tc15/lattices_n16*
+work/tc15/defer_n16*
+work/tc15/defer2_n16*
+work/tc15/bigblocks_n16_sample*
+work/tc15/sample*
+work/tc15/wtest*

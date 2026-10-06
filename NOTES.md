@@ -336,3 +336,7 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   Abe 2014 Cor 1.2(2): unjoined multiple points P, Q need (m_P-1)+(m_Q-1) <= d1 or = d2 (prunes
   1.3%; certifies lattices 3143, 4608 non-free).  n = 16 feasible (~400 CPU-h) with streaming +
   compiled filter; beyond needs theory (eps >= 2 free arrangements; mdr-mixed deletion lattices).
+- n = 16 (7,8) [the only class]: 8,884,481 skeletons, 16,371,552 candidate lattices (6 GB); fast
+  filter 13,748,942 NONREAL / 2,622,610 deferred; pass 2 2,594,921 NONREAL / 27,689 to M2; M2: 3,039
+  ideal (1), 24,650 degenerate-only, 0 REALISABLE.  TC HOLDS FOR ALL 16-LINE ARRANGEMENTS IN CP^2
+  [Theorem 10.4].  ~4 h on 8 cores (volume ratio lattices/skeletons 1.8, vs 61 for (7,7)).

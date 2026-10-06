@@ -11,7 +11,7 @@ for ((p=0; p<np; p++)); do nohup .venv/bin/python work/tc15/fast_real.py $n work
 wait
 cat work/tc15/lattices_${tag}_defer_[0-9]*.jsonl > work/tc15/defer_$tag.jsonl
 echo "fast done: $(wc -l < work/tc15/defer_$tag.jsonl) deferred" >> work/tc15/chain_$tag.log
-split -n l/$np -d work/tc15/defer_$tag.jsonl work/tc15/defer_${tag}_part
+nl=$(wc -l < work/tc15/defer_$tag.jsonl); per=$(( (nl + np - 1) / np )); split -l $per -d work/tc15/defer_$tag.jsonl work/tc15/defer_${tag}_part
 for f in work/tc15/defer_${tag}_part[0-9][0-9]; do mv $f $f.jsonl; done
 for f in work/tc15/defer_${tag}_part[0-9][0-9].jsonl; do nohup .venv/bin/python work/tc15/fast_real2.py $n $f > ${f%.jsonl}.log 2>&1 & done
 wait
