@@ -5,11 +5,10 @@ n=$1; wmin=$2; wmax=$3; bmax=$4; Wtot=$5; tag=$6; d1=$7; np=$8
 until grep -q FINAL work/tc15/bigblocks_$tag.log; do sleep 60; done
 for ((p=0; p<np; p++)); do nohup .venv/bin/python work/tc15/fill_triples.py $n $wmin $wmax $bmax $Wtot $tag $p $np > work/tc15/fill_${tag}_$p.log 2>&1 & done
 wait
-cat work/tc15/lattices_${tag}_[0-9]*.jsonl > work/tc15/lattices_$tag.jsonl
-echo "fill done: $(wc -l < work/tc15/lattices_$tag.jsonl) lattices" > work/tc15/chain_$tag.log
-for ((p=0; p<np; p++)); do nohup .venv/bin/python work/tc15/fast_real.py $n work/tc15/lattices_$tag.jsonl $p $np > work/tc15/fast_${tag}_$p.log 2>&1 & done
+echo "fill done: $(cat work/tc15/lattices_${tag}_[0-9]*.jsonl | wc -l) lattices" > work/tc15/chain_$tag.log
+for ((p=0; p<np; p++)); do nohup .venv/bin/python work/tc15/fast_real.py $n work/tc15/lattices_${tag}_$p.jsonl 0 1 > work/tc15/fast_${tag}_$p.log 2>&1 & done
 wait
-cat work/tc15/lattices_${tag}_defer_[0-9]*.jsonl > work/tc15/defer_$tag.jsonl
+cat work/tc15/lattices_${tag}_[0-9]*_defer_0.jsonl > work/tc15/defer_$tag.jsonl
 echo "fast done: $(wc -l < work/tc15/defer_$tag.jsonl) deferred" >> work/tc15/chain_$tag.log
 nl=$(wc -l < work/tc15/defer_$tag.jsonl); per=$(( (nl + np - 1) / np )); split -l $per -d work/tc15/defer_$tag.jsonl work/tc15/defer_${tag}_part
 for f in work/tc15/defer_${tag}_part[0-9][0-9]; do mv $f $f.jsonl; done

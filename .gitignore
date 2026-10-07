@@ -16,3 +16,8 @@ work/tc15/defer2_n16*
 work/tc15/bigblocks_n16_sample*
 work/tc15/sample*
 work/tc15/wtest*
+work/tc15/bb_*/
+work/tc15/pipe_*/
+work/tc15/defer2_n17*
+work/tc15/bigblocks_n17_*.jsonl
+work/tc15/bigblocks_n18_*.jsonl

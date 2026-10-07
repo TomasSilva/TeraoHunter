@@ -242,37 +242,40 @@ def fill_bfs(big, w0, n3):
 
 
 def run():
+    """Stream the configurations of this part (never holding them all in memory); solutions are
+    written as they are found and deduplicated by certificate within each configuration."""
     t0 = time.time()
-    mine = []                                   # stream: keep only this part's configurations
-    with open(IN) as fh:
-        for i, l in enumerate(fh):
-            if i % nparts == part:
-                mine.append(json.loads(l))
-    seen = set()
     out = open(OUT, 'w')
-    total_raw = 0
-    for ci, c in enumerate(mine):
-        big = [tuple(B) for B in c['blocks']]
-        n3 = Wtot - c['W']
-        t1 = time.time()
-        sols = fill(big, c['w'], n3)
-        if time.time() - t1 > 60:
-            print('  slow config %d: %d big blocks, n3=%d, %d solutions, %.0fs' % (ci, len(big), n3, len(sols), time.time() - t1), flush=True)
-        total_raw += len(sols)
-        for T in sols:
-            blocks = sorted(big + [tuple(t) for t in T])
-            k = cert(blocks)
-            if k not in seen:
-                seen.add(k)
+    total_raw = total_distinct = nconf = 0
+    with open(IN) as fh:
+        for i, line in enumerate(fh):
+            if i % nparts != part:
+                continue
+            c = json.loads(line); nconf += 1
+            big = [tuple(B) for B in c['blocks']]
+            n3 = Wtot - c['W']
+            t1 = time.time()
+            sols = fill(big, c['w'], n3)
+            if time.time() - t1 > 60:
+                print('  slow config %d: %d big blocks, n3=%d, %d solutions, %.0fs' % (i, len(big), n3, len(sols), time.time() - t1), flush=True)
+            total_raw += len(sols)
+            seen = set()
+            for T in sols:
+                blocks = sorted(big + [tuple(t) for t in T])
+                k = cert(blocks)
+                if k in seen:
+                    continue
+                seen.add(k); total_distinct += 1
                 w = list(c['w'])
                 for t in T:
                     for u in t:
                         w[u] += 1
                 out.write(json.dumps({'blocks': [list(B) for B in blocks], 's': [n - 1 - v for v in w]}) + '\n')
-        if (ci + 1) % 50 == 0:
-            print('%d/%d configs, raw solutions %d, distinct lattices %d (%.0fs)' % (ci + 1, len(mine), total_raw, len(seen), time.time() - t0), flush=True)
+            if nconf % 20000 == 0:
+                print('%d configs, raw solutions %d, distinct lattices %d (%.0fs)' % (nconf, total_raw, total_distinct, time.time() - t0), flush=True)
+                out.flush()
     out.close()
-    print('FINAL %s part %d: %d configs, %d raw solutions, %d distinct lattices (%.0fs)' % (tag, part, len(mine), total_raw, len(seen), time.time() - t0), flush=True)
+    print('FINAL %s part %d: %d configs, %d raw solutions, %d distinct lattices (%.0fs)' % (tag, part, nconf, total_raw, total_distinct, time.time() - t0), flush=True)
 
 
 if __name__ == '__main__':
