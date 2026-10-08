@@ -22,6 +22,11 @@ d₂ ≤ 2d₁ − 7**. This excludes (7, 8) at 16 lines (TC for 16 lines is now
 (9, 9) with mdr 7 at 19 lines, (9, 12) at 22 lines. The first theoretically open classes are
 (7, 7) at 15 lines (settled by enumeration), (8, 8) at 17 and (8, 9) at 18.
 
+**Added later on 8 Oct 2026 (§11):** the 18-line arrangement A(6,1,3) ∖ {x, y−z, y−ζz} is an
+mdr-7 member of the class (8, 9) with J/Q the product of the three deleted lines; its lattice is
+rigid, and every other three-pencil lattice of the class is free (six lattices, one with a
+one-parameter family, free throughout by Yoshinaga's criterion over ℚ[g]).
+
 This removes, for every n, the two outermost exponent classes of the window of `TC_GENERAL.md` §1:
 δ = d₁ − 4 (the narrow classes of `TC_GENERAL.md` §2: (6, 8), (7, 10), (8, 12), …) and δ = d₁ − 5
 ((6, 7), (7, 9), (8, 11), …), and inside the remaining classes it removes every value of mdr(A₂)
@@ -575,6 +580,91 @@ are singular points of the cubic; at a node μ_P = 1; at a triple point of three
 through a nondegenerate Bourbaki point. I have not completed the case analysis; the case
 Bour = 1 at 15 lines is Theorem 10.2 of `TC_ATTEMPT.md` (enumeration), and Bour = 2 at 18 lines
 is open.
+
+## 11. The (8, 9) class at 18 lines: the full-monomial seed and its three-pencil neighbourhood
+
+**11.1 The seed.** Let ζ be a primitive sixth root of unity and
+
+  Q = yz (x⁶ − y⁶)(z⁶ − x⁶) ∏_{b ∈ μ₆ ∖ {1, ζ}} (y − bz),
+
+eighteen lines. This is the full monomial arrangement A(6,1,3) = xyz(x⁶−y⁶)(y⁶−z⁶)(z⁶−x⁶)
+(21 lines, free with exponents (7, 13)) with the three lines x, y − z, y − ζz removed. Computer
+check (`work/pencil/seed18.m2`, over F₁₀₀₀₉ with ζ = 1045): point profile 2²⁴ 3²⁴ 6¹ 7²,
+b₂ = 89, χ̄ = (t − 8)(t − 9); Jacobian syzygies of degrees 7, 11, 12, so mdr = 7 and
+j = 3r − n = 3; Z(ω) has degree 57 = r² + r + 1 (saturated); the Bourbaki scheme is the two
+reduced points [0:1:1], [0:ζ:1], which lie on no line of the arrangement and are exactly the
+off-line singular points of ω (as Lemma 10.3 predicts for j = 3: no line has 7 points and
+e₁ = 6); and
+
+  J/Q = x (y − z)(y − ζz),
+
+the product of the three deleted lines, with the Bourbaki points two of its three vertices. The
+same holds for the two other deletion patterns (y − z, y − ζ²z and y − z, y + z removed).
+
+The explanation is general. The degree-7 derivation of A(6,1,3) is a derivation of every
+subarrangement, so mdr(A₂) ≤ 7 for every subarrangement A₂, with equality here by Theorem 10.1
+(3·7 = 18 + 3). Its foliation has 21 = 3·7 invariant lines, the maximum allowed by Pereira's
+bound, so its inflection curve is the product of the 21 lines and J/Q is the product of the
+deleted ones. Deleting a line lowers b₂ by the number of points on it; to go from
+b₂(A(6,1,3)) = 111 to 89 one needs 22 = 8 + 7 + 7, which forces a coordinate line and two
+lines of the pencil that meets it in double points: the three arrangements above are the only
+3-line deletions of A(6,1,3) in the class (8, 9).
+
+**Rigidity.** Normalizing the three pencil centres to the coordinate points, every realization
+of the lattice is given by nonzero numbers a_i (x = a_i y), c_j (z = c_j x), b_k (y = b_k z)
+with a_i c_j b_k = 1 for the 24 triple points. Over ℚ this binomial scheme has 6 points in 4
+components (`work/pencil/real18.m2`); the only non-degenerate ones are the Galois pair
+ζ₆^{±1}. So the lattice has one realization up to projective equivalence and conjugation, and
+no lattice-mate at all: Terao's conjecture holds for it trivially. Kneser's theorem says the
+same without computation: six lines through [0:0:1], six through [0:1:0], four through
+[1:0:0] with all 24 triple points force A and B to be cosets of μ₆ in ℂ*.
+
+**11.2 Three-pencil lattices.** Call a lattice *three-pencil* if its lines are x = a y
+(a ∈ A), z = c x (c ∈ B), y = b z (b ∈ C) and a subset K of the coordinate lines; the triple
+points are the triples with abc = 1, every other intersection is double, and the realization
+space is the group {a_i c_j b_k = 1} modulo the diagonal torus, whose components are indexed by
+the torsion of Z^{|A|+|B|+|C|}/(relations) and are explicitly parametrized (Smith normal form).
+This is the natural "neighbourhood" of the seed in which the cyclic relations can be weakened.
+For n = 18 and χ̄ = (t − 8)(t − 9) the multiplicities m of the three centres and the number t of
+triple points satisfy Σ C(m − 1, 2) + t = 64, and m ≤ 7 by (W3), which leaves six patterns
+(|A|, |B|, |C|; K; t): (5,5,5; xyz; 19), (6,6,4; yz; 24), (6,5,5; yz; 24), (6,6,5; x; 28),
+(6,5,6; x; 29), (6,6,6; ∅; 34).
+
+- (6,6,4; yz; 24) is the seed: Kneser forces μ₆-cosets, and the three variants are the only
+  lattices. Rigid, mdr 7.
+- (6,5,5), (6,6,5), (6,5,6), (6,6,6) have no realizations: with S the sumset of two of the sets
+  and H its stabilizer, Kneser's bound |S| ≥ |A+H| + |B+H| − |H| together with the required
+  number of triples gives a contradiction for every order of H (for the collinear-centres
+  version of (6,6,6), Cauchy–Davenport in the torsion-free group (ℂ, +) does it).
+- (5,5,5; xyz; 19): the enumeration over A, B, C ⊂ Z/N (N ≤ 24), Z, Z×Z/N (N ≤ 6), Z²
+  (`work/pencil/pencil_enum.py`) finds exactly six lattices up to isomorphism
+  (`pencil_iso.py`): three with realization space a single Galois orbit of 7-th roots of unity,
+  two with 8-th roots of unity, and one with a one-dimensional realization space,
+
+    x = gⁱ y (0 ≤ i ≤ 4),  z = gʲ x (0 ≤ j ≤ 4),  y = g⁻ᵏ z (2 ≤ k ≤ 6),  x, y, z,
+
+  the 19 triple points being the pairs (i, j) with 2 ≤ i + j ≤ 6. No lattice has two
+  components. **All six are free with exponents (8, 9)** (`pencil_mdr_P1.out`): the five rigid
+  ones directly, and the family at every point of ℂ* ∖ {degenerations}: by Yoshinaga's
+  criterion a member is free iff the Ziegler multirestriction on the line x (multiplicities
+  6, 6, 1, 1, 1, 1, 1) has exponents (8, 9), i.e. iff the 17 × 16 matrix of its degree-7
+  derivations has full rank; the ideal of its 16-minors in ℚ[g], saturated by the binomials
+  where the lattice changes, is (g⁴⁵) (`jump_P1_3_QQ.m2`), so no non-degenerate member is
+  non-free.
+
+So Terao's conjecture holds for every three-pencil lattice with 18 lines in the class (8, 9):
+the only non-free ones are the seed and its two variants, and they have no lattice-mates. To
+find a lattice with a free and a non-free realization one has to leave the monomial world, where
+realization spaces stop being tori and the enumeration of `TC_ATTEMPT.md` §10 is the only
+general tool.
+
+**11.3 Sub-arrangements of free arrangements.** The seed also illustrates a general source of
+mdr-7 members of the class (8, 9): if A₂ ⊂ A′ with A′ free with exponents (7, d₂′) and
+n′ = 8 + d₂′ lines, then mdr(A₂) ≤ 7, hence = 7 when A₂ has 18 lines (Theorem 10.1), and the
+k = n′ − 18 deleted lines must carry 8k − 2 points in total (counted successively). The
+inflection curve of such an A₂ contains the deleted lines whenever the degree-7 derivation of A′
+remains the minimal one. Supersolvable A′ with a modular point of multiplicity 8 give families
+with moduli; whether any of their deletions has a free lattice-mate is not known to me.
 
 ## Sources
 

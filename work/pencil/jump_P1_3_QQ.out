@@ -1,0 +1,7 @@
+=== component 0 s=[] ===
+random point: syz degrees {8, 9} mdr=8  FREE
+Ziegler multiplicities on H: {6, 6, 1, 1, 1, 1, 1}  matrix 17x16
+non-free locus inside the component (saturated by degenerations): matrix {{g_0^45}}
+   dim 0 degree 45 decomposition {matrix {{g_0}}}
+   (for reference: gcd of the 16-minors before saturation has degree 67)
+QQ jump exit 0

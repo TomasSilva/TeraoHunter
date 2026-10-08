@@ -1,0 +1,20 @@
+--- enumeration P1 done: 10 signature classes
+P1 sig#0 found over Z^0xZ/7: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#1 found over Z^0xZ/7: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#2 found over Z^0xZ/7: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#3 found over Z^0xZ/7: dim(real)=1 torsion=[] (|Tor|=1) non-degenerate Galois classes: 1
+P1 sig#4 found over Z^0xZ/7: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#5 found over Z^0xZ/7: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#6 found over Z^0xZ/7: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#7 found over Z^0xZ/7: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#8 found over Z^0xZ/8: dim(real)=0 torsion=[8] (|Tor|=8) non-degenerate Galois classes: 1
+P1 sig#9 found over Z^0xZ/8: dim(real)=0 torsion=[8] (|Tor|=8) non-degenerate Galois classes: 1
+P1: 6 isomorphism classes of lattices among 10 (sigid,T) pairs
+   class: [0, 4, 7] dim 0 torsion [7] found over ['Z^0xZ/7']
+   class: [1, 5, 6] dim 0 torsion [7] found over ['Z^0xZ/7']
+   class: [2] dim 0 torsion [7] found over ['Z^0xZ/7']
+   class: [3] dim 1 torsion [] found over ['Z^0xZ/7']
+   class: [8] dim 0 torsion [8] found over ['Z^0xZ/8']
+   class: [9] dim 0 torsion [8] found over ['Z^0xZ/8']
+--- mdr batch P1 exit 1
+pencil_mdr_P1.m2:1:10:(3):[6]: error: assignment to protected global variable 'entries', originally defined at /opt/homebrew/Cellar/macaulay2/1.26.06_1/share/Macaulay2/Core/methods.m2:270:10:(1):

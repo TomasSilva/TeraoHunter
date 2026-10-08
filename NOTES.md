@@ -400,3 +400,27 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   (9,9)[r=7] at 19, (9,12) at 22 excluded. Open: (7,7) [15, computer], (8,8)[B] [17, j=4,
   Bour 1], (8,9) [18, j=3, Bour 2].
 
+
+## Finding 25: the (8,9) seed at 18 lines and the three-pencil neighbourhood (TC_FOLIATION.md §11)
+
+- Seed (pasted by the user): Q = yz(x^6-y^6)(z^6-x^6) prod_{b in mu6 \ {1,zeta}} (y - b z), 18 lines
+  = full monomial A(6,1,3) (21 lines, free (7,13)) minus x, y-z, y-zeta z. Verified
+  (work/pencil/seed18.m2): profile 2^24 3^24 6 7^2, b2 = 89, chibar = (t-8)(t-9), syzygy degrees
+  (7,11,12), mdr 7, j = 3, Bourbaki scheme = the two points [0:1:1], [0:zeta:1] off all lines,
+  J/Q = x(y-z)(y-zeta z) = product of the deleted lines (the degree-7 derivation of A(6,1,3) has
+  3*7 = 21 invariant lines, the maximum). Same for the two other variants. These are the only
+  3-line deletions of A(6,1,3) in the class (8,9) (22 = 8+7+7 points must be removed).
+- Lattice rigid (work/pencil/real18.m2: binomial realization scheme over QQ has 6 points, only
+  the Galois pair zeta6^{+-1} non-degenerate), so no lattice-mate; Kneser's theorem forces mu6.
+- Three-pencil lattices (lines x = a y, z = c x, y = b z, triple points iff abc = 1, coordinate
+  lines K): realization space = binomial solution group mod torus, components = torsion of the
+  relation lattice (Smith normal form), generic points explicit (work/pencil/pencil_enum.py,
+  pencil_iso.py, pencil_jump.py). For n = 18, class (8,9), m <= 7: six patterns; (6,6,4;yz;24) is
+  the seed; (6,5,5), (6,6,5), (6,5,6), (6,6,6) have no realizations (Kneser); (5,5,5;xyz;19) gives
+  six lattices up to isomorphism (3 rigid Z/7, 2 rigid Z/8, one 1-parameter family
+  x = g^i y, z = g^j x, y = g^-k z, xyz), none with two components, ALL FREE (8,9); the family is
+  free at every non-degenerate g: the 16-minors of the 17x16 Yoshinaga matrix of the
+  multirestriction on x over QQ[g], saturated by the degeneration binomials, give (g^45).
+- Conclusion: TC holds for all three-pencil lattices with 18 lines in class (8,9); the only
+  non-free ones are the seed variants, which have no lattice-mates. Weakening the cyclic
+  relations inside the monomial world cannot produce a counterexample; one must leave it.

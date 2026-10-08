@@ -1,0 +1,18 @@
+entry 0 p=30059 syzdegs={8, 9} mdr=8 FREE
+entry 1 p=30059 syzdegs={8, 9} mdr=8 FREE
+entry 2 p=30059 syzdegs={8, 9} mdr=8 FREE
+entry 3 p=30011 syzdegs={8, 9} mdr=8 FREE
+entry 4 p=30059 syzdegs={8, 9} mdr=8 FREE
+entry 5 p=30059 syzdegs={8, 9} mdr=8 FREE
+entry 6 p=30059 syzdegs={8, 9} mdr=8 FREE
+entry 7 p=30059 syzdegs={8, 9} mdr=8 FREE
+entry 8 p=30089 syzdegs={8, 9} mdr=8 FREE
+entry 9 p=30089 syzdegs={8, 9} mdr=8 FREE
+pencil_mdr_P1.m2:15:23:(3):[7]: error: expected a list, sequence, string, net, hash table, database, or dictionary
+pencil_mdr_P1.m2:14:4:(3):[6]: --back trace--
+/private/tmp/macaulay2-20260630-37889-vjocqh/M2-release-1.26.06/M2/Macaulay2/m2/startup.m2.in:80:23:(0):[6]: --back trace--
+/opt/homebrew/Cellar/macaulay2/1.26.06_1/share/Macaulay2/Core/Core.m2:131:28:(1):[5]: --back trace--
+/opt/homebrew/Cellar/macaulay2/1.26.06_1/share/Macaulay2/Core/Core.m2:127:13:(1):[3]: --back trace--
+/opt/homebrew/Cellar/macaulay2/1.26.06_1/share/Macaulay2/Core/Core.m2:138:29:(1):[2]: --back trace--
+/private/tmp/macaulay2-20260630-37889-vjocqh/M2-release-1.26.06/M2/Macaulay2/m2/startup.m2.in:547:66:(0):[1]: --back trace--
+/private/tmp/macaulay2-20260630-37889-vjocqh/M2-release-1.26.06/M2/Macaulay2/m2/startup.m2.in:635:41:(2): --back trace--

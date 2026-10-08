@@ -1,0 +1,47 @@
+p=10009 w6=1045 w6^2-w6+1 mod p = 0
+== omit {1,w6}   (pasted example): n=18 syz degs={7, 11, 12} r=7 j=3r-n=3 gcd(omega)=1 | profile=Tally{2 => 24} b2=89 chibar(r)=2
+                                                                                                       3 => 24
+                                                                                                       6 => 1
+                                                                                                       7 => 2
+   points per line: Tally{7 => 4 }
+                          8 => 14
+   Z(omega)=57 (r^2+r+1=57)  off-line=2
+   Bourbaki ideal: dim R/I=1 degree=2
+   Bourbaki scheme components: {(1, ideal (y - z, x)), (1, ideal (y - 1045z, x))}
+   off-line singular points: {ideal (y - z, x), ideal (y - 1045z, x)}
+   J/Q = (1044y + z)(y - z)(x)(1382)
+   off-line part of Bourbaki = off-line singular scheme of omega? true
+   Sing(J/Q): {(1, ideal (y, z)), (1, ideal (y - z, x)), (1, ideal (y - 1045z, x))}
+   Bourbaki scheme inside Sing(J/Q)? true
+
+== omit {1,w6^2}: n=18 syz degs={7, 11, 12} r=7 j=3r-n=3 gcd(omega)=1 | profile=Tally{2 => 24} b2=89 chibar(r)=2
+                                                                                      3 => 24
+                                                                                      6 => 1
+                                                                                      7 => 2
+   points per line: Tally{7 => 4 }
+                          8 => 14
+   Z(omega)=57 (r^2+r+1=57)  off-line=2
+   Bourbaki ideal: dim R/I=1 degree=2
+   Bourbaki scheme components: {(1, ideal (y - z, x)), (1, ideal (y - 1044z, x))}
+   off-line singular points: {ideal (y - z, x), ideal (y - 1044z, x)}
+   J/Q = (1045y + z)(y - z)(x)(2894)
+   off-line part of Bourbaki = off-line singular scheme of omega? true
+   Sing(J/Q): {(1, ideal (y, z)), (1, ideal (y - z, x)), (1, ideal (y - 1044z, x))}
+   Bourbaki scheme inside Sing(J/Q)? true
+
+== omit {1,w6^3}: n=18 syz degs={7, 11, 12} r=7 j=3r-n=3 gcd(omega)=1 | profile=Tally{2 => 24} b2=89 chibar(r)=2
+                                                                                      3 => 24
+                                                                                      6 => 1
+                                                                                      7 => 2
+   points per line: Tally{7 => 4 }
+                          8 => 14
+   Z(omega)=57 (r^2+r+1=57)  off-line=2
+   Bourbaki ideal: dim R/I=1 degree=2
+   Bourbaki scheme components: {(1, ideal (y - z, x)), (1, ideal (y + z, x))}
+   off-line singular points: {ideal (y - z, x), ideal (y + z, x)}
+   J/Q = (y - z)(y + z)(x)(1512)
+   off-line part of Bourbaki = off-line singular scheme of omega? true
+   Sing(J/Q): {(1, ideal (y, z)), (1, ideal (y - z, x)), (1, ideal (y + z, x))}
+   Bourbaki scheme inside Sing(J/Q)? true
+
+seed18 exit 0
