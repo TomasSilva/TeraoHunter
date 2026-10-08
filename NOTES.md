@@ -358,3 +358,27 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
 - Honest status: no proof; every known tool is numerical and the numbers are consistent for all
   d1 >= 6; the verified cases are decided by non-realisability of dense linear spaces, not by the
   window.
+
+## Finding 24: the foliation of the minimal derivation; 3 mdr(A2) >= n+2 (TC_FOLIATION.md)
+
+- Tool: the least-degree Jacobian syzygy theta of the non-free member defines a degree-r foliation
+  of P^2 (r = mdr(A2)) with all n lines invariant; saturation of omega = theta x E follows from
+  s_H <= d2+1 and r <= d1-1. Its inflection curve J = det(d omega / dx) (Pereira's first extactic
+  curve, degree 3r) is divisible by Q and vanishes to order >= 2 at every singular point of the
+  foliation; so n <= 3r and J = Q J' with deg J' = 3r-n.
+- Excess identity (Thm 4.1): (d1-r)(d2-r) = sum over off-line singular points of mu_P minus
+  sum over on-line singular points of d_P, with d_P = 0 at nondegenerate points and at
+  saddle-nodes along a line. Every point contributing to the right side is a singular point of J'.
+- Theorem 5.1: a counterexample has 3 mdr(A2) >= n+2, hence d2 <= 2 d1 - 6, d1 >= 7, n >= 15
+  (theory only).  Excluded for every n: delta = d1-4 (narrow classes) and delta = d1-5.
+  Consequences: (6,7) at 14 lines proved theoretically (TC for n <= 14 now theoretical);
+  (6,8) at 15 lines theoretical (was Thm 10.1 by enumeration + Kneser); (7,9) and (8,8) with r = 6
+  at 17 lines excluded -- exactly what the running n=17 enumeration covers, which thereby becomes a
+  consistency check; the only open 17-line class is (8,8)[B] (A2 nearly free (7,10), r = 7,
+  deg J' = 4, excess 1).  (7,10) at 18 lines excluded; (8,9) survives with r = 7.
+- Checked in Macaulay2 on free arrangements with n = 3r and 3r-1 (work/foliation/inflect.m2): J/Q
+  constant resp. a line, zero scheme of degree r^2+r+1, no off-line points, Delta = 0.
+- Not proved: TC. Open: deg J' >= 2, i.e. whether the singular points of a curve of degree
+  3r-n <= d1-delta-4 can carry the excess (d1-r)(d2-r) >= delta+1; first instances j = 2
+  ((7,8), (8,10)) and j = 3 ((7,7), (8,9)).
+

@@ -73,6 +73,13 @@ and m is the largest point multiplicity.
   have the same exponents, so σ(A₂) is free. Freeness is Galois-invariant, so A₂ is free.
 - This is Abe–Yoshinaga, Cor. 5.3, in rank 3. ∎
 
+**Addendum (8 Oct 2026, `TC_FOLIATION.md` Theorem 5.1).** The foliation of P² defined by the
+minimal derivation of A₂ has all n lines invariant and its inflection curve (degree 3r) is
+divisible by Q; comparing its zeros with the lattice gives 3r ≥ n + 2. With (7) this sharpens (5)
+to **d₂ ≤ 2d₁ − 6, d₁ ≥ 7, n ≥ 15**, and sharpens the lower bound in (7) to r ≥ (n + 2)/3. In
+particular the classes (6, 7), (6, 8), (7, 9), (7, 10), (8, 11), (8, 12), … contain no
+counterexample for purely theoretical reasons, and for n = 17 only (8, 8) with r = 7 is left.
+
 **The smallest admissible exponents** (from (1), (4), (5)):
 
 | n | possible (d₁, d₂) | allowed s_H |
@@ -591,7 +598,15 @@ Remark 4.2 of DIM would dispose of the 8-point lines if d₂' ≠ d₁' + 3; her
 so it does not apply. This residual class is not covered by the current run; it is the only
 obstacle to "TC for 17 lines" once the run finishes.
 
-**General n.** An attempt to turn these patterns into a proof for all n is in `TC_GENERAL.md`:
+*Later the same day:* `TC_FOLIATION.md` Theorem 5.1 excludes r ≤ (n + 1)/3 = 6 for n = 17, so
+the (7, 9) class and part [A] (r = 6) of (8, 8) — everything the current run covers — are now
+settled by theory, and the run is an independent check of that theorem. Part [B] is the only open
+17-line class; there r = 7, the residual curve J/Q of the inflection curve is a quartic, and the
+excess (d₁ − r)(d₂ − r) is exactly 1.
+
+**General n.** `TC_FOLIATION.md` proves 3·mdr(A₂) ≥ n + 2 for every counterexample (hence
+d₂ ≤ 2d₁ − 6, d₁ ≥ 7, n ≥ 15) by the inflection curve of the foliation of the minimal
+derivation. An earlier attempt to turn the patterns into a proof for all n is in `TC_GENERAL.md`:
 the window for every n (§1), the structure forced in the narrow classes δ = d₁ − 4 (every line with
 exactly d₁ points, mdr(A₂) = d₁ − 1, all Ziegler restrictions of A₂ with exponents (d₁ − 1, d₂ + 1),
 a section of Ω¹(d₁ + 1) pinned to the multiple points; no real counterexample in these classes for
@@ -610,3 +625,4 @@ the Ziegler exponents on one line forces an extra incidence), which is equivalen
 - Dimca–Kühne–Pokora, [Free line arrangements with low maximal multiplicity](https://arxiv.org/abs/2505.01733).
 - Dimca–Pokora, [A nine-line counterexample to a conjecture on the minimal degree of Jacobian relations](https://arxiv.org/abs/2607.01985).
 - Yoshinaga, On the freeness of 3-arrangements, Bull. LMS 37 (2005); Free arrangements over finite field, Proc. Japan Acad. 82 (2006).
+- Pereira, Vector fields, invariant varieties and linear systems, Ann. Inst. Fourier 51 (2001) (extactic curves; used in `TC_FOLIATION.md`).

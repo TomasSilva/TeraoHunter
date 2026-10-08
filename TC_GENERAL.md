@@ -19,6 +19,14 @@ into a general argument. What came out:
 Nothing here contradicts the possibility of a counterexample with n ≥ 18 lines. Sections 2–3 are
 proved; §4 proves the reduction; §5 is discussion.
 
+**Update (later on 8 Oct 2026).** `TC_FOLIATION.md` proves, for every n, that a counterexample has
+3·mdr(A₂) ≥ n + 2, hence δ ≤ d₁ − 6, d₁ ≥ 7 and n ≥ 15. This disposes of the narrow classes of §2
+(δ = d₁ − 4) and of the classes δ = d₁ − 5, so (W1) below improves to δ ≤ d₁ − 6, and (W4) to
+r ≥ (n + 2)/3. The tool is the inflection curve of the foliation defined by the minimal derivation
+θ of §2–3 — the section ω of Ω¹(r + 2) studied in 2.2 and 3.1(3) — which is exactly the
+"statement about positions" that §5 says the numerical tools cannot supply. Conjecture J and
+Theorem 4.2 are unaffected; what §6 calls "where I stop" has moved to `TC_FOLIATION.md` §6.
+
 Notation as in `TC_ATTEMPT.md`: L a lattice of n lines; A₁ a free realisation with exponents
 (1, d₁, d₂), d₁ ≤ d₂, δ = d₂ − d₁, n = d₁ + d₂ + 1; A₂ a non-free realisation of L; for a line H,
 s_H = |A^H| its number of multiple points, μ_P = m_P − 1 the Ziegler multiplicities (Σ_{P∈H} μ_P
@@ -122,6 +130,8 @@ N points of such a configuration with only d₁ − 3 residual length — a stat
 *positions* of the points, which is where every numerical argument stops (§5). I could not prove
 it. For d₁ = 6 (n = 15, class (6, 8)) it is true by Theorem 10.1, since no counterexample exists;
 for d₁ = 7 (n = 18, class (7, 10)) it is exactly what a counterexample would have to violate.
+*Update:* it is now proved for every d₁ — `TC_FOLIATION.md` Theorem 5.1 shows the section ω
+cannot have the d₁ − 3 residual zeros at all (its inflection curve would have to be Q itself).
 
 ## 3. The other classes: what survives
 
