@@ -1,0 +1,21 @@
+P1 sig#0 found over Z^0xZ/25: dim(real)=1 torsion=[] (|Tor|=1) non-degenerate Galois classes: 1
+P1 sig#1 found over Z^0xZ/28: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#2 found over Z^0xZ/28: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#3 found over Z^0xZ/28: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#4 found over Z^0xZ/28: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#5 found over Z^0xZ/28: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#6 found over Z^0xZ/28: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#7 found over Z^0xZ/28: dim(real)=0 torsion=[7] (|Tor|=7) non-degenerate Galois classes: 1
+P1 sig#8 found over Z^1xZ/8 D=1: dim(real)=0 torsion=[8] (|Tor|=8) non-degenerate Galois classes: 1
+P1 sig#9 found over Z^1xZ/8 D=1: dim(real)=0 torsion=[8] (|Tor|=8) non-degenerate Galois classes: 1
+10 entries written
+10 original entries + 10 wide entries
+P1: 6 isomorphism classes of lattices among 20 (sigid,T) pairs
+   class: [0, 4, 7, 101, 104, 107] dim 0 torsion [7] found over ['Z^0xZ/28', 'Z^0xZ/7']
+   class: [1, 5, 6, 102, 105, 106] dim 0 torsion [7] found over ['Z^0xZ/28', 'Z^0xZ/7']
+   class: [2, 103] dim 0 torsion [7] found over ['Z^0xZ/28', 'Z^0xZ/7']
+   class: [3, 100] dim 1 torsion [] found over ['Z^0xZ/25', 'Z^0xZ/7']
+   class: [8, 108] dim 0 torsion [8] found over ['Z^0xZ/8', 'Z^1xZ/8 D=1']
+   class: [9, 109] dim 0 torsion [8] found over ['Z^0xZ/8', 'Z^1xZ/8 D=1']
+
+[exited with code 0]

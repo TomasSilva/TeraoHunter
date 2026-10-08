@@ -636,8 +636,8 @@ triple points satisfy Σ C(m − 1, 2) + t = 64, and m ≤ 7 by (W3), which leav
   and H its stabilizer, Kneser's bound |S| ≥ |A+H| + |B+H| − |H| together with the required
   number of triples gives a contradiction for every order of H (for the collinear-centres
   version of (6,6,6), Cauchy–Davenport in the torsion-free group (ℂ, +) does it).
-- (5,5,5; xyz; 19): the enumeration over A, B, C ⊂ Z/N (N ≤ 24), Z, Z×Z/N (N ≤ 6), Z²
-  (`work/pencil/pencil_enum.py`) finds exactly six lattices up to isomorphism
+- (5,5,5; xyz; 19): the enumeration over A, B, C ⊂ Z/N (N ≤ 30), Z, Z×Z/N (N ≤ 9), Z², Z²×Z/2
+  (`work/pencil/pencil_enum.py`, with and without `--wide`) finds exactly six lattices up to isomorphism
   (`pencil_iso.py`): three with realization space a single Galois orbit of 7-th roots of unity,
   two with 8-th roots of unity, and one with a one-dimensional realization space,
 
