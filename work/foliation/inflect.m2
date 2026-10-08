@@ -30,7 +30,6 @@ analyse = (name, lines) -> (
 );
 -- the six arrangements of TC_FOLIATION.md section 7 (all free; minimal derivation saturated)
 analyse("A3^0(2) = B3: xyz(x^2-y^2)(y^2-z^2)(z^2-x^2), exp (3,5), n=3r", {x,y,z,x-y,x+y,y-z,y+z,z-x,z+x});
-analyse("A3^0(4): xyz(x^4-y^4)(y^4-z^4)(z^4-x^4), exp (5,9), n=3r", {x,y,z,x-y,x+y,y-z,y+z,z-x,z+x,x^2+y^2,y^2+z^2,z^2+x^2});
 analyse("5 lines xyz(x-y)(x-z), exp (2,2), n=3r-1", {x,y,z,x-y,x-z});
 analyse("8 lines (3,4) supersolvable, n=3r-1", {x,y,x-y,x+y,z-x,z+x,z-y,z+y});
 analyse("B3 minus x=0, exp (3,4), n=3r-1", {y,z,x-y,x+y,y-z,y+z,z-x,z+x});
@@ -39,3 +38,6 @@ analyse("Pappus-like 9 lines (turns out free (3,5)), n=3r", {x,y,z,x-y,x-z,y-z,x
 P = {{1,0,0},{0,1,0},{0,0,1},{1,1,1},{1,2,5}};
 joinL = (p,q) -> ( v := {p#1*q#2-p#2*q#1, p#2*q#0-p#0*q#2, p#0*q#1-p#1*q#0}; v#0*x+v#1*y+v#2*z );
 analyse("10 lines joining 5 general points (unsaturated)", apply(subsets(P,2), s -> joinL(s#0,s#1)));
+-- the 15-line Fermat arrangement needs i = sqrt(-1); over ZZ/101 one has 10^2 = -1
+R = ZZ/101[x,y,z];
+analyse("A3^0(4) over ZZ/101 (i=10): xyz(x^4-y^4)(y^4-z^4)(z^4-x^4), exp (5,9), n=3r", {x,y,z,x-y,x+y,x-10*y,x+10*y,y-z,y+z,y-10*z,y+10*z,z-x,z+x,z-10*x,z+10*x});

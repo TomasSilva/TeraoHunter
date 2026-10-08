@@ -360,7 +360,8 @@ those lines. These identities constrain positions; I did not get a contradiction
 Jacobian syzygy θ, ω = θ × E and its gcd, J = det(∂ω/∂x), the factorisation of J/Q, the degree of
 the zero scheme of ω, the singular points off the lines and those that are not multiple points,
 the profile, b₂ and Δ := b₂ − n + 1 − r(n − 1 − r), which equals (d₁ − r)(d₂ − r) when the lattice
-has a free member. Results (r = syzygy degree minus (n − 1)):
+has a free member. Results (r = syzygy degree minus (n − 1); the 15-line example, which needs √−1, is computed over
+𝔽₁₀₁ with i = 10):
 
 | arrangement | n | r | j | J/Q | deg Z(ω) | off-line | non-multiple | Δ |
 |---|---|---|---|---|---|---|---|---|
