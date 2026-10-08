@@ -133,10 +133,11 @@ inequalities. What remains true for every n:
    smallest numbers of points on a line; and r ≤ d₁ − 1.
 2. On every line, e₁(H) ≤ r ≤ d₁ − 1; the Yoshinaga defect d₁d₂ − e₁(H)e₂(H) ≥ δ + 1, with
    equality exactly on the lines where e₁(H) = d₁ − 1.
-3. The minimal derivation θ of A₂ defines ω = θ × E, a section of Ω¹(r + 1), and on every line H
+3. The minimal derivation θ of A₂ defines ω = θ × E, a section of Ω¹(r + 2), and on every line H
    ω|_H = f_H n_H with f_H a binary form of degree r + 1 divisible by ∏_{P ∈ H} α_P; so ω vanishes
    at every multiple point of L and, on the line H, at r + 1 − s_H further points (with
-   multiplicity). Length count: c₂(Ω¹(r + 1)) = r² − r + 1.
+   multiplicity). Length count: c₂(Ω¹(r + 2)) = r² + r + 1 (for r = d₁ − 1 this is the
+   d₁² − d₁ + 1 of 2.2).
 4. Deleting any line H from the pair gives A₁ ∖ H plus-one generated with mdr = d₁ and A₂ ∖ H with
    mdr ≤ d₁ − 1: every one-line deletion of a counterexample lattice is a lattice with n − 1 lines
    whose realisations have different minimal Jacobian degrees.

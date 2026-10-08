@@ -573,6 +573,24 @@ enumeration ends; beyond that, only a structural
 theorem about free arrangements with d₁ ≥ m + 2 (the ε ≥ 2 regime of Dimca–Kühne–Pokora, where
 all our free candidates sit) or about mdr-mixed lattices would remove the wall.
 
+**The 17-line (8, 8) class, part [B].** For exponents (8, 8) the refinement Theorem 1(7) splits the
+candidates by r = mdr(A₂) ∈ {6, 7}. For r = 6 every line has 6 or 7 points and m ≤ 6 (this is what
+the running enumeration covers, together with (7, 9)). For r = 7 the non-free member is *nearly
+free* with exponents (7, 10) (τ = 192 = 193 − 1 in du Plessis–Wall), its lines carry 4 to 8 points,
+and m ≤ 7. Two published results cut this case down:
+- Dimca–Ibadula–Măcinic, Prop. 4.7 (citing Abe–Dimca, Cor. 1.7): if A₂ is nearly free with
+  exponents (d₁', d₂') and m(A₂) ≥ d₁', every lattice-mate of A₂ is nearly free. A free
+  arrangement is not nearly free, so **m ≤ 6** in part [B].
+- Abe–Dimca (Thm. 5.3, as quoted in DIM Prop. 4.6): every Ziegler restriction of a nearly free
+  arrangement with exponents (7, 10) has exponents (6, 10) or (7, 9); with Abe's gap bound
+  e₂ − e₁ ≤ s_H − 2 this forces (7, 9) on every line with s_H ≤ 5, and (7, 9) on lines with 8
+  points by s_H ≤ e₁ + 1.
+What is left of part [B] is: lattices with χ = (t − 1)(t − 8)², m ≤ 6, every line with 4 to 8 points
+and at least one line with 4, 5 or 8 points (lattices with all lines in {6, 7} are in part [A]).
+Remark 4.2 of DIM would dispose of the 8-point lines if d₂' ≠ d₁' + 3; here d₂' = d₁' + 3 exactly,
+so it does not apply. This residual class is not covered by the current run; it is the only
+obstacle to "TC for 17 lines" once the run finishes.
+
 **General n.** An attempt to turn these patterns into a proof for all n is in `TC_GENERAL.md`:
 the window for every n (§1), the structure forced in the narrow classes δ = d₁ − 4 (every line with
 exactly d₁ points, mdr(A₂) = d₁ − 1, all Ziegler restrictions of A₂ with exponents (d₁ − 1, d₂ + 1),
@@ -587,6 +605,8 @@ the Ziegler exponents on one line forces an extra incidence), which is equivalen
 - Abe, [Divisionally free arrangements of hyperplanes](https://arxiv.org/abs/1502.07520), Invent. Math. 204 (2016).
 - Abe–Yoshinaga, [Free arrangements and coefficients of characteristic polynomials](https://arxiv.org/abs/1109.0668), Math. Z. (2013).
 - Barakat–Kühne, [Computing the nonfree locus of the moduli space of arrangements and Terao's freeness conjecture](https://arxiv.org/abs/2112.13065), Math. Comp. 92 (2023).
+- Dimca–Ibadula–Măcinic, [Freeness and near freeness are combinatorial for line arrangements in small degrees](https://arxiv.org/abs/1712.04400).
+- Abe–Ibadula–Măcinic, [On some freeness-type properties for line arrangements](https://arxiv.org/abs/2101.02150).
 - Dimca–Kühne–Pokora, [Free line arrangements with low maximal multiplicity](https://arxiv.org/abs/2505.01733).
 - Dimca–Pokora, [A nine-line counterexample to a conjecture on the minimal degree of Jacobian relations](https://arxiv.org/abs/2607.01985).
 - Yoshinaga, On the freeness of 3-arrangements, Bull. LMS 37 (2005); Free arrangements over finite field, Proc. Japan Acad. 82 (2006).
