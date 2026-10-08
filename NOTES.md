@@ -340,3 +340,21 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   filter 13,748,942 NONREAL / 2,622,610 deferred; pass 2 2,594,921 NONREAL / 27,689 to M2; M2: 3,039
   ideal (1), 24,650 degenerate-only, 0 REALISABLE.  TC HOLDS FOR ALL 16-LINE ARRANGEMENTS IN CP^2
   [Theorem 10.4].  ~4 h on 8 cores (volume ratio lattices/skeletons 1.8, vs 61 for (7,7)).
+
+## Finding 23: general-n proof attempt (TC_GENERAL.md)
+- Window for all n collected (d1 >= 6, delta <= d1-4, delta+4 <= s_H <= d1, m <= d1-1, m <= r <= d1-1,
+  unjoined-pair rule, moduli must move every line).
+- Narrow classes delta = d1-4 (n = 3d1-3: (6,8), (7,10), (8,12), ...): s_H = d1 on every line,
+  r = mdr(A2) = d1-1, every Ziegler restriction of A2 has exponents (d1-1, d2+1) (defect d1-3 on
+  every line), Sum m_P = 3d1(d1-1), Sum m_P^2 = 12(d1-1)^2, N = d1^2-2d1+4; Melchior gives
+  2N-b2 = 12-3d1 < 3, so NO real/rational counterexample in a narrow class for any n.  The minimal
+  derivation theta of A2 gives omega = theta x E, a section of Omega^1(d1+1), whose restriction to
+  every line of A2 is (normal) x c_H prod alpha_P: vanishes exactly at the multiple points, simply;
+  c2 = d1^2-d1+1 = N + (d1-3).  Could not derive a contradiction from this.
+- Reduction: for a component C with a free point, the non-free locus equals pi_H^{-1}(Sigma_H) for
+  EVERY line H (Yoshinaga), so all n jump loci coincide; TC for L <=> Conjecture J for ONE line
+  (jump on a line forces an extra incidence).  J proved only for the 15-line family (jump polynomial
+  divides the degeneration polynomial with smaller exponents) and vacuously for rigid lattices.
+- Honest status: no proof; every known tool is numerical and the numbers are consistent for all
+  d1 >= 6; the verified cases are decided by non-realisability of dense linear spaces, not by the
+  window.

@@ -573,6 +573,13 @@ enumeration ends; beyond that, only a structural
 theorem about free arrangements with d₁ ≥ m + 2 (the ε ≥ 2 regime of Dimca–Kühne–Pokora, where
 all our free candidates sit) or about mdr-mixed lattices would remove the wall.
 
+**General n.** An attempt to turn these patterns into a proof for all n is in `TC_GENERAL.md`:
+the window for every n (§1), the structure forced in the narrow classes δ = d₁ − 4 (every line with
+exactly d₁ points, mdr(A₂) = d₁ − 1, all Ziegler restrictions of A₂ with exponents (d₁ − 1, d₂ + 1),
+a section of Ω¹(d₁ + 1) pinned to the multiple points; no real counterexample in these classes for
+any n), and the reduction of TC in P² to a single statement about positions, Conjecture J (a jump of
+the Ziegler exponents on one line forces an extra incidence), which is equivalent to TC. No proof.
+
 ## Sources
 
 - Abe, [Exponents of 2-multiarrangements and freeness of 3-arrangements](https://arxiv.org/abs/1005.5276) (2010/2012).

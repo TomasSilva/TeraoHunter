@@ -74,6 +74,7 @@ def process_chunk(path):
                 break
             rec = json.loads(line)
             big = [tuple(B) for B in rec['blocks']]
+            t1 = time.time(); l1 = prog['lattices']
             for c in rec.get('c', [0]):
                 if c not in CLASSES:
                     continue
@@ -105,6 +106,8 @@ def process_chunk(path):
                         defer_files[c].write(json.dumps({'blocks': [list(B) for B in blocks], 's': [n - 1 - v for v in w],
                                                          'c': c, 'reason': res, 'src': [base, i]}) + '\n')
             prog['skeletons'] += 1
+            if time.time() - t1 > 10:
+                print('slow skeleton %s:%d: %d blocks, W=%d, classes %s, %d lattices, %.0fs' % (base, i, len(big), rec['W'], rec.get('c'), prog['lattices'] - l1, time.time() - t1), flush=True)
             if (i + 1) % 200 == 0:
                 for f in defer_files.values():
                     f.flush()
