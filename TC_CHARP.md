@@ -47,7 +47,11 @@ generic point.
 - Three-pencil lattices over F_q* (`fq_pencil.py`; multiplicative structure, Smith normal form
   of the relation lattice, torsion prime to p): q = 7 (36 lattices), 8 (60), 9 (114): all rigid,
   every realization component is Galois-conjugate to the F_q-point; M2 confirms mdr ≤ q on all
-  of them (q = 7: syzygy degrees (7, 10, 10) or (7, 11, 12)). [q = 11: see below.]
+  of them (q = 7: syzygy degrees (7, 10, 10) or (7, 11, 12)). q = 11: 8324 lattices (25 to 28
+  lines, classes (12, 12) to (13, 13)); 8294 are rigid with all components F₁₁-rational; the other
+  30 (25 lines, class (12, 12), e.g. A = F₁₁* ∖ {1}, B = F₁₁*, C = the non-squares, K = {x}) have a
+  one-dimensional realization space over F̄₁₁, and its generic member, over GF(11⁴), still has
+  syzygy degrees (11, 14, 14): the Frobenius syzygy deforms along the family and nothing is free.
 - Additive three-pencil lattices over F_p (`additive.py`; collinear centres, linear realization
   space): p = 5 (one lattice, 13 lines, class (6, 6)), p = 7 (two lattices, 17 lines, class
   (8, 8)): all rigid.
@@ -60,4 +64,28 @@ generic point.
 
 ## 3. Results of the larger scans
 
-(filled in below as the runs finish)
+**All sub-arrangements of PG(2, 5)** (`pg25scan.c`, every n-subset of the 31 lines with 5 ∤ n,
+about 1.5·10⁹ subsets). Integer-rooted χ̄ with d₁ > 5 occurs only for n = 13 (class (6, 6),
+96 million subsets) and n = 14 (class (6, 7), 17 million); nothing for n ≥ 16. Up to the invariant
+(point profile, sorted multiplicity tuples of the points on each line) these are 203 lattices
+(161 + 42; `pg25_hits.txt`). Their realization schemes over F̄₅ (`pg2q_real.py`,
+`pg25_real_results.txt.gz`) are all zero-dimensional and F₅-rational: 202 consist of the single
+F₅-point, one (13 lines, profile 2¹² 3¹² 5³) of two F₅-points. Syzygy degrees (5, 8, 8) for every
+13-line lattice (nearly free) and (5, 9, 10) for every 14-line one. No lattice-mate exists at all.
+
+**One-parameter three-pencil families over Z** (`spread.py`, `spread_diag.py`; A, B ⊂ [0, D],
+C the sums or differences carrying most triple points, every K; D ≤ 7). For every family with
+integer-rooted χ̄ the smallest prime power q admitting a reduction with the same lattice
+satisfies q ≥ d₁, with equality for 299 of the families at D = 6 and strict inequality for the
+rest; no family admits q < d₁. (At q = d₁ the F_q-member may well be free, with the Frobenius
+syzygy as its minimal one, as in §1.) So in this world the Frobenius bound is sharp but never
+violated, exactly as Terao's conjecture demands.
+
+**Summary.** Over F̄₂ (all of PG(2, 4)), F̄₅ (all of PG(2, 5)), and for every three-pencil or
+additive lattice over F₇, F₈, F₉, F₁₁ with d₁ > q, the F_q-rational arrangement that the
+Frobenius syzygy makes non-free has no free lattice-mate, because its lattice is rigid or its
+only deformations keep a degree-q syzygy. The mechanism is sound (it is a clean proof of
+non-freeness) but every lattice it applies to in these ranges is rigid. The remaining room is
+q = 7 with general (non-pencil) sub-arrangements of PG(2, 7), which cannot be enumerated
+exhaustively (C(57, 17) ≈ 10¹⁴); a random sample of 17-, 18- and 19-line subsets is being
+analysed (`pg27sample.c`).

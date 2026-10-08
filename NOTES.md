@@ -424,3 +424,18 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
 - Conclusion: TC holds for all three-pencil lattices with 18 lines in class (8,9); the only
   non-free ones are the seed variants, which have no lattice-mates. Weakening the cyclic
   relations inside the monomial world cannot produce a counterexample; one must leave it.
+
+## Finding 26: Terao over fields of positive characteristic -- the Frobenius bound (TC_CHARP.md)
+
+- An arrangement defined over F_q (q = p^k) with p not dividing n has the Jacobian syzygy
+  theta' = (x^q, y^q, z^q) - (sigma/n) E, sigma = sum alpha_H^(q-1), of degree q: mdr <= q. Hence an
+  F_q-rational arrangement in a lattice class with d1 > q is non-free, and a counterexample over
+  F_p-bar needs only a free lattice-mate (necessarily not F_q-rational). Verified in M2.
+- Searches (work/charp/): three-pencil lattices over F_q* for q = 7, 8, 9, 11 with d1 > q (36, 60,
+  114, 8324 lattices): all rigid or (30 at q = 11) one-parameter families whose generic member
+  keeps mdr = 11; additive three-pencil over F_5, F_7: rigid; ALL sub-arrangements of PG(2,4)
+  (4 lattices, 11 lines, (5,5), rigid, syz (4,7,7)) and of PG(2,5) (203 lattices, 13-14 lines,
+  (6,6)/(6,7), all rigid F_5-points, syz (5,8,8)/(5,9,10)); one-parameter families over Z: the
+  smallest admissible q is always >= d1 (equality in 299 cases at D = 6), never below.
+- No counterexample and no pair with different syzygy degrees found; every lattice the mechanism
+  applies to is rigid.
