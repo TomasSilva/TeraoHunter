@@ -34,7 +34,8 @@ below (n + 2)/3. Concretely:
 What is *not* proved: TC. For deg(J/Q) ≥ 2 the identity allows a nonzero right-hand side carried
 by singular points of the curve J/Q, and §6 says exactly what those singularities would have to
 be. Sections 1–5 are proved; §6 is analysis of the remaining cases; §7 lists the computer checks
-of the structure on known free arrangements.
+of the structure on known free arrangements; §9 identifies the excess with the Bourbaki degree of
+Nasrollah Nejad–Nouri and checks this on the Dimca–Pokora Ziegler pair.
 
 Notation as in `TC_ATTEMPT.md` and `TC_GENERAL.md`: (A₁, A₂) a counterexample with lattice L of
 n lines; A₁ free with exponents (1, d₁, d₂), d₁ ≤ d₂, δ = d₂ − d₁, n = d₁ + d₂ + 1; A₂ not free
@@ -395,6 +396,58 @@ derivation (gcd(ω) ≠ 1) and are outside the scope of §1–5, as expected: sa
   (d₁ − r)(d₂ − r). The first open instances are j = 2 (a conic J' that is a line pair or a double
   line) and j = 3.
 
+## 9. The excess is the Bourbaki degree (Nasrollah Nejad–Nouri)
+
+Nasrollah Nejad and Nouri (arXiv:2609.22453) study the *Bourbaki degree* of a line arrangement:
+for a minimal Jacobian syzygy ν of degree e = mdr, the cokernel of R(−e) → Syz(J) is an ideal
+I_ν twisted, and Bour := deg(R/I_ν) (0 iff free). Their Theorem 2.1 is Bour = χ̄(e) with
+χ̄(t) = t² − (n − 1)t + b₂ − (n − 1) the reduced characteristic polynomial (our n). For the
+non-free member of a counterexample, χ̄(t) = (t − d₁)(t − d₂), so
+
+  Bour(A₂) = (d₁ − r)(d₂ − r):
+
+the left-hand side of Theorem 4.1 is the Bourbaki degree of A₂, and Theorem 4.1 says where the
+Bourbaki scheme B_θ := Proj(R/I_θ) lives. Precisely:
+
+1. The Bourbaki map sends η ∈ D₀(A₂) to h_η with θ × η = h_η·∇Q. For the syzygy ρ_p of a
+   multiple point p (their Prop. 1.1, ρ_p ≡ −n·(∏_{H∌p} α_H)·∂_p mod E) one finds
+   h_{ρ_p} = det(θ, E, p)/∏_{H∋p} α_H = R'_p, the residual polar curve of p (degree r + 1 − m_p):
+   this is their u_p ∈ (I_θ)_{r+1−m_p}. Since (K_H − K_{H'})·α_Hα_{H'} = det(θ, E, p) for
+   p = H ∩ H', all cofactor differences lie in I_θ, and with Σ_H K_H = 0 so do the cofactors:
+   I_θ ⊇ (K_H : H ∈ A₂). The common zeros of the cofactors are exactly the singular points P of
+   F with θ(P) = 0 and vanishing transverse eigenvalue along every line through P, i.e. the
+   points with d_P ≠ 0 or off the lines — the excess points of §4. So Supp(B_θ) ⊆ excess points
+   ⊆ Sing(J') (Corollary 3.2), and at an off-line point the local length of B_θ is μ_P (there
+   Syz(J) ≅ T_{P²}(r − 1) locally).
+2. Their Lemma 2.3 gives reg(I_θ) ≤ r − 1, hence Bour ≤ C(r, 2) and B_θ imposes independent
+   conditions in degree r − 2; their Theorem 2.5 gives the type t = indeg I_θ ≤ r − m₂ + 1 (the
+   residual polar curve of the second-largest point), with Bour ≤ C(r, 2) − C(m₂ − 1, 2).
+3. Their Terao criterion (Theorem 2.18) reads, in our notation, C(d₁ + 1, 2) < n − 1 + C(m₂ − 1, 2)
+   ⇒ TC. Inside the window (m ≤ d₁ − 1) the right-hand side is at most n − 1 + C(d₁ − 2, 2), so the
+   criterion needs n ≥ 3d₁ − 1, outside Abe's range n ≤ 3d₁ − 3; it is weaker there than (W1),
+   and Theorem 5.1 (n ≤ 3d₁ − 5) is strictly stronger. What their paper adds is the algebraic
+   object and its homological constraints, not a new bound.
+
+**Check on the Dimca–Pokora nine-line pair** (`work/foliation/bourbaki.m2`; the pair of
+arXiv:2607.01985, same lattice (n₂, n₃, n₄) = (9, 7, 1), χ̄(t) = t² − 8t + 18, mdr 4 and 5, Bourbaki
+degrees 2 and 3 by their Theorem 4.2). Both minimal foliations are saturated, Z(ω) has degree
+r² + r + 1 (21 and 31), and the Bourbaki scheme computed from the syzygies is:
+- mdr 4: J/Q = x·(conic); B_θ = the two points x = y² − 3yz − z² = 0, which are exactly the two
+  nodes of J/Q and the two off-line singular points of F; Bour = 2 = Σ_off μ_P.
+- mdr 5: J/Q = y·(quintic); B_θ = three reduced points: the two off-line singular points of F
+  plus the double point [1:0:0] = {y + z = 0} ∩ {z = 0}, at which J/Q has multiplicity 3 and the
+  foliation has L_P = 0 (μ_P = 4, ν = 2 on both lines, d_P = −1); Bour = 3 = 2 + 1.
+In both cases B_θ ⊆ Sing(J/Q) scheme-theoretically and the off-line part of B_θ equals the
+off-line singular scheme of ω. So on a genuine Ziegler pair the Bourbaki scheme is the excess
+scheme of §4, with a degenerate on-line point contributing as Theorem 4.1 predicts.
+
+**What this suggests.** TC for the window lattices is the statement B_θ = ∅ for the minimal
+syzygy of every realisation; the two descriptions constrain B_θ from different sides — degree
+(d₁ − r)(d₂ − r) and regularity ≤ r − 1 (algebra), support inside Sing(J') ∩ ⋂_p R'_p with the
+local models of §3 (geometry). Neither side alone forces B_θ = ∅ when deg J' ≥ 2; a proof would
+have to show that a scheme of that degree cannot sit at the singular points of a curve of degree
+3r − n while lying on every residual polar curve.
+
 ## Sources
 
 - J. V. Pereira, Vector fields, invariant varieties and linear systems, Ann. Inst. Fourier 51
@@ -404,3 +457,5 @@ derivation (gcd(ω) ≠ 1) and are outside the scope of §1–5, as expected: sa
 - M. Brunella, Birational geometry of foliations, IMPA (Milnor numbers under blow-up, used in the
   j = 2 discussion of §6).
 - The sources of `TC_ATTEMPT.md` for (I1), (I2) and the window.
+- A. Nasrollah Nejad, S. Nouri, The Bourbaki degree of line arrangements, arXiv:2609.22453 (§9).
+- A. Dimca, P. Pokora, A nine-line counterexample to a conjecture on the minimal degree of Jacobian relations, arXiv:2607.01985 (the pair of §9).

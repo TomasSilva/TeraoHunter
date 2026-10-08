@@ -381,4 +381,11 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
 - Not proved: TC. Open: deg J' >= 2, i.e. whether the singular points of a curve of degree
   3r-n <= d1-delta-4 can carry the excess (d1-r)(d2-r) >= delta+1; first instances j = 2
   ((7,8), (8,10)) and j = 3 ((7,7), (8,9)).
+- Bourbaki link (same day): Nasrollah Nejad-Nouri (arXiv:2609.22453) have Bour(A) = chibar(mdr),
+  so for A2 the excess (d1-r)(d2-r) IS the Bourbaki degree; their Bourbaki ideal contains the
+  residual polar curves and the cofactor ideal (K_H), so the Bourbaki scheme is supported at the
+  excess points (common zeros of the cofactors) inside Sing(J/Q). Checked on the Dimca-Pokora
+  9-line pair (work/foliation/bourbaki.m2): Bourbaki scheme = excess scheme (2 nodes of J/Q;
+  resp. 2 off-line points + 1 degenerate double point). Their Terao criterion needs
+  n >= 3 d1 - 1, weaker than Abe inside the window; Theorem 5.1 is strictly stronger there.
 
