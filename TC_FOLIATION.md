@@ -16,6 +16,12 @@ is ≥ 1. Hence (Theorem 5.1):
 
 > **A counterexample to TC in P² has 3·mdr(A₂) ≥ n + 2; hence d₂ ≤ 2d₁ − 6, d₁ ≥ 7 and n ≥ 15.**
 
+**Added later on 8 Oct 2026 (§10):** the next case deg(J/Q) = 2 is impossible too, by a local
+analysis along a double line of the inflection curve (Theorem 10.1). So **3·mdr(A₂) ≥ n + 3,
+d₂ ≤ 2d₁ − 7**. This excludes (7, 8) at 16 lines (TC for 16 lines is now theoretical), (8, 10) and
+(9, 9) with mdr 7 at 19 lines, (9, 12) at 22 lines. The first theoretically open classes are
+(7, 7) at 15 lines (settled by enumeration), (8, 8) at 17 and (8, 9) at 18.
+
 This removes, for every n, the two outermost exponent classes of the window of `TC_GENERAL.md` §1:
 δ = d₁ − 4 (the narrow classes of `TC_GENERAL.md` §2: (6, 8), (7, 10), (8, 12), …) and δ = d₁ − 5
 ((6, 7), (7, 9), (8, 11), …), and inside the remaining classes it removes every value of mdr(A₂)
@@ -294,18 +300,18 @@ n ∈ [2d₁ + 1, 3d₁ − 5], and r = mdr(A₂) ∈ [⌈(n + 2)/3⌉, d₁ −
 | (6, 7) | 14 | none | – | **excluded (5.1)**; was Barakat–Kühne (computer) |
 | (6, 8) | 15 | none | – | **excluded (5.1)**; was Thm 10.1 (computer + Kneser) |
 | (7, 7) | 15 | 6 | 3 | 1 |
-| (7, 8) | 16 | 6 | 2 | 2 |
+| (7, 8) | 16 | none | – | **excluded (10.1)**; was Thm 10.4 (computer) |
 | (7, 9) | 17 | none | – | **excluded (5.1)** |
 | (8, 8) | 17 | 7 | 4 | 1 |
 | (7, 10) | 18 | none | – | **excluded (5.1)** |
 | (8, 9) | 18 | 7 | 3 | 2 |
-| (8, 10) | 19 | 7 | 2 | 3 |
-| (9, 9) | 19 | 7, 8 | 2, 5 | 4, 1 |
+| (8, 10) | 19 | none | – | **excluded (10.1)** |
+| (9, 9) | 19 | 8 | 5 | 1 (r = 7 excluded by 10.1) |
 | (8, 11) | 20 | none | – | **excluded (5.1)** |
 | (9, 10) | 20 | 8 | 4 | 2 |
 
-For (7, 7) and (7, 8) TC is known by enumeration (`TC_ATTEMPT.md` Theorems 10.2, 10.4), so the
-first open case overall remains 17 lines, class (8, 8) with r = 7 — which is part [B] of
+For (7, 7) TC is known by enumeration (`TC_ATTEMPT.md` Theorem 10.2) and (7, 8) is excluded by
+Theorem 10.1 below, so the first open case overall remains 17 lines, class (8, 8) with r = 7 — which is part [B] of
 `TC_ATTEMPT.md` §11 (A₂ nearly free with exponents (7, 10)), the part *not* covered by the running
 enumeration. The running enumeration ((7, 9), and (8, 8) with r = 6) has become an independent
 computational check of Theorem 5.1 rather than the decisive step for n = 17.
@@ -393,8 +399,8 @@ derivation (gcd(ω) ≠ 1) and are outside the scope of §1–5, as expected: sa
   singular points of J'), which is what `TC_GENERAL.md` §5 said a proof needs.
 - TC itself is not proved. Within this framework it is equivalent, for the window lattices, to
   (★): the singular points of a curve of degree 3r − n ≤ d₁ − δ − 4 cannot carry excess
-  (d₁ − r)(d₂ − r). The first open instances are j = 2 (a conic J' that is a line pair or a double
-  line) and j = 3.
+  (d₁ − r)(d₂ − r). §10 settles j = 2 (3·mdr(A₂) ≥ n + 3); the first open instances are j = 3
+  with Bour = 2 ((8, 9), 18 lines) and j = 4 with Bour = 1 ((8, 8), 17 lines).
 
 ## 9. The excess is the Bourbaki degree (Nasrollah Nejad–Nouri)
 
@@ -447,6 +453,128 @@ syzygy of every realisation; the two descriptions constrain B_θ from different 
 local models of §3 (geometry). Neither side alone forces B_θ = ∅ when deg J' ≥ 2; a proof would
 have to show that a scheme of that degree cannot sit at the singular points of a curve of degree
 3r − n while lying on every residual polar curve.
+
+## 10. The next step: deg(J/Q) = 2 is impossible
+
+**Theorem 10.1.** A counterexample to TC in P² satisfies 3·mdr(A₂) ≥ n + 3, i.e. deg(J/Q) ≥ 3.
+Consequently n ≤ 3d₁ − 6, δ ≤ d₁ − 7, and the classes (7, 8) [16 lines], (8, 10) [19 lines],
+(9, 9) with mdr(A₂) = 7 [19 lines], (9, 12) [22 lines], … contain no counterexample. In particular
+TC for 16 lines has a theoretical proof (Theorem 10.4 of `TC_ATTEMPT.md` was by enumeration).
+
+The proof needs three lemmas that are of independent use. Throughout, E := D̃₀(A₂) is the sheaf of
+Jacobian syzygies of A₂, a rank-2 bundle on P² with c₁(E) = −(n − 1) and c₂(E) = (n − 1)² − τ (from
+0 → E → O³ → I_Σ(n − 1) → 0, Σ the singular scheme of A₂, length τ), and θ ∈ H⁰(E(r)) is the minimal
+derivation; its zero scheme is the Bourbaki scheme B_θ of §9, of length (d₁ − r)(d₂ − r).
+
+**Lemma 10.2 (the restriction of E to a line of A₂ is the Ziegler module).** For every H ∈ A₂,
+
+  E|_H ≅ O_H(−e₁(H)) ⊕ O_H(−e₂(H)),
+
+where (e₁(H), e₂(H)) are the exponents of the Ziegler multirestriction (A₂^H, μ). Consequently, for
+r < e₂(H) (always true here: e₂ ≥ n − 1 − r ≥ d₂ + 1 > r), the restriction θ|_H ∈ H⁰(E(r)|_H) has the
+form (g_H, 0) with g_H a binary form of degree r − e₁(H) on H, g_H ≠ 0, and
+
+  Supp(B_θ) ∩ H = Z(g_H),   length(B_θ ∩ H) ≤ r − e₁(H).
+
+In particular H contains a Bourbaki point iff e₁(H) ≤ r − 1, and f_H = g_H · f₁^H where
+f₁^H := det_H(θ₁^H, E_H) is the form of degree e₁(H) + 1 of the lowest Ziegler basis element.
+
+*Proof.* Let D_H(A₂) := {θ ∈ D(A₂) : θ(α_H) = 0}; it is a complement of S·E in D(A₂), hence
+D_H ≅ D₀(A₂) as graded S-modules and D̃_H ≅ E. Ziegler's restriction θ ↦ θ|_H (a derivation
+tangent to the plane H restricts to a vector field on H) is S-linear from D_H(A₂) to the
+multiarrangement module D(A₂^H, μ) — the multiplicity condition holds because θ(α_H) = 0: at a
+point P ∈ H with lines v = 0 (H) and v = c_iu through it, θ = a∂_u + b∂_v with b = 0, and
+θ(v − c_iu) = −c_ia ∈ (v − c_iu) for all i forces a(u, 0) ∈ (u^{m_P − 1}). The map kills α_H D_H, so
+it is a map of sheaves on H, E|_H → D̃(A₂^H, μ), between locally free sheaves of rank 2 (the
+multiarrangement module is a reflexive graded module over ℂ[H], hence free, with exponents
+(e₁, e₂), e₁ + e₂ = |μ| = n − 1). At a point of H that is not a multiple point both sides are the
+vector fields tangent to the plane H, and the map is the identity; so it is injective. Both sides
+have degree −(n − 1) (c₁(E) = −(n − 1); e₁ + e₂ = n − 1), and an injective map of bundles of the
+same rank and degree on a curve is an isomorphism. The rest: θ|_H ∈ H⁰(O(r − e₁)) ⊕ H⁰(O(r − e₂))
+and the second summand is 0; g_H = 0 would mean θ ∈ H⁰(E(r)(−H)) = H⁰(E(r − 1)) = D₀(A₂)_{r−1} = 0.
+The zero scheme of the restricted section contains B_θ ∩ H and has the same support; the
+factorisation f_H = g_H f₁^H is θ|_H = g_H·θ₁^H in the Ziegler module. ∎
+
+**Lemma 10.3 (Bourbaki points on lines).** Let j = 3r − n. For every line H of A₂,
+r − e₁(H) ≤ ⌊j/3⌋. Hence: for j ≤ 2 no Bourbaki point lies on a line of A₂; for 3 ≤ j ≤ 5 every
+line carries at most one Bourbaki point, and a line through a Bourbaki point has e₁(H) = r − 1 and
+exactly s_H = n + 3 − 2r = r + 3 − j multiple points.
+
+*Proof.* If e₁(H) = r − k, Abe's gap bound e₂ − e₁ ≤ s_H − 2 for the (balanced) Ziegler
+multirestriction gives s_H ≥ n + 1 − 2(r − k), while s_H ≤ e₁(H) + 1 = r − k + 1 (the form f₁^H of
+degree e₁ + 1 vanishes at the s_H points and is nonzero, `TC_ATTEMPT.md` Thm 1(7) step 3). So
+n + 1 − 2r + 2k ≤ r − k + 1, i.e. 3k ≤ j. For j ∈ {3, 4, 5} and k = 1 the two bounds coincide:
+s_H = r = e₁(H) + 1, so f₁^H has simple zeros exactly at the multiple points and the one Bourbaki
+point on H is the zero of the linear form g_H. ∎
+
+**Lemma 10.4 (lines in the inflection curve).** Let ℓ be a line and P ∈ ℓ a nondegenerate singular
+point of F whose linear part L_P has ℓ as an eigendirection, with eigenvalue λ₁ along ℓ and λ₂
+transverse. Write, in affine coordinates (u, v) centred at P with ℓ = {v = 0}, X₂(u, 0) = βu^k + ⋯
+(k ≥ 2, β ≠ 0) if ℓ is not invariant.
+(a) If ℓ is not invariant, then J|_ℓ = λ₁((k − 1)λ₁ + λ₂)·β·u^{k+1} + O(u^{k+2}) near P. So ℓ | J
+    forces (k − 1)λ₁ + λ₂ = 0; if L_P is a Jordan block (λ₁ = λ₂ = λ ≠ 0) this is impossible, and ℓ
+    is invariant.
+(b) If ℓ is invariant, write X₁(u, 0) = A(u), X₂ = v·B̃(u, v), B(u) := B̃(u, 0) (the transverse
+    eigenvalue function along ℓ). Then J = (r + 1)·v·A·(AB′ − A′B + B²) + O(v²), so ℓ² | J iff
+    φ := B/A satisfies φ′ = −φ², i.e. iff φ ≡ 0 or φ = 1/(u − c) in every affine coordinate u on ℓ.
+    In the second case ℓ carries exactly one singular point with nonzero transverse eigenvalue
+    (and its Camacho–Sad index is 1); in the first case none.
+
+*Proof.* J = (r + 1)·D with D = X₁²∂_uX₂ − X₂²∂_vX₁ + X₁X₂(∂_vX₂ − ∂_uX₁) (Proposition 2.1(1)).
+(a) With X₁ = λ₁u + v·(…) + O(2), X₂ = λ₂v + b(u, v), b ∈ 𝔪², on v = 0: A := X₁(u, 0) = λ₁u + O(u²),
+B := X₂(u, 0) = βu^k + ⋯, ∂_uX₂(u, 0) = B′, ∂_vX₂(u, 0) = λ₂ + O(u), ∂_uX₁(u, 0) = λ₁ + O(u) and
+∂_vX₁(u, 0) = O(1). Hence D|_{v=0} = A²B′ − B²·O(1) + AB(λ₂ − λ₁ + O(u)) =
+kβλ₁²u^{k+1} + λ₁β(λ₂ − λ₁)u^{k+1} + O(u^{k+2}) = λ₁((k − 1)λ₁ + λ₂)βu^{k+1} + O(u^{k+2}). For a
+Jordan block the coefficient is kλ²β ≠ 0, so J does not vanish on ℓ near P unless β = 0, i.e.
+X₂|_ℓ ≡ 0 near P, which (ℓ being a line, X₂|_ℓ a polynomial) means ℓ is invariant.
+(b) X₂ = vB̃ gives ∂_uX₂ = v∂_uB̃, ∂_vX₂ = B̃ + v∂_vB̃, X₂² = O(v²), so D = v·X₁(X₁∂_uB̃ + B̃² − B̃∂_uX₁)
++ O(v²), and on v = 0 the bracket is AB′ + B² − BA′. As A ≢ 0 (otherwise X ≡ 0 on ℓ), ℓ² | J iff
+AB′ − A′B + B² ≡ 0 iff (B/A)′ = −(B/A)². The solutions of φ′ = −φ² are φ ≡ 0 and φ = 1/(u − c).
+In the second case A = (u − c)B: the zeros of A (the singular points on ℓ in the chart) are c and
+the zeros of B; at the zeros of B the transverse eigenvalue vanishes, and at c it is B(c) ≠ 0
+with A′(c) = B(c), so CS(F, ℓ, c) = B(c)/A′(c) = 1. ∎
+
+*Proof of Theorem 10.1.* Let j = 2, so n = 3r − 2 and, by (I1), r ≥ 6 once n ≥ 16 (n = 13 is the
+class (6, 6), excluded by Dimca–Ibadula–Măcinic). By Lemma 10.3 no Bourbaki point lies on a line
+of A₂; so B_θ is supported at off-line singular points, where its length is μ_P (§9), and
+Bour = Σ_{P off-line} μ_P = (d₁ − r)(d₂ − r) ≥ 1. Every Bourbaki point P is a singular point of the
+conic J′ (Corollary 3.2), with mult_P(J′) = mult_P(J).
+- J′ smooth: no singular point, Bour = 0. Contradiction.
+- J′ = ℓ₁ℓ₂, two lines: B_θ is supported at the node P₀, where mult_{P₀}(J) = 2, so P₀ is
+  nondegenerate and μ_{P₀} = 1: Bour = 1, i.e. d₁ = d₂ = r + 1, n = 2r + 3 = 3r − 2, r = 5, n = 13.
+  Contradiction.
+- J′ = ℓ², a double line: B_θ ⊆ ℓ, and at each of its points mult_P(J) = 2, so P is nondegenerate
+  non-radial with μ_P = 1; thus B_θ consists of b := (d₁ − r)(d₂ − r) ≥ 2 distinct points of ℓ
+  (b = 1 is the previous case). At such a P the degree-2 part of J is Q(P)·ℓ_P², a double line;
+  by Proposition 3.1 that part is det(L_Pt, L_P²t), which is the product of the two distinct
+  eigen-coordinates when the eigenvalues are distinct and λ²det(t, Nt) = c·η(t)² when
+  L_P = λ(I + N), N = w ⊗ η nilpotent — a double line only in the Jordan case, with the line
+  {η = 0} = ℂw the eigendirection. So every Bourbaki point is a Jordan point with eigendirection
+  ℓ. By Lemma 10.4(a), ℓ is invariant. By Lemma 10.4(b), in an affine coordinate on ℓ in which the
+  b Jordan points are finite, φ = B/A is either 0 or 1/(u − c); but at a Jordan point A = 0 and
+  B = λ ≠ 0, so φ has a pole there: φ ≠ 0, and φ = 1/(u − c) has a single pole. Hence b ≤ 1.
+  Contradiction.
+So j ≠ 2, and with Theorem 5.1, j ≥ 3. The consequences follow from r ≤ d₁ − 1:
+n + 3 ≤ 3r ≤ 3d₁ − 3 and δ = n − 2d₁ − 1 ≤ d₁ − 7; the classes listed have n = 3d₁ − 5 (or, for
+(9, 9), the value r = 7 gives j = 2). ∎
+
+**Remark 10.5.** Two by-products. (i) For any arrangement with 3·mdr = n + 2 whose minimal
+derivation has a saturated foliation and balanced Ziegler restrictions, the same proof gives
+χ̄(mdr) ≤ 1: such arrangements are free or nearly free. (ii) Lemma 10.4(b) says that an invariant
+line which is a double component of the inflection curve carries at most one singular point with
+nonzero transverse eigenvalue, and that one has Camacho–Sad index 1.
+
+**What j = 3 looks like (classes (7, 7) at 15 lines, (8, 9) at 18, (9, 11) at 21, (10, 10) at 21).**
+J′ is a cubic and Bour = a(r − 4 − a) with a = d₁ − r (so 1, 2, 3, 4 for the four classes). By
+Lemma 10.3 a line carries at most one Bourbaki point, and only if it has exactly r multiple points
+and e₁(H) = r − 1; such a point is a multiple point with ν_P(H) = 2 (then L_P = 0) or a free
+saddle-node of order 2 with transverse centre (contribution 1, J′ nodal there with branches H and
+the centre direction, by the tangent-cone computation of Proposition 3.1). Off-line Bourbaki points
+are singular points of the cubic; at a node μ_P = 1; at a triple point of three concurrent lines
+μ_P ≤ 2 (radial, or a saddle-node of order 2). Lemma 10.4 applies to every line component of J′
+through a nondegenerate Bourbaki point. I have not completed the case analysis; the case
+Bour = 1 at 15 lines is Theorem 10.2 of `TC_ATTEMPT.md` (enumeration), and Bour = 2 at 18 lines
+is open.
 
 ## Sources
 

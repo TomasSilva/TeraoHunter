@@ -388,4 +388,15 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   9-line pair (work/foliation/bourbaki.m2): Bourbaki scheme = excess scheme (2 nodes of J/Q;
   resp. 2 off-line points + 1 degenerate double point). Their Terao criterion needs
   n >= 3 d1 - 1, weaker than Abe inside the window; Theorem 5.1 is strictly stronger there.
+- Theorem 10.1 (same day, later): deg(J/Q) = 2 is impossible, so 3 mdr(A2) >= n+3 and
+  d2 <= 2 d1 - 7. Proof: (i) E|_H = O(-e1(H)) + O(-e2(H)) (Ziegler module = restricted syzygy
+  bundle), so the Bourbaki points on a line are the zeros of a form of degree r - e1(H);
+  (ii) Abe's gap bound gives r - e1(H) <= j/3, so for j <= 2 no Bourbaki point is on a line;
+  (iii) J/Q a conic: smooth -> no excess; line pair -> Bour = 1 -> n = 13; double line ->
+  every Bourbaki point is a Jordan-block singular point with eigendirection the line, the line is
+  then invariant (local computation), and along an invariant double line of J the ratio
+  (transverse eigenvalue)/(tangential field) solves phi' = -phi^2, so at most one Jordan point.
+  Consequences: (7,8) at 16 lines theoretical (TC for 16 lines now theoretical), (8,10) and
+  (9,9)[r=7] at 19, (9,12) at 22 excluded. Open: (7,7) [15, computer], (8,8)[B] [17, j=4,
+  Bour 1], (8,9) [18, j=3, Bour 2].
 

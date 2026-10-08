@@ -76,9 +76,11 @@ and m is the largest point multiplicity.
 **Addendum (8 Oct 2026, `TC_FOLIATION.md` Theorem 5.1).** The foliation of P² defined by the
 minimal derivation of A₂ has all n lines invariant and its inflection curve (degree 3r) is
 divisible by Q; comparing its zeros with the lattice gives 3r ≥ n + 2. With (7) this sharpens (5)
-to **d₂ ≤ 2d₁ − 6, d₁ ≥ 7, n ≥ 15**, and sharpens the lower bound in (7) to r ≥ (n + 2)/3. In
-particular the classes (6, 7), (6, 8), (7, 9), (7, 10), (8, 11), (8, 12), … contain no
-counterexample for purely theoretical reasons, and for n = 17 only (8, 8) with r = 7 is left.
+to **d₂ ≤ 2d₁ − 6, d₁ ≥ 7, n ≥ 15**, and sharpens the lower bound in (7) to r ≥ (n + 2)/3; its
+Theorem 10.1 then excludes 3r = n + 2 as well, giving **d₂ ≤ 2d₁ − 7 and r ≥ (n + 3)/3**. In
+particular the classes (6, 7), (6, 8), (7, 8), (7, 9), (7, 10), (8, 10), (8, 11), (8, 12), … contain
+no counterexample for purely theoretical reasons (so TC for 16 lines no longer needs Theorem
+10.4), and for n = 17 only (8, 8) with r = 7 is left.
 
 **The smallest admissible exponents** (from (1), (4), (5)):
 
