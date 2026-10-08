@@ -498,14 +498,14 @@ factorisation f_H = g_H f₁^H is θ|_H = g_H·θ₁^H in the Ziegler module. �
 **Lemma 10.3 (Bourbaki points on lines).** Let j = 3r − n. For every line H of A₂,
 r − e₁(H) ≤ ⌊j/3⌋. Hence: for j ≤ 2 no Bourbaki point lies on a line of A₂; for 3 ≤ j ≤ 5 every
 line carries at most one Bourbaki point, and a line through a Bourbaki point has e₁(H) = r − 1 and
-exactly s_H = n + 3 − 2r = r + 3 − j multiple points.
+n + 3 − 2r ≤ s_H ≤ r multiple points (so s_H = r when j = 3; s_H ∈ {r − 1, r} when j = 4).
 
 *Proof.* If e₁(H) = r − k, Abe's gap bound e₂ − e₁ ≤ s_H − 2 for the (balanced) Ziegler
 multirestriction gives s_H ≥ n + 1 − 2(r − k), while s_H ≤ e₁(H) + 1 = r − k + 1 (the form f₁^H of
 degree e₁ + 1 vanishes at the s_H points and is nonzero, `TC_ATTEMPT.md` Thm 1(7) step 3). So
-n + 1 − 2r + 2k ≤ r − k + 1, i.e. 3k ≤ j. For j ∈ {3, 4, 5} and k = 1 the two bounds coincide:
-s_H = r = e₁(H) + 1, so f₁^H has simple zeros exactly at the multiple points and the one Bourbaki
-point on H is the zero of the linear form g_H. ∎
+n + 1 − 2r + 2k ≤ r − k + 1, i.e. 3k ≤ j. For k = 1 the bounds read n + 3 − 2r ≤ s_H ≤ r; for j = 3
+they coincide, s_H = r = e₁(H) + 1, so f₁^H has simple zeros exactly at the multiple points and the
+one Bourbaki point on H is the zero of the linear form g_H. ∎
 
 **Lemma 10.4 (lines in the inflection curve).** Let ℓ be a line and P ∈ ℓ a nondegenerate singular
 point of F whose linear part L_P has ℓ as an eigendirection, with eigenvalue λ₁ along ℓ and λ₂
