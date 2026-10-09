@@ -1,0 +1,19 @@
+ -- setting random seed to 11
+s=4 mu={4, 4, 4, 4}  e1<=7: nonempty(dim 0)  |  e1<=6: EMPTY
+s=4 mu={5, 4, 4, 3}  e1<=7: nonempty(dim 0)  |  e1<=6: EMPTY
+s=4 mu={5, 5, 3, 3}  e1<=7: nonempty(dim 0)  |  e1<=6: EMPTY
+s=4 mu={5, 5, 4, 2}  e1<=7: nonempty(dim 0)  |  e1<=6: EMPTY
+s=4 mu={5, 5, 5, 1}  e1<=7: nonempty(dim 0)  |  e1<=6: EMPTY
+s=5 mu={4, 3, 3, 3, 3}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={4, 4, 3, 3, 2}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={4, 4, 4, 2, 2}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={4, 4, 4, 3, 1}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={5, 3, 3, 3, 2}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={5, 4, 3, 2, 2}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={5, 4, 3, 3, 1}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={5, 4, 4, 2, 1}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={5, 5, 2, 2, 2}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={5, 5, 3, 2, 1}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=5 mu={5, 5, 4, 1, 1}  e1<=7: nonempty(dim 1)  |  e1<=6: EMPTY(after minors)
+s=6 mu={3, 3, 3, 3, 2, 2}  e1<=7: nonempty(dim 2)  |  e1<=6: nonempty(dim 0)
+s=6 mu={3, 3, 3, 3, 3, 1}  e1<=7: nonempty(dim 2)  |  e1<=6: nonempty(dim 0)

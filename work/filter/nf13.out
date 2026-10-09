@@ -1,0 +1,15 @@
+syz degrees {5, 8, 8}; Bourbaki ideal: matrix {{y-z, x}} degree 1
+lines through P0: {}
+y : s_H=6 exponents (1, 11)
+z : s_H=6 exponents (1, 11)
+x - y : s_H=6 exponents (5, 7)
+x - 3303y : s_H=6 exponents (5, 7)
+x + y : s_H=6 exponents (5, 7)
+x + 3303y : s_H=6 exponents (5, 7)
+y - 3303z : s_H=5 exponents (0, 12)
+y + z : s_H=5 exponents (0, 12)
+y + 3303z : s_H=5 exponents (0, 12)
+- x + z : s_H=6 exponents (5, 7)
+- 3303x + z : s_H=6 exponents (5, 7)
+x + z : s_H=6 exponents (5, 7)
+3303x + z : s_H=6 exponents (5, 7)
