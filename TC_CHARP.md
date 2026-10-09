@@ -87,5 +87,9 @@ Frobenius syzygy makes non-free has no free lattice-mate, because its lattice is
 only deformations keep a degree-q syzygy. The mechanism is sound (it is a clean proof of
 non-freeness) but every lattice it applies to in these ranges is rigid. The remaining room is
 q = 7 with general (non-pencil) sub-arrangements of PG(2, 7), which cannot be enumerated
-exhaustively (C(57, 17) ≈ 10¹⁴); a random sample of 17-, 18- and 19-line subsets is being
-analysed (`pg27sample.c`).
+exhaustively (C(57, 17) ≈ 10¹⁴). A random sample (`pg27sample.c`, 3·10⁷ subsets of 17 lines)
+contains 4.2 million subsets in class (8, 8), i.e. with d₁ = 8 > 7, in 1.66 million invariant
+classes; the 25 most structured of them (fewest double points; `pg27_hits.txt`,
+`pg27_real_results.txt.gz`) all have realization scheme over F̄₇ equal to the single F₇-point,
+with syzygy degrees (7, 10, 10). So the sample behaves like PG(2, 4) and PG(2, 5): the
+automatically non-free F₇-arrangements are rigid.
