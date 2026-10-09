@@ -439,3 +439,18 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   smallest admissible q is always >= d1 (equality in 299 cases at D = 6), never below.
 - No counterexample and no pair with different syzygy degrees found; every lattice the mechanism
   applies to is rigid.
+
+## Finding 27: scheme-theoretic Bourbaki-in-Sing(J/Q) (TC_FOLIATION.md section 12)
+
+- From a user-supplied proof attempt: the Bourbaki scheme of the minimal derivation is contained
+  SCHEME-THEORETICALLY in the singular scheme of the residual inflection curve C = J/Q (local
+  equation of C in the square of the Bourbaki ideal; proof via the Saito frame R = Euler,
+  H = Hamiltonian of the local product of lines, X = fR + gH, D/q = -m(fX(g)-gX(f)+(m-1)f^2 g)
+  + kappa g^3 in (f,g)^2). Verified algebraically and computationally (deletions of A(3,1,3),
+  A(4,1,3); Dimca-Pokora pair; random arrangements over F_101 with non-reduced Bourbaki
+  components of length 2, 3, 5): work/foliation/schemelemma.m2, nonreduced.m2.
+- Consequence: C reduced => ac <= tau(C) <= (j-1)^2; for j = 3: ac <= 3, leaving (7,7)@15,
+  (8,9)@18, (9,11)@21 in the reduced case. Non-reduced C: partial (C = l^2 l', off-line Bourbaki
+  points on l \ l': at most one, by Lemmas 10.4(a),(b)); l ∩ l', on-line points and C = l^3 open.
+- Does not touch the free lattice-mate; TC not proved. The missing step is exactly the
+  Fitting-ideal saturation statement on the realization space (note's (14)-(15)).

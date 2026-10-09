@@ -667,6 +667,60 @@ inflection curve of such an A₂ contains the deleted lines whenever the degree-
 remains the minimal one. Supersolvable A′ with a modular point of multiplicity 8 give families
 with moduli; whether any of their deletions has a free lattice-mate is not known to me.
 
+## 12. The Bourbaki scheme lies scheme-theoretically in Sing(J/Q) (added 9 Oct 2026)
+
+A note supplied by the user (an "integrated proof attempt") strengthens the support inclusion of
+§9 to a scheme-theoretic one and draws numerical consequences. I checked the argument and tested
+it; this section records what it adds. Notation: θ the minimal derivation of A₂, r = mdr(A₂),
+B = B_θ its Bourbaki scheme of length ac = (d₁ − r)(d₂ − r), C = J/Q the residual inflection
+curve of degree j = 3r − n.
+
+**Lemma 12.1 (scheme-theoretic inclusion).** B ⊆ Sing(C) as schemes: at every point the local
+equation of C lies in the square of the local Bourbaki ideal I, hence (C, C_u, C_v) ⊆ I.
+
+*Proof (as in the note, verified).* Off the arrangement write the affine field as X = (A, B);
+the Bourbaki ideal is (A, B) and the affine inflection equation is A²B_u − B²A_v + AB(B_v − A_u)
+∈ (A, B)². At a point P of multiplicity m of the arrangement, with q the product of the m line
+germs through P, Saito's criterion gives the local frame R = u∂_u + v∂_v, H = q_v∂_u − q_u∂_v of
+the logarithmic tangent sheaf (det(R, H) = −mq), so X = fR + gH and I = (f, g). One has
+∇_X R = X, ∇_R H = (m − 1)H, det(R, ∇_H H) = 0 (differentiate det(R, H) = −mq along H and use
+H(q) = 0) and q | det(H, ∇_H H) (H and its acceleration are tangent to every line through P).
+Expanding det(X, ∇_X X) gives
+
+  D/q = −m·(f X(g) − g X(f) + (m − 1) f² g) + κ g³,   κ = det(H, ∇_H H)/q,
+
+and since X(g) = fR(g) + gH(g) and X(f) = fR(f) + gH(f), every term lies in (f, g)². The local
+equations of J and C differ from D and D/q by units. ∎
+
+*Tests* (`work/foliation/schemelemma.m2`, `nonreduced.m2`): the inclusion Tjurina(C) ⊆ I and
+the membership C ∈ (I²)^{sat} hold for every deletion of A(3,1,3) and A(4,1,3) tried (Bourbaki
+lengths 0, 1, 2), for the Dimca–Pokora pair (one Bourbaki point on a line), and for six random
+arrangements over F₁₀₁ whose Bourbaki schemes have non-reduced components of length 2, 3 and 5.
+
+**Corollary 12.2.** If C is reduced then ac ≤ τ(C) ≤ (j − 1)², and ac ≤ (j − 1)(j − 2) if C is
+irreducible. For j = 3 this gives ac ≤ 4, and the note's line-intersection argument (a line
+meets B in length ≤ 1 by Lemma 10.3) together with the local normal form at a triple point of
+three concurrent lines improves it to ac ≤ 3. So, when C is reduced, the j = 3 classes are
+(7, 7) at 15 lines (ac = 1), (8, 9) at 18 (ac = 2) and (9, 11) at 21 (ac = 3), and B is the node
+set of a triangle, the nodes of a conic plus a secant, the length-2 or 3 scheme of a cusp or a
+tacnode, or a sub-scheme of these. The seed of §11.1 (triangle, two of its nodes) shows that this
+local geometry does occur, so the corollary cannot exclude these classes by itself.
+
+**What the inclusion does not give.** (i) Nothing when C is not reduced: Sing(C) then contains
+the multiple component. For j = 3 and C = ℓ²ℓ′, every Bourbaki point lies on ℓ; an off-line
+Bourbaki point P ∈ ℓ ∖ ℓ′ has mult_P(J) = 2 with tangent cone ℓ², so by the tangent-cone
+computation of Proposition 3.1 it is a Jordan-block point with eigendirection ℓ, ℓ is invariant
+(Lemma 10.4(a)), and Lemma 10.4(b) allows at most one such point on ℓ, each of Bourbaki length
+μ_P = 1. The point ℓ ∩ ℓ′, Bourbaki points on arrangement lines, and the case C = ℓ³ (every point
+of ℓ has mult_P(J) ≥ 3, so is radial or degenerate) are not covered by this argument; I have not
+completed them. (ii) No relation to the free lattice-mate A₁: the inclusion is a statement about
+A₂ alone, like everything in §§1–10. The note formulates the missing step exactly: for the
+matroid M with realization space Σ_M and the Fitting ideal 𝔑_M of the degree-d₁ logarithmic
+conditions, Terao's conjecture for M is the saturation statement 𝔑_M·O(Σ_M) = O(Σ_M), i.e.
+the non-free determinantal locus is supported on the incidence boundary. On an irreducible
+component with a free point this is the absence of an internal rank-drop locus; across components
+it is a comparison that no semicontinuity argument makes. This is where the attempt stops.
+
 ## Sources
 
 - J. V. Pereira, Vector fields, invariant varieties and linear systems, Ann. Inst. Fourier 51
