@@ -340,6 +340,13 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   filter 13,748,942 NONREAL / 2,622,610 deferred; pass 2 2,594,921 NONREAL / 27,689 to M2; M2: 3,039
   ideal (1), 24,650 degenerate-only, 0 REALISABLE.  TC HOLDS FOR ALL 16-LINE ARRANGEMENTS IN CP^2
   [Theorem 10.4].  ~4 h on 8 cores (volume ratio lattices/skeletons 1.8, vs 61 for (7,7)).
+- n = 17, classes (7,9) and (8,8)[A] (r <= 6), one shared run (bigblocks2.py + feeder/pipeline +
+  exact_tc_lattice.py, 7-9 Oct 2026, ~33 h wall on 10 cores): 1,503,001,339 skeleton states,
+  6,581,531 candidate lattices (4,623,124 + 1,958,407); exact filters 4,600,181 + 1,943,787
+  NONREAL; M2 22,943 + 14,620: ideal (1) 2,443 + 1,301, degenerate-only 20,500 + 13,319,
+  0 REALISABLE, MIXED 0, errors 0.  TC HOLDS for 17 lines in these classes [Theorem 10.5]; both
+  are also excluded by TC_FOLIATION Theorem 5.1 (mdr(A2) >= 7), so this is an independent check.
+  Open at 17 lines: (8,8)[B] only (A2 nearly free (7,10), m <= 6).
 
 ## Finding 23: general-n proof attempt (TC_GENERAL.md)
 - Window for all n collected (d1 >= 6, delta <= d1-4, delta+4 <= s_H <= d1, m <= d1-1, m <= r <= d1-1,

@@ -509,10 +509,32 @@ contains no realisable lattice at all, free or not. The volume was also far belo
 §11: the ratio lattices/skeletons was 1.8 for this class (61 for (7, 7)), because the window of
 points per line is narrower, so the whole computation took about 4 hours on 8 cores.
 
-**Larger n.** For n = 17 the classes are (7, 9) (every line with 6 or 7 points) and (8, 8) (4 to
-8 points per line, multiplicities ≤ 7); for n = 18, (7, 10) (exactly 7 points on every line) and
-(8, 9). The narrow classes (7, 9) and (7, 10) look feasible; the balanced classes (8, 8) and (8, 9)
-are the (7, 7) problem one size up and will be one to two orders of magnitude larger. See §11.
+**Theorem 10.5 (17 lines, 9 Oct 2026).** Terao's conjecture holds for arrangements of 17 lines
+in P²_ℂ with exponents (7, 9), and for arrangements with exponents (8, 8) whose non-free member
+would have mdr ≤ 6 (part [A] of §11: every line with 6 or 7 points, multiplicities ≤ 6).
+
+*Proof.* The candidate lattices have χ = (t − 1)(t − 7)(t − 9) with 6 or 7 points on every line
+and multiplicities ≤ 6 (w(x) ∈ [9, 10], W = 57), respectively χ = (t − 1)(t − 8)² with 6 or 7
+points on every line and multiplicities ≤ 6 (w(x) ∈ [9, 10], W = 56). Stage 1 (`bigblocks2.py`,
+one shared run for both classes, 81,644 s on 10 cores) produced 1,503,001,339 big-block skeleton
+states (1,495,909,996 usable for (7, 9), 1,016,814,025 for (8, 8)) in 2,001 chunks. Stage 2
+(`pipeline.py`, 220.7 CPU-hours) turned them into 6,581,531 candidate lattices: 4,623,124 for
+(7, 9) and 1,958,407 for (8, 8)[A]. The exact filters decided 4,600,181 and 1,943,787 of them as
+non-realisable, and Macaulay2 (`exact_tc_lattice.py`, 22 minutes on 10 cores) the remaining
+22,943 and 14,620: realisation ideal (1) for 2,443 and 1,301, only degenerate components for
+20,500 and 13,319. **No candidate lattice of either class has a complex realisation**, so none
+has a free one, and there is no counterexample. (MIXED = 0 and errors = 0 in both classes.) ∎
+
+Both statements are also consequences of `TC_FOLIATION.md`: Theorem 5.1 gives 3·mdr(A₂) ≥ n + 2,
+i.e. mdr(A₂) ≥ 7 for 17 lines, which excludes (7, 9) (there mdr(A₂) ≤ d₁ − 1 = 6) and part [A]
+of (8, 8); so the computation is an independent check of that theorem on 6.6 million lattices.
+What remains for "TC for 17 lines" is part [B] of (8, 8): the non-free member nearly free with
+exponents (7, 10), lines with 4 to 8 points, m ≤ 6, see §11 and `TC_FOLIATION.md` §10.
+
+**Larger n.** For n = 18 the classes are (7, 10) (exactly 7 points on every line) and (8, 9);
+Theorem 10.1 of `TC_FOLIATION.md` excludes (7, 10), and (8, 9) needs mdr(A₂) = 7. The balanced
+classes (8, 8)[B] at 17 and (8, 9) at 18 are the (7, 7) problem one size up and one to two orders
+of magnitude larger. See §11.
 
 ## 11. Scaling beyond 15 lines: where the cost is, and what would remove it
 
@@ -602,7 +624,8 @@ obstacle to "TC for 17 lines" once the run finishes.
 
 *Later the same day:* `TC_FOLIATION.md` Theorem 5.1 excludes r ≤ (n + 1)/3 = 6 for n = 17, so
 the (7, 9) class and part [A] (r = 6) of (8, 8) — everything the current run covers — are now
-settled by theory, and the run is an independent check of that theorem. Part [B] is the only open
+settled by theory, and the run is an independent check of that theorem. *9 Oct 2026:* the run
+finished (Theorem 10.5): no realisable candidate lattice in either class. Part [B] is the only open
 17-line class; there r = 7, the residual curve J/Q of the inflection curve is a quartic, and the
 excess (d₁ − r)(d₂ − r) is exactly 1.
 
