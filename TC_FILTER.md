@@ -34,11 +34,16 @@ drop of an explicit 16 × 16 (resp. 16 × 14) matrix in the s_H − 3 moduli of 
   (4,4,4,4): a root of t² − 5t + 1, t² − t + 1, t² + 3t − 3 or 3t² − 3t − 1.
 - s_H = 5 (eleven vectors): e₁ ≤ 7 on an irreducible curve of degree 8 to 10 in the two
   moduli, and e₁ ≤ 6 never.
-- s_H = 6: e₁ ≤ 7 on a surface and e₁ ≤ 6 at finitely many positions (for the vectors computed
-  so far: (3,3,3,3,2,2), (3,3,3,3,3,1), (4,3,3,2,2,2), (4,3,3,3,2,1), (4,4,2,2,2,2); the run is
-  being completed). So a line through the jumping point P₀ with 6 points sits at one of finitely
+- s_H = 6 (all sixteen vectors): e₁ ≤ 7 on a surface in the three moduli, and e₁ ≤ 6 at finitely
+  many positions. So a line through the jumping point P₀ with 6 points sits at one of finitely
   many positions of its six points.
-- s_H = 7, 8: being computed.
+- s_H = 7 (all seventeen vectors): e₁ ≤ 7 on a hypersurface (`jumps78.m2`, random specialization
+  of all but one modulus: a non-degenerate root of degree 2 appears every time). The (6,10) loci
+  for 7-point lines were not computed (the 16 × 14 minors in four variables are too slow).
+- s_H = 8: e₁ ≤ 7 on a hypersurface for every vector except (2,2,2,2,2,2,2,2), for which no
+  non-degenerate root exists: a multiarrangement of eight points of constant multiplicity 2 has
+  exponents (8, 8) in every position (Wakefield–Yuzvinsky, constant even multiplicity; confirmed
+  numerically). **So A₂ has no line whose eight points are all triple points.**
 
 Consequences. (i) The jumping point P₀ of A₂ lies on no line with 4 or 5 points; the lines
 through it have 6 or 7 points (this sharpens `TC_FOLIATION.md` Lemma 10.3 for j = 4). (ii) A line
@@ -100,7 +105,15 @@ have moduli (dim V > 3); there a counterexample is conceivable exactly when the 
 a rational function on V, is non-constant and the lattice survives on a fibre λ ∈ S(μ). Note that
 for (5,5,4,2) and (4,4,4,4) the jump set S(μ) contains no rational number, so a lattice whose
 realization is rational and rigid is free; for (5,5,5,1), (5,5,3,3), (5,4,4,3) the rational
-jump values are −1 (harmonic) and 1/2. These four sub-cases are the next computation. A first pass (`net4gen.py`, additive nets with
+jump values are −1 (harmonic) and 1/2. **Lemma F5 (Galois).** Every jump set S(μ) is a union of full Galois orbits over ℚ. The
+realization space of a lattice is defined over ℚ, so on a ℚ-irreducible component on which λ is
+constant, λ is an algebraic number whose conjugates all lie in S(μ) or all lie outside it, and the
+component is entirely non-free or entirely free. Hence a counterexample with a 4-point line needs
+either a component on which λ is non-constant (generic member free, members over λ ∈ S(μ)
+non-free, with the lattice unchanged there) or two ℚ-components with λ in different S-classes.
+Both are visible in the realization space of the 4-pencil structure alone.
+
+These four sub-cases are the next computation. A first pass (`net4gen.py`, additive nets with
 A, B ⊂ [0, 9] and rigid, i.e. dim V = 3) finds no complete lattice at all: for every rigid net
 no choice of the lines through P₄ satisfies the window and b₂ = 80. What remains are the
 non-rigid nets (dim V ≥ 4; 236, 6991, 22997 and 897890 of them in the box for the four vectors,
@@ -117,7 +130,8 @@ Part [B] splits by the minimal number of points on a line:
 - (II) a line with 5 points and none with 4: 5-pencil structures, two cross-ratios, with the
   jump curve of Lemma F1 playing the role of the jump set.
 - (III) all lines with 6 to 8 points and at least one with 8: the window w(x) = 16 − s_x ∈ [8, 10]
-  of the finished run widened by one value; it is empty if no 8-point multiplicity vector admits
-  e₁ ≤ 7 (being computed).
+  of the finished run widened by one value. By Lemma F1 the 8-point lines are not all-triple, so
+  every 8-point line carries a point of multiplicity ≥ 4 (a big block through it), which the
+  skeleton stage can impose.
 
-(to be continued as the computations finish)
+
