@@ -35,7 +35,9 @@ drop of an explicit 16 × 16 (resp. 16 × 14) matrix in the s_H − 3 moduli of 
 - s_H = 5 (eleven vectors): e₁ ≤ 7 on an irreducible curve of degree 8 to 10 in the two
   moduli, and e₁ ≤ 6 never.
 - s_H = 6: e₁ ≤ 7 on a surface and e₁ ≤ 6 at finitely many positions (for the vectors computed
-  so far; the run is being completed).
+  so far: (3,3,3,3,2,2), (3,3,3,3,3,1), (4,3,3,2,2,2), (4,3,3,3,2,1), (4,4,2,2,2,2); the run is
+  being completed). So a line through the jumping point P₀ with 6 points sits at one of finitely
+  many positions of its six points.
 - s_H = 7, 8: being computed.
 
 Consequences. (i) The jumping point P₀ of A₂ lies on no line with 4 or 5 points; the lines
@@ -75,6 +77,30 @@ having c − a in a 5-element set C forces A, B, C to be near arithmetic progres
 With Lemma F2 this sub-case is decidable lattice by lattice: compute the λ-fibres of the
 realization space; a counterexample would be a lattice whose realization space contains both a
 point with λ in the jump set and one outside it, with the same lattice at both.
+
+**Proposition F4 (the (6,6,6,2) sub-case is empty).** No 17-line lattice of class (8, 8) with
+multiplicities ≤ 6 and a line of 4 points of multiplicities 6, 6, 6, 2 is realizable over ℂ.
+*Argument.* By Lemma F3 the realization is a 3-net with additive structure: A, B, C ⊂ (ℂ, +)
+of size 5, the triple points being all pairs (a, c) with c − a ∈ C. The count above gives
+t ∈ {16, 17, 18}, and every pencil line needs at least three triple points (a pencil line
+through P₁ meets the other two pencils in ≤ 7 points, 5 + (5 − t_a) + [L₄] ≤ 7). So each a ∈ A
+has at least three c with c − a ∈ C, each c at least three a, each b at least three
+representations. Ordering the three sets in ℝ through a generic linear functional, the extreme
+elements force the middle label b₃ to equal c₁ − a₁ = c₅ − a₅, hence A and B to have the same
+diameter Δ, and a₁ + {b₃, b₄, b₅}, a₅ + {b₁, b₂, b₃} ⊂ B, c₁ − {b₁, b₂, b₃}, c₅ − {b₃, b₄, b₅} ⊂ A,
+which pins A, B, C to near-arithmetic progressions; for those the triple count with all degrees
+≥ 3 is at least 19. The exhaustive search `add551.py` over A, B ⊂ [0, D] (after translation),
+D ≤ 10, with C any five differences, finds no structure with t ≤ 18 and all degrees ≥ 3 (the
+D ≤ 16 run is being completed). ∎ (computer-assisted; the ordering argument is a sketch)
+
+The other four 4-point vectors are 4-pencil structures with pencils of sizes (5,5,4,2),
+(5,5,3,3), (5,4,4,3), (4,4,4,4) and fewer forced triple points (for (5,5,4,2): t = s₁ + s₂ − 1
+∈ [11, 15] with s_i the point counts of the two lines through P₄), so their additive nets may
+have moduli (dim V > 3); there a counterexample is conceivable exactly when the cross-ratio λ,
+a rational function on V, is non-constant and the lattice survives on a fibre λ ∈ S(μ). Note that
+for (5,5,4,2) and (4,4,4,4) the jump set S(μ) contains no rational number, so a lattice whose
+realization is rational and rigid is free; for (5,5,5,1), (5,5,3,3), (5,4,4,3) the rational
+jump values are −1 (harmonic) and 1/2. These four sub-cases are the next computation.
 
 ## 3. The reduced enumeration plan
 
