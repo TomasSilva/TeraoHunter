@@ -90,8 +90,8 @@ elements force the middle label b₃ to equal c₁ − a₁ = c₅ − a₅, hen
 diameter Δ, and a₁ + {b₃, b₄, b₅}, a₅ + {b₁, b₂, b₃} ⊂ B, c₁ − {b₁, b₂, b₃}, c₅ − {b₃, b₄, b₅} ⊂ A,
 which pins A, B, C to near-arithmetic progressions; for those the triple count with all degrees
 ≥ 3 is at least 19. The exhaustive search `add551.py` over A, B ⊂ [0, D] (after translation),
-D ≤ 10, with C any five differences, finds no structure with t ≤ 18 and all degrees ≥ 3 (the
-D ≤ 16 run is being completed). ∎ (computer-assisted; the ordering argument is a sketch)
+D ≤ 16, with C any five differences, finds no structure with t ≤ 18 and all degrees ≥ 3. ∎
+(computer-assisted; the ordering argument is a sketch)
 
 The other four 4-point vectors are 4-pencil structures with pencils of sizes (5,5,4,2),
 (5,5,3,3), (5,4,4,3), (4,4,4,4) and fewer forced triple points (for (5,5,4,2): t = s₁ + s₂ − 1
@@ -100,7 +100,14 @@ have moduli (dim V > 3); there a counterexample is conceivable exactly when the 
 a rational function on V, is non-constant and the lattice survives on a fibre λ ∈ S(μ). Note that
 for (5,5,4,2) and (4,4,4,4) the jump set S(μ) contains no rational number, so a lattice whose
 realization is rational and rigid is free; for (5,5,5,1), (5,5,3,3), (5,4,4,3) the rational
-jump values are −1 (harmonic) and 1/2. These four sub-cases are the next computation.
+jump values are −1 (harmonic) and 1/2. These four sub-cases are the next computation. A first pass (`net4gen.py`, additive nets with
+A, B ⊂ [0, 9] and rigid, i.e. dim V = 3) finds no complete lattice at all: for every rigid net
+no choice of the lines through P₄ satisfies the window and b₂ = 80. What remains are the
+non-rigid nets (dim V ≥ 4; 236, 6991, 22997 and 897890 of them in the box for the four vectors,
+with as few as 7 to 12 triple points), for which the lines through P₄ impose bilinear equations
+(linear in the pencil parameters, with λ as coefficient) that must be solved symbolically; since
+such nets are not near-progressions, they have to be enumerated as abstract partial Latin
+rectangles rather than in an integer box. This is the open part of sub-case (I).
 
 ## 3. The reduced enumeration plan
 
