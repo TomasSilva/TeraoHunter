@@ -134,4 +134,18 @@ Part [B] splits by the minimal number of points on a line:
   every 8-point line carries a point of multiplicity ≥ 4 (a big block through it), which the
   skeleton stage can impose.
 
+## 4. Status: 17-line runs cancelled (10 Oct 2026)
 
+All 17-line runs were cancelled at the user's request on 10 Oct 2026; nothing of part [B] was
+enumerated. Measured before cancelling, on samples of stage 2:
+
+| window (points per line) | CPU per skeleton | lattices per skeleton |
+|---|---|---|
+| 6–7, the finished run of Theorem 10.5 | 0.53 ms | 0.0044 |
+| 4–8, all of part [B] | 2.5 s | 144 |
+
+So brute force over the whole of part [B] is out of reach (about 5000 times the cost per skeleton
+on a comparable number of skeletons). The sub-cases (I)–(III) above remain the route; none was run.
+The verified range is therefore all arrangements of at most 16 lines (`TC_ATTEMPT.md`
+Theorems 10.1–10.4, Corollary 10.3), plus the 17-line classes of Theorem 10.5.
+`work/tc15/filter_partB.py` and `work/tc15/chain3.sh` are the unused part-[B] filter and chain.
