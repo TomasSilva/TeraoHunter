@@ -525,6 +525,15 @@ non-realisable, and Macaulay2 (`exact_tc_lattice.py`, 22 minutes on 10 cores) th
 20,500 and 13,319. **No candidate lattice of either class has a complex realisation**, so none
 has a free one, and there is no counterexample. (MIXED = 0 and errors = 0 in both classes.) ∎
 
+*Correction (10 Oct 2026).* Stage 1 of this run (`bigblocks2.py`) applied the unjoined-pair
+condition of §11 in its too-strong form. For the class (7, 9) it discarded every skeleton with two
+disjoint blocks of sizes {4, 6} or {5, 5}, i.e. with (m_P − 1) + (m_Q − 1) = 8 strictly between
+d₁ = 7 and d₂ = 9, which the correct condition allows. **So the (7, 9) part of Theorem 10.5 is
+not a complete computer proof**; the class (7, 9) is excluded only by `TC_FOLIATION.md`
+Theorem 5.1. For (8, 8) the condition used, (m_P − 1) + (m_Q − 1) ≤ 8, is the correct one, and
+that part of the theorem stands. The 15- and 16-line runs used `bigblocks.py`, which does not
+apply the condition, so Theorems 10.1–10.4 are unaffected.
+
 Both statements are also consequences of `TC_FOLIATION.md`: Theorem 5.1 gives 3·mdr(A₂) ≥ n + 2,
 i.e. mdr(A₂) ≥ 7 for 17 lines, which excludes (7, 9) (there mdr(A₂) ≤ d₁ − 1 = 6) and part [A]
 of (8, 8); so the computation is an independent check of that theorem on 6.6 million lattices.
@@ -565,6 +574,13 @@ the free realisation A₁: every line L of the plane not in A₁ meets A₁ in k
 not on a common line of A are joined by an external line, so
 
   **(m_P − 1) + (m_Q − 1) ≤ d₁, or = d₂ with no third multiple point on PQ.**
+
+*Correction (10 Oct 2026).* The bold statement is too strong when d₂ ≥ d₁ + 2. Abe's corollary
+constrains σ_L, and σ_L can exceed (m_P − 1) + (m_Q − 1) through further multiple points of A₁
+on the line PQ, which the lattice does not record (PQ is not a line of A). The correct lattice
+condition is **(m_P − 1) + (m_Q − 1) ≤ d₂**, with σ_L = d₂ forced in the realization when the
+sum exceeds d₁. For d₂ ≤ d₁ + 1 the two statements coincide, so everything below about the
+(7, 7) lattices stands.
 
 This is a condition on the lattice. It excludes 1.3% of the (7, 7) skeletons and certifies
 combinatorially that two of the ten realisable (7, 7) lattices (indices 3143 and 4608: two 6-fold

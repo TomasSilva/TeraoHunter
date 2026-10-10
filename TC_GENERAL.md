@@ -45,7 +45,7 @@ counterexample (A₁, A₂) satisfies, for every n:
 | (W2) | δ + 4 ≤ s_H ≤ d₁ for every line H | Abe 2012, Abe 2014, Abe 2016 |
 | (W3) | m ≤ d₁ − 1 | Dimca–Kühne–Pokora |
 | (W4) | m ≤ r ≤ d₁ − 1, and n + 1 − 2r ≤ s_H ≤ r + 1, s_H − 1 ≤ e₁(H) ≤ r | Theorem 1(7) |
-| (W5) | unjoined points P, Q (no line of A through both): (m_P − 1) + (m_Q − 1) ≤ d₁, or = d₂ with no third multiple point on PQ | §11 |
+| (W5) | unjoined points P, Q (no line of A through both): (m_P − 1) + (m_Q − 1) ≤ d₂ (corrected 10 Oct 2026; the earlier "≤ d₁ or = d₂" was too strong for d₂ ≥ d₁ + 2) | §11 |
 | (W6) | the moduli of L move the points of every line | Theorem 1(8) |
 | (W7) | n ≥ 18 once the 17-line run finishes (n ≤ 16 proved, n ≤ 14 Barakat–Kühne) | §10 |
 

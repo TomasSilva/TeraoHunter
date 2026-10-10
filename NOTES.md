@@ -347,6 +347,10 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   0 REALISABLE, MIXED 0, errors 0.  TC HOLDS for 17 lines in these classes [Theorem 10.5]; both
   are also excluded by TC_FOLIATION Theorem 5.1 (mdr(A2) >= 7), so this is an independent check.
   Open at 17 lines: (8,8)[B] only (A2 nearly free (7,10), m <= 6).
+  CORRECTION 10 Oct 2026: stage 1 applied the unjoined-pair rule in a too-strong form for (7,9)
+  (it dropped disjoint block pairs with sizes {4,6} or {5,5}; the correct rule only needs
+  (m_P-1)+(m_Q-1) <= d2 = 9).  So the (7,9) computation is incomplete and (7,9) rests on
+  TC_FOLIATION Theorem 5.1 alone; the (8,8)[A] part is unaffected (rule s <= 8 is correct).
 
 ## Finding 23: general-n proof attempt (TC_GENERAL.md)
 - Window for all n collected (d1 >= 6, delta <= d1-4, delta+4 <= s_H <= d1, m <= d1-1, m <= r <= d1-1,

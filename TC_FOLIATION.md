@@ -632,7 +632,8 @@ triple points satisfy Σ C(m − 1, 2) + t = 64, and m ≤ 7 by (W3), which leav
 
 - (6,6,4; yz; 24) is the seed: Kneser forces μ₆-cosets, and the three variants are the only
   lattices. Rigid, mdr 7.
-- (6,5,5), (6,6,5), (6,5,6), (6,6,6) have no realizations: with S the sumset of two of the sets
+- (6,5,5), (6,6,5), (6,5,6), (6,6,6) appear to have no realizations (Kneser-type argument
+  sketched here, not written out in full): with S the sumset of two of the sets
   and H its stabilizer, Kneser's bound |S| ≥ |A+H| + |B+H| − |H| together with the required
   number of triples gives a contradiction for every order of H (for the collinear-centres
   version of (6,6,6), Cauchy–Davenport in the torsion-free group (ℂ, +) does it). The
@@ -653,8 +654,10 @@ triple points satisfy Σ C(m − 1, 2) + t = 64, and m ≤ 7 by (W3), which leav
   where the lattice changes, is (g⁴⁵) (`jump_P1_3_QQ.m2`), so no non-degenerate member is
   non-free.
 
-So Terao's conjecture holds for every three-pencil lattice with 18 lines in the class (8, 9):
-the only non-free ones are the seed and its two variants, and they have no lattice-mates. To
+So, within the groups and boxes searched, Terao's conjecture holds for the three-pencil
+lattices with 18 lines in the class (8, 9): the only non-free ones found are the seed and its two
+variants, and they have no lattice-mates. *(Correction 10 Oct 2026: the enumeration over
+Z/N, Z, Z×Z/N, Z² is bounded, so this is not a classification of all three-pencil lattices.)* To
 find a lattice with a free and a non-free realization one has to leave the monomial world, where
 realization spaces stop being tori and the enumeration of `TC_ATTEMPT.md` §10 is the only
 general tool.

@@ -83,7 +83,7 @@ With Lemma F2 this sub-case is decidable lattice by lattice: compute the λ-fibr
 realization space; a counterexample would be a lattice whose realization space contains both a
 point with λ in the jump set and one outside it, with the same lattice at both.
 
-**Proposition F4 (the (6,6,6,2) sub-case is empty).** No 17-line lattice of class (8, 8) with
+**Claim F4 (the (6,6,6,2) sub-case appears empty; not proved).** No 17-line lattice of class (8, 8) with
 multiplicities ≤ 6 and a line of 4 points of multiplicities 6, 6, 6, 2 is realizable over ℂ.
 *Argument.* By Lemma F3 the realization is a 3-net with additive structure: A, B, C ⊂ (ℂ, +)
 of size 5, the triple points being all pairs (a, c) with c − a ∈ C. The count above gives
@@ -95,8 +95,12 @@ elements force the middle label b₃ to equal c₁ − a₁ = c₅ − a₅, hen
 diameter Δ, and a₁ + {b₃, b₄, b₅}, a₅ + {b₁, b₂, b₃} ⊂ B, c₁ − {b₁, b₂, b₃}, c₅ − {b₃, b₄, b₅} ⊂ A,
 which pins A, B, C to near-arithmetic progressions; for those the triple count with all degrees
 ≥ 3 is at least 19. The exhaustive search `add551.py` over A, B ⊂ [0, D] (after translation),
-D ≤ 16, with C any five differences, finds no structure with t ≤ 18 and all degrees ≥ 3. ∎
-(computer-assisted; the ordering argument is a sketch)
+D ≤ 16, with C any five differences, finds no structure with t ≤ 18 and all degrees ≥ 3.
+*Correction (10 Oct 2026): this is not a proof.* Any additive structure over ℂ can be moved to ℤ
+with the same incidences (a generic homomorphism of the finitely generated group to ℤ), but with
+no a priori bound on the diameter, so a box search is not exhaustive, and the ordering argument is
+only a sketch. A proof needs an enumeration of the abstract 5 × 5 partial Latin squares with 16 to
+18 cells and row, column and symbol counts ≥ 3, followed by exact linear algebra on each.
 
 The other four 4-point vectors are 4-pencil structures with pencils of sizes (5,5,4,2),
 (5,5,3,3), (5,4,4,3), (4,4,4,4) and fewer forced triple points (for (5,5,4,2): t = s₁ + s₂ − 1
@@ -114,7 +118,8 @@ non-free, with the lattice unchanged there) or two ℚ-components with λ in dif
 Both are visible in the realization space of the 4-pencil structure alone.
 
 These four sub-cases are the next computation. A first pass (`net4gen.py`, additive nets with
-A, B ⊂ [0, 9] and rigid, i.e. dim V = 3) finds no complete lattice at all: for every rigid net
+A, B ⊂ [0, 9] and rigid, i.e. dim V = 3; exploratory only, since a box is not exhaustive) finds no
+complete lattice at all: for every rigid net
 no choice of the lines through P₄ satisfies the window and b₂ = 80. What remains are the
 non-rigid nets (dim V ≥ 4; 236, 6991, 22997 and 897890 of them in the box for the four vectors,
 with as few as 7 to 12 triple points), for which the lines through P₄ impose bilinear equations
