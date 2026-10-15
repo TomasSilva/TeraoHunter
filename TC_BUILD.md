@@ -32,9 +32,13 @@ open case is 17 lines with exponents (1, 8, 8), A₂ nearly free with exponents 
    family has no external 8-point line at all, the 13-line family admits four 8-point lines with
    pairwise intersections on the arrangement only through one quintuple point, and deleting a
    line from the 15-line family leaves the same curve, with the lost concurrency automatic.
-6. Four-pencil (4-point-line) lattices: an integer-box search with twelve rational cross-ratios
-   finds nothing in the window; a complete census over F₁₁ and F₁₃ finds, for (4, 4, 4, 4), only
-   E₁₇ (§5). Lifting is exact.
+6. Pencil censuses over F₁₁ and F₁₃, lifted exactly (§5).
+   - 4-point lines: the only window arrangement is E₁₇.
+   - 5-point lines: the window arrangements are two new rational nearly free (7, 10) arrangements,
+     R₁₇ᵃ and R₁₇ᵇ, whose residual quartic is two rich lines times a smooth conic, plus two
+     deletions of A(G₂₆).
+   - All six are rigid and non-free, and no free arrangement of this shape exists over these
+     fields.
 7. The literature mechanism for Ziegler pairs is a singular realisation space with hidden
    collinearities (§6). No lattice with χ̄ = (t − 8)² and a singular realisation space is known.
 
@@ -237,12 +241,10 @@ all forced coincidences).
 
 **Result.** For (4, 4, 4, 4) over F₁₁: nothing in any cross-ratio class. Over F₁₃: nothing in the
 harmonic class and nothing in the generic class of size 6, and **24 configurations in the
-equianharmonic class**, forming a single lattice (§3b). For the other four vectors: over F₁₁ every ordering and every cross-ratio class
-gives nothing, and over F₁₃ the runs completed so far (all of (5, 5, 3, 3) and (5, 5, 4, 2) in
-several orderings) give nothing; the runs for (5, 5, 5, 1) and (5, 4, 4, 3) over F₁₃, which have
-three 5-line pencils to enumerate, were still running when this was written
-(`fp_runs/log.txt` records each run with its hit count; any hit would be lifted with
-`pencil_post_fp.py` and `pencil_real2.m2` as in §5.3).
+equianharmonic class**, forming a single lattice (§3b). For the other four vectors ((5, 5, 5, 1), (5, 5, 3, 3), (5, 4, 4, 3), (5, 5, 4, 2)), in every
+ordering and every cross-ratio class, over F₁₁ and F₁₃: nothing. All 175 runs are complete
+(`fp_runs/log.txt`). **So over F₁₁ and F₁₃ the only 17-line window arrangements with a 4-point line
+are E₁₇ and its conjugate.**
 
 ### 5.3 Exact lifting
 `work/build/pencil_post_fp.py` groups the hits by lattice isomorphism class (nauty on the
@@ -315,7 +317,41 @@ passes through no intersection point and is tangent to no line of the arrangemen
 So the extremal case of TC_CONTRADICTION Proposition 5 (J′ a product of rich lines) is not forced:
 non-free window arrangements with a conic in J′ exist. They are rigid here.
 
-RESULT_C5
+**Result (complete, 220 jobs, 2,222 cross-ratio pairs, 4.36 · 10¹⁰ configurations, 1,304 hits).**
+`census5_post.py` groups the hits into **6 lattice classes**. `exact_tc_lattice.py` decides each one
+over ℚ̄ (`census5_lift.txt`):
+
+| class | H-vector | primes | points | realisation space over ℚ̄ | freeness |
+|---|---|---|---|---|---|
+| 0 = R₁₇ᵃ | (5, 4, 3, 3, 1) | 11, 13 | 2²³ 3¹⁰ 4⁸ 5² 6¹ | one rational point | nearly free (7, 10) |
+| 1 | (4, 4, 3, 3, 2) | 13 | 2²³ 3⁵ 4¹³ 5² | conjugate pair over ℚ(√−3) | nearly free (7, 10) |
+| 2 | (4, 4, 4, 3, 1) | 13 | 2²⁴ 3⁸ 4⁸ 5⁴ | conjugate pair over ℚ(√−3) | nearly free (7, 10) |
+| 3 | (5, 5, 4, 1, 1) | 11 | 2³⁰ 3⁶ 4⁸ 5¹ 6² | none (ideal (1)) | – |
+| 4 = R₁₇ᵇ | (5, 5, 4, 1, 1) | 11, 13 | 2²⁰ 3¹⁸ 4² 5² 6² | one rational point | nearly free (7, 10) |
+| 5 | (5, 5, 4, 1, 1) | 11 | 2³⁰ 3⁶ 4⁸ 5¹ 6² | none (ideal (1)) | – |
+
+Classes 1 and 2 are the two validation lattices (window deletions of A(G₂₆)). They appear at
+p = 13 ≡ 1 (mod 3) and not at p = 11, as a ℚ(√−3)-lattice must. Classes 3 and 5 are
+characteristic-11 artefacts. Every realisable class is rigid and non-free, and nothing free was
+found.
+
+**Conclusion of §5.2 and §5.5 together.** Over F₁₁ and F₁₃, every 17-line arrangement in the
+window of class (8, 8)[B] whose smallest line has 4 or 5 points is one of six arrangements, up to
+conjugation:
+- E₁₇;
+- R₁₇ᵃ and R₁₇ᵇ;
+- the two 5-point-line deletions of A(G₂₆).
+
+All six are nearly free with exponents (7, 10) and rigid. So a 17-line counterexample whose lattice
+has a 4- or 5-point line can only exist if that lattice has no realisation over any field with a
+degree-1 prime above 11 or 13 (or degenerates there). Moreover, no free (8, 8) window arrangement
+of this shape exists over these two fields at all. This is a search, not a proof: number fields in
+which neither 11 nor 13 splits are not covered. Q(√2) is the smallest example. Covering it would
+need p = 17, which costs about 90 CPU-hours (estimate in §5.5).
+
+The remaining part of class (8, 8)[B] is lattices whose smallest line has 8 points. By Lemma 1.3 a
+free member then comes from a T(−9)-arrangement N of 16 lines plus a weight-8 line, so the
+natural next search is over 16-line arrangements with logarithmic bundle T(−9).
 
 ## 6. The mechanism in the literature
 

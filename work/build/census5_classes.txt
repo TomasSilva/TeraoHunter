@@ -1,0 +1,7 @@
+hits 1304, lattice classes 6
+class 0: H-vector [5, 4, 3, 3, 1], primes [11, 13], hits 144, points {2: 23, 3: 10, 4: 8, 5: 2, 6: 1}, s_H {5: 1, 6: 3, 7: 3, 8: 10}
+class 1: H-vector [4, 4, 3, 3, 2], primes [13], hits 72, points {2: 23, 3: 5, 4: 13, 5: 2}, s_H {5: 1, 7: 10, 8: 6}
+class 2: H-vector [4, 4, 4, 3, 1], primes [13], hits 288, points {2: 24, 3: 8, 4: 8, 5: 4}, s_H {5: 1, 7: 9, 8: 7}
+class 3: H-vector [5, 5, 4, 1, 1], primes [11], hits 320, points {2: 30, 3: 6, 4: 8, 5: 1, 6: 2}, s_H {5: 1, 7: 6, 8: 10}
+class 4: H-vector [5, 5, 4, 1, 1], primes [11, 13], hits 320, points {2: 20, 3: 18, 4: 2, 5: 2, 6: 2}, s_H {5: 1, 6: 3, 7: 3, 8: 10}
+class 5: H-vector [5, 5, 4, 1, 1], primes [11], hits 160, points {2: 30, 3: 6, 4: 8, 5: 1, 6: 2}, s_H {5: 1, 7: 6, 8: 10}

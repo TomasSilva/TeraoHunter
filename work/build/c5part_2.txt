@@ -1,0 +1,25 @@
+sizes 5 4 1 1 5
+point 0 1 2 3 4 5
+point 0 6 7 8 9
+point 0 12 13 14 15 16
+point 1 6 12
+point 1 7 11 13
+point 1 8 14
+point 1 9 10
+point 2 6 16
+point 2 7 12
+point 2 8 13
+point 2 10 14
+point 3 6 15
+point 3 7 16
+point 3 8 10 11 12
+point 3 9 14
+point 4 7 10 15
+point 4 8 16
+point 4 9 13
+point 5 6 10
+point 5 8 15
+point 5 9 12
+point 5 11 16
+point 6 11 14
+point 9 11 15
