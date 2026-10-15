@@ -1,0 +1,12 @@
+lattice {254, 193, 204, 240}: kernel dim 3; offsets over F_2(mu) by pencil (y=a, x=b, x+y=c, x+mu y=d):
+   pencil 1: {(0)/(1), 1/(1), (mu^2+mu+1)/(1), (mu+1)/(1), (mu+1)^2/(1), (mu)^2/(1), (mu)/(1)}
+   pencil 2: {(0)/(1), (mu)/(1), (mu)^2/(1)}
+   pencil 3: {1/(1), (mu^2+mu+1)/(1), (mu)^2/(1), (mu)/(1)}
+   pencil 4: {(mu)/(1), (mu)^2/(1), (mu)*(mu^2+mu+1)/(1), (mu)^3/(1)}
+   syzygy generator degrees (first few): {8, 11, 11}
+lattice {254, 193, 60, 60}: kernel dim 3; offsets over F_2(mu) by pencil (y=a, x=b, x+y=c, x+mu y=d):
+   pencil 1: {(0)/(1), 1/(1), (mu^2+mu+1)/(1), (mu+1)/(1), (mu+1)^2/(1), (mu^2+mu+1)/((mu+1)), (mu)/(1)}
+   pencil 2: {(0)/(1), (mu)/(1), (mu)^2/(1)}
+   pencil 3: {1/(1), (mu^2+mu+1)/(1), (mu+1)/(1), (mu+1)^2/(1)}
+   pencil 4: {(0)/(1), (mu)*(mu+1)/(1), (mu)/(1), (mu)^2/(1)}
+   syzygy generator degrees (first few): {8, 11, 11}

@@ -131,3 +131,129 @@ Jacobian ideal over the field in question: free iff pd(S/J) = 2.
 
 So no census lattice is a counterexample in characteristic 0, 7, 11 or 13. No free realisation of
 any of them exists over ℚ̄, F̄₇, F̄₁₁ or F̄₁₃.
+
+## 5. A one-line Frobenius criterion (15 Oct 2026)
+
+**Proposition 5.1.** Let A be an arrangement of n lines over a field of characteristic p, with χ̄(A, t)
+having integer roots d₁ ≤ d₂. Suppose some line H ∈ A has the following properties:
+- the points of A on H are projectively F_q-rational (q = pᵉ), i.e. in a suitable coordinate on H
+  they all lie in P¹(F_q);
+- every Ziegler multiplicity m(X) = (number of lines through X) − 1 on H is at most q.
+
+If q < d₁, then A is not free.
+
+*Proof.* D(A) = S·θ_E ⊕ D_H(A) in every characteristic, so if A is free with exponents (1, d₁, d₂)
+then Ziegler's multirestriction (A^H, m) is free with exponents (d₁, d₂). The proof via Saito's
+criterion has no characteristic assumption, and Terao's factorization is also characteristic-free.
+In coordinates (x, y) on H where every point is F_q-rational, θ_q = x^q∂_x + y^q∂_y satisfies
+θ_q(α_X) = α_X^q, which is divisible by α_X^{m(X)}. So θ_q ∈ D(A^H, m) has degree q, the smaller
+exponent of the multirestriction is at most q < d₁, and this is a contradiction. ∎
+
+Remarks on the proposition:
+- The global bound of §1 is the special case where every line is F_q-rational.
+- The new point is that a bad lattice-mate only needs ONE line in Frobenius position. Its other
+  coordinates can be transcendental.
+- A line with at most 3 points is always F_p-rational. So in characteristic p, a line with ≤ 3
+  points, all multiplicities ≤ q and q < d₁ makes the lattice non-free in every realisation. This
+  is a combinatorial statement, consistent with TC.
+
+## 6. Why every family so far missed by one
+
+**Lemma 6.1.** For q ≤ 7, any four distinct points of P¹(F_q) are harmonic or equianharmonic.
+- F_q ∖ {0, 1} has q − 2 elements.
+- These are covered by the harmonic orbit {−1, 2, ½} and the roots of μ² − μ + 1:
+  - q = 3: {2};
+  - q = 4: {ω, ω²};
+  - q = 5: {2, 3, 4};
+  - q = 7: {2, 4, 6} ∪ {3, 5}.
+
+For q = 8, the six elements of F₈ ∖ F₂ form one generic anharmonic orbit; neither special value
+lies in F₈. For q = 9, 11, 13, F_q has 6 generic values.
+
+So for q ≤ 7 every F_q-position of a moving cross-ratio is the reduction of a characteristic-0
+special position, and there TC-consistent families already degenerate:
+- ACKN-13: the degeneracy set {0, 1, ∞, −1, 2, ½, λ² − λ + 1 = 0} covers P¹(F₄), P¹(F₅) and P¹(F₇);
+- ACKN-15: {0, ½, 1, ∞, λ² − 3λ + 1, λ² + λ − 1} covers F₄ and F₅;
+- the (8, 9) three-pencil family: the elements of F_q* have order ≤ q − 1 ≤ 6.
+
+This is the "miss by one" of §1 and §3. The Frobenius mechanism (§1 or §5) can only produce a
+counterexample when q ≥ 8, hence d₁ ≥ 9 and n ≥ 19. The first fields worth searching are F₈, F₉
+and F₁₁.
+
+## 7. Arrangements inside PG(2, q)
+
+**Lemma 7.1.** Let A ⊂ PG(2, q) contain a line H, and let A ∖ H be K = n − 1 affine lines covering U
+of the q² affine points. Then:
+- b₂ = (q + 1)K − U, so χ₀(A, 0) = qK − U;
+- χ̄ splits iff W = q² − U = u·v with u + v = K − 2q, and then the exponents are (q + u, q + v).
+
+So d₁ > q iff the affine lines leave uv > 0 points uncovered with u ≥ 1. Covering every affine
+point gives exactly d₁ = q, which is why the Frobenius bound is so often attained but not
+exceeded. (For the 13- and 14-line PG(2, 5) lattices of §3 this gives W = 1 and W = 2.)
+
+## 8. Exhaustive four-pencil searches over F₈ and F₉ (`work/charp2/`)
+
+An arrangement with a 4-point line H is a four-pencil arrangement:
+- every other line passes through one of the 4 points of H;
+- for fixed cross-ratio μ the offsets satisfy linear equations M(μ)s = 0, one for each extra line
+  through an affine point;
+- so the realisation space fibres linearly over the μ-line.
+
+With Lemma 7.1, every four-pencil sub-arrangement of PG(2, q) with d₁ > q can be enumerated.
+Every such arrangement is non-free by §1. For each one the question is whether its lattice has a
+realisation with μ ∉ F_q, which could be free by §5.
+
+**q = 8 (characteristic 2).** `ag8_4pencil.c`, `ag8_flex.c`, `ag8_orbits.c`.
+- The search covers all 2³² offset choices. Directions are (1:0), (0:1), (1:1), (t:1), with
+  t³ = t + 1; all 4-subsets of P¹(F₈) are equivalent.
+- 250,006,624 configurations have d₁ ≥ 9:
+  - K = 18: 143,661,952, exponents (9, 9);
+  - K = 19: 100,259,712, exponents (9, 10);
+  - K = 20: 5,750,080 with (9, 11) and 317,856 with (10, 10);
+  - K = 21: 17,024, exponents (9, 12).
+- They form 46,698 orbits under the 5,376 semilinear affine maps that preserve the four
+  directions.
+- Rigid lattices: 46,696 orbits have rank M(μ) = K − 2 at generic μ and at every μ in F₄, F₁₆,
+  F₃₂, F₆₄ ∖ F₈, F₁₂₈ and F₂₅₆. Their only realisations have μ ∈ F₈ (μ of degree ≥ 9 over F₂ was
+  not tested).
+- **Flexible lattices.** 2 orbits (10,752 configurations, `flex_classes.txt`) deform to generic μ:
+  - Both are 19-line (9, 9) lattices. Each is an *additive lift*: F₈ = F₂[t]/(t³ + t + 1) is
+    replaced by the F₂-span of 1, μ, μ².
+  - In one of them the horizontal offsets are {0, 1, μ, μ + 1, μ², μ² + 1, μ² + μ + 1} and the
+    fourth pencil is x + μy = d with d ∈ {μ, μ², μ³ + μ² + μ, μ³} (`family_explicit.out`).
+  - At generic μ the generic member has exactly the lattice of the F₈ hit: every concurrent triple
+    agrees (126 and 122 triples respectively).
+  - **The generic member is still nearly free, with syzygies (8, 11, 11)** (`flexcheck.out`). The
+    degree-8 syzygy of the F₈ member deforms along the whole family. Lower semicontinuity of mdr
+    then makes every member non-free, so TC holds for both lattices.
+- No counterexample.
+
+**q = 9 (characteristic 3).** `ag9_4pencil.c`.
+- The search covers all 2³⁶ offset choices, with directions (1:0), (0:1), (1:1), (i:1) and i² = −1.
+- 3,607,477,992 configurations have d₁ ≥ 10. They form 697,905 orbits under 64 · 81 semilinear
+  affine maps.
+- None is flexible: rank at a generic μ ∈ F₂₁₈₇ is K − 2.
+- None has a realisation with μ in F₂₇, F₈₁ ∖ F₉, F₂₄₃ or F₇₂₉ ∖ F₉.
+- No counterexample.
+
+**Why the flexible ones fail.**
+- The F_q member of a family through a configuration with d₁ > q is dense: by Lemma 7.1, K ≥ 2q + 2
+  lines cover all but uv affine points.
+- So every incidence it has must hold identically in μ. That forces F_p-linear structure in the
+  offsets.
+- Both kinds of flexible family met so far keep the degree-q syzygy along the family: the additive
+  lifts here and the multiplicative three-pencil families at q = 11 (§2).
+
+## 9. Where a positive-characteristic counterexample could still be
+
+By §5 to §8 it needs one of the following:
+- **A bad member that is not globally F_q-rational.** For four-pencil lattices this means a
+  realisation space of dimension ≥ 2 whose F_q-fibre has only degenerate F_q-points, so it is
+  invisible to the PG(2, q) census.
+- **Lines with 5 or more points.** Five-pencil lattices over F₈ or F₉ need two cross-ratios in F_q.
+  This is about 2⁴⁰ configurations, not run.
+- **Prime fields q = p ≥ 11.** There are no additive lifts there, so flexibility would have to be of
+  characteristic-0 type, with d₁ ≥ 12 and n ≥ 25. The four-pencil census over F₁₁ is about 2⁴⁴
+  configurations, not run.
+- **A free flexible family of characteristic-0 type with d₁ ≥ 9**, reduced mod 2 or 3. The only
+  known flexible free families, ACKN-13 and ACKN-15, have d₁ = 6 and 7.

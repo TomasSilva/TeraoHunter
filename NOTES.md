@@ -477,3 +477,24 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   realised over F_7-bar by their F_7-point only (charp7_lift.py). There is no free mate, so no
   char-7 counterexample.
 - Control: G17 mod 11 and mod 13 is free (8,8).
+
+## Finding 29: the one-line Frobenius criterion and exhaustive four-pencil searches over F_8, F_9 (TC_CHARP.md 5-9)
+
+- One-line criterion (char p, any field):
+  - if some line H of A has its points projectively F_q-rational and all Ziegler multiplicities
+    <= q, then the multirestriction has the derivation x^q d_x + y^q d_y;
+  - so e1 <= q, and A is non-free when d1 > q.
+  - The global Frobenius bound is the special case. A bad lattice-mate needs only ONE such line.
+- q <= 7: every 4 points of P^1(F_q) are harmonic or equianharmonic. F_q-positions are reductions of
+  char-0 special positions, which explains the "miss by one" of every family (ACKN-13 and -15
+  degenerate on all of F_4, F_5, F_7). The Frobenius mechanism needs q >= 8, d1 >= 9, n >= 19.
+- A in PG(2,q) with H in A: chi_0 = qK - U. Exponents are (q+u, q+v) with uv = #uncovered affine
+  points and u+v = K-2q.
+- Exhaustive four-pencil searches:
+  - PG(2,8): 250,006,624 configurations with d1 >= 9, 46,698 orbits.
+    - 46,696 are rigid: no realisation with mu in F_4, F_16, F_32, F_64\F_8, F_128, F_256.
+    - 2 are flexible: 19-line (9,9) additive lifts (F_8 -> span(1, mu, mu^2)). Their generic member
+      has the same lattice and is still nearly free (8,11,11).
+  - PG(2,9): 3,607,477,992 configurations, 697,905 orbits, all rigid.
+  - No counterexample.
+  - Code in work/charp2/. The raw hit list ag8_hits.txt (7.6 GB) is not committed.

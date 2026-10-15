@@ -1,0 +1,8 @@
+hit {254, 193, 204, 240}: 19 lines, 126 concurrent triples; over F_8: (3,{8, 11, 11})
+  generic mu: kernel dimension 3
+  generic member: lines distinct true, same concurrent triples as the hit: true (126)
+  generic member freeness over GF(2^11): (3,{8, 11, 11})
+hit {254, 193, 60, 60}: 19 lines, 122 concurrent triples; over F_8: (3,{8, 11, 11})
+  generic mu: kernel dimension 3
+  generic member: lines distinct true, same concurrent triples as the hit: true (122)
+  generic member freeness over GF(2^11): (3,{8, 11, 11})
