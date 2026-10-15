@@ -18,20 +18,32 @@ open case is 17 lines with exponents (1, 8, 8), A₂ nearly free with exponents 
 2. A reformulation (§2): a 17-line counterexample with an 8-point line is the same thing as a
    16-line Ziegler pair with b₂ = 72 whose members are nearly free (8, 8) and nearly free (7, 9)
    (or worse), together with a common external line of weight 8.
-3. The first explicit free arrangement of 17 lines with χ̄ = (t − 8)² (§3): a four-pencil
-   sub-arrangement of the B₂ grid. It has three 9-point lines, so its lattice is divisionally free
-   and Terao's conjecture holds for it. For four-pencil lattices freeness is decided by one
-   cross-ratio, so a counterexample in that class is a four-pencil lattice realised both inside
-   and outside the jump set.
-4. Every natural extension of the two known flexible free families fails (§4): the 15-line
+3. Two explicit 17-line arrangements with χ̄ = (t − 8)² (§3, §3b). The harmonic four-pencil grid
+   G₁₇ is free with exponents (8, 8) but has 9-point lines, so its lattice is divisionally free.
+   The equianharmonic four-pencil arrangement E₁₇ over ℚ(√−3) is in the window and nearly free
+   with exponents (7, 10): it is the reflection arrangement of G₂₆ (Hesse ∪ dual Hesse) minus the
+   four Hesse lines through one flex, its four rich lines are exactly those, and its residual
+   inflection quartic splits into them. E₁₇ is the non-free half of a would-be counterexample;
+   its lattice is rigid.
+4. The 2,655 seventeen-line sub-arrangements of the two reduced convex arrangements of degree 7,
+   A(G₂₆) and A(6, 1, 3), with χ̄ = (t − 8)² are all nearly free; they form 13 lattices, all rigid
+   with one conjugate pair of realisations, so Terao's conjecture holds for them (§5.4).
+5. Every natural extension of the two known flexible free families fails (§4): the 15-line
    family has no external 8-point line at all, the 13-line family admits four 8-point lines with
    pairwise intersections on the arrangement only through one quintuple point, and deleting a
    line from the 15-line family leaves the same curve, with the lost concurrency automatic.
-5. Searches (§5): all four-pencil arrangements with integer offsets in a box and twelve rational
-   cross-ratios, and a complete census over F₁₁ and F₁₃, lifted to characteristic zero exactly.
-   Results in §5.
-6. The literature mechanism for Ziegler pairs is a singular realisation space with hidden
-   collinearities (§6). No such lattice with a free generic member is known.
+6. Four-pencil (4-point-line) lattices: an integer-box search with twelve rational cross-ratios
+   finds nothing in the window; a complete census over F₁₁ and F₁₃ finds, for (4, 4, 4, 4), only
+   E₁₇ (§5). Lifting is exact.
+7. The literature mechanism for Ziegler pairs is a singular realisation space with hidden
+   collinearities (§6). No lattice with χ̄ = (t − 8)² and a singular realisation space is known.
+
+**What a counterexample at 17 lines now has to be.** Its non-free member is nearly free (7, 10)
+with four or fewer rich lines; when the residual quartic is four lines, it is a reduced convex
+arrangement minus four leaves, and all those lattices are rigid. So either the residual quartic
+of A₂ is not a product of lines, or the lattice has a 5-point or 8-point line whose pencil
+structure has moduli. No example of a free (8, 8) arrangement with all lines ≤ 8 points is known,
+and Lemma 1.1 says it cannot be reached from a free arrangement by adding at most three lines.
 
 ## 1. What the free member must look like (17 lines, exponents (8, 8))
 
@@ -128,6 +140,57 @@ linear condition on 13 normalised offsets (for fixed cross-ratio), so 22 to 32 c
 unknowns; moduli need incidence theorems, and the near-progression structures that reach the
 counts are grids.
 
+## 3b. The equianharmonic four-pencil arrangement E₁₇ (non-free, in the window)
+
+The census over F₁₃ (§5.2) found, for the vector (4, 4, 4, 4), exactly one lattice class, only at the
+equianharmonic cross-ratio, and it lifts to characteristic zero: the realisation space over ℚ is
+one point of degree 2 with t² − t + 1 = 0 (`pencil_real2.m2`). Solving (`equi_solve.m2`) gives,
+with w = e^{iπ/3} (w² − w + 1 = 0), the arrangement
+
+  E₁₇ = {z = 0} ∪ {y = az : a ∈ {0, 1, w − 1, w}} ∪ {x = bz : b ∈ {0, 1, w, 1 − w}}
+        ∪ {x + y = cz : c ∈ {0, 1, w, w + 1}} ∪ {x + wy = dz : d ∈ {0, 1, w − 1, w}},
+
+a sub-arrangement of the Eisenstein grid. Verified directly over ℚ(w) (`equi_clean.m2`,
+`equi_clean2.m2`):
+- 17 lines, points 2²⁴ 3⁸ 4⁸ 5⁴, b₂ = 80, so χ̄ = (t − 8)²; lines with 4, 7 or 8 points; every
+  multiplicity ≤ 5: it is in the window of a 17-line counterexample;
+- Jacobian syzygies of degrees 7, 10, 10: **nearly free with exponents (7, 10)**, the type the
+  non-free member of a 17-line counterexample must have (Theorem 17(a));
+- every line has Ziegler exponents (7, 9), so the Bourbaki point P₀ = (1/2 : w/2 : 1) lies on no
+  line of E₁₇;
+- exactly four lines of the plane have weight ≥ 9: all four have weight 10, pass through P₀, are
+  leaves of the minimal foliation, and meet the bound 3r − n = 4 of TC_CONTRADICTION Theorem 1.
+  So the residual inflection quartic J′ is the product of the four rich lines.
+
+**E₁₇ ∪ {four rich lines} is the reflection arrangement of G₂₆** (Hesse ∪ dual Hesse): 21 lines,
+points 2³⁶ 4⁹ 5¹², b₂ = 111, every line with exactly 8 points (Hirzebruch's property for d = 7),
+free with exponents (1, 7, 13), every Ziegler restriction (7, 13). Its degree-7 derivation defines
+a reduced convex foliation of degree 7 with these 21 invariant lines; the four rich lines are the
+four Hesse lines through one flex, and E₁₇ is A(G₂₆) with those four lines removed. This is
+Proposition 5 of TC_CONTRADICTION made concrete: the non-free member is a reduced-convex
+arrangement minus leaves, exactly as the 18-line seed is A(6, 1, 3) minus three lines.
+
+The lattice of E₁₇ is rigid (one Galois-conjugate pair over ℚ(√−3)), so Terao's conjecture
+holds for it: both realisations are non-free. For a counterexample one would need a deletion
+lattice of this kind with a second, free realisation. The same weak combinatorics 2²⁴ 3⁸ 4⁸ 5⁴ is
+realised by the free harmonic grid of Example 3.1, so freeness is not a function of the weak
+combinatorics in this class either.
+
+**Deletions of the reduced convex arrangements.** Removing four lines from A(G₂₆) (b₂ = 111)
+gives b₂ = 80 exactly when one pair of removed lines meets at a double point and the other five
+pairs at multiple points; all such 17-line arrangements lie in the window (multiplicities ≤ 5,
+lines ≤ 8 points). `g26del.m2` enumerates them and tests freeness by Yoshinaga's criterion on one
+line; `fermatdel.m2` does the same for A(6, 1, 3) with the multiplicity bound.
+
+- A(6, 1, 3): 18 four-line deletions have b₂ = 80 and multiplicities ≤ 6; all 18 are non-free
+  (`fermatdel.out`). They include the three-coordinate-line deletions (Ceva(6) minus a line) and
+  the seed-type ones.
+- A(G₂₆): 2,637 four-line deletions have b₂ = 80 (all in the window since the multiplicities are
+  ≤ 5); all 2,637 are non-free (`g26del.m2`, 12 minutes). So every 17-line sub-arrangement of the
+  two reduced convex arrangements of degree 7 with χ̄ = (t − 8)² is nearly free, never free.
+  These 2,655 arrangements fall into 13 lattice classes; their realisation spaces are
+  computed in §5.4.
+
 ## 4. The known flexible families do not extend
 
 Scripts in `work/build/` (`famtools.m2`, `f13plus4.m2`, `f13rich.m2`, `b18.m2`, `real14.m2`).
@@ -161,7 +224,9 @@ multiplicity vectors, all orderings of the sizes, and the cross-ratios −1, 2, 
 4, 5, 5/2, 7/2, 7/3, 6. Output: configurations with b₂ = 80 and 4 to 8 points on every line.
 Validated on Example 3.1 with the point bound relaxed to 9.
 
-RESULT_ZBOX
+**Result.** 420 runs, 12.2 million derived-pencil choices for (4, 4, 4, 4) alone: **no configuration**
+with b₂ = 80 and every line carrying 4 to 8 points (`pencil_runs/log.txt`). With the bound relaxed to
+9 points the harmonic grids of Example 3.1 appear, as they must.
 
 ### 5.2 Complete census over F₁₁ and F₁₃
 `work/build/pencils_fp.c`: the same with offsets in F_p, normalised a₀ = 0, a₁ = 1, b₀ = 0, so
@@ -170,7 +235,9 @@ every configuration over F_p is found once per affine class, for every cross-rat
 orbit and one orbit of size 6). Over F₇ the field is too small (83,832 hits for (4, 4, 4, 4),
 all forced coincidences).
 
-RESULT_FP
+**Result.** For (4, 4, 4, 4) over F₁₁: nothing in any cross-ratio class. Over F₁₃: nothing in the
+harmonic class and nothing in the generic class of size 6, and **24 configurations in the
+equianharmonic class**, forming a single lattice (§3b). For the other four vectors: RESULT_FP_REST
 
 ### 5.3 Exact lifting
 `work/build/pencil_post_fp.py` groups the hits by lattice isomorphism class (nauty on the
@@ -179,7 +246,19 @@ of the four-pencil lattice: unknown offsets and cross-ratio t, the concurrency e
 saturation by the degeneracies, minimal primes, and on each component whether t is constant and
 whether extra incidences hold identically (coarser lattice).
 
-RESULT_LIFT
+**Result.** The 236 lattice classes found over F₇ are all non-realisable over ℚ̄ (`fp7_lift.txt`):
+pure characteristic-7 artefacts. The single F₁₃ class lifts to E₁₇, rigid, with t² − t + 1 = 0.
+
+### 5.4 Sub-arrangements of the reduced convex arrangements
+`delclasses.py` groups the 2,655 window deletions of §3b into **13 lattice classes** (12 from
+A(G₂₆), 1 from A(6, 1, 3), the latter being Ceva(6) minus a line; E₁₇'s class has 9 members, the
+nine flexes). `work/tc15/exact_tc_lattice.py` (the pipeline of the 15- and 16-line proofs:
+frame, greedy parametrisation, minimal primes, Yoshinaga's matrix on each component) gives for
+every one of the 13 classes: exactly one non-degenerate component, of dimension 0 and degree 2,
+on which the Yoshinaga matrix has rank 15 of 16 (`del17_tc_0.out`, `del17_tc_1.out`). So all 13
+lattices are rigid, realised only by a conjugate pair over ℚ(√−3), both members nearly free.
+**Terao's conjecture holds for every 17-line sub-arrangement of A(G₂₆) and A(6, 1, 3) with
+χ̄ = (t − 8)².**
 
 ## 6. The mechanism in the literature
 

@@ -1,0 +1,17 @@
+fn = "equi4444_class.txt";
+lns = lines get fn;
+sizes = apply(drop(separate(" ", lns#0), 1), value);
+ptsL = apply(select(lns, l -> match("^point ", l)), l -> apply(drop(separate(" ", l), 1), value));
+nA = sizes#0; nB = sizes#1; nC = sizes#2; nD = sizes#3; n = 1 + nA + nB + nC + nD;
+vars0 = (apply(nA, i -> "a"|toString i)) | (apply(nB, i -> "b"|toString i)) | (apply(nC, i -> "c"|toString i)) | (apply(nD, i -> "d"|toString i)) | {"t"};
+Rr = QQ(monoid[apply(vars0, v -> getSymbol v), MonomialOrder => Lex]);
+g = gens Rr;
+a = i -> g#i; b = i -> g#(nA+i); c = i -> g#(nA+nB+i); d = i -> g#(nA+nB+nC+i); t = g#(nA+nB+nC+nD);
+lineV = {{0_Rr,0_Rr,1_Rr}} | apply(nA, i -> {0_Rr, -1_Rr, -a i}) | apply(nB, i -> {1_Rr, 0_Rr, -b i}) | apply(nC, i -> {1_Rr, -1_Rr, -c i}) | apply(nD, i -> {1_Rr, -t, -d i});
+concT = unique flatten apply(ptsL, P -> subsets(P, 3));
+I = ideal apply(concT, T -> det matrix apply(T, i -> lineV#i)) + ideal(a 0, b 0, a 1 - 1);
+degs = apply(subsets(nA,2), p -> a(p#0) - a(p#1)) | apply(subsets(nB,2), p -> b(p#0) - b(p#1)) | apply(subsets(nC,2), p -> c(p#0) - c(p#1)) | apply(subsets(nD,2), p -> d(p#0) - d(p#1)) | {t, t-1};
+for h in degs do I = saturate(I, h);
+G = flatten entries gens gb I;
+print("Groebner basis (lex, t last):");
+for f in G do print("   " | toString f);

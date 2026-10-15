@@ -1,0 +1,57 @@
+point 0 1 2 3 4
+point 0 5 6 7 8
+point 1 5 9 13 19
+point 2 5 10 16 18
+point 3 5
+point 4 5 11 15 17
+point 1 6 10 14 17
+point 2 6
+point 3 6 11 13 18
+point 4 6 12 16 19
+point 1 7 11 16 20
+point 2 7 12 17
+point 3 7 15 19
+point 4 7
+point 1 8
+point 2 8 14 19
+point 3 8 9 17
+point 4 8 10 13 20
+point 0 9 10 11 12
+point 2 9 15 20
+point 4 9
+point 6 9
+point 7 9 14 18
+point 3 10
+point 7 10
+point 2 11
+point 8 11
+point 1 12
+point 3 12 14 20
+point 5 12
+point 8 12 15 18
+point 0 13 14 15 16
+point 2 13
+point 7 13
+point 12 13
+point 4 14
+point 5 14
+point 11 14
+point 1 15
+point 6 15
+point 10 15
+point 3 16
+point 8 16
+point 9 16
+point 0 17
+point 13 17
+point 16 17
+point 0 18
+point 1 18
+point 4 18
+point 17 18 19 20
+point 0 19
+point 10 19
+point 11 19
+point 0 20
+point 5 20
+point 6 20
