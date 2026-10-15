@@ -1,0 +1,23 @@
+F13: points new Tally from {1 => 21, 2 => 3, 3 => 3, 4 => 3}, degenerations {l0+l1, l0-l1, l0^2-l0*l1+l1^2, l0, l0-(1/2)*l1, l0-2*l1, l1}
+candidate lines with |F13 meet l| = 8: 12
+   {6*l0*l1, -12*l0^2-6*l0*l1, -6*l0^2+6*l1^2}  through points of weights {1, 4}
+   {6*l0^2+6*l0*l1, -6*l0^2+6*l0*l1, 6*l0^2-6*l1^2}  through points of weights {1, 4}
+   {6*l0^2, 6*l0^2+12*l0*l1, -6*l0^2+6*l1^2}  through points of weights {1, 4}
+   {12*l0^2-6*l0*l1, 6*l0*l1, 12*l0*l1-6*l1^2}  through points of weights {1, 4}
+   {-6*l0^2, 18*l0^2-12*l0*l1, 12*l0*l1-6*l1^2}  through points of weights {4, 1}
+   {6*l0^2-6*l0*l1, 18*l0^2-6*l0*l1, -12*l0*l1+6*l1^2}  through points of weights {4, 1}
+   {-6*l0+6*l1, 6*l0-18*l1, -6*l0+12*l1}  through points of weights {4, 1}
+   {-6*l1, 12*l0-18*l1, 6*l0-12*l1}  through points of weights {4, 1}
+   {6*l0-12*l1, 6*l0, -6*l0+12*l1}  through points of weights {4, 1}
+   {2*l0^2-2*l0*l1, 2*l0^2+2*l0*l1, 4*l0^2-4*l0*l1+4*l1^2}  through points of weights {4, 1}
+   {2*l0*l1, -4*l0^2+2*l0*l1, 4*l0^2-4*l0*l1+4*l1^2}  through points of weights {4, 1}
+   {-2*l0^2, 2*l0^2-4*l0*l1, 4*l0^2-4*l0*l1+4*l1^2}  through points of weights {4, 1}
+compatible pairs: 18 of 66
+4-cliques: 3
+== clique {1, 4, 7, 9}
+   points new Tally from {2 => 41, 3 => 7, 4 => 3, 5 => 2, 9 => 1}, b2 = 80 (need 80), points per line new Tally from {6 => 5, 8 => 4, 9 => 8}, window: false
+== clique {2, 3, 6, 10}
+   points new Tally from {2 => 41, 3 => 7, 4 => 3, 5 => 2, 9 => 1}, b2 = 80 (need 80), points per line new Tally from {6 => 5, 8 => 4, 9 => 8}, window: false
+== clique {0, 5, 8, 11}
+   points new Tally from {2 => 41, 3 => 7, 4 => 3, 5 => 2, 9 => 1}, b2 = 80 (need 80), points per line new Tally from {6 => 5, 8 => 4, 9 => 8}, window: false
+M2 --script f13plus4.m2  1.16s user 0.09s system 106% cpu 1.172 total

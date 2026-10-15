@@ -1,0 +1,5 @@
+F15: points new Tally from {1 => 27, 2 => 6, 4 => 6}, degenerations {l0-2*l1, l0-l1, l0^2-3*l0*l1+l1^2, l0^2-l0*l1-l1^2, l0, l1}
+candidate lines: 0  (points on F: new Tally from {})
+free B found: 0
+surviving A2 candidates: 0
+M2 --script b18.m2  0.73s user 0.08s system 102% cpu 0.788 total
