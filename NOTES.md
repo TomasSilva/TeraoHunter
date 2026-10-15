@@ -526,3 +526,45 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
     lines.
 - Not a proof: rational special positions exist (R17a, R17b; harmonic), and lines with >= 6 points
   are unconstrained.
+
+## Finding 31: the non-free member as a rational dynamical system (TC_GLOBAL.md)
+
+- Theorem A (Yoshinaga, dynamically):
+  - a Ziegler derivation (f, g) of a line is a rational self-map Φ = [f : g] of the line;
+  - the multiple points are fixed points of local degree >= m_P - 1, so points with m_P >= 3 are
+    superattracting.
+  - The minimal derivation of A2 gives such a map on every line at once.
+  - The Camacho-Sad index at P equals 1/(1 - Φ'(P)), so the Camacho-Sad formula on a line is the
+    holomorphic fixed-point formula.
+- Lemma A2: if all points of a line have k_P >= 2, then s <= e1. 17-line window consequences:
+  - 8-point lines of A2 have a double point;
+  - 7-point lines through P0 have a double point, which excludes the vectors (4,2^6) and (3^2,2^5).
+- Theorem B: on a 4-point line the jump set is the set of critically fixed rational maps with the
+  given critical profile (no common factors possible). They are counted by planar charge graphs
+  (Cordwell et al. 2015; Hlushchanka 2019).
+  - The count matches the jump polynomials for all 136 even-K vectors with K <= 20
+    (work/global/charge_graphs.py). All 604 interior jump factors for K <= 30 are simple.
+  - Examples:
+    - (4,4,4,4) = K4 (chiral pair, equianharmonic) + 6 doubled 4-cycles (Q(sqrt 21));
+    - (5,5,5,1) = the S3-symmetric doubled-triangle map;
+    - (D,D,1,1) = z^D, with J = mu_{D-1} \ {1} for every D.
+  - Hence TC(Q) for every lattice with n = 3 mod 4 lines and a 4-point line of vector (D,D,1,1),
+    for all n.
+- Theorem C: (J/alpha_H)|_H = c (s g - t f) Jac(f, g). So the residual inflection curve J' meets
+  each line in the excess ramification + the other fixed points + the free critical points of Φ_H.
+  - Verified on R17a, R17b, B3 (work/global/jprime_lines.m2).
+  - In R17a/b the conic of J' carries the free critical points of the 7- and 8-point lines.
+  - The 5- and 6-point lines have critically fixed maps.
+- Theorem E (from TC_RIGIDITY Lemma 3): in a component with free points, every line's jump function
+  vanishes to order >= 2 at a non-free point. So a non-free point is a singular point of the
+  realisation space (the Barakat-Kuhne-Pokora mechanism) or a simultaneous tangency. On a 4-point
+  line this means the cross-ratio is stationary there.
+- Six-point lines through the jumping point P0 (17-line window):
+  - their (6,10) positions are critically fixed maps of degree 6;
+  - the planar-graph count (24/36/40) equals the computed degree for all 16 vectors;
+  - over Q there are NONE: the msolve RUR eliminants have no linear factor (work/global/sixpoint_exact.m2),
+    and for 9 of the 16 vectors there are no real positions either.
+  - So over Q every line of A2 through P0 has exactly 7 points, one of them double (Lemma A2).
+- Not a proof of TC(Q). The open steps are (M1) no interior tangency, (M2) symmetric non-free
+  components are isolated, and (M3) rational critically fixed maps are harmonic. (M3) is checked
+  for K <= 30 and proved for (D,D,1,1).

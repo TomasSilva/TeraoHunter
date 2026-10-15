@@ -1,0 +1,4 @@
+ -- setting random seed to 7
+k = {3, 3, 3, 3, 2, 2}  (dim, degree) = (0,24)
+k = {2, 2, 3, 3, 3, 3}  (dim, degree) = (0,24)
+M2 --script sixpoint_count.m2  1.49s user 3.61s system 429% cpu 1.189 total

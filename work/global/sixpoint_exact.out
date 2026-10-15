@@ -1,0 +1,17 @@
+k = {5, 5, 3, 1, 1, 1}: positions 24, rational 0, Galois orbit sizes {8, 8, 8}
+k = {5, 5, 2, 2, 1, 1}: positions 36, rational 0, Galois orbit sizes {12, 12, 12}
+k = {5, 4, 4, 1, 1, 1}: positions 24, rational 0, Galois orbit sizes {4, 4, 4, 4, 4, 4}
+k = {5, 4, 3, 2, 1, 1}: positions 36, rational 0, Galois orbit sizes {36}
+k = {5, 4, 2, 2, 2, 1}: positions 36, rational 0, Galois orbit sizes {36}
+k = {5, 3, 3, 3, 1, 1}: positions 36, rational 0, Galois orbit sizes {36}
+k = {5, 3, 3, 2, 2, 1}: positions 36, rational 0, Galois orbit sizes {4, 32}
+k = {5, 3, 2, 2, 2, 2}: positions 24, rational 0, Galois orbit sizes {24}
+k = {4, 4, 4, 2, 1, 1}: positions 36, rational 0, Galois orbit sizes {36}
+k = {4, 4, 3, 3, 1, 1}: positions 36, rational 0, Galois orbit sizes {12, 12, 12}
+k = {4, 4, 3, 2, 2, 1}: positions 40, rational 0, Galois orbit sizes {8, 32}
+k = {4, 4, 2, 2, 2, 2}: positions 24, rational 0, Galois orbit sizes {8, 8, 8}
+k = {4, 3, 3, 3, 2, 1}: positions 36, rational 0, Galois orbit sizes {36}
+k = {4, 3, 3, 2, 2, 2}: positions 24, rational 0, Galois orbit sizes {24}
+k = {3, 3, 3, 3, 3, 1}: positions 24, rational 0, Galois orbit sizes {4, 4, 4, 4, 4, 4}
+k = {3, 3, 3, 3, 2, 2}: positions 24, rational 0, Galois orbit sizes {8, 8, 8}
+M2 --script sixpoint_exact.m2  48.35s user 1.38s system 307% cpu 16.162 total

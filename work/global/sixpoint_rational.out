@@ -1,0 +1,17 @@
+k = {5, 5, 3, 1, 1, 1}: real positions 0, rational positions 0
+k = {5, 5, 2, 2, 1, 1}: real positions 0, rational positions 0
+k = {5, 4, 4, 1, 1, 1}: real positions 0, rational positions 0
+k = {5, 4, 3, 2, 1, 1}: real positions 12, rational positions 0
+k = {5, 4, 2, 2, 2, 1}: real positions 12, rational positions 0
+k = {5, 3, 3, 3, 1, 1}: real positions 0, rational positions 0
+k = {5, 3, 3, 2, 2, 1}: real positions 8, rational positions 0
+k = {5, 3, 2, 2, 2, 2}: real positions 0, rational positions 0
+k = {4, 4, 4, 2, 1, 1}: real positions 0, rational positions 0
+k = {4, 4, 3, 3, 1, 1}: real positions 12, rational positions 0
+k = {4, 4, 3, 2, 2, 1}: real positions 16, rational positions 0
+k = {4, 4, 2, 2, 2, 2}: real positions 0, rational positions 0
+k = {4, 3, 3, 3, 2, 1}: real positions 12, rational positions 0
+k = {4, 3, 3, 2, 2, 2}: real positions 0, rational positions 0
+k = {3, 3, 3, 3, 3, 1}: real positions 0, rational positions 0
+k = {3, 3, 3, 3, 2, 2}: real positions 24, rational positions 0
+M2 --script sixpoint_rational.m2  48.35s user 1.40s system 308% cpu 16.132 total

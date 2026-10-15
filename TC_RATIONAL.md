@@ -175,7 +175,8 @@ open; in it the non-free member A₂ is nearly free (7, 10). Over ℚ:
   curve. If the list in §4 is complete, A₂ has no 5-point line of vector (5,3,3,3,2), (4,4,4,2,2),
   (4,4,3,3,2) or (4,3,3,3,3). Such lattices would then have only free rational realisations.
 - **Jumping point.** As over ℂ, the jumping point P₀ of A₂ is rational and lies on no 4- or 5-point
-  line (TC_FILTER.md).
+  line (TC_FILTER.md). Over ℚ it also lies on no 6-point line (`TC_GLOBAL.md` §5, Step 2), so every
+  line of A₂ through P₀ has exactly 7 points.
 
 ## 6. Why this is not a proof of TC(ℚ)
 

@@ -1,0 +1,16 @@
+[5, 5, 3, 1, 1, 1] predicted (6,10) positions: 24
+[5, 5, 2, 2, 1, 1] predicted (6,10) positions: 36
+[5, 4, 4, 1, 1, 1] predicted (6,10) positions: 24
+[5, 4, 3, 2, 1, 1] predicted (6,10) positions: 36
+[5, 4, 2, 2, 2, 1] predicted (6,10) positions: 36
+[5, 3, 3, 3, 1, 1] predicted (6,10) positions: 36
+[5, 3, 3, 2, 2, 1] predicted (6,10) positions: 36
+[5, 3, 2, 2, 2, 2] predicted (6,10) positions: 24
+[4, 4, 4, 2, 1, 1] predicted (6,10) positions: 36
+[4, 4, 3, 3, 1, 1] predicted (6,10) positions: 36
+[4, 4, 3, 2, 2, 1] predicted (6,10) positions: 40
+[4, 4, 2, 2, 2, 2] predicted (6,10) positions: 24
+[4, 3, 3, 3, 2, 1] predicted (6,10) positions: 36
+[4, 3, 3, 2, 2, 2] predicted (6,10) positions: 24
+[3, 3, 3, 3, 3, 1] predicted (6,10) positions: 24
+[3, 3, 3, 3, 2, 2] predicted (6,10) positions: 24
