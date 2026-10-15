@@ -1,0 +1,22 @@
+classes 236
+done charp7_lift_000.m2 2s
+done charp7_lift_012.m2 2s
+done charp7_lift_024.m2 2s
+done charp7_lift_036.m2 2s
+done charp7_lift_048.m2 4s
+done charp7_lift_060.m2 4s
+done charp7_lift_072.m2 4s
+done charp7_lift_084.m2 4s
+done charp7_lift_096.m2 5s
+done charp7_lift_108.m2 5s
+done charp7_lift_120.m2 5s
+done charp7_lift_132.m2 5s
+done charp7_lift_144.m2 7s
+done charp7_lift_156.m2 7s
+done charp7_lift_168.m2 7s
+done charp7_lift_180.m2 7s
+done charp7_lift_192.m2 9s
+done charp7_lift_204.m2 9s
+done charp7_lift_216.m2 9s
+done charp7_lift_228.m2 9s
+nice -n 5 /Users/agent/Projects/TeraoHunter/.venv/bin/python charp7_lift.py  55.74s user 1.90s system 364% cpu 15.794 total
