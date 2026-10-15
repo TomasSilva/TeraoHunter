@@ -237,7 +237,12 @@ all forced coincidences).
 
 **Result.** For (4, 4, 4, 4) over F₁₁: nothing in any cross-ratio class. Over F₁₃: nothing in the
 harmonic class and nothing in the generic class of size 6, and **24 configurations in the
-equianharmonic class**, forming a single lattice (§3b). For the other four vectors: RESULT_FP_REST
+equianharmonic class**, forming a single lattice (§3b). For the other four vectors: over F₁₁ every ordering and every cross-ratio class
+gives nothing, and over F₁₃ the runs completed so far (all of (5, 5, 3, 3) and (5, 5, 4, 2) in
+several orderings) give nothing; the runs for (5, 5, 5, 1) and (5, 4, 4, 3) over F₁₃, which have
+three 5-line pencils to enumerate, were still running when this was written
+(`fp_runs/log.txt` records each run with its hit count; any hit would be lifted with
+`pencil_post_fp.py` and `pencil_real2.m2` as in §5.3).
 
 ### 5.3 Exact lifting
 `work/build/pencil_post_fp.py` groups the hits by lattice isomorphism class (nauty on the
