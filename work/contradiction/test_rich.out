@@ -1,0 +1,28 @@
+== 18-line seed: n = 18, mdr r = 7, #min generators = 1, syzygy degrees {7, 11, 12}
+   points new Tally from {2 => 24, 3 => 24, 6 => 1, 7 => 2}, b2 = 89, c2 = 72, Bourbaki length = 2 (predicted 2)
+   rich line {1, 0, 0}: W = 12, |A meet l| = 6, z = 2, invariant: true
+   rich line {0, 1, -1}: W = 11, |A meet l| = 7, z = 1, invariant: true
+   rich line {0, 1, -w-1}: W = 11, |A meet l| = 7, z = 1, invariant: true
+   diagonals: 435, (W, z) tally {((2,0),36), ((3,0),204), ((4,0),108), ((4,1),12), ((5,0),48), ((5,1),12), ((6,0),12), ((11,1),2), ((12,2),1)}
+   dichotomy violations: 0;  rich lines: 3 (bound 3r - n = 3);  rich lines not invariant: 0
+== Ceva(5), free (6,8): n = 15, mdr r = 6, #min generators = 1, syzygy degrees {6, 8}
+   points new Tally from {3 => 25, 5 => 3}, b2 = 62, c2 = 48, Bourbaki length = 0 (predicted 0)
+   rich line {0, 0, 1}: W = 8, |A meet l| = 7, z = 0, invariant: true
+   rich line {1, 0, 0}: W = 8, |A meet l| = 7, z = 0, invariant: true
+   rich line {0, 1, 0}: W = 8, |A meet l| = 7, z = 0, invariant: true
+   diagonals: 153, (W, z) tally {((4,0),150), ((8,0),3)}
+   dichotomy violations: 0;  rich lines: 3 (bound 3r - n = 3);  rich lines not invariant: 0
+== Ceva(5) minus a line (nearly free): n = 14, mdr r = 6, #min generators = 1, syzygy degrees {6, 8, 8}
+   points new Tally from {2 => 5, 3 => 20, 4 => 1, 5 => 2}, b2 = 56, c2 = 43, Bourbaki length = 1 (predicted 1)
+   rich line {0, 0, 1}: W = 8, |A meet l| = 6, z = 1, invariant: true
+   rich line {1, 0, 0}: W = 7, |A meet l| = 7, z = 0, invariant: true
+   rich line {1, -1, 0}: W = 8, |A meet l| = 6, z = 1, invariant: true
+   rich line {0, 1, 0}: W = 7, |A meet l| = 7, z = 0, invariant: true
+   diagonals: 154, (W, z) tally {((3,0),60), ((4,0),90), ((7,0),2), ((8,1),2)}
+   dichotomy violations: 0;  rich lines: 4 (bound 3r - n = 4);  rich lines not invariant: 0
+== Ceva(5) minus two lines: n = 13, mdr r = 6, #min generators = 1, syzygy degrees {6, 7, 8}
+   points new Tally from {2 => 8, 3 => 16, 4 => 2, 5 => 1}, b2 = 50, c2 = 38, Bourbaki length = 2 (predicted 2)
+   (2r >= n-1: the leaf claim does not apply)
+   diagonals: 143, (W, z) tally {((2,0),12), ((3,0),72), ((4,0),54), ((6,0),1), ((7,1),4)}
+   dichotomy violations: 0;  rich lines: 0 (bound 3r - n = 5);  rich lines not invariant: 0
+M2 --script test_rich.m2  12.89s user 0.37s system 113% cpu 11.704 total

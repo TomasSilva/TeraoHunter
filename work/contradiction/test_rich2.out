@@ -1,0 +1,25 @@
+== A(4,1,3), free (5,9): n = 15, mdr r = 5, #min generators = 1, syzygy degrees {5, 9}
+   points new Tally from {2 => 12, 3 => 16, 6 => 3}, b2 = 59, c2 = 45, Bourbaki length = 0 (predicted 0)
+   diagonals: 112, (W, z) tally {((3,0),64), ((5,0),48)}
+   dichotomy violations: 0;  rich lines: 0 (bound 3r - n = 0);  rich lines not invariant: 0
+== A(4,1,3) minus x=0: n = 14, mdr r = 5, #min generators = 1, syzygy degrees {5, 8}
+   points new Tally from {2 => 8, 3 => 16, 5 => 2, 6 => 1}, b2 = 53, c2 = 40, Bourbaki length = 0 (predicted 0)
+   rich line {1, 0, 0}: W = 8, |A meet l| = 6, z = 0, invariant: true
+   diagonals: 97, (W, z) tally {((2,0),16), ((3,0),32), ((4,0),16), ((5,0),32), ((8,0),1)}
+   dichotomy violations: 0;  rich lines: 1 (bound 3r - n = 1);  rich lines not invariant: 0
+== A(4,1,3) minus two pencil lines: n = 13, mdr r = 5, #min generators = 1, syzygy degrees {5, 7}
+   points new Tally from {2 => 16, 3 => 9, 5 => 2, 6 => 1}, b2 = 47, c2 = 35, Bourbaki length = 0 (predicted 0)
+   rich line {1, -1, 0}: W = 7, |A meet l| = 6, z = 0, invariant: true
+   rich line {0, 1, -jj}: W = 7, |A meet l| = 6, z = 0, invariant: true
+   diagonals: 102, (W, z) tally {((2,0),22), ((3,0),46), ((4,0),24), ((5,0),8), ((7,0),2)}
+   dichotomy violations: 0;  rich lines: 2 (bound 3r - n = 2);  rich lines not invariant: 0
+== B3, free (3,5): n = 9, mdr r = 3, #min generators = 1, syzygy degrees {3, 5}
+   points new Tally from {2 => 6, 3 => 4, 4 => 3}, b2 = 23, c2 = 15, Bourbaki length = 0 (predicted 0)
+   diagonals: 16, (W, z) tally {((3,0),16)}
+   dichotomy violations: 0;  rich lines: 0 (bound 3r - n = 0);  rich lines not invariant: 0
+== B3 minus a line: n = 8, mdr r = 3, #min generators = 1, syzygy degrees {3, 4}
+   points new Tally from {2 => 4, 3 => 6, 4 => 1}, b2 = 19, c2 = 12, Bourbaki length = 0 (predicted 0)
+   rich line {1, 0, 0}: W = 4, |A meet l| = 4, z = 0, invariant: true
+   diagonals: 13, (W, z) tally {((2,0),4), ((3,0),8), ((4,0),1)}
+   dichotomy violations: 0;  rich lines: 1 (bound 3r - n = 1);  rich lines not invariant: 0
+M2 --script test_rich2.m2  3.76s user 0.15s system 113% cpu 3.449 total
