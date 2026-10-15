@@ -43,6 +43,23 @@ realisation, and turns it into four theorems and two new results over ℚ:
 §5 assembles these into the global argument over ℚ and marks, step by step, what is proved and
 what is heuristic. §6 states the three precise statements that would turn it into a proof.
 
+**Added later on 15 Oct 2026 (§7–§9).**
+- **(M1) is proved for every lattice with a four-point line** (Theorem F, §7), for any number of
+  lines up to 31, and for all n given simple jump roots.
+  - On such a lattice freeness is constant on every irreducible component of the realisation
+    space, so a counterexample must use two different components.
+  - Two ingredients make this work. The four points on the line *linearise* the realisation space
+    over the cross-ratio, so the component of free arrangements is a vector bundle over a curve.
+    And a new lemma (F1, by Krull's height theorem) shows that a degenerating free basis collapses
+    exactly at the Bourbaki point. That lemma also completes the proof of Theorem E for every line.
+- **Theorem G (§8)** says where (M1) could still fail on other lattices: at singular points of a
+  component, at fibres that jump in dimension, or where the family is tangent to a jump
+  hypersurface. Along such a non-free divisor every line with at most five points is frozen at a
+  special position.
+- **(M2) is not proved (§9).** For lattices with a four-point line it reduces to a finite
+  linear-algebra problem: an unforced harmonic rank drop of the concurrency matrix. Over ℚ at
+  17 lines this is a targeted enumeration of four-direction arrangements, not yet run.
+
 Notation as in `TC_RATIONAL.md` and `TC_FOLIATION.md`:
 - L is a lattice of n lines with χ₀ = (t − d₁)(t − d₂);
 - A₁ is free and A₂ is not;
@@ -312,13 +329,18 @@ contains a free point, and let A₀ ∈ C be non-free with C smooth at A₀. The
    contradiction. ∎
 
 **Readings.**
-- **Over ℂ.** A non-free point inside a free family is either a singular point of the
-  realisation space, or a point where the family is tangent to the jump locus of every line.
-  - The first is the mechanism of every known Ziegler pair: in Barakat–Kühne–Pokora, two surfaces
-    of realisations cross along a conic on which a hidden collinearity holds, and Θ = g₁g₂
-    vanishes doubly there.
-  - The second never occurs in the families computed so far. In the 13- and 15-line families of
-    `TC_RIGIDITY.md` §3 every jump function factors into boundary factors.
+- **Over ℂ.** A non-free point of a component C that contains free points is either a singular
+  point of C itself, or a point where C is tangent to the jump locus of every line.
+  - Singular points of the realisation space that are smooth points of each component through
+    them do not help. Theorem E applies to each component separately. So two smooth surfaces
+    crossing along a curve, as in the Ziegler pairs of Barakat–Kühne–Pokora, could only produce a
+    counterexample if each surface were tangent to the jump loci along the crossing curve.
+  - The tangent case never occurs in the families computed so far. In the 13- and 15-line
+    families of `TC_RIGIDITY.md` §3 every jump function factors into boundary factors.
+- **Proof status.** For j_H = 1 the proof uses `TC_RIGIDITY.md` Lemma 3(c). That lemma needs the
+  restricted frame to remain a basis on H, which fails if H passes through the point where the
+  frame collapses. Lemma F1 below shows that this point is the Bourbaki point, through which no
+  line with j_H = 1 passes. So Theorem E holds as stated, for every line.
 - **On a 4-point line.** All roots of the jump polynomial are simple. This is the data for
   K ≤ 30, consistent with Epstein's transversality theorem for postcritically finite maps. So tangency means the
   cross-ratio function λ_H : C → P¹ is *stationary* at A₀: dλ_H = 0. Over ℚ this is a rational
@@ -405,7 +427,7 @@ is labelled by its status. Specialisations to the open 17-line class (8, 8)[B] a
 ## 6. What would finish it
 
 (M1) and (M2) are TC(ℚ) itself, split into its two types and restated with the structure of
-§1–§4 available as hypotheses. (M3) is a self-contained statement in arithmetic dynamics. On its
+§1–§4 available as hypotheses. §7 proves (M1) for every lattice with a four-point line. (M3) is a self-contained statement in arithmetic dynamics. On its
 own, (M3) confines a rational counterexample, for every n, to harmonic positions on every 4-point
 line. Together the three give TC(ℚ).
 
@@ -442,13 +464,219 @@ enumeration:
 - whether the free critical points of the 7- and 8-point lines of a rational A₂ always lie on the
   non-linear part of J′, as in R₁₇ᵃ and R₁₇ᵇ.
 
-## 7. Files (`work/global/`)
+## 7. (M1) holds for every lattice with a four-point line (Theorem F)
+
+This section proves (M1), with no extra hypothesis, for every lattice that has a line with exactly
+four points, for any number of lines n (over ℂ, using the simple-root data for n ≤ 31).
+
+**Setting.** A *type-II germ* is a family A_t over R = ℂ{t} such that:
+- the lattice L is the same for all t;
+- A_t is free with exponents (d, d) for t ≠ 0, and A₀ is not free.
+
+Let θ₁, θ₂ be an R-basis of D₀(A_R)_d. Write c(t) for the Saito determinant, so that
+det(E, θ₁, θ₂) = c(t)·Q_t. By `TC_RIGIDITY.md` Lemma 3, θᵢ(0) = fᵢ·η with η ∈ D₀(A₀) of least
+degree r, and ord_t c ≥ 2.
+
+**Lemma F1 (the frame collapses at the Bourbaki point).** Suppose r = d − 1, so A₀ has one
+Bourbaki point P₀ and f₁, f₂ are independent linear forms. Then V(f₁, f₂) = {P₀}.
+
+*Proof.*
+1. For (a, b) ≠ (0, 0), consider s = aθ₁ + bθ₂ as a section of the rank-2 bundle E_R(d) on the
+   regular threefold P² × Δ.
+2. For t ≠ 0, E_t(d) ≅ O² and s(t) is a nonzero constant section, so it has no zero. Hence
+   Z(s) ⊂ P² × {0}.
+3. At t = 0, s(0) = (af₁ + bf₂)·η. Since η vanishes, as a section of E₀(d − 1), exactly at P₀,
+   this gives Z(s) = {af₁ + bf₂ = 0} ∪ {P₀} as a set.
+4. Z(s) is cut out locally by two equations in a regular scheme of dimension 3. By Krull's height
+   theorem every component of Z(s) has dimension ≥ 1, so P₀ is not an isolated point of Z(s).
+   Therefore P₀ lies on the line af₁ + bf₂ = 0, for every (a, b). ∎
+
+**Corollary F2 (Lemma 3(c) and Theorem E for every line).** Let H be a line with jump j_H = 1 at
+A₀; such a line misses P₀. Then ord_t Θ_H(γ(t)) = ord_t c(t) ≥ 2.
+
+*Proof.*
+1. *The restricted frame is a basis.* Restricting θ₁, θ₂ to H gives φ₁, φ₂ in the family of
+   Ziegler modules. At t = 0, φᵢ(0) = fᵢ|_H·ψ, where ψ spans the degree-(d − 1) part. The forms
+   f₁|_H and f₂|_H are independent because H ∌ P₀ (Lemma F1). So φ₁(0), φ₂(0) span the
+   2-dimensional degree-d part, and by Nakayama (φ₁, φ₂) is an R-basis of that free module.
+2. *Its cokernel.* The map O_H(−d)² → F_R given by (φ₁, φ₂) has determinant c(t)·∏ α_P^{k_P}.
+   Its image at t = 0 is the summand O(−d + 1)·ψ, so the cokernel restricts to O_H(−d − 1) on
+   the central fibre. A rank-one quotient with Fitting ideal (t^e) is then
+   O_H(−d − 1) ⊗ R/(t^e), where e = ord c.
+3. *The order of Θ_H.* ord_t Θ_H equals the length of
+   coker(H⁰(O(d − 1)²) → conditions) = H¹(F_R(d − 1)) = H¹(O_H(−2) ⊗ R/(t^e)), which is e. ∎
+
+Lines through P₀ have j_H = 2, and lines missing P₀ have j_H = 1. So with Corollary F2,
+Theorem E holds as stated, for every line.
+
+**Lemma F3 (four-point lines linearise the realisation space).** Let H have four points. Put them
+at [1:0:0], [0:1:0], [1:1:0] and [λ:1:0], and write every other line as an offset in its pencil.
+Then the realisations of L form an open subset (all non-incidences of L) of
+
+  K = {(λ, v) : M(λ)·v = 0},
+
+where M(λ) = M₀ + λM₁ is the matrix of the concurrency conditions of L (`TC_FILTER.md` Lemma F3),
+modulo a 3-dimensional group acting linearly on v. Consequently:
+- K has exactly one irreducible component K₀ dominating the λ-line. Every other component lies
+  over one of the finitely many values where the rank of M drops (a *vertical* component).
+- Near any λ₀, K₀ is the total space of a vector bundle over a disc. At λ₀ its fibre is the limit
+  V₀ = lim ker M(λ), which exists because a map from a punctured disc to a Grassmannian extends.
+  So K₀ is smooth and λ restricted to K₀ is a submersion.
+
+**Theorem F.** Let L be a lattice with a line H with exactly four points and multiplicity
+vector k, and suppose the jump polynomial of k has simple roots. This holds for every k with
+K ≤ 30, i.e. n ≤ 31; for all K it would follow from the infinitesimal form of Thurston rigidity,
+see the remark below. Then **freeness is constant on every irreducible component of the
+realisation space of L.** In particular L has no type-II counterexample.
+
+*Proof.*
+- **K odd, k unbalanced, or χ not split.** Freeness is constant on the whole realisation space.
+- **χ₀ = (t − d₁)(t − d₂) with d₁ = K/2 − 1.** A realisation is free iff λ ∈ J (Yoshinaga on H).
+  - On K₀ the free points would form a nonempty open set (Yuzvinsky) inside the finite union of
+    fibres over J, which is impossible.
+  - On a vertical component λ is constant.
+- **d₁ = d₂ = K/2.** A realisation is free iff λ ∉ J, so vertical components are constant and
+  the generic point of K₀ is free. Suppose A₀ ∈ K₀ is not free, with λ(A₀) = λ₀ ∈ J.
+  1. A 4-point line has j_H ≤ 1 by Abe's bound, so k = 1 and H misses the Bourbaki point.
+     Corollary F2 gives ord Θ_H(γ(t)) ≥ 2 along every arc in K₀ from free points into A₀.
+  2. K₀ is smooth at A₀ and dλ ≠ 0 there (Lemma F3). Take an arc γ in K₀ through A₀ with
+     dλ(γ′(0)) ≠ 0. For t ≠ 0, γ(t) has λ ≠ λ₀ near λ₀, hence λ ∉ J, so γ(t) is free.
+  3. Along γ, Θ_H(λ(γ(t))) = Θ_H′(λ₀)·(dλ(γ′(0)))·t + O(t²) has order exactly 1, since λ₀ is a
+     simple root. This contradicts step 1. ∎
+
+**Remark (simple roots for all K).** Suppose λ₀ is a double root of the jump polynomial. By
+Theorem B there is then a first-order deformation (λ₀ + ε, Φ + εΦ̇) of the critically fixed map
+Φ that keeps all four marked points fixed, critical with the same local degrees, while moving
+their cross-ratio. The infinitesimal form of Thurston rigidity says the pull-back map on the
+Teichmüller space of the postcritical set has no eigenvalue 1 at Φ (Douady–Hubbard; Epstein). That
+rules out such a deformation. The data confirm simplicity for all 604 interior factors with
+K ≤ 30.
+
+**What a counterexample with a four-point line must look like.**
+
+**Corollary F4.** If L has a four-point line (K ≤ 30), every counterexample for L is of type I:
+- a non-free *vertical* component at some λ₀ ∈ J at which the rank of M drops;
+- together with a free component, which is either K₀ or a vertical component at some
+  λ₁ ∉ J.
+
+Over ℚ, λ₀ is harmonic. If the free component is K₀, then:
+- its limit fibre V₀ over λ₀ is entirely degenerate (Theorem F);
+- at a generic point of V₀ the degeneration creates exactly one new triple point (β = 1, by
+  `TC_RIGIDITY.md` Lemma 2, since Θ_H vanishes there to order 1);
+- the limit arrangements are free with exponents (d − 1, d + 1), by Yoshinaga on H.
+
+*Where harmonic rank drops come from.* Take two lines of the A-pencil and two of the B-pencil,
+forming a quadrangle, and ask that its two diagonals lie in the C- and D-pencils. The conditions
+read c₂ − c₁ = a₂ − a₁ and c₂ − c₁ = −λ(a₂ − a₁), so (1 + λ)(a₂ − a₁) = 0. This is the
+complete-quadrangle theorem: the configuration exists non-degenerately only at λ = −1.
+- When the lattice *forces* the harmonic position in this way, every realisation has λ = −1, and
+  TC holds for L trivially.
+- So a counterexample needs an *unforced* harmonic rank drop: the concurrency matrix gains rank at
+  −1 without forcing λ = −1 on every realisation.
+
+That is a finite linear-algebra condition on the lattice. The realisations at λ = −1 are the
+arrangements whose lines lie in four directions: rows, columns, diagonals and anti-diagonals.
+
+**Test** (`work/global/thmF_test.py`, `thmF_example.m2`). The test builds random families in which
+the lines of three pencils sit at integer offsets, and each line of the fourth pencil passes
+through one chosen point. Such a family lies in the dominating component, so Theorem F applies.
+- **Vector (1, 2, 2, 3), jump at μ₀ = 2, 9 lines.** There are 24 distinct lattices with
+  χ₀ = (t − 4)². In all 24 the lattice changes at μ₀, always with β = 1 (one new triple point),
+  as Corollary F4 predicts.
+- **One example checked in Macaulay2.** The generic member has Jacobian syzygies (4, 4), so it is
+  free. The member at μ₀ has syzygies (3, 5): free with exponents (d − 1, d + 1).
+- **Other vectors.** The naive construction produced no balanced lattice for the other five
+  vectors tried. For n ≤ 14 the test cannot fail without contradicting Barakat–Kühne; what it does
+  check is the code and the β = 1 prediction.
+
+## 8. (M1) in general: where a non-free point can hide (Theorem G)
+
+Every line H gives the same linear structure as Lemma F3, now over the (s − 3)-dimensional
+configuration space M_{0,s}(H). The realisations of L form an open subset of
+K_H = {(λ, v) : M_H(λ)·v = 0}, λ ∈ M_{0,s}(H). A component C lies over Z = closure of π_H(C), and
+over a dense open subset of Z it is a vector bundle with linear fibres.
+
+**Theorem G.** Let d₁ = d₂, let C be an irreducible component containing free points, and let
+E ⊄ Sing C be an irreducible component of the non-free locus of C. Then E is a divisor of C, and
+for every line H:
+- (a) Θ_H ∘ π_H vanishes to order ≥ 2 along E;
+- (b) at a generic point x ∈ E, at least one of the following holds:
+  - π_H|_C is not a submersion onto Z at x;
+  - Z is singular at π_H(x);
+  - Z is tangent there to the jump hypersurface J_H, i.e. d(Θ_H|_Z) = 0, which includes the case
+    where J_H is singular.
+
+*Proof.* The non-free locus is the zero set of the single function Θ_H ∘ π_H, so it is a divisor.
+(a) is Theorem E at the generic point of E. For (b), suppose π_H|_C is a submersion onto a smooth
+Z at x. Then Θ_H ∘ π_H ∈ m_x² gives d(Θ_H|_Z)(π_H(x)) = 0. ∎
+
+**Consequences.**
+- **Four-point lines.** None of the three alternatives can occur on K₀: it is a vector bundle over
+  a curve, and the roots are simple. This is Theorem F.
+- **Five-point lines whose five points move freely** (Z = M_{0,5}(H)).
+  - J_H is reduced: it is irreducible over ℚ (`TC_RATIONAL.md` §4).
+  - So E lies over finitely many points: Sing(J_H), and the points where C is not a vector bundle.
+  - Since E is a divisor and the generic fibre has codimension 2, E is a whole fibre π_H⁻¹(z₁)
+    that has jumped in dimension.
+  - If z₁ is a smooth point of J_H and π_H contracts E simply (π_H*m_{z₁} = I_E, as in a
+    blow-up), then (a) fails. So π_H contracts E with multiplicity ≥ 2, or C is singular along E.
+- **Five-point lines whose points move on a curve Z.** Then E is the fibre over a single point z₁
+  of Z where Z is tangent to J_H, or Z or J_H is singular. Over ℚ, z₁ is one of the finitely many
+  rational points of J_H (`TC_RATIONAL.md` §4).
+- **In all cases.** Along a non-free divisor E of a free family, the positions on every line with
+  at most five points are frozen: E lies over one point of each such line's configuration space,
+  and that point is special for the line.
+
+So (M1) fails, if at all, only through one of three special geometric events:
+- singular components;
+- fibres that jump in dimension;
+- tangency between the image of the family and a jump hypersurface.
+
+On four-point lines all three are impossible.
+
+## 9. (M2): what is left
+
+**Status: not proved.** Every argument above concerns one irreducible component. A type-I
+counterexample places the free and the non-free realisations on different components, and nothing
+in §1–§8 compares two components.
+
+What is known about the non-free component C₂:
+- Over ℚ, every rational point of C₂ sits at rational special positions on its small lines. If
+  the rational points of C₂ are Zariski-dense, which is automatic when C₂ is a linear space, each
+  small line is frozen at one point of the finite set J_H(ℚ).
+- If L has a four-point line, C₂ is vertical: a linear space ker M(λ₀) ∩ U at an unforced
+  harmonic λ₀ (Corollary F4).
+
+Attempts that did not close it:
+- **Deletion.** Deleting a line gives two non-free 16-line arrangements, about which TC says
+  nothing.
+- **The boundary point between the components.** Suppose the free component is K₀. The two
+  components then meet, inside the closure, along V₀, where the arrangements are free with
+  exponents (d − 1, d + 1) and lattice L′ = L + T.
+  - T can be broken in two ways: horizontally (λ moves), which gives free arrangements, or
+    vertically (λ fixed), which gives non-free ones. Both are consistent.
+  - At 17 lines this does give a constraint. Imposing T on the generic free family must force
+    further incidences. Otherwise L′ would be a TC counterexample in class (7, 9), which
+    `TC_FOLIATION.md` Theorem 5.1 excludes.
+- **Characteristic 3.** −1 ≡ 2 makes the four points of H all of P¹(F₃). But the one-line
+  Frobenius criterion needs Ziegler multiplicities ≤ 3, and the window has 5.
+
+**What would finish the 17-line case over ℚ.**
+- After Theorem F, the open part of sub-case (I) of `TC_FILTER.md` is a *linear* problem over ℚ.
+  It asks for the four-direction arrangements (rows, columns, diagonals, anti-diagonals) with
+  vectors (5,5,5,1), (5,5,3,3), (5,4,4,3) at their harmonic values that are non-degenerate, and
+  for each, whether its lattice has another component.
+- That is a targeted 17-line enumeration. I have not run it, because 17-line runs need your
+  explicit go-ahead.
+
+## 10. Files (`work/global/`)
 
 - `charge_graphs.py`: planar-graph count of critically fixed maps against the jump polynomials;
   output `charge_K20.out` (136 vectors, 0 mismatches).
 - `harmonic_maps.m2`: the maps behind the rational jump points at K = 16.
 - `linemaps.m2`: the line maps Φ_H of R₁₇ᵃ and R₁₇ᵇ, with local degrees and free critical points.
 - `jprime_lines.m2`: Theorem C on R₁₇ᵃ, R₁₇ᵇ and B₃.
+- `thmF_test.py`, `thmF_example.py`, `thmF_example.m2`: the consistency test of Theorem F.
 - `charge_general.py` (`charge_six.out`): the planar-graph count for the 6-point lines.
 - `sixpoint_count.m2`, `sixpoint_modp.m2` (`sixpoint_modp.out`): direct degree of the (6, 10)
   loci over ZZ/32003.

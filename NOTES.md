@@ -568,3 +568,34 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
 - Not a proof of TC(Q). The open steps are (M1) no interior tangency, (M2) symmetric non-free
   components are isolated, and (M3) rational critically fixed maps are harmonic. (M3) is checked
   for K <= 30 and proved for (D,D,1,1).
+
+## Finding 32: (M1) proved for every lattice with a four-point line (TC_GLOBAL.md §7-9)
+
+- Lemma F1 (new): when a free family with exponents (d,d) degenerates, with constant lattice, to
+  a non-free member with mdr = d - 1, the frame collapses exactly at the Bourbaki point:
+  θ_i(0) = f_i η with V(f1,f2) = {P0}. Proof: a section of E_R(d) has no zeros on the free fibres.
+  By Krull's height theorem its zero set cannot have P0 as an isolated point.
+- Corollary F2: TC_RIGIDITY Lemma 3(c), and hence Theorem E, hold for every line. Lines with
+  jump 1 miss P0, the restricted frame stays a basis, and ord Θ_H = ord c >= 2.
+- Lemma F3: a four-point line linearises the realisation space over its cross-ratio,
+  K = {M(λ)v = 0} with M affine in λ (TC_FILTER F3). There is exactly one dominating component
+  K0, and near every λ0 it is a vector bundle over a disc, so it is smooth and λ is a submersion.
+- Theorem F: for every lattice with a four-point line (simple jump roots, all K <= 30), freeness
+  is constant on every irreducible component of the realisation space. No type-II counterexample.
+  Proof: on K0 a non-free point needs ord Θ_H >= 2 along every arc (F2). An arc transverse to
+  λ = λ0 gives order 1 (simple root). Vertical components have constant λ.
+- Corollary F4: a counterexample with a four-point line is of type I.
+  - It needs a non-free vertical component at a jump value where the concurrency matrix drops
+    rank; over Q this value is harmonic.
+  - If the free component is K0, its λ0-fibre is degenerate, with beta = 1 (one new triple point)
+    and free limit (d-1, d+1).
+  - Harmonic rank drops come from complete quadrangles. If the lattice forces λ0, TC holds
+    trivially; so a counterexample needs an unforced drop.
+- Test (work/global/thmF_test.py): 24 dominating free 9-line families with vector (1,2,2,3) all
+  degenerate at μ0 = 2 with beta = 1. One example in M2: generic syzygies (4,4), limit (3,5).
+- Theorem G: in general, non-free divisors of a free component lie where the component is
+  singular, where fibres over the line configuration space jump, or where the image is tangent to
+  the jump hypersurface. Lines with at most five points are frozen along such a divisor.
+- (M2) not proved. For lattices with a four-point line it is a finite linear problem in
+  four-direction arrangements at the harmonic value. The 17-line instance, vectors (5,5,5,1),
+  (5,5,3,3), (5,4,4,3), is a targeted 17-line enumeration and was not run (needs explicit request).
