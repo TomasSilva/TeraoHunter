@@ -2,7 +2,7 @@
 
 **Status (15 Oct 2026).** Not a proof of TC(ℚ). This note looks for a *global* reason why a
 counterexample over ℚ cannot exist. It finds one global object behind every non-free
-realisation, and turns it into five theorems:
+realisation, and turns it into four theorems and two new results over ℚ:
 
 - **Theorem A (§1).** Yoshinaga's criterion is a statement about rational maps.
   - A line H jumps iff it carries a rational self-map of degree d₁ − 1.
