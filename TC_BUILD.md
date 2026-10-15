@@ -265,6 +265,58 @@ lattices are rigid, realised only by a conjugate pair over ℚ(√−3), both me
 **Terao's conjecture holds for every 17-line sub-arrangement of A(G₂₆) and A(6, 1, 3) with
 χ̄ = (t − 8)².**
 
+### 5.5 Five-point lines (five pencils, two cross-ratios)
+
+`work/build/pencils5x.c` enumerates every 17-line arrangement over F_p made of a line H = {z = 0}
+with five points and the five pencils through them, for each of the eleven multiplicity vectors of
+a 5-point line (partitions of 16 into five parts ≤ 5):
+- the points of H are put at (1:0:0), (0:1:0), (1:1:0), (λ₁:1:0), (λ₂:1:0), with (λ₁, λ₂) running
+  over all ordered pairs of distinct elements of F_p ∖ {0, 1}, so every configuration of five
+  points on H is covered;
+- four pencils are enumerated over all of F_p, normalised by the affine group fixing H pointwise
+  (two offsets of the first pencil set to 0 and 1, one of the second to 0); the largest pencil is
+  derived, its lines being those whose excess Σ(m_R − 2) over the other pencils' points lies in the
+  window;
+- b₂ is checked arithmetically before any line check: adding a derived line d changes b₂ by
+  (number of enumerated lines) − ex(d), so the derived lines must have excesses summing to a known
+  target;
+- every line must carry 5 to 8 points (lattices with a 4-point line were covered by §5.2 at the
+  same primes), multiplicities are at most 6 automatically, and b₂ = 80.
+
+**Validation.** Two window deletions of A(G₂₆) have a 5-point line with every other line carrying
+7 or 8 points, with H-vectors (4, 4, 3, 3, 2) and (4, 4, 4, 3, 1). Reduced mod 13
+(w = 4), their census coordinates are λ = (4, 6) or (10, 8), and λ = (4, 10), …
+(`mk_test5.py`). The enumerator finds them with exactly 36 = 4·3·3 and 48 = 4·3·4 hits, the number
+of normalisations of each, at 0.33 µs per configuration.
+
+**Run.** All eleven vectors, p = 11 and p = 13, 220 jobs, 4.4 · 10¹⁰ configurations.
+
+**Two rational nearly free arrangements (found at p = 11, lifted exactly).** In the line
+coordinates dq·x − dp·y = v·z for the pencil of direction (dp : dq : 0):
+- R₁₇ᵃ: H = {z = 0}; y = −a (a = 0, 1, 2, 3); x = 0, 2, 4; x − y = 2, 3, 5; 3x − 4y = 12;
+  x − 2y = 2, 4, 5, 6, 8. H-vector (5, 4, 3, 3, 1), cross-ratios (4/3, 2).
+  Points 2²³ 3¹⁰ 4⁸ 5² 6¹.
+- R₁₇ᵇ: H = {z = 0}; y = −a (a = 0, …, 4); x = 0, 1, 2, 4; x − y = 4; 2x + y = 2;
+  x + y = −2, −1, 0, 1, 2. H-vector (5, 5, 4, 1, 1), cross-ratios (−1/2, −1).
+  Points 2²⁰ 3¹⁸ 4² 5² 6².
+
+Both have b₂ = 80, lines with 5 to 8 points and multiplicities ≤ 6, so both are in the window. Both
+are **nearly free with exponents (7, 10)** (syzygies 7, 10, 10) with one Bourbaki point
+(`c5rational.m2`). Each realisation space is one rational point (`exact_tc_lattice.py`: dim 0,
+degree 1, Yoshinaga rank 15/16), so Terao's conjecture holds for both lattices.
+
+Unlike E₁₇ they have only **two** rich lines, crossing at the Bourbaki point. The residual
+inflection quartic is J′ = (rich line)·(rich line)·(smooth conic over ℚ) (`c5jprime.m2`):
+- R₁₇ᵃ: (x − 4y − 8z)(x − y − 4z)(2x² − 2xy + 2y² − 11xz + 10yz + 20z²);
+- R₁₇ᵇ: (x − 3z)(x + 2y + 2z)(x² + xy + y² − 2xz + 2yz + 2z²).
+
+Sing J′ has length 5 and contains the Bourbaki point, as the scheme lemma requires. The conic
+passes through no intersection point and is tangent to no line of the arrangement (`c5conic.m2`).
+So the extremal case of TC_CONTRADICTION Proposition 5 (J′ a product of rich lines) is not forced:
+non-free window arrangements with a conic in J′ exist. They are rigid here.
+
+RESULT_C5
+
 ## 6. The mechanism in the literature
 
 Barakat–Kühne–Pokora (arXiv:2407.07070) construct Ziegler pairs from (3, 12)-matroids with
