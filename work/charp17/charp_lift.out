@@ -1,0 +1,32 @@
+
+LAT c5-0 p=11 components 2 good 1 dims {0} zerobad 0
+  COMP dim 0 degree 1 (residue field F_11^1) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-1 p=11 components 1 good 1 dims {0} zerobad 0
+  COMP dim 0 degree 2 (residue field F_11^2) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-2 p=11 components 1 good 1 dims {0} zerobad 0
+  COMP dim 0 degree 2 (residue field F_11^2) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-3 p=11 components 1 good 1 dims {0} zerobad 0
+  COMP dim 0 degree 1 (residue field F_11^1) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-4 p=11 components 1 good 1 dims {0} zerobad 0
+  COMP dim 0 degree 1 (residue field F_11^1) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-5 p=11 components 1 good 1 dims {0} zerobad 0
+  COMP dim 0 degree 1 (residue field F_11^1) pd 3 syzygies {7, 10, 10} NONFREE
+LAT E17 p=11 components 1 good 1 dims {0} zerobad 0
+  COMP dim 0 degree 2 (residue field F_11^2) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-0 p=13 components 2 good 1 dims {0} zerobad 0
+  COMP dim 0 degree 1 (residue field F_13^1) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-1 p=13 components 2 good 2 dims {0, 0} zerobad 0
+  COMP dim 0 degree 1 (residue field F_13^1) pd 3 syzygies {7, 10, 10} NONFREE
+  COMP dim 0 degree 1 (residue field F_13^1) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-2 p=13 components 2 good 2 dims {0, 0} zerobad 0
+  COMP dim 0 degree 1 (residue field F_13^1) pd 3 syzygies {7, 10, 10} NONFREE
+  COMP dim 0 degree 1 (residue field F_13^1) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-3 p=13 NONREAL
+LAT c5-4 p=13 components 1 good 1 dims {0} zerobad 0
+  COMP dim 0 degree 1 (residue field F_13^1) pd 3 syzygies {7, 10, 10} NONFREE
+LAT c5-5 p=13 NONREAL
+LAT E17 p=13 components 2 good 2 dims {0, 0} zerobad 0
+  COMP dim 0 degree 1 (residue field F_13^1) pd 3 syzygies {7, 10, 10} NONFREE
+  COMP dim 0 degree 1 (residue field F_13^1) pd 3 syzygies {7, 10, 10} NONFREE
+DONE
+

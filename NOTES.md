@@ -465,3 +465,15 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   points on l \ l': at most one, by Lemmas 10.4(a),(b)); l ∩ l', on-line points and C = l^3 open.
 - Does not touch the free lattice-mate; TC not proved. The missing step is exactly the
   Fitting-ideal saturation statement on the realization space (note's (14)-(15)).
+
+## Finding 28: the 17-line census lattices in positive characteristic (TC_CHARP.md section 4)
+
+- All 1,328 F_p-hits of the 4- and 5-point pencil censuses (p = 11, 13) are nearly free (7,10) over
+  their own field: syzygies (7,10,10), pd 3. This includes the two char-11-only classes.
+  work/charp17/charp_free.py.
+- Realisation spaces over F_11-bar and F_13-bar of the seven census lattices (E17 + six five-pencil
+  classes) are zero-dimensional, and every point is nearly free (charp_lift.py).
+- The 236 F_7 lattices (d1 = 8 > 7, so every F_7-point is non-free by the Frobenius bound) are
+  realised over F_7-bar by their F_7-point only (charp7_lift.py). There is no free mate, so no
+  char-7 counterexample.
+- Control: G17 mod 11 and mod 13 is free (8,8).

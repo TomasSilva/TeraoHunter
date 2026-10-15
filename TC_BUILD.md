@@ -335,6 +335,17 @@ p = 13 ≡ 1 (mod 3) and not at p = 11, as a ℚ(√−3)-lattice must. Classes 
 characteristic-11 artefacts. Every realisable class is rigid and non-free, and nothing free was
 found.
 
+**Positive characteristic** (TC_CHARP.md §4, `work/charp17/`). The lifting above decides freeness
+over ℚ̄. Freeness was then decided directly in characteristic p as well:
+- all 1,328 F_p-hits of §5.2 and §5.5 are nearly free (7, 10) over their own field, including the
+  hits of the characteristic-11 classes 3 and 5;
+- the realisation spaces of the seven census lattices over F̄₁₁ and F̄₁₃ are finite, and every point
+  is nearly free (7, 10);
+- each of the 236 F₇ lattices of §5.3 is realised over F̄₇ by its F₇-point alone, which is nearly
+  free.
+
+So no census lattice is a counterexample in characteristic 7, 11 or 13 either.
+
 **Conclusion of §5.2 and §5.5 together.** Over F₁₁ and F₁₃, every 17-line arrangement in the
 window of class (8, 8)[B] whose smallest line has 4 or 5 points is one of six arrangements, up to
 conjugation:

@@ -93,3 +93,41 @@ classes; the 25 most structured of them (fewest double points; `pg27_hits.txt`,
 `pg27_real_results.txt.gz`) all have realization scheme over F̄₇ equal to the single F₇-point,
 with syzygy degrees (7, 10, 10). So the sample behaves like PG(2, 4) and PG(2, 5): the
 automatically non-free F₇-arrangements are rigid.
+
+## 4. The lattices of the 17-line pencil censuses (15 Oct 2026)
+
+The censuses of TC_BUILD.md §5.2 and §5.5 work over F_p only as a route to characteristic 0. Their
+exact lifting decides freeness over ℚ̄. Here the same hits and lattices are decided in
+characteristic p (`work/charp17/`). Freeness is tested by the minimal free resolution of the
+Jacobian ideal over the field in question: free iff pd(S/J) = 2.
+
+- **Every hit is non-free over its own field** (`charp_free.py`, `charp_free.out`). All 1,328
+  F_p-configurations have syzygy degrees (7, 10, 10), i.e. are nearly free (7, 10):
+  - 712 hits at p = 11 and 592 at p = 13 with a 5-point line;
+  - the 24 E₁₇ hits at p = 13.
+
+  This includes the 480 hits of the two characteristic-11 lattices (classes 3 and 5), which have no
+  realisation in characteristic 0 or 13.
+- **Realisation spaces over F̄₁₁ and F̄₁₃** (`charp_lift.py`, `charp_lift.out`) of the seven census
+  lattices, E₁₇ and the six five-pencil classes, are all zero-dimensional:
+  - in characteristic 11 the ℚ(√−3)-lattices (E₁₇, classes 1 and 2) are each a single point over
+    F₁₂₁, and the other four lattices are each a single F₁₁-point;
+  - in characteristic 13 the ℚ(√−3)-lattices split into two F₁₃-points each, and classes 3 and 5
+    have no realisation.
+
+  Every point is nearly free (7, 10). So Terao's conjecture holds for these lattices in
+  characteristics 11 and 13, as well as 0.
+- **The 236 lattices of the F₇ run** (`charp7_lift.py`, `charp7_lift.out`). These come from the
+  four-pencil (4, 4, 4, 4) run at cross-ratio −1; none is realisable over ℚ̄. They are class (8, 8)
+  with d₁ = 8 > 7, so by §1 every F₇-rational member is non-free. A characteristic-7 counterexample
+  would therefore need a free realisation over F̄₇ ∖ F₇. There is none:
+  - each realisation space over F̄₇ is the single F₇-point;
+  - for 10 of the lattices there is also a second component, but it lies in a forbidden
+    collinearity;
+  - every F₇-point is nearly free with syzygies (7, 10, 10). Its degree-7 syzygy is, up to a scalar,
+    the Frobenius syzygy θ′.
+- **Control** (`g17_control.m2`). The free harmonic grid G₁₇ (TC_BUILD.md §3), reduced mod 11 and
+  mod 13, is free with syzygies (8, 8) and pd 2.
+
+So no census lattice is a counterexample in characteristic 0, 7, 11 or 13. No free realisation of
+any of them exists over ℚ̄, F̄₇, F̄₁₁ or F̄₁₃.
