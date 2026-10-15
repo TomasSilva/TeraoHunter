@@ -498,3 +498,31 @@ all non-free, Macaulay2-confirmed) and q = 3 in rank 3; q = 3 rank 4 running (11
   - PG(2,9): 3,607,477,992 configurations, 697,905 orbits, all rigid.
   - No counterexample.
   - Code in work/charp2/. The raw hit list ag8_hits.txt (7.6 GB) is not committed.
+
+## Finding 30: Terao over Q -- only rational jump points matter (TC_RATIONAL.md)
+
+- TC(F_p) for infinitely many p implies TC(Q), by spreading out: lattice, freeness and non-freeness
+  (mdr < d1) all survive almost all reductions.
+  - Useless computationally: the bad primes depend on the heights.
+  - TC over F_p for large p is geometric (Lang-Weil sees every piece of the non-free locus); TC(Q)
+    sees only its rational points.
+- Freeness is read off one line (Yoshinaga). A non-free member has every line in its jump locus.
+  Over Q only rational jump points count.
+- 4-point lines, all 1,005 balanced vectors with K <= 30 (work/rational/jump4_all.out):
+  - K odd: no jumps (Abe's bound).
+  - Every rational jump point is harmonic ({-1, 2, 1/2}). 73 vectors have one; none at
+    K = 10, 14, 18, 22, 26.
+  - Hence TC(Q) holds for every lattice with a 4-point line and n in {11, 15, 19, 23, 27}.
+  - For other odd n <= 31, a rational counterexample needs a non-free member that is harmonic on
+    every 4-point line.
+- 5-point lines (the 11 window vectors for n = 17):
+  - Each jump curve is irreducible of degree 8-11 with geometric genus >= 3, so finitely many
+    rational points.
+  - Rational points with height(a) <= 40: a handful of small-height configurations (R17a and R17b
+    among them); none for (5,3,3,3,2), (4,4,4,2,2), (4,4,3,3,2), (4,3,3,3,3).
+- n = 17 over Q:
+  - every [B] lattice with a (4,4,4,4) or (5,5,4,2) line has only free rational realisations;
+  - a rational A2 is harmonic on its 4-point lines and at special rational points on its 5-point
+    lines.
+- Not a proof: rational special positions exist (R17a, R17b; harmonic), and lines with >= 6 points
+  are unconstrained.
